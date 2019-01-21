@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- Abstract Algebra: Theory and Applications        -->
+<!--                                                  -->
+<!-- Text: Copyright (C) 1997-2018  Thomas W. Judson  -->
+<!-- Sage: Copyright (C) 2010-2018  Robert A. Beezer  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- USE XINCLUDE SWITCH ON XSLTPROC                  -->
+<!-- Master file for AATA                             -->
+<!-- Use XSL stylesheets to create subsets            -->
+<!--    Important: Always process all of the source   -->
+<!--    to preserve numbering and cross-references!   -->
+<!--    So it is never advisable to edit this file    -->
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <xi:include href="./bookinfo.xml" /> <!-- ISBN, website, other metadata -->
+  <book xml:id="aa-teachers" permid="aZr">
+    <title>Abstract Algebra for Teachers</title>
+    <subtitle>Theory and Applications</subtitle>
+    <xi:include href="./frontmatter.xml" />                 <!-- Title Page, Preface, etc. -->
+    <xi:include href="./sets.xml" />                        <!-- Set Theory  -->
+    <xi:include href="./integers.xml" />                    <!-- Integers -->
+    <xi:include href="./groups.xml" />                      <!-- Groups -->
+    <xi:include href="./cyclic.xml" />                      <!-- Cyclic Groups -->
+    <xi:include href="./rings.xml" />                       <!-- Introduction to Rings -->
+    <xi:include href="./poly.xml" />                        <!-- Polynomial Rings -->
+    <xi:include href="./domains.xml" />                     <!-- Integral Domains --> 
+    <xi:include href="./vect.xml" />                        <!-- Vector Spaces -->
+    <xi:include href="./fields.xml" />                      <!-- Extension Fields -->
+    <xi:include href="./permute.xml" />                     <!-- Permutation Groups -->
+    <xi:include href="./cosets.xml" />                      <!-- Cosets and Lagrange's Theorem -->
+    <xi:include href="./isomorph.xml" />                    <!-- Isomorphisms -->
+    <xi:include href="./normal.xml" />                      <!-- Normal Subgroups -->
+    <xi:include href="./homomorph.xml" />                   <!-- Homomorphisms -->
+    <xi:include href="./constructions.xml" />               <!-- Constructions -->
+    <xi:include href="./backmatter.xml" />                  <!-- GFDL, Hints, Notation -->
+  </book>
+</mathbook>
+
