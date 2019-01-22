@@ -1724,10 +1724,7 @@
       </statement>
     </exercise>
 
-  </exercises>
-  <exercises xml:id="poly-exercises-cubics-quartics" permid="KNE">
-    <title>Additional Exercises:  Solving the Cubic and Quartic Equations</title>
-    <exercise permid="woA">
+        <exercise permid="woA">
       <statement>
         <p permid="XMd">
           Solve the general quadratic equation

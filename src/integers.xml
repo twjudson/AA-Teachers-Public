@@ -1187,72 +1187,8 @@
     </exercise>
 
   </exercises>
-  <exercises xml:id="integers-exercises-programming" permid="jzs">
-    <title>Programming Exercises</title>
-    <exercise permid="Bhx">
-      <title>The Sieve of Eratosthenes</title>
-      <idx>
-      <h>Sieve of Eratosthenes</h>
-      </idx>
-      <statement>
-        <p permid="ITn">
-          One method of computing all of the prime numbers less than a certain fixed positive integer <m>N</m> is to list all of the numbers <m>n</m> such that <m>1 \lt n \lt N</m>.
-          Begin by eliminating all of the multiples of <m>2</m>.
-          Next eliminate all of the multiples of <m>3</m>.
-          Now eliminate all of the multiples of <m>5</m>.
-          Notice that <m>4</m> has already been crossed out.
-          Continue in this manner,
-          noticing that we do not have to go all the way to <m>N</m>;
-          it suffices to stop at <m>\sqrt{N}</m>.
-          Using this method,
-          compute all of the prime numbers less than <m>N = 250</m>.
-          We can also use this method to find all of the integers that are relatively prime to an integer <m>N</m>.
-          Simply eliminate the prime factors of <m>N</m> and all of their multiples.
-          Using this method,
-          find all of the numbers that are relatively prime to <m>N= 120</m>.
-          Using the Sieve of Eratosthenes,
-          write a program that will compute all of the primes less than an integer <m>N</m>.
-        </p>
-      </statement>
-    </exercise>
 
-    <exercise permid="hoG">
-      <idx>
-      <h>Ackermann's function</h>
-      </idx>
-      <statement>
-        <p permid="paw">
-          Let <m>{\mathbb N}^0 = {\mathbb N} \cup \{ 0 \}</m>.
-          Ackermann's function is the function
-          <m>A :{\mathbb N}^0 \times {\mathbb N}^0 \rightarrow {\mathbb N}^0</m> defined by the equations
-          <md permid="tYK">
-            <mrow>A(0, y) &amp; = y + 1,</mrow>
-            <mrow>A(x + 1, 0) &amp; = A(x, 1),</mrow>
-            <mrow>A(x + 1, y + 1) &amp; = A(x, A(x + 1, y))</mrow>
-          </md>.
-          Use this definition to compute <m>A(3, 1)</m>.
-          Write a program to evaluate Ackermann's function.
-          Modify the  program to count the number of statements executed in the program when Ackermann's function is evaluated.
-          How many statements are executed in the evaluation of <m>A(4, 1)</m>?
-          What about <m>A(5, 1)</m>?
-        </p>
-      </statement>
-    </exercise>
 
-    <exercise permid="NvP">
-      <statement>
-        <p permid="VhF">
-          Write a computer program that will implement the Euclidean algorithm.
-          The program should accept two positive integers <m>a</m> and <m>b</m> as input and should output
-          <m>\gcd( a,b)</m> as well as integers <m>r</m> and <m>s</m> such that
-          <me permid="afT">
-            \gcd( a,b) = ra + sb
-          </me>.
-        </p>
-      </statement>
-    </exercise>
-
-  </exercises>
   <todo>Fix intro to references</todo>
 
   <references xml:id="integers-references">

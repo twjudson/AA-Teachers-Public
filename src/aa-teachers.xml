@@ -23,8 +23,9 @@
     <xi:include href="./sets.xml" />                        <!-- Set Theory  -->
     <xi:include href="./integers.xml" />                    <!-- Integers -->
     <xi:include href="./groups.xml" />                      <!-- Groups -->
-    <xi:include href="./cyclic.xml" />                      <!-- Cyclic Groups -->
     <xi:include href="./rings.xml" />                       <!-- Introduction to Rings -->
+    <xi:include href="./cyclic.xml" />                      <!-- Cyclic Groups -->
+    <xi:include href="./ideals.xml" />                      <!-- Ideals -->
     <xi:include href="./poly.xml" />                        <!-- Polynomial Rings -->
     <xi:include href="./domains.xml" />                     <!-- Integral Domains --> 
     <xi:include href="./vect.xml" />                        <!-- Vector Spaces -->

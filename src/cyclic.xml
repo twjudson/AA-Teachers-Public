@@ -1716,28 +1716,7 @@
     </exercise>
 
   </exercises>
-  <exercises xml:id="cyclic-exercises-programming" permid="Ueq">
-    <title>Programming Exercises</title>
-    <exercise permid="kHc">
-      <statement>
-        <p permid="oAk">
-          Write a computer program that will write any decimal number as the sum of distinct powers of <m>2</m>.
-          What is the largest integer that your program will handle?
-        </p>
-      </statement>
-    </exercise>
 
-    <exercise permid="QOl">
-      <statement>
-        <p permid="UHt">
-          Write a computer program to calculate
-          <m>a^x \pmod{ n}</m> by the method of repeated squares.
-          What are the largest values of <m>n</m> and <m>x</m> that your program will accept?
-        </p>
-      </statement>
-    </exercise>
-
-  </exercises>
 
   <references xml:id="cyclic-references">
     <title>References and Suggested Readings</title>

@@ -2025,116 +2025,6 @@
       </statement>
     </exercise>
 
-  </exercises>
-  <exercises xml:id="groups-exercises-detecting-errors" permid="uJR">
-    <title>Additional Exercises: Detecting Errors</title>
-        <!--EXERCISE GROUP
-
-		<introduction>
-			<p>Credit card companies, banks, book publishers, and supermarkets all take advantage of the properties of integer arithmetic modulo <m>n</m> and group theory to obtain error detection schemes for the identification codes that they use.</p>
-		</introduction>
-	-->
-    <todo>Add intro</todo>
-        <!-- % TWJ, 2010/03/31 -->
-        <!-- % Fixed figure reference -->
-        <!-- % TWJ, 2012/10/21 -->
-        <!-- % Deleted the word "now" in the description of <acro>UPC</acro> symbols.  Suggested by R. Beezer. -->
-    <exercise permid="lEA">
-      <title><acro>UPC</acro> Symbols</title>
-      <statement>
-        <p permid="PWJ">
-          Universal Product Code
-              <idx><h>Universal Product Code</h></idx>
-          (<acro>UPC</acro>) symbols are found on most products in grocery and retail stores.
-          The <acro>UPC</acro> symbol is a 12-digit code identifying the manufacturer of a product and the product itself (<xref ref="figure-upc-codes"/>).
-          The first 11 digits contain information about the product;
-          the twelfth digit is used for error detection.
-          If <m>d_1 d_2 \cdots d_{12}</m> is a valid <acro>UPC</acro> number, then
-          <me permid="yRu">
-            3 \cdot d_1 + 1 \cdot d_2 + 3 \cdot d_3 + \cdots + 3 \cdot d_{11} + 1 \cdot d_{12} \equiv 0 \pmod{10}
-          </me>.
-          <ol permid="kNC">
-            <li permid="tbV">
-              <p permid="Soz">
-                Show that the <acro>UPC</acro> number 0-50000-30042-6, which appears in <xref ref="figure-upc-codes"/>, is a valid <acro>UPC</acro> number.
-              </p>
-            </li>
-
-            <li permid="Zje">
-              <p permid="yvI">
-                Show that the number 0-50000-30043-6 is not a valid <acro>UPC</acro> number.
-              </p>
-            </li>
-
-            <li permid="Fqn">
-              <p permid="eCR">
-                Write a formula to calculate the check digit, <m>d_{12}</m>,
-                in the <acro>UPC</acro> number.
-              </p>
-            </li>
-
-            <li permid="lxw">
-              <p permid="KKa">
-                The <acro>UPC</acro> error detection scheme can detect most transposition errors;
-                that is, it can determine if two digits have been interchanged.
-                Show that the transposition error 0-05000-30042-6 is not detected.
-                Find a transposition error that is detected.
-                Can you find a general rule for the types of transposition errors that can be detected?
-              </p>
-            </li>
-<!-- % Corrected exercise. Suggested by John Watterlond. TWJ 8/24/2011 -->
-            <li permid="REF">
-              <p permid="qRj">
-                Write a program that will determine whether or not a <acro>UPC</acro> number is valid.
-              </p>
-            </li>
-          </ol>
-        </p>
-
-        <figure xml:id="figure-upc-codes" permid="wdS">
-          <caption>A <acro>UPC</acro> code</caption>
-          <image width="50%" source="images/UPCcode"/>
-        </figure>
-      </statement>
-    </exercise>
-
-    <exercise permid="RLJ">
-      <statement>
-        <p permid="clb">
-          It is often useful to use an inner product notation for this type of error detection scheme;
-          hence, we will use the notion
-          <me permid="eYD">
-            (d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots, w_k ) \equiv 0 \pmod{ n }
-          </me>
-          to mean
-          <me permid="LfM">
-            d_1 w_1 +  d_2 w_2 + \cdots +  d_k w_k  \equiv 0  \pmod{ n}
-          </me>.
-        </p>
-
-        <p permid="Isk">
-          Suppose that <m>(d_1, d_2, \ldots,
-          d_k ) \cdot (w_1, w_2, \ldots,
-          w_k ) \equiv 0 \pmod{ n}</m> is an error detection scheme for the <m>k</m>-digit identification number <m>d_1 d_2 \cdots d_k</m>,
-          where <m>0 \leq d_i \lt n</m>.
-          Prove that all single-digit errors are detected if and only if
-          <m>\gcd( w_i, n ) = 1</m> for <m>1 \leq i \leq k</m>.
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise permid="xSS">
-      <statement>
-        <p permid="ozt">
-          Let <m>(d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots,
-          w_k ) \equiv 0 \pmod{ n}</m> be an error detection scheme for the <m>k</m>-digit identification number <m>d_1 d_2 \cdots d_k</m>,
-          where <m>0 \leq d_i \lt n</m>.
-          Prove that all transposition errors of two digits <m>d_i</m> and <m>d_j</m> are detected if and only if
-          <m>\gcd( w_i - w_j, n ) = 1</m> for <m>i</m> and <m>j</m> between <m>1</m> and <m>k</m>.
-        </p>
-      </statement>
-    </exercise>
-
     <exercise permid="eab">
       <title><acro>ISBN</acro> Codes</title>
       <statement>
@@ -2168,12 +2058,6 @@
             <li permid="Kag">
               <p permid="jmK">
                 How many different <acro>ISBN</acro> codes are there?
-              </p>
-            </li>
-
-            <li permid="qhp">
-              <p permid="PtT">
-                Write a computer program that will calculate the check digit for the first nine digits of an <acro>ISBN</acro> code.
               </p>
             </li>
 
