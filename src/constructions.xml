@@ -414,16 +414,12 @@
       </paragraphs>
     </subsection>
 
-
   </section>
     <!-- Exercises with Solutions  -->
     <!-- File: fields.xml  -->
     <!-- Title: Fields -->
   <exercises xml:id="exercises-fields" filenamebase="fields" permid="Lvl">
     <title>Exercises</title>
-
-
-
 
     <exercise number="6" permid="prI">
       <statement>
@@ -456,8 +452,6 @@
       </hint>
     </exercise>
 
-
-
     <exercise number="19" permid="rgV">
       <statement>
         <p permid="ubO">
@@ -466,11 +460,6 @@
         </p>
       </statement>
     </exercise>
-
-    <todo>Fix this proof.</todo>
-
-
-
 
   </exercises>
 
