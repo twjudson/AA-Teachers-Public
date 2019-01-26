@@ -7,26 +7,26 @@
 <!-- This file is part of the book                    -->
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="poly" permid="tPt">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="poly">
   <title>Polynomials</title>
-  <introduction permid="VBe">
-    <p permid="Djs">
+  <introduction>
+    <p>
       Most people are fairly familiar with polynomials by the time they begin to study abstract algebra.
       When we examine polynomial expressions such as
-      <md permid="Lcm">
+      <md>
         <mrow>p(x) &amp; = x^3 -3x +2</mrow>
         <mrow>q(x) &amp; = 3x^2 -6x +5</mrow>
       </md>,
       we have a pretty good idea of what
       <m>p(x) + q(x)</m> and <m>p(x) q(x)</m> mean.
       We just add and multiply polynomials as functions; that is,
-      <md permid="rjv">
+      <md>
         <mrow>(p +q)(x) &amp; = p(x) + q(x)</mrow>
         <mrow>&amp; =  ( x^3 - 3 x + 2 ) + ( 3 x^2 - 6 x + 5 )</mrow>
         <mrow>&amp; = x^3 + 3 x^2 - 9 x + 7</mrow>
       </md>
       and
-      <md permid="XqE">
+      <md>
         <mrow>(p q)(x) &amp; = p(x)  q(x)</mrow>
         <mrow>&amp; =  ( x^3 - 3 x + 2 )  ( 3 x^2 - 6 x + 5 )</mrow>
         <mrow>&amp; = 3 x^5 - 6 x^4 - 4 x^3 + 24 x^2 - 27 x + 10</mrow>
@@ -39,12 +39,12 @@
     </p>
   </introduction>
 
-  <section xml:id="section-poly-rings" permid="Djf">
+  <section xml:id="section-poly-rings">
     <title>Polynomial Rings</title>
-    <p permid="NWS">
+    <p>
       Throughout this chapter we shall assume that <m>R</m> is a commutative ring with identity.
       Any expression of the form
-      <me permid="DxN">
+      <me>
         f(x) = \sum^{n}_{i=0} a_i x^i = a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n
       </me>,
       where <m>a_i \in R</m> and <m>a_n \neq 0</m>,
@@ -80,7 +80,7 @@
 
       Two polynomials are equal exactly when their corresponding coefficients are equal; that is,
       if we let
-      <md permid="PMf">
+      <md>
         <mrow>p(x) &amp; = a_0 + a_1 x + \cdots + a_n x^n</mrow>
         <mrow>q(x) &amp; = b_0 + b_1 x + \cdots + b_m x^m</mrow>
       </md>,
@@ -88,40 +88,40 @@
       <m>a_i = b_i</m> for all <m>i \geq 0</m>.
     </p>
 
-    <p permid="ueb">
+    <p>
       To show that the set of all polynomials forms a ring,
       we must first define addition and multiplication.
       We define the sum of two polynomials as follows.
       Let
-      <md permid="ooP">
+      <md>
         <mrow>p(x) &amp; = a_0 + a_1 x + \cdots + a_n x^n</mrow>
         <mrow>q(x) &amp; = b_0 + b_1 x + \cdots + b_m x^m</mrow>
       </md>.
       Then the sum of <m>p(x)</m> and <m>q(x)</m> is
-      <me permid="vTo">
+      <me>
         p(x) + q(x) = c_0 + c_1 x + \cdots + c_k x^k
       </me>,
       where <m>c_i = a_i + b_i</m> for each <m>i</m>.
       We define the product of <m>p(x)</m> and <m>q(x)</m> to be
-      <me permid="cax">
+      <me>
         p(x) q(x) = c_0 + c_1 x + \cdots + c_{m + n} x^{m + n}
       </me>,
       where
-      <me permid="IhG">
+      <me>
         c_i = \sum_{k = 0}^i a_k b_{i - k} = a_0  b_i + a_1 b_{i -1} + \cdots + a_{i -1} b _1 + a_i b_0
       </me>
       for each <m>i</m>.
       Notice that in each case some of the coefficients may be zero.
     </p>
 
-    <example xml:id="example-poly-operations" permid="YvK">
-      <p permid="hBo">
+    <example xml:id="example-poly-operations">
+      <p>
         Suppose that
-        <me permid="UvY">
+        <me>
           p(x) = 3 + 0 x + 0 x^2 + 2 x^3 + 0 x^4
         </me>
         and
-        <me permid="ADh">
+        <me>
           q(x) = 2 + 0 x - x^2 + 0 x^3 + 4 x^4
         </me>
         are polynomials in <m>{\mathbb Z}[x]</m>.
@@ -130,21 +130,21 @@
         In this case we  would write
         <m>p(x) =  3 + 2 x^3</m> and <m>q(x) = 2 - x^2 + 4 x^4</m>.
         The sum of these two polynomials is
-        <me permid="gKq">
+        <me>
           p(x) + q(x)= 5 - x^2 + 2 x^3 + 4 x^4
         </me>.
         The product,
-        <me permid="MRz">
+        <me>
           p(x) q(x) = (3 + 2 x^3)( 2 - x^2 + 4 x^4 ) =  6 - 3x^2 + 4 x^3 + 12 x^4  - 2 x^5 + 8 x^7
         </me>,
         can be calculated either by determining the <m>c_i</m>s in the definition or by simply multiplying polynomials in the same way as we have always done.
       </p>
     </example>
 
-    <example xml:id="example-poly-integral-domains" permid="ECT">
-      <p permid="NIx">
+    <example xml:id="example-poly-integral-domains">
+      <p>
         Let
-        <me permid="sYI">
+        <me>
           p(x) = 3 + 3 x^3 \qquad \text{and} \qquad q(x) = 4 + 4 x^2 + 4 x^4
         </me>
         be polynomials in <m>{\mathbb Z}_{12}[x]</m>.
@@ -154,16 +154,16 @@
       </p>
     </example>
 
-    <theorem xml:id="theorem-poly-1" permid="CNG">
+    <theorem xml:id="theorem-poly-1">
       <statement>
-        <p permid="fMb">
+        <p>
           Let <m>R</m> be a commutative ring with identity.
           Then <m>R[x]</m> is a commutative ring with identity.
         </p>
       </statement>
 
-      <proof permid="NWF">
-        <p permid="UDc">
+      <proof>
+        <p>
           Our first task is to show that <m>R[x]</m> is an abelian group under polynomial addition.
           The zero polynomial, <m>f(x) = 0</m>, is the additive identity.
           Given a polynomial <m>p(x) = \sum_{i = 0}^{n} a_i x^i</m>,
@@ -171,15 +171,15 @@
           Commutativity and associativity follow immediately from the definition of polynomial addition and from the fact that addition in <m>R</m> is both commutative and associative.
         </p>
 
-        <p permid="AKl">
+        <p>
           To show that polynomial multiplication is associative, let
-          <md permid="ZfR">
+          <md>
             <mrow>p(x) &amp; = \sum_{i = 0}^{m} a_i x^i,</mrow>
             <mrow>q(x) &amp; = \sum_{i = 0}^{n} b_i x^i,</mrow>
             <mrow>r(x) &amp; = \sum_{i = 0}^{p} c_i x^i</mrow>
           </md>.
           Then
-          <md permid="Fna">
+          <md>
             <mrow>[p(x) q(x)] r(x) &amp; = \left[ \left( \sum_{i=0}^{m} a_i x^i  \right) \left(  \sum_{i=0}^{n} b_i x^i \right) \right] \left( \sum_{i = 0}^{p} c_i x^i \right)</mrow>
             <mrow>&amp; = \left[ \sum_{i = 0}^{m+n} \left(  \sum_{j = 0}^{i} a_j b_{i - j} \right) x^i \right] \left( \sum_{i = 0}^{p} c_i x^i \right)</mrow>
             <mrow>&amp; = \sum_{i = 0}^{m + n + p} \left[ \sum_{j = 0}^{i} \left( \sum_{k=0}^j a_k b_{j-k} \right) c_{i-j} \right] x^i</mrow>
@@ -198,9 +198,9 @@
         <!-- TWJ 17/1/2013 -->
         <!-- Subscript typo corrected in the above associativity proof.  Suggested by  M. Sergeyev. -->
         <!-- TWJ 5/2/2013 -->
-    <proposition xml:id="proposition-poly-integral-domain" permid="Hxz">
+    <proposition xml:id="proposition-poly-integral-domain">
       <statement>
-        <p permid="wKm">
+        <p>
           Let <m>p(x)</m> and <m>q(x)</m> be polynomials in <m>R[x]</m>,
           where <m>R</m> is an integral domain.
           Then <m>\deg p(x) + \deg q(x) = \deg( p(x) q(x) )</m>.
@@ -208,14 +208,14 @@
         </p>
       </statement>
 
-      <proof permid="eUQ">
-        <p permid="gRu">
+      <proof>
+        <p>
           Suppose that we have two nonzero polynomials
-          <me permid="luj">
+          <me>
             p(x) = a_m x^m + \cdots + a_1 x + a_0
           </me>
           and
-          <me permid="RBs">
+          <me>
             q(x) = b_n x^n + \cdots + b_1 x + b_0
           </me>
           with <m>a_m \neq 0</m> and <m>b_n \neq 0</m>.
@@ -233,7 +233,7 @@
     </proposition>
         <!-- Changed p and q to p(x) and q(x).  Suggested by  P. Diethelm. -->
         <!-- TWJ 24/4/2013 -->
-    <p permid="alk">
+    <p>
       We also want to consider polynomials in two or more variables,
       such as <m>x^2 - 3 x y + 2 y^3</m>.
       Let <m>R</m> be a ring and suppose that we are given two indeterminates <m>x</m> and <m>y</m>.
@@ -253,9 +253,9 @@
 
     </p>
 
-    <theorem xml:id="theorem-poly-3" permid="iUP">
+    <theorem xml:id="theorem-poly-3">
       <statement>
-        <p permid="LTk">
+        <p>
           Let <m>R</m> be a commutative ring with identity and <m>\alpha \in R</m>.
           Then we have a ring homomorphism  <m>\phi_{\alpha} : R[x] \rightarrow R</m> defined by
 
@@ -264,20 +264,20 @@
             <description>evaluation homomorphism at <m>\alpha</m></description>
           </notation>
 
-          <me permid="xIB">
+          <me>
             \phi_{\alpha} (p(x) ) = p( \alpha ) = a_n \alpha^n + \cdots + a_1 \alpha + a_0
           </me>,
           where <m>p( x ) = a_n x^n + \cdots + a_1 x + a_0</m>.
         </p>
       </statement>
 
-      <proof permid="udO">
-        <p permid="MYD">
+      <proof>
+        <p>
           Let <m>p(x) = \sum_{i = 0}^n a_i x^i</m> and <m>q(x) = \sum_{i = 0}^m b_i x^i</m>.
           It is easy to show that <m>\phi_{\alpha}(p(x) + q(x)) = \phi_{\alpha}(p(x)) + \phi_{\alpha}(q(x))</m>.
           To show that multiplication is preserved under the map <m>\phi_{\alpha}</m>,
           observe that
-          <md permid="dPK">
+          <md>
             <mrow>\phi_{\alpha} (p(x) ) \phi_{\alpha} (q(x)) &amp; = p( \alpha ) q(\alpha)</mrow>
             <mrow>&amp; = \left( \sum_{i = 0}^n a_i \alpha^i \right) \left( \sum_{i = 0}^m b_i \alpha^i \right)</mrow>
             <mrow>&amp; = \sum_{i = 0}^{m + n} \left( \sum_{k = 0}^i a_k b_{i - k} \right) \alpha^i</mrow>
@@ -287,15 +287,15 @@
       </proof>
     </theorem>
 
-    <p permid="Gst">
+    <p>
       The map <m>\phi_{\alpha} : R[x] \rightarrow R</m> is called the
       <term>evaluation homomorphism</term><idx><h>Homomorphism</h><h>evaluation</h></idx> at <m>\alpha</m>.
     </p>
   </section>
 
-  <section xml:id="section-poly-division-algorithm" permid="jqo">
+  <section xml:id="section-poly-division-algorithm">
     <title>The Division Algorithm</title>
-    <p permid="mzC">
+    <p>
       Recall that the division algorithm for integers (<xref ref="theorem-integers-division_algorithm"/>) says that if <m>a</m> and <m>b</m> are integers with <m>b \gt 0</m>,
       then there exist unique integers <m>q</m> and <m>r</m> such that <m>a = bq + r</m>,
       where <m>0 \leq r \lt b</m>.
@@ -306,7 +306,7 @@
       it is worthwhile to review <xref ref="theorem-integers-division_algorithm"/> at this point.
     </p>
 
-    <theorem permid="PbY">
+    <theorem>
       <title>Division Algorithm</title>
       <idx>
       <h>Division algorithm</h>
@@ -317,12 +317,12 @@
       <h>division</h>
       </idx>
       <statement>
-        <p permid="sat">
+        <p>
           Let <m>f(x)</m> and <m>g(x)</m> be polynomials in <m>F[x]</m>,
           where <m>F</m> is a field and  <m>g(x)</m> is a nonzero polynomial.
           Then there exist unique polynomials <m>q(x),
           r(x) \in F[x]</m> such that
-          <me permid="JWT">
+          <me>
             f(x) = g(x) q(x) + r(x)
           </me>,
           where either  <m>\deg r(x) \lt \deg g(x)</m> or <m>r(x)</m> is the zero polynomial.
@@ -330,11 +330,11 @@
       </statement>
             <!-- Statement of the division algorithm and the proof corrected.  Suggested by  P. Diethelm. -->
             <!-- TWJ 16/8/2013 -->
-      <proof permid="akX">
-        <p permid="tfM">
+      <proof>
+        <p>
           We will first consider the existence of <m>q(x)</m> and <m>r(x)</m>.
           If <m>f(x)</m> is the zero polynomial, then
-          <me permid="qec">
+          <me>
             0 = 0 \cdot g(x) + 0;
           </me>
           hence, both <m>q</m> and <m>r</m> must also be the zero polynomial.
@@ -344,45 +344,45 @@
           <m>q(x) = 0</m> and <m>r(x) = f(x)</m>.
           Hence, we may assume that <m>m  \leq n</m> and proceed by induction on <m>n</m>.
           If
-          <md permid="uNV">
+          <md>
             <mrow>f(x) &amp; = a_n x^n + a_{n-1} x^{n - 1} + \cdots + a_1 x + a_0</mrow>
             <mrow>g(x) &amp; = b_m x^m + b_{m-1} x^{m - 1} + \cdots + b_1 x + b_0</mrow>
           </md>
           the polynomial
-          <me permid="Wll">
+          <me>
             f'(x) = f(x) - \frac{a_n}{b_m} x^{n - m} g(x)
           </me>
           has degree less than <m>n</m> or is the zero polynomial.
           By induction,
           there exist polynomials <m>q'(x)</m> and <m>r(x)</m> such that
-          <me permid="Csu">
+          <me>
             f'(x) = q'(x) g(x) + r(x)
           </me>,
           where <m>r(x) = 0</m> or the degree of <m>r(x)</m> is less than the degree of <m>g(x)</m>.
           Now let
-          <me permid="izD">
+          <me>
             q(x) = q'(x) + \frac{a_n}{b_m} x^{n - m}
           </me>.
           Then
-          <me permid="OGM">
+          <me>
             f(x) = g(x) q(x) + r(x)
           </me>,
           with <m>r(x)</m> the zero polynomial or <m>\deg r(x) \lt \deg g(x)</m>.
         </p>
 
-        <p permid="ZmV">
+        <p>
           To show that  <m>q(x)</m> and <m>r(x)</m> are unique,
           suppose that there exist two other polynomials <m>q_1(x)</m> and <m>r_1(x)</m> such that <m>f(x) = g(x) q_1(x) + r_1(x)</m> with
           <m>\deg r_1(x) \lt \deg g(x)</m> or <m>r_1(x) = 0</m>, so that
-          <me permid="aVe">
+          <me>
             f(x) = g(x) q(x) + r(x) = g(x) q_1(x) + r_1(x)
           </me>,
           and
-          <me permid="Hcn">
+          <me>
             g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)
           </me>.
           If <m>q(x) - q_1(x)</m> is not the zero polynomial, then
-          <me permid="njw">
+          <me>
             \deg( g(x) [q(x) - q_1(x) ] )= \deg( r_1(x) - r(x) ) \geq \deg g(x)
           </me>.
           However, the degrees of both <m>r(x)</m> and <m>r_1(x)</m> are strictly less than the degree of <m>g(x)</m>;
@@ -392,17 +392,17 @@
     </theorem>
         <!-- Changed g to g(x).  Suggested by  P. Diethelm. -->
         <!-- TWJ 24/4/2013 -->
-    <example xml:id="example-poly-division" permid="kKc">
-      <p permid="tPG">
+    <example xml:id="example-poly-division">
+      <p>
         The division algorithm merely formalizes long division of polynomials,
         a task we have been familiar with since high school.
         For example,
         suppose that we divide <m>x^3 - x^2 + 2 x - 3</m> by <m>x - 2</m>.
       </p>
 
-      <sidebyside width="40%" margins="auto" permid="ptV">
+      <sidebyside width="40%" margins="auto">
 
-        <tabular halign="right" permid="rxQ">
+        <tabular halign="right">
           <row>
             <cell/>
             <cell/>
@@ -503,50 +503,50 @@
 
       </sidebyside>
 
-      <p permid="ZWP">
+      <p>
         Hence, <m>x^3 - x^2 + 2 x - 3 = (x - 2) (x^2 + x + 4 ) + 5</m>.
       </p>
     </example>
 
-    <p permid="SGL">
+    <p>
       Let <m>p(x)</m> be a polynomial in <m>F[x]</m> and <m>\alpha \in F</m>.
       We say that <m>\alpha</m> is a <term>zero</term><idx><h>Polynomial</h><h>zero of</h></idx><idx><h>Zero</h><h>of a polynomial</h></idx> or
       <term>root</term><idx><h>Polynomial</h><h>root of</h></idx> of <m>p(x)</m> if <m>p(x)</m> is in the kernel of the evaluation homomorphism <m>\phi_{\alpha}</m>.
       All we are really saying here is that <m>\alpha</m> is a zero of <m>p(x)</m> if <m>p(\alpha) = 0</m>.
     </p>
 
-    <corollary xml:id="corollary-poly-factor" permid="zTa">
+    <corollary xml:id="corollary-poly-factor">
       <statement>
-        <p permid="pfN">
+        <p>
           Let <m>F</m> be a field.
           An element <m>\alpha \in F</m> is a zero of <m>p(x) \in F[x]</m> if and only if
           <m>x - \alpha</m> is a factor of <m>p(x)</m> in <m>F[x]</m>.
         </p>
       </statement>
 
-      <proof permid="Xqr">
-        <p permid="Fue">
+      <proof>
+        <p>
           Suppose that <m>\alpha \in F</m> and <m>p( \alpha ) = 0</m>.
           By the division algorithm,
           there exist polynomials <m>q(x)</m> and <m>r(x)</m> such that
-          <me permid="TqF">
+          <me>
             p(x) = (x -\alpha) q(x) + r(x)
           </me>
           and the degree of <m>r(x)</m> must be less than the degree of <m>x -\alpha</m>.
           Since the degree of <m>r(x)</m> is less than 1,
           <m>r(x) = a</m> for <m>a \in F</m>; therefore,
-          <me permid="zxO">
+          <me>
             p(x) = (x -\alpha) q(x) + a
           </me>.
           But
-          <me permid="fEX">
+          <me>
             0 = p(\alpha) = 0 \cdot q(\alpha) + a = a;
           </me>
           consequently, <m>p(x) = (x - \alpha) q(x)</m>,
           and <m>x - \alpha</m> is a factor of <m>p(x)</m>.
         </p>
 
-        <p permid="lBn">
+        <p>
           Conversely, suppose that <m>x - \alpha</m> is a factor of <m>p(x)</m>;
           say <m>p(x) = (x - \alpha) q(x)</m>.
           Then <m>p( \alpha ) = 0 \cdot q(\alpha) = 0</m>.
@@ -556,16 +556,16 @@
         <!-- changed x to \alpha in the appropriate places in the proof. -->
         <!-- Suggested by  P. Diethelm. -->
         <!-- TWJ 24/4/2013 -->
-    <corollary xml:id="corollary-poly-zeros" permid="gaj">
+    <corollary xml:id="corollary-poly-zeros">
       <statement>
-        <p permid="VmW">
+        <p>
           Let <m>F</m> be a field.
           A nonzero polynomial <m>p(x)</m> of degree <m>n</m> in <m>F[x]</m> can have at most <m>n</m> distinct zeros in <m>F</m>.
         </p>
       </statement>
 
-      <proof permid="DxA">
-        <p permid="RIw">
+      <proof>
+        <p>
           We will use induction on the degree of <m>p(x)</m>.
           If <m>\deg p(x) = 0</m>,
           then <m>p(x)</m> is a constant polynomial and has no zeros.
@@ -575,7 +575,7 @@
           then <m>a\alpha_1 + b = a\alpha_2 +b</m> or <m>\alpha_1 = \alpha_2</m>.
         </p>
 
-        <p permid="xPF">
+        <p>
           Now assume that <m>\deg p(x) \gt 1</m>.
           If <m>p(x)</m> does not have a zero in <m>F</m>, then we are done.
           On the other hand, if <m>\alpha</m> is a zero of <m>p(x)</m>,
@@ -593,7 +593,7 @@
       </proof>
     </corollary>
 
-    <p permid="yNU">
+    <p>
       Let <m>F</m> be a field.
       A monic polynomial <m>d(x)</m> is a
       <term>greatest common divisor</term><idx><h>Polynomial</h><h>greatest common divisor of</h></idx><idx><h>Greatest common divisor</h><h>of two polynomials</h></idx> of polynomials
@@ -607,12 +607,12 @@
       if <m>\gcd(p(x), q(x) ) = 1</m>.
     </p>
 
-    <proposition xml:id="proposition-poly-gcd" permid="nEI">
+    <proposition xml:id="proposition-poly-gcd">
       <statement>
-        <p permid="cRv">
+        <p>
           Let <m>F</m> be a field and suppose that <m>d(x)</m> is a greatest common divisor of two polynomials <m>p(x)</m> and <m>q(x)</m> in <m>F[x]</m>.
           Then there exist polynomials <m>r(x)</m> and <m>s(x)</m> such that
-          <me permid="LMg">
+          <me>
             d(x) = r(x) p(x) + s(x) q(x)
           </me>.
           Furthermore,
@@ -620,10 +620,10 @@
         </p>
       </statement>
 
-      <proof permid="LbZ">
-        <p permid="dWO">
+      <proof>
+        <p>
           Let <m>d(x)</m> be the monic polynomial of smallest degree in the set
-          <me permid="rTp">
+          <me>
             S = \{ f(x) p(x) + g(x) q(x) : f(x), g(x) \in F[x]  \}
           </me>.
           We can write <m>d(x) = r(x) p(x) + s(x) q(x)</m> for two polynomials  <m>r(x)</m> and <m>s(x)</m> in <m>F[x]</m>.
@@ -633,7 +633,7 @@
           there exist polynomials <m>a(x)</m> and <m>b(x)</m> such that <m>p(x) = a(x) d(x) + b(x)</m>,
           where <m>b(x)</m> is either the zero polynomial or <m>\deg b(x) \lt \deg d(x)</m>.
           Therefore,
-          <md permid="Yay">
+          <md>
             <mrow>b(x) &amp; = p(x) - a(x) d(x)</mrow>
             <mrow>&amp; = p(x) - a(x)( r(x) p(x) + s(x) q(x))</mrow>
             <mrow>&amp; = p(x) - a(x) r(x) p(x) - a(x)  s(x) q(x)</mrow>
@@ -646,7 +646,7 @@
           hence, <m>d(x)</m> is a common divisor of <m>p(x)</m> and <m>q(x)</m>.
         </p>
 
-        <p permid="KdX">
+        <p>
           To show that <m>d(x)</m> is a greatest common divisor of <m>p(x)</m> and <m>q(x)</m>,
           suppose that <m>d'(x)</m> is another common divisor of <m>p(x)</m> and <m>q(x)</m>.
           We will show that <m>d'(x) \mid d(x)</m>.
@@ -654,7 +654,7 @@
           there exist polynomials <m>u(x)</m> and <m>v(x)</m> such that
           <m>p(x) = u(x) d'(x)</m> and <m>q(x) = v(x) d'(x)</m>.
           Therefore,
-          <md permid="EhH">
+          <md>
             <mrow>d(x) &amp; = r(x) p(x) + s(x) q(x)</mrow>
             <mrow>&amp; =  r(x) u(x) d'(x) + s(x) v(x) d'(x)</mrow>
             <mrow>&amp; = d'(x) [r(x) u(x) + s(x) v(x)]</mrow>
@@ -665,12 +665,12 @@
             <!-- removed and extra parenthesis below. -->
             <!-- Suggested by  P. Diethelm. -->
             <!-- TWJ 24/4/2013 -->
-        <p permid="qlg">
+        <p>
           Finally, we must show that the greatest common divisor of <m>p(x)</m> and <m>q(x)</m> is unique.
           Suppose that <m>d'(x)</m> is another greatest common divisor of <m>p(x)</m> and <m>q(x)</m>.
           We have just shown that there exist polynomials <m>u(x)</m> and <m>v(x)</m> in <m>F[x]</m> such that <m>d(x) = d'(x)[r(x) u(x) + s(x) v(x)]</m>.
           Since
-          <me permid="koQ">
+          <me>
             \deg d(x) =  \deg d'(x) + \deg[r(x) u(x) + s(x) v(x)]
           </me>
           and <m>d(x)</m> and <m>d'(x)</m> are both greatest common divisors,
@@ -681,15 +681,15 @@
       </proof>
     </proposition>
 
-    <p permid="eVd">
+    <p>
       Notice the similarity between the proof of <xref ref="proposition-poly-gcd"/> and the proof of <xref ref="theorem-integers-gcd"/>.
     </p>
   </section>
 
-  <section xml:id="section-irreducible-poly" permid="Pxx">
+  <section xml:id="section-irreducible-poly">
     <title>Irreducible Polynomials</title>
-    <introduction permid="BIn">
-      <p permid="jqB">
+    <introduction>
+      <p>
         A nonconstant polynomial <m>f(x) \in F[x]</m> is
         <term>irreducible</term><idx><h>Polynomial</h><h>irreducible</h></idx>
             <idx><h>Irreducible polynomial</h></idx>
@@ -699,22 +699,22 @@
         <q>prime numbers</q> of polynomial rings.
       </p>
 
-      <example xml:id="example-poly-irreducible" permid="QRl">
-        <p permid="GdY">
+      <example xml:id="example-poly-irreducible">
+        <p>
           The polynomial <m>x^2 - 2 \in {\mathbb Q}[x]</m> is irreducible since it cannot be factored any further over the rational numbers.
           Similarly, <m>x^2 + 1</m> is irreducible over the real numbers.
         </p>
       </example>
 
-      <example xml:id="example-poly-finite" permid="wYu">
-        <p permid="mlh">
+      <example xml:id="example-poly-finite">
+        <p>
           The polynomial <m>p(x) = x^3 + x^2 + 2</m> is irreducible over <m>{\mathbb Z}_3[x]</m>.
           Suppose that this polynomial was reducible over <m>{\mathbb Z}_3[x]</m>.
           By the division algorithm there would have to be a factor of the form <m>x - a</m>,
           where <m>a</m> is some element in <m>{\mathbb Z}_3[x]</m>.
           Hence, it would have to be true that <m>p(a) = 0</m>.
           However,
-          <md permid="QvZ">
+          <md>
             <mrow>p(0) &amp; = 2</mrow>
             <mrow>p(1) &amp; = 1</mrow>
             <mrow>p(2) &amp; = 2</mrow>
@@ -724,12 +724,12 @@
         </p>
       </example>
 
-      <lemma xml:id="lemma-poly-integer-coef" permid="TLR">
+      <lemma xml:id="lemma-poly-integer-coef">
         <statement>
-          <p permid="IYE">
+          <p>
             Let <m>p(x) \in {\mathbb Q}[x]</m>.
             Then
-            <me permid="wDi">
+            <me>
               p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n)
             </me>,
             where <m>r, s, a_0, \ldots, a_n</m> are integers,
@@ -738,27 +738,27 @@
           </p>
         </statement>
 
-        <proof permid="rji">
-          <p permid="Wsp">
+        <proof>
+          <p>
             Suppose that
-            <me permid="cKr">
+            <me>
               p(x) = \frac{b_0}{c_0} + \frac{b_1}{c_1} x + \cdots + \frac{b_n}{c_n} x^n
             </me>,
             where the <m>b_i</m>'s and the <m>c_i</m>'s are integers.
             We can rewrite <m>p(x)</m> as
-            <me permid="IRA">
+            <me>
               p(x) = \frac{1}{c_0 \cdots c_n} (d_0 + d_1 x + \cdots + d_n x^n)
             </me>,
             where <m>d_0, \ldots, d_n</m> are integers.
             Let <m>d</m> be the greatest common divisor of <m>d_0, \ldots, d_n</m>.
             Then
-            <me permid="oYJ">
+            <me>
               p(x) = \frac{d}{c_0 \cdots c_n} (a_0 + a_1 x + \cdots + a_n x^n)
             </me>,
             where <m>d_i = d a_i</m> and the <m>a_i</m>'s are relatively prime.
             Reducing <m>d /(c_0 \cdots c_n)</m> to its lowest terms,
             we can write
-            <me permid="VfS">
+            <me>
               p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n)
             </me>,
             where <m>\gcd(r,s) = 1</m>.
@@ -766,10 +766,10 @@
         </proof>
       </lemma>
 
-      <theorem xml:id="theorem-gauss-lemma" permid="vjh">
+      <theorem xml:id="theorem-gauss-lemma">
         <title>Gauss's Lemma</title>
         <statement>
-          <p permid="YhC">
+          <p>
             Let <m>p(x) \in {\mathbb Z}[x]</m> be a monic polynomial such that <m>p(x)</m> factors into a product of two polynomials <m>\alpha(x)</m> and
             <m>\beta(x)</m> in <m>{\mathbb Q}[x]</m>,
             where the degrees of both <m>\alpha(x)</m> and
@@ -780,23 +780,23 @@
           </p>
         </statement>
 
-        <proof permid="Gsg">
-          <p permid="Czy">
+        <proof>
+          <p>
             By <xref ref="lemma-poly-integer-coef"/>, we can assume that
-            <md permid="huk">
+            <md>
               <mrow>\alpha(x)  &amp; = \frac{c_1}{d_1} (a_0 + a_1 x + \cdots + a_m x^m ) = \frac{c_1}{d_1} \alpha_1(x)</mrow>
               <mrow>\beta(x)  &amp; = \frac{c_2}{d_2} (b_0 + b_1 x + \cdots + b_n x^n) = \frac{c_2}{d_2} \beta_1(x)</mrow>
             </md>,
             where the <m>a_i</m>'s are relatively prime and the <m>b_i</m>'s are relatively prime.
             Consequently,
-            <me permid="Bnb">
+            <me>
               p(x) = \alpha(x) \beta(x) = \frac{c_1 c_2}{d_1 d_2} \alpha_1(x) \beta_1(x) = \frac{c}{d} \alpha_1(x) \beta_1(x)
             </me>,
             where <m>c/d</m> is the product of <m>c_1/d_1</m> and <m>c_2/d_2</m> expressed in lowest terms.
             Hence, <m>d p(x) = c \alpha_1(x) \beta_1(x)</m>.
           </p>
 
-          <p permid="iGH">
+          <p>
             If <m>d = 1</m>,
             then <m>c a_m b_n = 1</m> since <m>p(x)</m> is a monic polynomial.
             Hence, either <m>c=1</m> or <m>c = -1</m>.
@@ -811,7 +811,7 @@
             The case in which <m>c = -1</m> can be handled similarly.
           </p>
 
-          <p permid="ONQ">
+          <p>
             Now suppose that <m>d \neq 1</m>.
             Since <m>\gcd(c, d) = 1</m>,
             there exists a prime <m>p</m> such that
@@ -834,9 +834,9 @@
         </proof>
       </theorem>
 
-      <corollary xml:id="corollary-rational-roots-theorem" permid="Mhs">
+      <corollary xml:id="corollary-rational-roots-theorem">
         <statement>
-          <p permid="Buf">
+          <p>
             Let <m>p(x) = x^n + a_{n - 1} x^{n - 1} + \cdots + a_0</m> be a polynomial with coefficients in
             <m>{\mathbb Z}</m> and <m>a_0 \neq 0</m>.
             If <m>p(x)</m> has a zero in <m>{\mathbb Q}</m>,
@@ -845,14 +845,14 @@
           </p>
         </statement>
 
-        <proof permid="jEJ">
-          <p permid="uUZ">
+        <proof>
+          <p>
             Let <m>p(x)</m> have a zero <m>a \in {\mathbb Q}</m>.
             Then <m>p(x)</m> must have a linear factor <m>x - a</m>.
             By Gauss's Lemma,
             <m>p(x)</m> has a factorization with a linear factor in <m>{\mathbb Z}[x]</m>.
             Hence, for some <m>\alpha \in {\mathbb Z}</m>
-            <me permid="NBt">
+            <me>
               p(x) = (x - \alpha)( x^{n - 1} + \cdots - a_0 / \alpha )
             </me>.
             Thus <m>a_0 /\alpha \in {\mathbb Z}</m> and so <m>\alpha \mid a_0</m>.
@@ -860,8 +860,8 @@
         </proof>
       </corollary>
 
-      <example xml:id="example-poly-factor" permid="dfD">
-        <p permid="Ssq">
+      <example xml:id="example-poly-factor">
+        <p>
           Let <m>p(x) = x^4 - 2 x^3 + x + 1</m>.
           We shall show that <m>p(x)</m> is irreducible over <m>{\mathbb Q}[x]</m>.
           Assume that <m>p(x)</m> is reducible.
@@ -871,7 +871,7 @@
           or <m>p(x)</m> has two quadratic factors.
         </p>
 
-        <p permid="yzz">
+        <p>
           If <m>p(x)</m> has a linear factor in <m>{\mathbb Q}[x]</m>,
           then it has a zero in <m>{\mathbb Z}</m>.
           By <xref ref="corollary-rational-roots-theorem"/>,
@@ -881,15 +881,15 @@
           we have eliminated the possibility that <m>p(x)</m> has any linear factors.
         </p>
 
-        <p permid="eGI">
+        <p>
           Therefore, if <m>p(x)</m> is reducible it must factor into two quadratic polynomials, say
-          <md permid="ZPL">
+          <md>
             <mrow>p(x) &amp; = (x^2 + ax + b )( x^2 + cx + d )</mrow>
             <mrow>&amp; = x^4 + (a + c)x^3 + (ac + b + d)x^2 + (ad + bc)x + bd</mrow>
           </md>,
           where each factor is in <m>{\mathbb Z}[x]</m> by Gauss's Lemma.
           Hence,
-          <md permid="FWU">
+          <md>
             <mrow>a + c &amp; = - 2</mrow>
             <mrow>ac + b + d &amp; = 0</mrow>
             <mrow>ad + bc &amp; = 1</mrow>
@@ -898,7 +898,7 @@
           Since <m>bd = 1</m>, either
           <m>b = d = 1</m> or <m> b = d = -1</m>.
           In either case <m>b = d</m> and so
-          <me permid="tIC">
+          <me>
             ad + bc  = b( a + c ) = 1
           </me>.
           Since <m>a + c = -2</m>, we know that <m>-2b = 1</m>.
@@ -907,15 +907,15 @@
         </p>
       </example>
             <!--  2010/05/18 R Beezer, fixed n-1 in range for p \mid a_i -->
-      <theorem xml:id="theorem-eisenstein" permid="bqq">
+      <theorem xml:id="theorem-eisenstein">
         <title>Eisenstein's Criterion</title>
         <idx>
         <h>Eisenstein's Criterion</h>
         </idx>
         <statement>
-          <p permid="EoL">
+          <p>
             Let <m>p</m> be a prime and suppose that
-            <me permid="med">
+            <me>
               f(x) = a_n x^n + \cdots + a_0 \in {\mathbb Z}[x]
             </me>.
             If <m>p \mid a_i</m> for <m>i = 0, 1, \ldots,
@@ -924,12 +924,12 @@
           </p>
         </statement>
 
-        <proof permid="mzp">
-          <p permid="bci">
+        <proof>
+          <p>
             By Gauss's Lemma,
             we need only show that <m>f(x)</m> does not factor into polynomials of lower degree in <m>{\mathbb Z}[x]</m>.
             Let
-            <me permid="Slm">
+            <me>
               f(x) = (b_rx^r + \cdots + b_0)(c_s x^s + \cdots + c_0 )
             </me>
             be a factorization in <m>{\mathbb Z}[x]</m>,
@@ -942,7 +942,7 @@
             neither <m>b_r</m> nor <m>c_s</m> is divisible by <m>p</m>.
             Let <m>m</m> be the smallest value of <m>k</m> such that <m>p \notdivide c_k</m>.
             Then
-            <me permid="ysv">
+            <me>
               a_m = b_0 c_m + b_1 c_{m - 1} + \cdots + b_m c_0
             </me>
             is not divisible by <m>p</m>,
@@ -953,10 +953,10 @@
         </proof>
       </theorem>
 
-      <example xml:id="example-poly-eisenstein" permid="JmM">
-        <p permid="KNR">
+      <example xml:id="example-poly-eisenstein">
+        <p>
           The polynomial
-          <me permid="ezE">
+          <me>
             f(x) = 16 x^5 - 9 x^4 + 3x^2 + 6 x - 21
           </me>
           is easily seen to be irreducible over
@@ -966,7 +966,7 @@
             <!-- changed p(x) to f(x) -->
             <!-- Suggested by  P. Diethelm. -->
             <!-- TWJ 24/4/2013 -->
-      <p permid="PxK">
+      <p>
         Eisenstein's Criterion is more useful in constructing irreducible polynomials of a certain degree over
         <m>{\mathbb Q}</m> than in determining the irreducibility of an arbitrary polynomial in <m>{\mathbb Q}[x]</m>:
         given an arbitrary polynomial,
@@ -975,34 +975,34 @@
       </p>
     </introduction>
 
-    <subsection xml:id="poly-subsection-ideals" permid="ZWC">
+    <subsection xml:id="poly-subsection-ideals">
       <title>Ideals in <m>F\lbrack x \rbrack</m></title>
-      <p permid="iVc">
+      <p>
         Let <m>F</m> be a field.
         Recall that a principal ideal in <m>F[x]</m> is an ideal
         <m>\langle p(x) \rangle</m> generated by some polynomial <m>p(x)</m>; that is,
-        <me permid="KGN">
+        <me>
           \langle p(x) \rangle = \{ p(x) q(x) : q(x) \in F[x] \}
         </me>.
       </p>
 
-      <example xml:id="example-poly-ideal" permid="oah">
-        <p permid="qVa">
+      <example xml:id="example-poly-ideal">
+        <p>
           The polynomial <m>x^2</m> in <m>F[x]</m> generates the ideal
           <m>\langle x^2 \rangle</m> consisting of all polynomials with no constant term or term of degree <m>1</m>.
         </p>
       </example>
 
-      <theorem xml:id="theorem-poly-principal-ideal" permid="bLP">
+      <theorem xml:id="theorem-poly-principal-ideal">
         <statement>
-          <p permid="kvU">
+          <p>
             If <m>F</m> is a field,
             then every ideal in <m>F[x]</m> is a principal ideal.
           </p>
         </statement>
 
-        <proof permid="SGy">
-          <p permid="Hjr">
+        <proof>
+          <p>
             Let <m>I</m> be an ideal of <m>F[x]</m>.
             If <m>I</m> is the zero ideal,
             the theorem is easily true.
@@ -1014,7 +1014,7 @@
             <m>\langle 1 \rangle = I = F[x]</m> and <m>I</m> is again a principal ideal.
           </p>
 
-          <p permid="nqA">
+          <p>
             Now assume that <m>\deg p(x) \geq 1</m> and let <m>f(x)</m> be any element in <m>I</m>.
             By the division algorithm there exist <m>q(x)</m> and <m>r(x)</m> in <m>F[x]</m> such that
             <m>f(x) = p(x) q(x) + r(x)</m> and <m>\deg r(x) \lt \deg p(x)</m>.
@@ -1029,8 +1029,8 @@
         </proof>
       </theorem>
 
-      <example xml:id="example-poly-xy" permid="Uhq">
-        <p permid="Xcj">
+      <example xml:id="example-poly-xy">
+        <p>
           It is not the case that every ideal in the ring <m>F[x,y]</m> is a principal ideal.
           Consider the ideal of <m>F[x, y]</m> generated by the polynomials <m>x</m> and <m>y</m>.
           This is the ideal of <m>F[x, y]</m> consisting of all polynomials with no constant term.
@@ -1039,16 +1039,16 @@
         </p>
       </example>
 
-      <theorem xml:id="theorem-max-ideal-poly" permid="HSY">
+      <theorem xml:id="theorem-max-ideal-poly">
         <statement>
-          <p permid="QDd">
+          <p>
             Let <m>F</m> be a field and suppose that <m>p(x) \in F[x]</m>.
             Then the ideal generated by <m>p(x)</m> is maximal if and only if <m>p(x)</m> is irreducible.
           </p>
         </statement>
 
-        <proof permid="yNH">
-          <p permid="TxJ">
+        <proof>
+          <p>
             Suppose that <m>p(x)</m> generates a maximal ideal of <m>F[x]</m>.
             Then <m>\langle p(x) \rangle</m> is also a prime ideal of <m>F[x]</m>.
             Since a maximal ideal must be properly contained inside <m>F[x]</m>,
@@ -1062,7 +1062,7 @@
             which is impossible since <m>\langle p(x) \rangle</m> is maximal.
           </p>
 
-          <p permid="zES">
+          <p>
             Conversely, suppose that <m>p(x)</m> is irreducible over <m>F[x]</m>.
             Let <m>I</m> be an ideal in <m>F[x]</m> containing <m>\langle p(x) \rangle</m>.
             By <xref ref="theorem-poly-principal-ideal"/>, <m>I</m> is a principal ideal;
@@ -1079,9 +1079,9 @@
         </proof>
       </theorem>
 
-      <paragraphs permid="XbW">
+      <paragraphs>
         <title>Sage</title>
-        <p permid="Pcl">
+        <p>
           Polynomial rings are very important for computational approaches to algebra,
           and so Sage makes it very easy to compute with polynomials,
           over rings, or over fields.
@@ -1091,9 +1091,9 @@
 
     </subsection>
 
-    <subsection xml:id="poly-subsection-historical-note" permid="GdL">
+    <subsection xml:id="poly-subsection-historical-note">
       <title>Historical Note</title>
-      <p permid="vju">
+      <p>
         Throughout history,
         the solution of polynomial equations has been a challenging problem.
         The Babylonians knew how to solve the equation <m>ax^2 + bx + c = 0</m>.
@@ -1105,12 +1105,12 @@
         This was taken as a challenge by the rest of the mathematical community.
       </p>
             <!-- % 2010/11/1 T Judson Spelling corrected Luca Pacioli (Thanks to Roberto Derenzi) -->
-      <p permid="bqD">
+      <p>
         Scipione del Ferro
             <idx><h>Ferro, Scipione del</h></idx>
         (1465<ndash/>1526), of the University of Bologna,
         solved the <q>depressed cubic,</q>
-        <me permid="qNW">
+        <me>
           ax^3 + cx + d = 0
         </me>.
         He kept his solution an absolute secret.
@@ -1129,7 +1129,7 @@
         (ca. 1506<ndash/>?).
       </p>
 
-      <p permid="HxM">
+      <p>
         Although Fior was not the equal of his teacher,
         he immediately issued a challenge to Niccolo Fontana (1499<ndash/>1557).
         Fontana was known as Tartaglia
@@ -1144,7 +1144,7 @@
         who faded into obscurity.
       </p>
 
-      <p permid="nEV">
+      <p>
         At this point another mathematician, Gerolamo Cardano
             <idx><h>Cardano, Gerolamo</h></idx>
         (1501<ndash/>1576), entered the story.
@@ -1153,13 +1153,13 @@
         Tartaglia refused several of his requests,
         then finally revealed the solution to Cardano after the latter swore an oath not to publish the secret or to pass it on to anyone else.
         Using the knowledge that he had obtained from Tartaglia, Cardano eventually solved the general cubic
-        <me permid="WVf">
+        <me>
           a x^3 + bx^2 + cx + d = 0
         </me>.
         Cardano shared the secret with his student, Ludovico Ferrari
             <idx><h>Ferrari, Ludovico</h></idx>
         (1522<ndash/>1565), who solved the general quartic equation,
-        <me permid="Dco">
+        <me>
           a x^4 + b x^3 + cx^2 + d x + e = 0
         </me>.
         In 1543, Cardano and Ferrari examined del Ferro's papers and discovered that he had also solved the depressed cubic.
@@ -1175,97 +1175,97 @@
     <!-- Exercises with Solutions  -->
     <!-- File: poly.xml  -->
     <!-- Title: Polynomials -->
-  <exercises xml:id="exercises-poly" filenamebase="poly" permid="eGv">
+  <exercises xml:id="exercises-poly" filenamebase="poly">
     <title>Exercises</title>
-    <exercise number="1" permid="Aoz">
+    <exercise number="1">
       <statement>
-        <p permid="bMc">
+        <p>
           List all of the polynomials of degree <m>3</m> or less in <m>{\mathbb Z}_2[x]</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="2" permid="gvI">
+    <exercise number="2">
       <statement>
-        <p permid="HTl">
+        <p>
           Compute each of the following.
 
-          <ol permid="qNJ">
-            <li permid="Uam">
-              <p permid="JfI">
+          <ol>
+            <li>
+              <p>
                 <m>(5x^2 + 3x - 4) + (4x^2 - x + 9)</m> in <m>{\mathbb Z}_{12}</m>
               </p>
             </li>
 
-            <li permid="Ahv">
-              <p permid="pmR">
+            <li>
+              <p>
                 <m>(5x^2 + 3x - 4) (4x^2 - x + 9)</m> in <m>{\mathbb Z}_{12}</m>
               </p>
             </li>
 
-            <li permid="goE">
-              <p permid="Vua">
+            <li>
+              <p>
                 <m>(7x^3 + 3x^2 - x) + (6x^2 - 8x + 4)</m> in <m>{\mathbb Z}_9</m>
               </p>
             </li>
 
-            <li permid="MvN">
-              <p permid="BBj">
+            <li>
+              <p>
                 <m>(3x^2 + 2x - 4) + (4x^2 + 2)</m> in <m>{\mathbb Z}_5</m>
               </p>
             </li>
 
-            <li permid="sCW">
-              <p permid="hIs">
+            <li>
+              <p>
                 <m>(3x^2 + 2x - 4) (4x^2 + 2)</m> in <m>{\mathbb Z}_5</m>
               </p>
             </li>
 
-            <li permid="YKf">
-              <p permid="NPB">
+            <li>
+              <p>
                 <m>(5x^2 + 3x - 2)^2</m> in <m>{\mathbb Z}_{12}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="cak">
-        <p permid="fch">
+      <hint>
+        <p>
           (a) <m>9x^2 + 2x + 5</m>; (b) <m>8x^4 + 7x^3 + 2x^2 + 7x</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="3" permid="MCR">
+    <exercise number="3">
       <statement>
-        <p permid="oau">
+        <p>
           Use the division algorithm to find <m>q(x)</m> and <m>r(x)</m> such that <m>a(x) = q(x) b(x) + r(x)</m> with
           <m>\deg r(x) \lt \deg b(x)</m> for each of the following pairs of polynomials.
 
-          <ol permid="WUS">
-            <li permid="pIq">
-              <p permid="eNM">
+          <ol>
+            <li>
+              <p>
                 <m>a(x) = 5 x^3 + 6x^2 - 3 x + 4</m> and
                 <m>b(x) = x - 2</m> in <m>{\mathbb Z}_7[x]</m>
               </p>
             </li>
 
-            <li permid="VPz">
-              <p permid="KUV">
+            <li>
+              <p>
                 <m>a(x) = 6 x^4 - 2 x^3 + x^2 - 3 x + 1</m> and
                 <m>b(x) = x^2 + x - 2</m> in <m>{\mathbb Z}_7[x]</m>
               </p>
             </li>
 
-            <li permid="BWI">
-              <p permid="rce">
+            <li>
+              <p>
                 <m>a(x) = 4 x^5 - x^3 + x^2 + 4</m> and
                 <m>b(x) = x^3 - 2</m> in <m>{\mathbb Z}_5[x]</m>
               </p>
             </li>
 
-            <li permid="idR">
-              <p permid="Xjn">
+            <li>
+              <p>
                 <m>a(x) = x^5 + x^3 -x^2 - x</m> and
                 <m>b(x) = x^3 + x</m> in <m>{\mathbb Z}_2[x]</m>
               </p>
@@ -1273,44 +1273,44 @@
           </ol>
         </p>
       </statement>
-      <hint permid="ooC">
-        <p permid="Ljq">
+      <hint>
+        <p>
           (a) <m>5 x^3 + 6 x^2 - 3 x + 4 = (5 x^2 + 2x + 1)(x -2) + 6</m>; (c) <m>4x^5 - x^3 + x^2 + 4 = (4x^2 + 4)(x^3 + 3) + 4x^2 + 2</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="4" permid="sKa">
+    <exercise number="4">
       <statement>
-        <p permid="UhD">
+        <p>
           Find the greatest common divisor of each of the following pairs <m>p(x)</m> and <m>q(x)</m> of polynomials.
           If <m>d(x) = \gcd( p(x), q(x) )</m>,
           find two polynomials <m>a(x)</m> and <m>b(x)</m> such that <m>a(x) p(x) + b(x) q(x) = d(x)</m>.
 
-          <ol permid="Dcb">
-            <li permid="mNK">
-              <p permid="bTg">
+          <ol>
+            <li>
+              <p>
                 <m>p(x) = x^3 - 6x^2 + 14x - 15</m> and <m>q(x) = x^3 - 8x^2 + 21x - 18</m>,
                 where <m>p(x), q(x) \in {\mathbb Q}[x]</m>
               </p>
             </li>
 
-            <li permid="SUT">
-              <p permid="Iap">
+            <li>
+              <p>
                 <m>p(x) = x^3 + x^2 - x + 1</m> and <m>q(x) = x^3 + x - 1</m>,
                 where <m>p(x), q(x) \in {\mathbb Z}_2[x]</m>
               </p>
             </li>
 
-            <li permid="zcc">
-              <p permid="ohy">
+            <li>
+              <p>
                 <m>p(x) = x^3 + x^2 - 4x + 4</m> and <m>q(x) = x^3 + 3 x -2</m>,
                 where <m>p(x), q(x) \in {\mathbb Z}_5[x]</m>
               </p>
             </li>
 
-            <li permid="fjl">
-              <p permid="UoH">
+            <li>
+              <p>
                 <m>p(x) = x^3 - 2 x + 4</m> and <m>q(x) = 4 x^3 + x + 3</m>,
                 where <m>p(x), q(x) \in {\mathbb Q}[x]</m>
               </p>
@@ -1320,141 +1320,141 @@
       </statement>
     </exercise>
 
-    <exercise number="5" permid="YRj">
+    <exercise number="5">
       <statement>
-        <p permid="AoM">
+        <p>
           Find all of the zeros for each of the following polynomials.
 
-          <ol cols="2" permid="jjk">
-            <li permid="jTe">
-              <p permid="YYA">
+          <ol cols="2">
+            <li>
+              <p>
                 <m>5x^3 + 4x^2 - x + 9</m> in <m>{\mathbb Z}_{12}</m>
               </p>
             </li>
 
-            <li permid="Qan">
-              <p permid="FfJ">
+            <li>
+              <p>
                 <m>3x^3 - 4x^2 - x + 4</m> in <m>{\mathbb Z}_{5}</m>
               </p>
             </li>
 
-            <li permid="whw">
-              <p permid="lmS">
+            <li>
+              <p>
                 <m>5x^4 + 2x^2 - 3</m> in <m>{\mathbb Z}_{7}</m>
               </p>
             </li>
 
-            <li permid="coF">
-              <p permid="Rub">
+            <li>
+              <p>
                 <m>x^3 + x + 1</m> in <m>{\mathbb Z}_2</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="gKd">
-        <p permid="rqz">
+      <hint>
+        <p>
           (a) No zeros in <m>{\mathbb Z}_{12}</m>; (c) <m>3</m>,
           <m>4</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="6" permid="EYs">
+    <exercise number="6">
       <statement>
-        <p permid="gvV">
+        <p>
           Find all of the units in <m>{\mathbb Z}[x]</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="7" permid="lfB">
+    <exercise number="7">
       <statement>
-        <p permid="MDe">
+        <p>
           Find a unit <m>p(x)</m> in
           <m>{\mathbb Z}_4[x]</m> such that <m>\deg p(x) \gt 1</m>.
         </p>
       </statement>
-      <hint permid="ZfE">
-        <p permid="XxI">
+      <hint>
+        <p>
           Look at <m>(2x + 1)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="8" permid="RmK">
+    <exercise number="8">
       <statement>
-        <p permid="sKn">
+        <p>
           Which of the following polynomials are irreducible over <m>{\mathbb Q}[x]</m>?
 
-          <ol cols="2" permid="Pqt">
-            <li permid="gYy">
-              <p permid="WdU">
+          <ol cols="2">
+            <li>
+              <p>
                 <m>x^4 - 2x^3 + 2x^2 + x + 4</m>
               </p>
             </li>
 
-            <li permid="NfH">
-              <p permid="Cld">
+            <li>
+              <p>
                 <m>x^4 - 5x^3 + 3x - 2</m>
               </p>
             </li>
 
-            <li permid="tmQ">
-              <p permid="ism">
+            <li>
+              <p>
                 <m>3x^5 - 4x^3 - 6x^2 + 6</m>
               </p>
             </li>
 
-            <li permid="ZtZ">
-              <p permid="Ozv">
+            <li>
+              <p>
                 <m>5x^5 - 6x^4 - 3x^2 + 9 x - 15</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="ltW">
-        <p permid="DER">
+      <hint>
+        <p>
           (a) Reducible; (c) irreducible.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="9" permid="xtT">
+    <exercise number="9">
       <statement>
-        <p permid="YRw">
+        <p>
           Find all of the irreducible polynomials of degrees <m>2</m> and <m>3</m> in <m>{\mathbb Z}_2[x]</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="10" permid="dBc">
+    <exercise number="10">
       <statement>
-        <p permid="EYF">
+        <p>
           Give two different factorizations of
           <m>x^2 + x + 8</m> in <m>{\mathbb Z}_{10}[x]</m>.
         </p>
       </statement>
-      <hint permid="dPx">
-        <p permid="jMa">
+      <hint>
+        <p>
           One factorization is <m>x^2 + x + 8 = (x + 2)(x + 9)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="11" permid="JIl">
+    <exercise number="11">
       <statement>
-        <p permid="lfO">
+        <p>
           Prove or disprove: There exists a polynomial <m>p(x)</m> in
           <m>{\mathbb Z}_6[x]</m> of degree <m>n</m> with more than <m>n</m> distinct zeros.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="12" permid="pPu">
+    <exercise number="12">
       <statement>
-        <p permid="RmX">
+        <p>
           If <m>F</m> is a field, show that
           <m>F[x_1, \ldots,
           x_n]</m> is an integral domain.
@@ -1464,37 +1464,37 @@
 
     <todo>Finish solution.</todo>
 
-    <exercise number="13" permid="VWD">
+    <exercise number="13">
       <statement>
-        <p permid="xug">
+        <p>
           Show that the division algorithm does not hold for <m>{\mathbb Z}[x]</m>.
           Why does it fail?
         </p>
       </statement>
-      <hint permid="Csh">
-        <p permid="PTj">
+      <hint>
+        <p>
           The integers <m>\mathbb Z</m> do not form a field.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="14" permid="CdM">
+    <exercise number="14">
       <statement>
-        <p permid="dBp">
+        <p>
           Prove or disprove: <m>x^p + a</m> is irreducible for any
           <m>a \in {\mathbb Z}_p</m>, where <m>p</m> is prime.
         </p>
       </statement>
-      <hint permid="OGz">
-        <p permid="was">
+      <hint>
+        <p>
           False.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="15" permid="ikV">
+    <exercise number="15">
       <statement>
-        <p permid="JIy">
+        <p>
           Let <m>f(x)</m> be irreducible in <m>F[x]</m>,
           where <m>F</m> is a field.
           If <m>f(x) \mid p(x)q(x)</m>,
@@ -1503,15 +1503,15 @@
       </statement>
     </exercise>
 
-    <exercise number="16" permid="Ose">
+    <exercise number="16">
       <statement>
-        <p permid="pPH">
+        <p>
           Suppose that <m>R</m> and <m>S</m> are isomorphic rings.
           Prove that <m>R[x] \cong S[x]</m>.
         </p>
       </statement>
-      <hint permid="Hca">
-        <p permid="chB">
+      <hint>
+        <p>
           Let <m>\phi : R \rightarrow S</m> be an isomorphism.
           Define <m>\overline{\phi} : R[x] \rightarrow S[x]</m> by <m>\overline{\phi}(a_0 + a_1 x + \cdots + a_n x^n) = \phi(a_0) + \phi(a_1) x + \cdots + \phi(a_n) x^n</m>.
         </p>
@@ -1520,9 +1520,9 @@
 
     <todo>Finish proof.</todo>
 
-    <exercise number="17" permid="uzn">
+    <exercise number="17">
       <statement>
-        <p permid="VWQ">
+        <p>
           Let <m>F</m> be a field and <m>a \in F</m>.
           If <m>p(x) \in F[x]</m>,
           show that <m>p(a)</m> is the remainder obtained when <m>p(x)</m> is divided by <m>x - a</m>.
@@ -1530,12 +1530,12 @@
       </statement>
     </exercise>
 
-    <exercise number="18" permid="aGw">
+    <exercise number="18">
       <title>The Rational Root Theorem</title>
       <statement>
-        <p permid="CdZ">
+        <p>
           Let
-          <me permid="PqG">
+          <me>
             p(x) = a_n x^n + a_{n - 1}x^{n - 1} + \cdots + a_0 \in \mathbb Z[x]
           </me>,
           where <m>a_n \neq 0</m>.
@@ -1546,9 +1546,9 @@
       </statement>
     </exercise>
 
-    <exercise number="19" permid="GNF">
+    <exercise number="19">
       <statement>
-        <p permid="ili">
+        <p>
           Let <m>{\mathbb Q}^*</m> be the multiplicative group of positive rational numbers.
           Prove that <m>{\mathbb Q}^*</m> is isomorphic to <m>( {\mathbb Z}[x], +)</m>.
         </p>
@@ -1557,12 +1557,12 @@
 
     <todo>Finish the proof.</todo>
 
-    <exercise number="20" xml:id="exercise-poly-cyclotomic-polynomials" permid="mUO">
+    <exercise number="20" xml:id="exercise-poly-cyclotomic-polynomials">
       <title>Cyclotomic Polynomials</title>
       <statement>
-        <p permid="Osr">
+        <p>
           The polynomial
-          <me permid="nTq">
+          <me>
             \Phi_n(x) = \frac{x^n - 1}{x - 1} = x^{n - 1} + x^{n - 2} + \cdots + x + 1
           </me>
           is called the <term>cyclotomic polynomial.</term>
@@ -1570,10 +1570,10 @@
           <m>{\mathbb Q}</m> for any prime <m>p</m>.
         </p>
       </statement>
-      <hint permid="LLT">
-        <p permid="IoK">
+      <hint>
+        <p>
           The polynomial
-          <me permid="Uaz">
+          <me>
             \Phi_n(x) = \frac{x^n - 1}{x - 1} = x^{n - 1} + x^{n - 2} + \cdots + x + 1
           </me>
           is called the <term>cyclotomic polynomial.</term>
@@ -1585,9 +1585,9 @@
 
     <todo>Finish the proof.</todo>
 
-    <exercise number="21" permid="TbX">
+    <exercise number="21">
       <statement>
-        <p permid="uzA">
+        <p>
           If <m>F</m> is a field,
           show that there are infinitely many irreducible polynomials in <m>F[x]</m>.
         </p>
@@ -1596,49 +1596,49 @@
 
     <todo>Finish the proof.</todo>
 
-    <exercise number="22" permid="zjg">
+    <exercise number="22">
       <statement>
-        <p permid="aGJ">
+        <p>
           Let <m>R</m> be a commutative ring with identity.
           Prove that multiplication is commutative in <m>R[x]</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="23" permid="fqp">
+    <exercise number="23">
       <statement>
-        <p permid="GNS">
+        <p>
           Let <m>R</m> be a commutative ring with identity.
           Prove that multiplication is distributive in <m>R[x]</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="24" permid="Lxy">
+    <exercise number="24">
       <statement>
-        <p permid="mVb">
+        <p>
           Show that <m>x^p - x</m> has <m>p</m> distinct zeros in
           <m>{\mathbb Z}_p</m>, for any prime <m>p</m>.
           Conclude that
-          <me permid="Mwa">
+          <me>
             x^p - x = x(x - 1)(x - 2) \cdots (x - (p - 1))
           </me>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="25" permid="rEH">
+    <exercise number="25">
       <statement>
-        <p permid="Tck">
+        <p>
           Let <m>F</m> be a field and <m>f(x) = a_0 + a_1 x + \cdots + a_n x^n</m> be in <m>F[x]</m>.
           Define <m>f'(x) = a_1  + 2 a_2 x + \cdots + n a_n x^{n - 1}</m> to be the
           <term>derivative</term> of <m>f(x)</m>.
 
-          <ol permid="vxC">
-            <li permid="Klb">
-              <p permid="Tjo">
+          <ol>
+            <li>
+              <p>
                 Prove that
-                <me permid="sDj">
+                <me>
                   (f + g)'(x) = f'(x) + g'(x)
                 </me>.
                 Conclude that we can define a homomorphism of abelian groups
@@ -1646,32 +1646,32 @@
               </p>
             </li>
 
-            <li permid="qsk">
-              <p permid="zqx">
+            <li>
+              <p>
                 Calculate the kernel of <m>D</m> if <m>\chr F = 0</m>.
               </p>
             </li>
 
-            <li permid="Wzt">
-              <p permid="fxG">
+            <li>
+              <p>
                 Calculate the kernel of <m>D</m> if <m>\chr F = p</m>.
               </p>
             </li>
 
-            <li permid="CGC">
-              <p permid="LEP">
+            <li>
+              <p>
                 Prove that
-                <me permid="YKs">
+                <me>
                   (fg)'(x) = f'(x)g(x) + f(x) g'(x)
                 </me>.
               </p>
             </li>
 
-            <li permid="iNL">
-              <p permid="rLY">
+            <li>
+              <p>
                 Suppose that we can factor a polynomial
                 <m>f(x) \in F[x]</m> into linear factors, say
-                <me permid="ERB">
+                <me>
                   f(x) = a(x - a_1) (x - a_2) \cdots ( x - a_n)
                 </me>.
                 Prove that <m>f(x)</m> has no repeated factors if and only if <m>f(x)</m> and <m>f'(x)</m> are relatively prime.
@@ -1682,41 +1682,41 @@
       </statement>
     </exercise>
 
-    <exercise number="26" permid="XLQ">
+    <exercise number="26">
       <statement>
-        <p permid="zjt">
+        <p>
           Let <m>F</m> be a field.
           Show that <m>F[x]</m> is never a field.
         </p>
       </statement>
-      <hint permid="cKe">
-        <p permid="ovT">
+      <hint>
+        <p>
           Find a nontrivial proper ideal in <m>F[x]</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="27" permid="DSZ">
+    <exercise number="27">
       <statement>
-        <p permid="fqC">
+        <p>
           Let <m>R</m> be an integral domain.
           Prove that <m>R[x_1, \ldots, x_n]</m> is an integral domain.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="28" permid="kai">
+    <exercise number="28">
       <statement>
-        <p permid="LxL">
+        <p>
           Let <m>R</m> be a commutative ring with identity.
           Show that <m>R[x]</m> has a subring <m>R'</m> isomorphic to <m>R</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="29" permid="Qhr">
+    <exercise number="29">
       <statement>
-        <p permid="rEU">
+        <p>
           Let <m>p(x)</m> and <m>q(x)</m> be polynomials in <m>R[x]</m>,
           where <m>R</m> is a commutative ring with identity.
           Prove that <m>\deg( p(x) + q(x) ) \leq \max( \deg p(x), \deg q(x) )</m>.
@@ -1724,15 +1724,15 @@
       </statement>
     </exercise>
 
-        <exercise permid="woA">
+        <exercise>
       <statement>
-        <p permid="XMd">
+        <p>
           Solve the general quadratic equation
-          <me permid="JBu">
+          <me>
             ax^2 + bx + c = 0
           </me>
           to obtain
-          <me permid="pID">
+          <me>
             x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
           </me>.
           The <term>discriminant</term><idx><h>Discriminant</h><h>of the quadratic equation</h></idx> of the quadratic equation
@@ -1744,11 +1744,11 @@
       </statement>
     </exercise>
 
-    <exercise permid="cvJ">
+    <exercise>
       <statement>
-        <p permid="DTm">
+        <p>
           Show that any cubic equation of the form
-          <me permid="VPM">
+          <me>
             x^3 + bx^2 + cx + d = 0
           </me>
           can be reduced to the form
@@ -1757,11 +1757,11 @@
       </statement>
     </exercise>
 
-    <exercise permid="ICS">
+    <exercise>
       <statement>
-        <p permid="kav">
+        <p>
           Prove that the cube roots of 1 are given by
-          <md permid="BWV">
+          <md>
             <mrow>\omega &amp; = \frac{-1+ i \sqrt{3}}{2}</mrow>
             <mrow>\omega^2 &amp; = \frac{-1- i \sqrt{3}}{2}</mrow>
             <mrow>\omega^3 &amp; = 1</mrow>
@@ -1770,11 +1770,11 @@
       </statement>
     </exercise>
 
-    <exercise permid="oKb">
+    <exercise>
       <statement>
-        <p permid="QhE">
+        <p>
           Make the substitution
-          <me permid="iee">
+          <me>
             y = z - \frac{p}{3 z}
           </me>
           for <m>y</m> in the equation
@@ -1783,26 +1783,26 @@
       </statement>
     </exercise>
 
-    <exercise permid="URk">
+    <exercise>
       <statement>
-        <p permid="woN">
+        <p>
           Show that the product of the solutions obtained in (4) is <m>-p^3/27</m>,
           deducing that <m>\sqrt[3]{A B} = -p/3</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise permid="AYt">
+    <exercise>
             <!--  2010/05/18 R Beezer, changed one omega to omega-squared in general solution below -->
             <!-- % RAB 2010/08/26  Two seemingly spurious \  necessary for translation by tex4ht to Sage -->
       <statement>
-        <p permid="cvW">
+        <p>
           Prove that the possible solutions for <m>z</m> in (4) are given by
-          <me permid="Oln">
+          <me>
             \sqrt[3]{A}, \quad \omega \sqrt[3]{A}, \quad \omega^2 \sqrt[3]{A}, \quad \sqrt[3]{B}, \quad \omega \sqrt[3]{B}, \quad \omega^2 \sqrt[3]{B}
           </me>
           and use this result to show that the three possible solutions for <m>y</m> are
-          <me permid="usw">
+          <me>
             \omega^i \sqrt[3]{-\frac{q}{2}+ \sqrt{\ \frac{p^3}{27} + \frac{q^2}{4}} } + \omega^{2i} \sqrt[3]{-\frac{q}{2}- \sqrt{\ \frac{p^3}{27} + \frac{q^2}{4}}  }
           </me>,
           where <m>i = 0, 1, 2</m>.
@@ -1810,31 +1810,31 @@
       </statement>
     </exercise>
 
-    <exercise permid="hfC">
+    <exercise>
       <statement>
-        <p permid="IDf">
+        <p>
           The <term>discriminant</term><idx><h>Discriminant</h><h>of the cubic equation</h></idx> of the cubic equation is
-          <me permid="azF">
+          <me>
             \Delta = \frac{p^3}{27}  + \frac{q^2}{4}
           </me>.
           Show that <m>y^3 + py + q=0</m>
 
-          <ol permid="bEL">
-            <li permid="TEN">
-              <p permid="cDa">
+          <ol>
+            <li>
+              <p>
                 has three real roots,
                 at least two of which are equal, if <m>\Delta = 0</m>.
               </p>
             </li>
 
-            <li permid="zLW">
-              <p permid="IKj">
+            <li>
+              <p>
                 has one real root and two conjugate imaginary roots if <m>\Delta \gt 0</m>.
               </p>
             </li>
 
-            <li permid="fTf">
-              <p permid="oRs">
+            <li>
+              <p>
                 has three distinct real roots if <m>\Delta \lt 0</m>.
               </p>
             </li>
@@ -1843,32 +1843,32 @@
       </statement>
     </exercise>
 
-    <exercise permid="NmL">
+    <exercise>
       <statement>
-        <p permid="oKo">
+        <p>
           Solve the following cubic equations.
 
-          <ol permid="HLU">
-            <li permid="Mao">
-              <p permid="UYB">
+          <ol>
+            <li>
+              <p>
                 <m>x^3 - 4x^2 + 11 x + 30 = 0</m>
               </p>
             </li>
 
-            <li permid="shx">
-              <p permid="BfK">
+            <li>
+              <p>
                 <m>x^3 - 3x +5 = 0</m>
               </p>
             </li>
 
-            <li permid="YoG">
-              <p permid="hmT">
+            <li>
+              <p>
                 <m>x^3 - 3x +2 = 0</m>
               </p>
             </li>
 
-            <li permid="EvP">
-              <p permid="Nuc">
+            <li>
+              <p>
                 <m>x^3 + x + 3 = 0</m>
               </p>
             </li>
@@ -1877,15 +1877,15 @@
       </statement>
     </exercise>
 
-    <exercise permid="ttU">
+    <exercise>
       <statement>
-        <p permid="URx">
+        <p>
           Show that the general quartic equation
-          <me permid="GGO">
+          <me>
             x^4 + ax^3 + bx^2 + cx + d = 0
           </me>
           can be reduced to
-          <me permid="mNX">
+          <me>
             y^4 + py^2 + qy + r = 0
           </me>
           by using the substitution <m>x = y - a/4</m>.
@@ -1893,39 +1893,39 @@
       </statement>
     </exercise>
 
-    <exercise xml:id="exercise-cubic-poly-10" permid="ZBd">
+    <exercise xml:id="exercise-cubic-poly-10">
       <statement>
-        <p permid="AYG">
+        <p>
           Show that
-          <me permid="SVg">
+          <me>
             \left( y^2 + \frac{1}{2} z \right)^2 = (z - p)y^2 - qy +  \left( \frac{1}{4} z^2 - r \right)
           </me>.
         </p>
       </statement>
     </exercise>
 
-    <exercise xml:id="exercise-cubic-poly-11" permid="FIm">
+    <exercise xml:id="exercise-cubic-poly-11">
       <statement>
-        <p permid="hfP">
+        <p>
           Show that the right-hand side of <xref ref="exercise-cubic-poly-10"/> can be put in the form <m>(my + k)^2</m> if and only if
-          <me permid="zcp">
+          <me>
             q^2 - 4(z - p)\left( \frac{1}{4} z^2 - r \right) = 0
           </me>.
         </p>
       </statement>
     </exercise>
 
-    <exercise permid="lPv">
+    <exercise>
       <statement>
-        <p permid="NmY">
+        <p>
           From <xref ref="exercise-cubic-poly-11"/> obtain the
           <term>resolvent cubic equation</term><idx><h>Resolvent cubic equation</h></idx>
-          <me permid="fjy">
+          <me>
             z^3 - pz^2 - 4rz + (4pr - q^2) = 0
           </me>.
           Solving the resolvent cubic equation,
           put the equation found in <xref ref="exercise-cubic-poly-10"/> in the form
-          <me permid="LqH">
+          <me>
             \left( y^2 + \frac{1}{2} z \right)^2 = (my + k)^2
           </me>
           to obtain the solution of the quartic equation.
@@ -1933,32 +1933,32 @@
       </statement>
     </exercise>
 
-    <exercise permid="RWE">
+    <exercise>
       <statement>
-        <p permid="tuh">
+        <p>
           Use this method to solve the following quartic equations.
 
-          <ol permid="nTd">
-            <li permid="kCY">
-              <p permid="tBl">
+          <ol>
+            <li>
+              <p>
                 <m>x^4 - x^2 - 3x + 2 = 0</m>
               </p>
             </li>
 
-            <li permid="QKh">
-              <p permid="ZIu">
+            <li>
+              <p>
                 <m>x^4 + x^3 - 7 x^2 - x + 6 = 0</m>
               </p>
             </li>
 
-            <li permid="wRq">
-              <p permid="FPD">
+            <li>
+              <p>
                 <m>x^4 -2 x^2 + 4 x -3 = 0</m>
               </p>
             </li>
 
-            <li permid="cYz">
-              <p permid="lWM">
+            <li>
+              <p>
                 <m>x^4 - 4 x^3 + 3x^2 - 5x +2 = 0</m>
               </p>
             </li>

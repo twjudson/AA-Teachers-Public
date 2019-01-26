@@ -6,23 +6,23 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="permute" permid="AQc">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="permute">
   <title>Permutation Groups</title>
-  <introduction permid="DZd">
-    <p permid="ogy">
+  <introduction>
+    <p>
       Permutation groups are central to the study of geometric symmetries and to Galois theory,
       the study of finding solutions of polynomial equations.
       They also provide abundant examples of nonabelian groups.
     </p>
 
-    <p permid="UnH">
+    <p>
       Let us recall for a moment the symmetries of the equilateral triangle
       <m>\bigtriangleup ABC</m> from <xref ref="groups"/>.
       The symmetries actually consist of permutations of the three vertices,
       where a <term>permutation</term><idx><h>Permutation</h><h>definition of</h></idx> of the set
       <m>S = \{ A, B, C \}</m> is a one-to-one and onto map <m>\pi :S \rightarrow S</m>.
       The three vertices have the following six permutations.
-      <md permid="XwI">
+      <md>
         <mrow>\begin{pmatrix}
         A &amp; B &amp; C \\
         A &amp; B &amp; C
@@ -54,9 +54,9 @@
       </md>
     </p>
 
-    <p permid="AuQ">
+    <p>
       We have used the array
-      <me permid="DDR">
+      <me>
         \begin{pmatrix}
         A &amp; B &amp; C \\
         B &amp; C &amp; A
@@ -65,7 +65,7 @@
       to denote the permutation that sends <m>A</m> to <m>B</m>,
       <m>B</m> to <m>C</m>, and <m>C</m> to <m>A</m>.
       That is,
-      <md permid="jLa">
+      <md>
         <mrow>A &amp; \mapsto  B</mrow>
         <mrow>B &amp; \mapsto  C</mrow>
         <mrow>C &amp; \mapsto  A</mrow>
@@ -75,10 +75,10 @@
     </p>
   </introduction>
 
-  <section xml:id="section-permutation-definitions" permid="Wyg">
+  <section xml:id="section-permutation-definitions">
     <title>Definitions and Notation</title>
-    <introduction permid="kgm">
-      <p permid="gBZ">
+    <introduction>
+      <p>
         In general, the permutations of a set <m>X</m> form a group <m>S_X</m>.
         If <m>X</m> is a finite set, we can assume <m>X=\{ 1, 2, \ldots, n\}</m>.
         In this case we write <m>S_n</m> instead of <m>S_X</m>.
@@ -94,17 +94,17 @@
         on <m>n</m> letters.
       </p>
 
-      <theorem permid="GTJ">
+      <theorem>
         <statement>
-          <p permid="kBY">
+          <p>
             The symmetric group on <m>n</m> letters, <m>S_n</m>,
             is a group with <m>n!</m> elements,
             where the binary operation is the composition of maps.
           </p>
         </statement>
 
-        <proof permid="cBN">
-          <p permid="Kkb">
+        <proof>
+          <p>
             The identity of <m>S_n</m> is just the identity map that sends <m>1</m> to <m>1</m>,
             <m>2</m> to <m>2</m>, <m>\ldots</m>, <m>n</m> to <m>n</m>.
             If <m>f : S_n \rightarrow S_n</m> is a permutation,
@@ -117,17 +117,17 @@
         </proof>
       </theorem>
 
-      <p permid="MJi">
+      <p>
         A subgroup of <m>S_n</m> is called a
         <term>permutation group</term>.
             <idx><h>Group</h><h>permutation</h></idx>
             <idx><h>Permutation group</h></idx>
       </p>
 
-      <example xml:id="example-permute-s5" permid="zpk">
-        <p permid="Gkc">
+      <example xml:id="example-permute-s5">
+        <p>
           Consider the subgroup <m>G</m> of <m>S_5</m> consisting of the identity permutation <m>\identity</m> and the permutations
-          <md permid="PSj">
+          <md>
             <mrow>\sigma
             &amp; =
             \begin{pmatrix}
@@ -150,10 +150,10 @@
           The following table tells us how to multiply elements in the permutation group <m>G</m>.
         </p>
 
-        <sidebyside width="100%" permid="XRU">
+        <sidebyside width="100%">
 
-          <p permid="mrl">
-            <me permid="vZs">
+          <p>
+            <me>
               \begin{array}{c|cccc}
               \circ &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\ \hline
               \identity &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\
@@ -166,8 +166,8 @@
         </sidebyside>
       </example>
 
-      <remark permid="rKL">
-        <p permid="bSg">
+      <remark>
+        <p>
           Though it is natural to multiply elements in a group from left to right,
           functions are composed from right to left.
           Let <m>\sigma</m> and <m>\tau</m> be permutations on a set <m>X</m>.
@@ -187,11 +187,11 @@
         </p>
       </remark>
 
-      <example xml:id="example-permute-s4-nonabelian" permid="fwt">
-        <p permid="Syu">
+      <example xml:id="example-permute-s4-nonabelian">
+        <p>
           Permutation multiplication is not usually commutative.
           Let
-          <md permid="ouT">
+          <md>
             <mrow>\sigma
             &amp; =
             \begin{pmatrix}
@@ -206,7 +206,7 @@
             \end{pmatrix}</mrow>
           </md>.
           Then
-          <me permid="cgB">
+          <me>
             \sigma \tau
             =
             \begin{pmatrix}
@@ -215,7 +215,7 @@
             \end{pmatrix}
           </me>,
           but
-          <me permid="InK">
+          <me>
             \tau \sigma
             =
             \begin{pmatrix}
@@ -227,20 +227,20 @@
       </example>
     </introduction>
 
-    <subsection xml:id="permute-subsection-cycle-notation" permid="gXl">
+    <subsection xml:id="permute-subsection-cycle-notation">
       <title>Cycle Notation</title>
-      <p permid="bwH">
+      <p>
         The notation that we have used to represent permutations up to this point is cumbersome,
         to say the least.
         To work effectively with permutation groups,
         we need a more streamlined method of writing down and manipulating permutations.
       </p>
 
-      <p permid="HDQ">
+      <p>
         A permutation <m>\sigma \in S_X</m> is a
         <term>cycle of length</term><idx><h>Cycle</h><h>definition of</h></idx> <m>k</m> if there exist elements <m>a_1, a_2, \ldots,
         a_k \in X</m> such that
-        <md permid="UCc">
+        <md>
           <mrow>\sigma( a_1 ) &amp; = a_2</mrow>
           <mrow>\sigma( a_2 ) &amp; = a_3</mrow>
           <mrow>&amp; \vdots</mrow>
@@ -258,10 +258,10 @@
         Cycles are the building blocks of all permutations.
       </p>
 
-      <example xml:id="example-permute-cycle-notation" permid="bhZ">
-        <p permid="yFD">
+      <example xml:id="example-permute-cycle-notation">
+        <p>
           The permutation
-          <me permid="AJl">
+          <me>
             \sigma =
             \begin{pmatrix}
             1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7\\
@@ -271,7 +271,7 @@
             (1 6 2 3 5 4 )
           </me>
           is a cycle of length <m>6</m>, whereas
-          <me permid="gQu">
+          <me>
             \tau =
             \begin{pmatrix}
             1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
@@ -283,10 +283,10 @@
           is a cycle of length <m>3</m>.
         </p>
 
-        <p permid="eMM">
+        <p>
           Not every permutation is a cycle.
           Consider the permutation
-          <me permid="MXD">
+          <me>
             \begin{pmatrix}
             1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
             2 &amp; 4 &amp; 1 &amp; 3 &amp; 6 &amp; 5
@@ -297,29 +297,29 @@
         </p>
       </example>
 
-      <example xml:id="example-permute-cycle-mult" permid="Hpi">
-        <p permid="KTV">
+      <example xml:id="example-permute-cycle-mult">
+        <p>
           It is very easy to compute products of cycles.
           Suppose that
-          <me permid="teM">
+          <me>
             \sigma = (1 3 5 2 ) \quad \text{and} \quad \tau = (2 5 6)
           </me>.
           If we think of <m>\sigma</m> as
-          <me permid="ZlV">
+          <me>
             1 \mapsto 3, \qquad
             3 \mapsto 5, \qquad
             5 \mapsto 2, \qquad
             2 \mapsto 1
           </me>,
           and <m>\tau</m> as
-          <me permid="Fte">
+          <me>
             2 \mapsto 5, \qquad
             5 \mapsto 6, \qquad
             6 \mapsto 2
           </me>,
           then for <m>\sigma \tau</m> remembering that we apply <m>\tau</m> first and then <m>\sigma</m>,
           it must be the case that
-          <me permid="lAn">
+          <me>
             1 \mapsto 3, \qquad
             3 \mapsto 5, \qquad
             5 \mapsto 6, \qquad
@@ -330,7 +330,7 @@
         </p>
       </example>
 
-      <p permid="nKZ">
+      <p>
         Two cycles in <m>S_X</m>, <m>\sigma = (a_1, a_2, \ldots,
         a_k )</m> and <m>\tau = (b_1, b_2, \ldots,
         b_l )</m>, are <term>disjoint</term>
@@ -338,12 +338,12 @@
         if <m>a_i \neq b_j</m> for all <m>i</m> and <m>j</m>.
       </p>
 
-      <example xml:id="example-permute-cycles-disjoint" permid="nwr">
-        <p permid="rbe">
+      <example xml:id="example-permute-cycles-disjoint">
+        <p>
           The cycles <m>(1 3 5)</m> and <m>(2 7 )</m> are disjoint;
           however, the cycles <m>(1 3 5)</m> and <m>(3 4 7 )</m> are not.
           Calculating their products, we find that
-          <md permid="RHw">
+          <md>
             <mrow>(1 3 5)(2 7 ) &amp; = (1 3 5)(2 7 )</mrow>
             <mrow>(1 3 5)(3 4 7 ) &amp; = (1 3 4 7 5)</mrow>
           </md>.
@@ -352,16 +352,16 @@
         </p>
       </example>
 
-      <proposition permid="vaQ">
+      <proposition>
         <statement>
-          <p permid="BAj">
+          <p>
             Let <m>\sigma</m> and <m>\tau</m> be two disjoint cycles in <m>S_X</m>.
             Then <m>\sigma \tau = \tau \sigma</m>.
           </p>
         </statement>
 
-        <proof permid="NsP">
-          <p permid="qrk">
+        <proof>
+          <p>
             Let <m>\sigma = (a_1, a_2, \ldots,
             a_k )</m> and <m>\tau = (b_1, b_2, \ldots, b_l )</m>.
             We must show that <m>\sigma \tau(x) = \tau \sigma(x)</m> for all <m>x \in X</m>.
@@ -370,14 +370,14 @@
             then both <m>\sigma</m> and <m>\tau</m> fix <m>x</m>.
             That is, <m>\sigma(x)=x</m> and <m>\tau(x)=x</m>.
             Hence,
-            <me permid="xOF">
+            <me>
               \sigma \tau(x) = \sigma( \tau(x)) = \sigma(x) = x = \tau(x) = \tau( \sigma(x)) =  \tau \sigma(x)
             </me>.
             <em>Do not forget that we are multiplying permutations right to left,
             which is the opposite of the order in which we usually multiply group elements.</em>
             Now suppose that <m>x \in \{ a_1, a_2, \ldots, a_k \}</m>.
             Then <m>\sigma( a_i ) = a_{(i \bmod k) + 1}</m>; that is,
-            <md permid="dVO">
+            <md>
               <mrow>a_1 &amp; \mapsto a_2</mrow>
               <mrow>a_2 &amp; \mapsto a_3</mrow>
               <mrow>&amp; \vdots</mrow>
@@ -386,7 +386,7 @@
             </md>.
             However, <m>\tau(a_i) = a_i</m> since <m>\sigma</m> and <m>\tau</m> are disjoint.
             Therefore,
-            <md permid="KcX">
+            <md>
               <mrow>\sigma \tau(a_i) &amp; = \sigma( \tau(a_i))</mrow>
               <mrow>&amp; = \sigma(a_i)</mrow>
               <mrow>&amp; = a_{(i \bmod k)+1}</mrow>
@@ -400,15 +400,15 @@
         </proof>
       </proposition>
 
-      <theorem permid="OTH">
+      <theorem>
         <statement>
-          <p permid="QJh">
+          <p>
             Every permutation in <m>S_n</m> can be written as the product of disjoint cycles.
           </p>
         </statement>
 
-        <proof permid="IIW">
-          <p permid="Wyt">
+        <proof>
+          <p>
             We can assume that <m>X = \{ 1, 2, \ldots, n \}</m>.
             If <m>\sigma \in S_n</m> and we define <m>X_1</m> to be <m>\{ \sigma(1), \sigma^2(1), \ldots \}</m>,
             then the set <m>X_1</m> is finite since <m>X</m> is finite.
@@ -420,7 +420,7 @@
             we are guaranteed that this process will end and there will be only a finite number of these sets,
             say <m>r</m>.
             If <m>\sigma_i</m> is the cycle defined by
-            <me permid="qkg">
+            <me>
               \sigma_i( x ) = 
               \begin{cases}
               \sigma( x ) &amp; x \in X_i \\
@@ -434,10 +434,10 @@
         </proof>
       </theorem>
 
-      <example xml:id="example-permute-cycle-products" permid="TDA">
-        <p permid="Xin">
+      <example xml:id="example-permute-cycle-products">
+        <p>
           Let
-          <md permid="Wrp">
+          <md>
             <mrow>\sigma &amp; =
             \begin{pmatrix}
             1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
@@ -450,7 +450,7 @@
             \end{pmatrix}</mrow>
           </md>.
           Using cycle notation, we can write
-          <md permid="Cyy">
+          <md>
             <mrow>\sigma      &amp; = (1624)</mrow>
             <mrow>\tau        &amp; = (13)(456)</mrow>
             <mrow>\sigma \tau &amp; = (1 3 6) ( 2 4 5)</mrow>
@@ -459,8 +459,8 @@
         </p>
       </example>
 
-      <remark permid="zKJ">
-        <p permid="HZp">
+      <remark>
+        <p>
           From this point forward we will find it convenient to use cycle notation to represent permutations.
           When using cycle notation,
           we often denote the identity permutation by <m>(1)</m>.
@@ -468,32 +468,32 @@
       </remark>
     </subsection>
 
-    <subsection xml:id="permute-subsection-transpositions" permid="Neu">
+    <subsection xml:id="permute-subsection-transpositions">
       <title>Transpositions</title>
-      <p permid="TSi">
+      <p>
         The simplest permutation is a cycle of length <m>2</m>.
         Such cycles are called <term>transpositions</term>.
             <idx><h>Transposition</h></idx>
         Since
-        <me permid="iFH">
+        <me>
           (a_1, a_2, \ldots, a_n ) = (a_1 a_n ) (a_1 a_{n-1} ) \cdots ( a_1 a_3 ) (a_1 a_2 )
         </me>,
         any cycle can be written as the product of transpositions,
         leading to the following proposition.
       </p>
 
-      <proposition permid="LZb">
+      <proposition>
         <statement>
-          <p permid="hHs">
+          <p>
             Any permutation of a finite set containing at least two elements can be written as the product of transpositions.
           </p>
         </statement>
       </proposition>
 
-      <example xml:id="example-permute-transpositions" permid="Ynt">
-        <p permid="Dpw">
+      <example xml:id="example-permute-transpositions">
+        <p>
           Consider the permutation
-          <me permid="OMQ">
+          <me>
             ( 1 6 ) (2 5 3) = (1 6 )( 2 3 )( 2 5 ) = (1 6 )( 4 5 )(2 3 )( 4 5 )(2 5 )
           </me>.
           As we can see,
@@ -504,30 +504,30 @@
           However, as it turns out,
           no permutation can be written as the product of both an even number of transpositions and an odd number of transpositions.
           For instance, we could represent the permutation <m>(1 6)</m> by
-          <me permid="uTZ">
+          <me>
             (2 3 )(1 6)( 2 3)
           </me>
           or by
-          <me permid="bbi">
+          <me>
             (3 5) (1 6) (1 3) (1 6) (1 3) (3 5) (5 6)
           </me>,
           but <m>(1 6)</m> will always be the product of an odd number of transpositions.
         </p>
       </example>
 
-      <lemma xml:id="lemma-identity-even-trans" permid="sgk">
+      <lemma xml:id="lemma-identity-even-trans">
         <statement>
-          <p permid="acT">
+          <p>
             If the identity is written as the product of <m>r</m> transpositions,
-            <me permid="Hir">
+            <me>
               \identity = \tau_1 \tau_2 \cdots \tau_r
             </me>,
             then <m>r</m> is an even number.
           </p>
         </statement>
 
-        <proof permid="ZHh">
-          <p permid="CFC">
+        <proof>
+          <p>
             We will employ induction  on <m>r</m>.
             A transposition cannot be the identity;
             hence, <m>r \gt 1</m>.
@@ -535,7 +535,7 @@
             Suppose that <m>r \gt 2</m>.
             In this case the product of the last two transpositions,
             <m>\tau_{r-1} \tau_r</m>, must be one of the following cases:
-            <md permid="npA">
+            <md>
               <mrow>(a b)(a b) &amp; = \identity</mrow>
               <mrow>(b c)(a b) &amp; = (a c)(b c)</mrow>
               <mrow>(c d)(a b) &amp; = (a b)(c d)</mrow>
@@ -545,18 +545,18 @@
             and <m>d</m> are distinct.
           </p>
 
-          <p permid="iML">
+          <p>
             The first equation simply says that a transposition is its own inverse.
             If this case occurs, delete
             <m>\tau_{r-1} \tau_r</m> from the product to obtain
-            <me permid="TwJ">
+            <me>
               \identity = \tau_1 \tau_2 \cdots \tau_{r - 3} \tau_{r - 2}
             </me>.
             By induction <m>r - 2</m> is even;
             hence, <m>r</m> must be even.
           </p>
 
-          <p permid="OTU">
+          <p>
             In each of the other three cases,
             we can replace <m>\tau_{r - 1} \tau_r</m> with the right-hand side of the corresponding equation to obtain a new product of <m>r</m> transpositions for the identity.
             In this new product the last occurrence of <m>a</m> will be in the next-to-the-last transposition.
@@ -567,7 +567,7 @@
             otherwise, we will repeat the procedure with <m>\tau_{r - 3} \tau_{r - 2}</m>.
           </p>
 
-          <p permid="vbd">
+          <p>
             At some point either we will have two adjacent,
             identical transpositions canceling each other out or <m>a</m> will be shuffled so that it will appear only in the first transposition.
             However, the latter case cannot occur,
@@ -578,9 +578,9 @@
         </proof>
       </lemma>
 
-      <theorem xml:id="theorem-even-and-odd" permid="fRS">
+      <theorem xml:id="theorem-even-and-odd">
         <statement>
-          <p permid="wQq">
+          <p>
             If a permutation <m>\sigma</m> can be expressed as the product of an even number of transpositions,
             then any other product of transpositions equaling <m>\sigma</m> must also contain an even number of transpositions.
             Similarly, if <m>\sigma</m> can be expressed as the product of an odd number of transpositions,
@@ -588,17 +588,17 @@
           </p>
         </statement>
 
-        <proof permid="oQf">
-          <p permid="bim">
+        <proof>
+          <p>
             Suppose that
-            <me permid="zDS">
+            <me>
               \sigma = \sigma_1 \sigma_2 \cdots \sigma_m = \tau_1 \tau_2 \cdots \tau_n
             </me>,
             where <m>m</m> is even.
             We must show that <m>n</m> is also an even number.
             The inverse of <m>\sigma</m> is <m>\sigma_m \cdots \sigma_1</m>.
             Since
-            <me permid="fLb">
+            <me>
               \identity = \sigma \sigma_m \cdots \sigma_1 = \tau_1  \cdots \tau_n \sigma_m \cdots \sigma_1
             </me>,
             <m>n</m> must be even by <xref ref="lemma-identity-even-trans"/>.
@@ -607,7 +607,7 @@
         </proof>
       </theorem>
 
-      <p permid="zZr">
+      <p>
         In light of <xref ref="theorem-even-and-odd"/>, we define a permutation to be <term>even</term>
             <idx><h>Permutation</h><h>even</h></idx>
         if it can be expressed as an even number of transpositions and <term>odd</term>
@@ -616,9 +616,9 @@
       </p>
     </subsection>
 
-    <subsection xml:id="permute-subsection-alternating-groups" permid="tlD">
+    <subsection xml:id="permute-subsection-alternating-groups">
       <title>The Alternating Groups</title>
-      <p permid="ggA">
+      <p>
         One of the most important subgroups of <m>S_n</m> is the set of all even permutations,
         <m>A_n</m>.
 
@@ -632,25 +632,25 @@
             <idx><h>Group</h><h>alternating</h></idx>
       </p>
 
-      <theorem permid="EuC">
+      <theorem>
         <statement>
-          <p permid="cXz">
+          <p>
             The set <m>A_n</m> is a subgroup of <m>S_n</m>.
           </p>
         </statement>
 
-        <proof permid="UXo">
-          <p permid="Hpv">
+        <proof>
+          <p>
             Since the product of two even permutations must also be an even permutation,
             <m>A_n</m> is closed.
             The identity is an even permutation and therefore is in <m>A_n</m>.
             If <m>\sigma</m> is an even permutation, then
-            <me permid="LSk">
+            <me>
               \sigma = \sigma_1 \sigma_2 \cdots \sigma_r
             </me>,
             where <m>\sigma_i</m> is a transposition and <m>r</m> is even.
             Since the inverse of any transposition is itself,
-            <me permid="rZt">
+            <me>
               \sigma^{-1} = \sigma_r \sigma_{r-1} \cdots \sigma_1
             </me>
             is also in <m>A_n</m>.
@@ -658,33 +658,33 @@
         </proof>
       </theorem>
 
-      <proposition permid="kBL">
+      <proposition>
         <statement>
-          <p permid="NOB">
+          <p>
             The number of even permutations in <m>S_n</m>,
             <m>n \geq 2</m>, is equal to the number of odd permutations;
             hence, the order of <m>A_n</m> is <m>n!/2</m>.
           </p>
         </statement>
 
-        <proof permid="tzY">
-          <p permid="nwE">
+        <proof>
+          <p>
             Let <m>A_n</m> be the set of even permutations in <m>S_n</m> and <m>B_n</m> be the set of odd permutations.
             If we can show that there is a bijection between these sets,
             they must contain the same number of elements.
             Fix a transposition <m>\sigma</m> in <m>S_n</m>.
             Since <m>n \geq 2</m>, such a <m>\sigma</m> exists.
             Define
-            <me permid="YgC">
+            <me>
               \lambda_{\sigma} : A_n \rightarrow B_n
             </me>
             by
-            <me permid="EnL">
+            <me>
               \lambda_{\sigma} ( \tau ) = \sigma  \tau 
             </me>.
             Suppose that <m>\lambda_{\sigma} ( \tau ) = \lambda_{\sigma} ( \mu )</m>.
             Then <m>\sigma  \tau = \sigma  \mu</m> and so
-            <me permid="kuU">
+            <me>
               \tau = \sigma^{-1} \sigma \tau = \sigma^{-1} \sigma \mu = \mu
             </me>.
             Therefore, <m>\lambda_{\sigma}</m> is one-to-one.
@@ -694,11 +694,11 @@
         </proof>
       </proposition>
 
-      <example xml:id="example-permute-s4" permid="QIU">
-        <p permid="jwF">
+      <example xml:id="example-permute-s4">
+        <p>
           The group <m>A_4</m> is the subgroup of <m>S_4</m> consisting of even permutations.
           There are twelve elements in  <m>A_4</m>:
-          <md permid="QCd">
+          <md>
             <mrow>&amp; (1)    &amp;&amp; (12)(34) &amp;&amp; (13)(24) &amp;&amp; (14)(23)</mrow>
             <mrow>&amp; (123)  &amp;&amp; (132)    &amp;&amp; (124)    &amp;&amp; (142)</mrow>
             <mrow>&amp; (134)  &amp;&amp; (143)    &amp;&amp; (234)    &amp;&amp; (243)</mrow>
@@ -710,9 +710,9 @@
       </example>
     </subsection>
 
-    <subsection xml:id="permute-historical-note" permid="ZsM">
+    <subsection xml:id="permute-historical-note">
       <title>Historical Note</title>
-      <p permid="MnJ">
+      <p>
         Lagrange
             <idx><h>Lagrange, Joseph-Louis</h></idx>
         first thought of permutations as functions from a set to itself,
@@ -735,10 +735,10 @@
 
   </section>
 
-  <section xml:id="section-dihedral-groups" permid="CFp">
+  <section xml:id="section-dihedral-groups">
     <title>Dihedral Groups</title>
-    <introduction permid="Qnv">
-      <p permid="sQr">
+    <introduction>
+      <p>
         Another special type of permutation group is the dihedral group.
         Recall the symmetry group of an equilateral triangle in <xref ref="groups"/>.
         Such groups consist of the rigid motions of a regular <m>n</m>-sided polygon or <m>n</m>-gon.
@@ -763,9 +763,9 @@
         We summarize these results in the following theorem.
       </p>
 
-      <figure xml:id="figure-regular" permid="YXA">
+      <figure xml:id="figure-regular">
         <caption>A regular <m>n</m>-gon</caption>
-        <image width="60%" xml:id="permute-ngon" permid="guV">
+        <image width="60%" xml:id="permute-ngon">
 
             <latex-image>
                 <xi:include href="tikz/permute-ngon.tex" parse="text"/>
@@ -774,22 +774,22 @@
 
       </figure>
 
-      <theorem permid="naS">
+      <theorem>
         <statement>
-          <p permid="JeI">
+          <p>
             The dihedral group, <m>D_n</m>,
             is a subgroup of <m>S_n</m> of order <m>2n</m>.
           </p>
         </statement>
       </theorem>
 
-      <theorem xml:id="theorem-dn-generator" permid="Tib">
+      <theorem xml:id="theorem-dn-generator">
         <statement>
-          <p permid="plR">
+          <p>
             The group <m>D_n</m>, <m>n \geq 3</m>,
             consists of all products of the two elements <m>r</m> and <m>s</m>,
             satisfying the relations
-            <md permid="wJm">
+            <md>
               <mrow>r^n &amp; = 1</mrow>
               <mrow>s^2 &amp; = 1</mrow>
               <mrow>srs &amp; = r^{-1}</mrow>
@@ -797,24 +797,24 @@
           </p>
         </statement>
 
-        <proof permid="Bex">
-          <p permid="TDN">
+        <proof>
+          <p>
             The possible motions of a regular <m>n</m>-gon are either reflections or rotations (<xref ref="figure-rotations"/>).
             There are exactly <m>n</m> possible rotations:
-            <me permid="cQv">
+            <me>
               \identity, \frac{360^{\circ} }{n}, 2 \cdot \frac{360^{\circ} }{n}, \ldots, (n-1) \cdot \frac{360^{\circ} }{n}
             </me>.
             We will denote the rotation <m>360^{\circ} /n</m> by <m>r</m>.
             The rotation <m>r</m> generates all  of the other rotations.
             That is,
-            <me permid="IXE">
+            <me>
               r^k = k \cdot \frac{360^{\circ} }{n}
             </me>.
           </p>
 
-          <figure xml:id="figure-rotations" permid="fSf">
+          <figure xml:id="figure-rotations">
             <caption>Rotations and reflections of a regular <m>n</m>-gon</caption>
-            <image xml:id="permute-motions-ngon" permid="MCe">
+            <image xml:id="permute-motions-ngon">
 
             <latex-image>
                 <xi:include href="tikz/permute-motions-ngon.tex" parse="text"/>
@@ -823,7 +823,7 @@
 
           </figure>
 
-          <p permid="zKW">
+          <p>
             Label the <m>n</m> reflections <m>s_1, s_2, \ldots, s_n</m>,
             where <m>s_k</m> is the reflection that leaves vertex <m>k</m> fixed.
             There are two cases of reflections,
@@ -844,15 +844,15 @@
             If the second vertex is replaced by <m>k-1</m>, then <m>t = s r^k</m>.
             Hence, <m>r</m> and <m>s</m> generate <m>D_n</m>.
             That is, <m>D_n</m> consists of all finite products of <m>r</m> and <m>s</m>,
-            <me permid="peN">
+            <me>
               D_n = \{1, r, r^2, \ldots, r^{n-1}, s, sr, sr^2, \ldots, sr^{n-1}\}
             </me>.
             We will leave the proof that <m>srs = r^{-1}</m> as an exercise.
           </p>
 
-          <figure xml:id="figure-types" permid="LZo">
+          <figure xml:id="figure-types">
               <caption>Types of  reflections of a regular <m>n</m>-gon</caption>
-              <image xml:id="permute-reflections-ngon" permid="sJn">
+              <image xml:id="permute-reflections-ngon">
 
             <latex-image>
                 <xi:include href="tikz/permute-reflections-ngon.tex" parse="text"/>
@@ -863,34 +863,34 @@
         </proof>
       </theorem>
 
-      <example xml:id="example-permute-d4-group" permid="LDC">
-        <p permid="PDO">
+      <example xml:id="example-permute-d4-group">
+        <p>
           The group of rigid motions of a square,
           <m>D_4</m>, consists of eight elements.
           With the vertices numbered <m>1</m>, <m>2</m>, <m>3</m>,
           <m>4</m> (<xref ref="figure-d4"/>), the rotations are
-          <md permid="VlW">
+          <md>
             <mrow>r   &amp; = (1234)</mrow>
             <mrow>r^2 &amp; = (13)(24)</mrow>
             <mrow>r^3 &amp; = (1432)</mrow>
             <mrow>r^4 &amp; = (1)</mrow>
           </md>
           and the reflections are
-          <md permid="Btf">
+          <md>
             <mrow>s_1 &amp; = (24)</mrow>
             <mrow>s_2 &amp; = (13)</mrow>
           </md>.
           The order of <m>D_4</m> is <m>8</m>.
           The remaining two elements are
-          <md permid="hAo">
+          <md>
             <mrow>r s_1   &amp; = (12)(34)</mrow>
             <mrow>r^3 s_1 &amp; = (14)(23)</mrow>
           </md>.
         </p>
 
-        <figure xml:id="figure-d4" permid="vKX">
+        <figure xml:id="figure-d4">
           <caption>The group <m>D_4</m></caption>
-          <image width="60%" xml:id="permute-dihedral-four" permid="YQw">
+          <image width="60%" xml:id="permute-dihedral-four">
 
             <latex-image>
                 <xi:include href="tikz/permute-dihedral-four.tex" parse="text"/>
@@ -903,9 +903,9 @@
 
     </introduction>
 
-    <subsection xml:id="permute-subsection-motion-group-cube" permid="FzV">
+    <subsection xml:id="permute-subsection-motion-group-cube">
       <title>The Motion Group of a Cube</title>
-      <p permid="suS">
+      <p>
         We can investigate the groups of rigid motions of geometric objects other than a regular <m>n</m>-sided polygon to obtain interesting examples of permutation groups.
         Let us consider the group of rigid motions of a cube.
         One of the first questions that we can ask about this group is
@@ -919,23 +919,23 @@
 
 
 
-      <proposition xml:id="proposition-motions-cube" permid="cXm">
+      <proposition xml:id="proposition-motions-cube">
         <statement>
-          <p permid="tVK">
+          <p>
             The group of rigid motions of a cube contains <m>24</m> elements.
           </p>
         </statement>
       </proposition>
 
-      <theorem permid="wQd">
+      <theorem>
         <statement>
-          <p permid="Vta">
+          <p>
             The group of rigid motions of a cube is <m>S_4</m>.
           </p>
         </statement>
 
-        <proof permid="hlG">
-          <p permid="sgx">
+        <proof>
+          <p>
             From <xref ref="proposition-motions-cube"/>,
             we already know that the motion group of the cube has <m>24</m> elements,
             the same number of elements as there are in <m>S_4</m>.
@@ -952,10 +952,10 @@
             the motion group of a cube must be <m>S_4</m>.
           </p>
 
-          <figure xml:id="figure-motions" permid="YnG">
+          <figure xml:id="figure-motions">
             <caption>The motion group of a cube</caption>
 
-            <image width="60%" xml:id="permute-motions-cube" permid="EXF">
+            <image width="60%" xml:id="permute-motions-cube">
 
             <latex-image>
                 <xi:include href="tikz/permute-motions-cube.tex" parse="text"/>
@@ -964,9 +964,9 @@
 
           </figure>
 
-          <figure xml:id="figure-transpose" permid="EuP">
+          <figure xml:id="figure-transpose">
             <caption>Transpositions in the motion group of a cube</caption>
-            <image xml:id="permute-transpositions-cube" permid="leO">
+            <image xml:id="permute-transpositions-cube">
 
             <latex-image>
                 <xi:include href="tikz/permute-transpositions-cube.tex" parse="text"/>
@@ -977,9 +977,9 @@
         </proof>
       </theorem>
 
-      <paragraphs permid="qqX">
+      <paragraphs>
         <title>Sage</title>
-        <p permid="YCb">
+        <p>
           A permutation group is a very concrete representation of a group,
           and Sage support for permutations groups is very good <mdash/> making Sage a natural place for beginners to learn about group theory.
         </p>
@@ -988,17 +988,17 @@
     </subsection>
   </section>
 
-  <exercises xml:id="exercises-permute" filenamebase="permute" permid="ecF">
+  <exercises xml:id="exercises-permute" filenamebase="permute">
     <title>Exercises</title>
-    <exercise number="1" permid="Jev">
+    <exercise number="1">
       <statement>
-        <p permid="xAk">
+        <p>
           Write the following permutations in cycle notation.
 
-          <ol cols="2" permid="xOs">
-            <li permid="ZVC">
-              <p permid="vih">
-                <me permid="NHx">
+          <ol cols="2">
+            <li>
+              <p>
+                <me>
                   \begin{pmatrix}
                   1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
                   2 &amp; 4 &amp; 1 &amp; 5 &amp; 3
@@ -1007,9 +1007,9 @@
               </p>
             </li>
 
-            <li permid="GcL">
-              <p permid="bpq">
-                <me permid="tOG">
+            <li>
+              <p>
+                <me>
                   \begin{pmatrix}
                   1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
                   4 &amp; 2 &amp; 5 &amp; 1 &amp; 3
@@ -1018,9 +1018,9 @@
               </p>
             </li>
 
-            <li permid="mjU">
-              <p permid="Hwz">
-                <me permid="ZVP">
+            <li>
+              <p>
+                <me>
                   \begin{pmatrix}
                   1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
                   3 &amp; 5 &amp; 1 &amp; 4 &amp; 2
@@ -1029,9 +1029,9 @@
               </p>
             </li>
 
-            <li permid="Srd">
-              <p permid="nDI">
-                <me permid="GcY">
+            <li>
+              <p>
+                <me>
                   \begin{pmatrix}
                   1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
                   1 &amp; 4 &amp; 3 &amp; 2 &amp; 5
@@ -1042,203 +1042,203 @@
           </ol>
         </p>
       </statement>
-      <hint permid="lVz">
-        <p permid="AQp">
+      <hint>
+        <p>
           (a) <m>(12453)</m>; (c) <m>(13)(25)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="2" permid="plE">
+    <exercise number="2">
       <statement>
-        <p permid="dHt">
+        <p>
           Compute each of the following.
 
-          <ol cols="2" permid="dVB">
-            <li permid="yym">
-              <p permid="TKR">
+          <ol cols="2">
+            <li>
+              <p>
                 <m>(1345)(234)</m>
               </p>
             </li>
 
-            <li permid="eFv">
-              <p permid="zSa">
+            <li>
+              <p>
                 <m>(12)(1253)</m>
               </p>
             </li>
 
-            <li permid="KME">
-              <p permid="fZj">
+            <li>
+              <p>
                 <m>(143)(23)(24)</m>
               </p>
             </li>
 
-            <li permid="qTN">
-              <p permid="Mgs">
+            <li>
+              <p>
                 <m>(1423)(34)(56)(1324)</m>
               </p>
             </li>
 
-            <li permid="XaW">
-              <p permid="snB">
+            <li>
+              <p>
                 <m>(1254)(13)(25)</m>
               </p>
             </li>
 
-            <li permid="Dif">
-              <p permid="YuK">
+            <li>
+              <p>
                 <m>(1254) (13)(25)^2</m>
               </p>
             </li>
 
-            <li permid="jpo">
-              <p permid="EBT">
+            <li>
+              <p>
                 <m>(1254)^{-1} (123)(45) (1254)</m>
               </p>
             </li>
 
-            <li permid="Pwx">
-              <p permid="kJc">
+            <li>
+              <p>
                 <m>(1254)^2 (123)(45)</m>
               </p>
             </li>
 
-            <li permid="vDG">
-              <p permid="QQl">
+            <li>
+              <p>
                 <m>(123)(45) (1254)^{-2}</m>
               </p>
             </li>
 
-            <li permid="bKP">
-              <p permid="wXu">
+            <li>
+              <p>
                 <m>(1254)^{100}</m>
               </p>
             </li>
 
-            <li permid="HRY">
-              <p permid="deD">
+            <li>
+              <p>
                 <m>|(1254)|</m>
               </p>
             </li>
 
-            <li permid="nZh">
-              <p permid="JlM">
+            <li>
+              <p>
                 <m>|(1254)^2|</m>
               </p>
             </li>
 
-            <li permid="Ugq">
-              <p permid="psV">
+            <li>
+              <p>
                 <m>(12)^{-1}</m>
               </p>
             </li>
 
-            <li permid="Anz">
-              <p permid="VAe">
+            <li>
+              <p>
                 <m>(12537)^{-1}</m>
               </p>
             </li>
 
-            <li permid="guI">
-              <p permid="BHn">
+            <li>
+              <p>
                 <m>[(12)(34)(12)(47)]^{-1}</m>
               </p>
             </li>
 
-            <li permid="MBR">
-              <p permid="hOw">
+            <li>
+              <p>
                 <m>[(1235)(467)]^{-1}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="yjR">
-        <p permid="gXy">
+      <hint>
+        <p>
           (a) <m>(135)(24)</m>; (c) <m>(14)(23)</m>; (e) <m>(1324)</m>; (g) <m>(134)(25)</m>; (n) <m>(17352)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="3" permid="VsN">
+    <exercise number="3">
       <statement>
-        <p permid="JOC">
+        <p>
           Express the following permutations as products of transpositions and identify them as even or odd.
 
-          <ol cols="2" permid="KcK">
-            <li permid="sJa">
-              <p permid="NVF">
+          <ol cols="2">
+            <li>
+              <p>
                 <m>(14356)</m>
               </p>
             </li>
 
-            <li permid="YQj">
-              <p permid="ucO">
+            <li>
+              <p>
                 <m>(156)(234)</m>
               </p>
             </li>
 
-            <li permid="EXs">
-              <p permid="ajX">
+            <li>
+              <p>
                 <m>(1426)(142)</m>
               </p>
             </li>
 
-            <li permid="leB">
-              <p permid="Grg">
+            <li>
+              <p>
                 <m>(17254)(1423)(154632)</m>
               </p>
             </li>
 
-            <li permid="RlK">
-              <p permid="myp">
+            <li>
+              <p>
                 <m>(142637)</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="Kyj">
-        <p permid="NeH">
+      <hint>
+        <p>
           (a) <m>(16)(15)(13)(14)</m>; (c) <m>(16)(14)(12)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="4" permid="BzW">
+    <exercise number="4">
       <statement>
-        <p permid="pVL">
+        <p>
           Find <m>(a_1, a_2, \ldots, a_n)^{-1}</m>.
         </p>
       </statement>
-      <hint permid="WMB">
-        <p permid="tlQ">
+      <hint>
+        <p>
           <m>(a_1, a_2, \ldots, a_n)^{-1} = (a_1, a_{n}, a_{n-1}, \ldots, a_2)</m>
         </p>
       </hint>
     </exercise>
 
-    <exercise number="5" permid="hHf">
+    <exercise number="5">
       <statement>
-        <p permid="WcU">
+        <p>
           List all of the subgroups of <m>S_4</m>.
           Find each of the following sets:
 
-          <ol permid="qjT">
-            <li permid="xsT">
-              <p permid="SFy">
+          <ol>
+            <li>
+              <p>
                 <m>\{ \sigma \in S_4 : \sigma(1) = 3 \}</m>
               </p>
             </li>
 
-            <li permid="dAc">
-              <p permid="yMH">
+            <li>
+              <p>
                 <m>\{ \sigma \in S_4 : \sigma(2) = 2 \}</m>
               </p>
             </li>
 
-            <li permid="JHl">
-              <p permid="eTQ">
+            <li>
+              <p>
                 <m>\{ \sigma \in S_4 : \sigma(1) = 3</m> and <m>\sigma(2) = 2 \}</m>.
               </p>
             </li>
@@ -1247,70 +1247,70 @@
           Are any of these sets subgroups of <m>S_4</m>?
         </p>
       </statement>
-      <hint permid="jaT">
-        <p permid="ZsZ">
+      <hint>
+        <p>
           (a) <m>\{ (13), (13)(24), (132), (134), (1324), (1342) \}</m> is not a subgroup.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="6" permid="NOo">
+    <exercise number="6">
       <statement>
-        <p permid="Ckd">
+        <p>
           Find all of the subgroups in <m>A_4</m>.
           What is the order of each subgroup?
         </p>
       </statement>
     </exercise>
 
-    <exercise number="7" permid="tVx">
+    <exercise number="7">
       <statement>
-        <p permid="irm">
+        <p>
           Find all possible orders of elements in <m>S_7</m> and <m>A_7</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="8" permid="acG">
+    <exercise number="8">
       <statement>
-        <p permid="Oyv">
+        <p>
           Show that <m>A_{10}</m> contains an element of order <m>15</m>.
         </p>
       </statement>
-      <hint permid="HDD">
-        <p permid="FAi">
+      <hint>
+        <p>
           <m>(12345)(678)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="9" permid="GjP">
+    <exercise number="9">
       <statement>
-        <p permid="uFE">
+        <p>
           Does <m>A_8</m> contain an element of order <m>26</m>?
         </p>
       </statement>
     </exercise>
 
-    <exercise number="10" permid="mqY">
+    <exercise number="10">
       <statement>
-        <p permid="aMN">
+        <p>
           Find an element of largest order in <m>S_n</m> for <m>n = 3, \ldots, 10</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="11" permid="Syh">
+    <exercise number="11">
       <statement>
-        <p permid="GTW">
+        <p>
           What are the possible cycle structures of elements of <m>A_5</m>?
           What about <m>A_6</m>?
         </p>
       </statement>
-      <hint permid="ggn">
-        <p permid="lHr">
+      <hint>
+        <p>
           Permutations of the form
-          <me permid="mkh">
+          <me>
             (1), (a_1, a_2)(a_3, a_4), (a_1, a_2, a_3), (a_1, a_2, a_3, a_4, a_5)
           </me>
           are possible for <m>A_5</m>.
@@ -1318,9 +1318,9 @@
       </hint>
     </exercise>
 
-    <exercise number="12" permid="yFq">
+    <exercise number="12">
       <statement>
-        <p permid="nbf">
+        <p>
           Let <m>\sigma \in S_n</m> have order <m>n</m>.
           Show that for all integers <m>i</m> and <m>j</m>,
           <m>\sigma^i = \sigma^j</m> if and only if <m>i \equiv j \pmod{n}</m>.
@@ -1328,18 +1328,18 @@
       </statement>
     </exercise>
 
-    <exercise number="13" xml:id="exercise-permute-order-product-cycles" permid="eMz">
+    <exercise number="13" xml:id="exercise-permute-order-product-cycles">
       <statement>
-        <p permid="Tio">
+        <p>
           Let <m>\sigma = \sigma_1 \cdots \sigma_m \in S_n</m> be the product of disjoint cycles.
           Prove that the order of <m>\sigma</m> is the least common multiple of the lengths of the cycles <m>\sigma_1, \ldots, \sigma_m</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="14" permid="KTI">
+    <exercise number="14">
       <statement>
-        <p permid="zpx">
+        <p>
           Using cycle notation, list the elements in <m>D_5</m>.
           What are <m>r</m> and <m>s</m>?
           Write every element as a product of <m>r</m> and <m>s</m>.
@@ -1347,9 +1347,9 @@
       </statement>
     </exercise>
 
-    <exercise number="15" permid="raR">
+    <exercise number="15">
       <statement>
-        <p permid="fwG">
+        <p>
           If the diagonals of a cube are labeled as <xref ref="figure-motions"/>,
           to which motion of the cube does the permutation <m>(12)(34)</m> correspond?
           What about the other permutations of the diagonals?
@@ -1357,56 +1357,56 @@
       </statement>
     </exercise>
 
-    <exercise number="16" permid="Xia">
+    <exercise number="16">
       <statement>
-        <p permid="LDP">
+        <p>
           Find the group of rigid motions of a tetrahedron.
           Show that this is the same group as <m>A_4</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="17" permid="Dpj">
+    <exercise number="17">
       <statement>
-        <p permid="rKY">
+        <p>
           Prove that <m>S_n</m> is nonabelian for <m>n \geq 3</m>.
         </p>
       </statement>
-      <hint permid="xey">
-        <p permid="ROA">
+      <hint>
+        <p>
           Calculate <m>(123)(12)</m> and <m>(12)(123)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="18" permid="jws">
+    <exercise number="18">
       <statement>
-        <p permid="XSh">
+        <p>
           Show that <m>A_n</m> is nonabelian for <m>n \geq 4</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="19" permid="PDB">
+    <exercise number="19">
       <statement>
-        <p permid="DZq">
+        <p>
           Prove that <m>D_n</m> is nonabelian for <m>n \geq 3</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="20" xml:id="exercise-permute-cycle-n-1-transpositions" permid="vKK">
+    <exercise number="20" xml:id="exercise-permute-cycle-n-1-transpositions">
       <statement>
-        <p permid="kgz">
+        <p>
           Let <m>\sigma \in S_n</m> be a cycle.
           Prove that <m>\sigma</m> can be written as the product of at most <m>n-1</m> transpositions.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="21" permid="bRT">
+    <exercise number="21">
       <statement>
-        <p permid="QnI">
+        <p>
           Let <m>\sigma \in S_n</m>.
           If <m>\sigma</m> is not a cycle,
           prove that <m>\sigma</m> can be written as the product of at most <m>n - 2</m> transpositions.
@@ -1414,66 +1414,66 @@
       </statement>
     </exercise>
 
-    <exercise number="22" permid="HZc">
+    <exercise number="22">
       <statement>
-        <p permid="wuR">
+        <p>
           If <m>\sigma</m> can be expressed as an odd number of transpositions,
           show that any other product of transpositions equaling <m>\sigma</m> must also be odd.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="23" permid="ogl">
+    <exercise number="23">
       <statement>
-        <p permid="cCa">
+        <p>
           If <m>\sigma</m> is a cycle of odd length,
           prove that <m>\sigma^2</m> is also a cycle.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="24" permid="Unu">
+    <exercise number="24">
       <statement>
-        <p permid="IJj">
+        <p>
           Show that a <m>3</m>-cycle is an even permutation.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="25" permid="AuD">
+    <exercise number="25">
       <statement>
-        <p permid="oQs">
+        <p>
           Prove that in <m>A_n</m> with <m>n \geq 3</m>,
           any permutation is a product of cycles of length <m>3</m>.
         </p>
       </statement>
-      <hint permid="arb">
-        <p permid="xVJ">
+      <hint>
+        <p>
           Consider the cases <m>(ab)(bc)</m> and <m>(ab)(cd)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="26" permid="gBM">
+    <exercise number="26">
       <statement>
-        <p permid="UXB">
+        <p>
           Prove that any element in <m>S_n</m> can be written as a finite product of the following permutations.
 
-          <ol permid="Wrc">
-            <li permid="ijV">
-              <p permid="ZeE">
+          <ol>
+            <li>
+              <p>
                 <m>(1 2), (13), \ldots, (1n)</m>
               </p>
             </li>
 
-            <li permid="Ore">
-              <p permid="FlN">
+            <li>
+              <p>
                 <m>(1 2), (23), \ldots, (n- 1,n)</m>
               </p>
             </li>
 
-            <li permid="uyn">
-              <p permid="lsW">
+            <li>
+              <p>
                 <m>(12), (1 2 \ldots n )</m>
               </p>
             </li>
@@ -1482,9 +1482,9 @@
       </statement>
     </exercise>
 
-    <exercise number="27" permid="MIV">
+    <exercise number="27">
       <statement>
-        <p permid="BeK">
+        <p>
           Let <m>G</m> be a group and define a map
           <m>\lambda_g : G \rightarrow G</m> by <m>\lambda_g(a) = g a</m>.
           Prove that <m>\lambda_g</m> is a permutation of <m>G</m>.
@@ -1492,19 +1492,19 @@
       </statement>
     </exercise>
 
-    <exercise number="28" permid="sQe">
+    <exercise number="28">
       <statement>
-        <p permid="hlT">
+        <p>
           Prove that there exist <m>n!</m> permutations of a set containing <m>n</m> elements.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="29" permid="YXn">
+    <exercise number="29">
       <statement>
-        <p permid="Ntc">
+        <p>
           Recall that the <term>center</term> of a group <m>G</m> is
-          <me permid="eFI">
+          <me>
             Z(G) = \{ g \in G : gx = xg \text{ for all } x \in G \}
           </me>.
           Find the center of <m>D_8</m>.
@@ -1514,25 +1514,25 @@
       </statement>
     </exercise>
 
-    <exercise number="30" permid="Few">
+    <exercise number="30">
       <statement>
-        <p permid="tAl">
+        <p>
           Let <m>\tau = (a_1, a_2, \ldots,
           a_k)</m> be a cycle of length <m>k</m>.
 
-          <ol permid="Cyl">
-            <li permid="TaX">
-              <p permid="JVG">
+          <ol>
+            <li>
+              <p>
                 Prove that if <m>\sigma</m> is any permutation, then
-                <me permid="Xbj">
+                <me>
                   \sigma \tau \sigma^{-1 } = ( \sigma(a_1), \sigma(a_2), \ldots, \sigma(a_k))
                 </me>
                 is a cycle of length <m>k</m>.
               </p>
             </li>
 
-            <li permid="zig">
-              <p permid="qcP">
+            <li>
+              <p>
                 Let <m>\mu</m> be a cycle of length <m>k</m>.
                 Prove that there is a permutation <m>\sigma</m> such that <m>\sigma \tau \sigma^{-1 } = \mu</m>.
               </p>
@@ -1540,16 +1540,16 @@
           </ol>
         </p>
       </statement>
-      <hint permid="Lid">
-        <p permid="ecS">
+      <hint>
+        <p>
           For (a), show that <m>\sigma \tau \sigma^{-1 }(\sigma(a_i)) = \sigma(a_{i + 1})</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="31" permid="llF">
+    <exercise number="31">
       <statement>
-        <p permid="ZHu">
+        <p>
           For <m>\alpha</m> and <m>\beta</m> in <m>S_n</m>,
           define <m>\alpha \sim \beta</m> if there exists an
           <m>\sigma \in S_n</m> such that <m>\sigma \alpha \sigma^{-1} = \beta</m>.
@@ -1558,34 +1558,34 @@
       </statement>
     </exercise>
 
-    <exercise number="32" permid="RsO">
+    <exercise number="32">
       <statement>
-        <p permid="FOD">
+        <p>
           Let <m>\sigma \in S_X</m>.
           If <m>\sigma^n(x) = y</m>, we will say that <m>x \sim y</m>.
 
-          <ol permid="iFu">
-            <li permid="rDH">
-              <p permid="iyq">
+          <ol>
+            <li>
+              <p>
                 Show that <m>\sim</m> is an equivalence relation on <m>X</m>.
               </p>
             </li>
 
-            <li permid="XKQ">
-              <p permid="OFz">
+            <li>
+              <p>
                 If <m>\sigma \in A_n</m> and <m>\tau \in S_n</m>,
                 show that <m>\tau^{-1} \sigma \tau \in A_n</m>.
               </p>
             </li>
 
-            <li permid="DRZ">
-              <p permid="uMI">
+            <li>
+              <p>
                 Define the <term>orbit</term> of <m>x \in X</m> under <m>\sigma \in S_X</m> to be the set
-                <me permid="vDT">
+                <me>
                   {\mathcal O}_{x, \sigma} = \{ y : x \sim y  \}
                 </me>.
                 Compute the orbits of each of the following elements in <m>S_5</m>:
-                <md permid="bLc">
+                <md>
                   <mrow>\alpha &amp; = (1254)</mrow>
                   <mrow>\beta &amp; = (123)(45)</mrow>
                   <mrow>\gamma &amp; = (13)(25)</mrow>
@@ -1593,16 +1593,16 @@
               </p>
             </li>
 
-            <li permid="jZi">
-              <p permid="aTR">
+            <li>
+              <p>
                 If <m>{\mathcal O}_{x, \sigma} \cap {\mathcal O}_{y, \sigma} \neq \emptyset</m>,
                 prove that <m>{\mathcal O}_{x, \sigma} = {\mathcal O}_{y, \sigma}</m>.
                 The orbits under a permutation <m>\sigma</m> are the equivalence classes corresponding to the equivalence relation <m>\sim</m>.
               </p>
             </li>
 
-            <li permid="Qgr">
-              <p permid="Hba">
+            <li>
+              <p>
                 A subgroup <m>H</m> of <m>S_X</m> is <term>transitive</term>
                 if for every <m>x, y \in X</m>,
                 there exists a <m>\sigma \in H</m> such that <m>\sigma(x) = y</m>.
@@ -1615,9 +1615,9 @@
       </statement>
     </exercise>
 
-    <exercise number="33" permid="xzX">
+    <exercise number="33">
       <statement>
-        <p permid="lVM">
+        <p>
           Let <m>\alpha \in S_n</m> for <m>n \geq 3</m>.
           If <m>\alpha \beta = \beta \alpha</m> for all <m>\beta \in S_n</m>,
           prove that <m>\alpha</m> must be the identity permutation;
@@ -1626,43 +1626,43 @@
       </statement>
     </exercise>
 
-    <exercise number="34" xml:id="permute-exercise-inverse-even" permid="dHg">
+    <exercise number="34" xml:id="permute-exercise-inverse-even">
       <statement>
-        <p permid="ScV">
+        <p>
           If <m>\alpha</m> is even, prove that <m>\alpha^{-1}</m> is also even.
           Does a corresponding result hold if <m>\alpha</m> is odd?
         </p>
       </statement>
     </exercise>
 
-    <exercise number="35" permid="JOp">
+    <exercise number="35">
       <statement>
-        <p permid="yke">
+        <p>
           Show that <m>\alpha^{-1} \beta^{-1} \alpha \beta</m> is even for <m>\alpha, \beta \in S_n</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="36" permid="pVy">
+    <exercise number="36">
       <statement>
-        <p permid="ern">
+        <p>
           Let <m>r</m> and <m>s</m> be the elements in <m>D_n</m> described in <xref ref="theorem-dn-generator"/>
 
-          <ol permid="OMD">
-            <li permid="AXt">
-              <p permid="rSc">
+          <ol>
+            <li>
+              <p>
                 Show that <m>srs = r^{-1}</m>.
               </p>
             </li>
 
-            <li permid="heC">
-              <p permid="XZl">
+            <li>
+              <p>
                 Show that <m>r^k s = s r^{-k}</m> in <m>D_n</m>.
               </p>
             </li>
 
-            <li permid="NlL">
-              <p permid="Egu">
+            <li>
+              <p>
                 Prove that the order of <m>r^k \in D_n</m> is <m>n / \gcd(k,n)</m>.
               </p>
             </li>

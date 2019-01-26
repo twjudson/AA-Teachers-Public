@@ -6,10 +6,10 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="isomorph" permid="OUu">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="isomorph">
   <title>Isomorphisms</title>
-  <introduction permid="kQT">
-    <p permid="qrX">
+  <introduction>
+    <p>
       Many groups may appear to be different at first glance,
       but can be shown to be the same by a simple renaming of the group elements.
       For example,
@@ -19,16 +19,16 @@
     </p>
   </introduction>
 
-  <section xml:id="section-isomorph-definitions" permid="Evp">
+  <section xml:id="section-isomorph-definitions">
     <title>Definition and Examples</title>
-    <introduction permid="QYc">
-      <p permid="Wzg">
+    <introduction>
+      <p>
         Two groups <m>(G, \cdot)</m> and
         <m>(H, \circ)</m> are <term>isomorphic</term>
             <idx><h>Group</h><h>isomorphic</h></idx>
         if there exists a one-to-one and onto map
         <m>\phi : G \rightarrow H</m> such that the group operation is preserved;  that is,
-        <me permid="svF">
+        <me>
           \phi( a \cdot b) = \phi( a) \circ \phi( b)
         </me>
         for all <m>a</m> and <m>b</m> in <m>G</m>.
@@ -45,32 +45,32 @@
             <idx><h>Isomorphism</h><h>of groups</h></idx>
       </p>
 
-      <example xml:id="example-isomorph-z4" permid="gha">
-        <p permid="Qaa">
+      <example xml:id="example-isomorph-z4">
+        <p>
           To show that <m>{\mathbb Z}_4 \cong \langle i \rangle</m>,
           define a map <m>\phi: {\mathbb Z}_4 \rightarrow \langle i \rangle</m> by <m>\phi(n) = i^n</m>.
           We must show that <m>\phi</m> is bijective and preserves the group operation.
           The map <m>\phi</m> is one-to-one and onto because
-          <md permid="EJX">
+          <md>
             <mrow>\phi(0) &amp; = 1</mrow>
             <mrow>\phi(1) &amp; = i</mrow>
             <mrow>\phi(2) &amp; = -1</mrow>
             <mrow>\phi(3) &amp; = -i</mrow>
           </md>.
           Since
-          <me permid="YCO">
+          <me>
             \phi(m + n) = i^{m+n} = i^m i^n = \phi(m) \phi( n)
           </me>,
           the group operation is preserved.
         </p>
       </example>
 
-      <example xml:id="example-isomorph-real" permid="Moj">
-        <p permid="whj">
+      <example xml:id="example-isomorph-real">
+        <p>
           We can define an isomorphism <m>\phi</m> from the additive group of real numbers
           <m>( {\mathbb R}, + )</m> to the multiplicative group of positive real numbers 
           <m>( {\mathbb R^+}, \cdot )</m> with the exponential map; that is,
-          <me permid="kRg">
+          <me>
             \phi( x + y) = e^{x + y} = e^x e^y = \phi( x ) \phi( y)
           </me>.
           Of course, we must still show that <m>\phi</m> is one-to-one and onto,
@@ -78,13 +78,13 @@
         </p>
       </example>
 
-      <example xml:id="example-isomorph-rational" permid="svs">
-        <p permid="cos">
+      <example xml:id="example-isomorph-rational">
+        <p>
           The integers are isomorphic to the subgroup of
           <m>{\mathbb Q}^\ast</m> consisting of elements of the form <m>2^n</m>.
           Define a map <m>\phi: {\mathbb Z} \rightarrow {\mathbb Q}^\ast</m> by <m>\phi( n ) = 2^n</m>.
           Then
-          <me permid="QYp">
+          <me>
             \phi( m + n ) = 2^{m + n} = 2^m 2^n = \phi( m ) \phi( n )
           </me>.
           By definition the map <m>\phi</m> is onto the subset
@@ -98,18 +98,18 @@
         </p>
       </example>
 
-      <example xml:id="example-isomorph-units" permid="YCB">
-        <p permid="IvB">
+      <example xml:id="example-isomorph-units">
+        <p>
           The groups <m>{\mathbb Z}_8</m> and
           <m>{\mathbb Z}_{12}</m> cannot be isomorphic since they have different orders;
           however, it is true that <m>U(8) \cong U(12)</m>.
           We know that
-          <md permid="xfy">
+          <md>
             <mrow>U(8) &amp; = \{1, 3, 5, 7 \}</mrow>
             <mrow>U(12) &amp; = \{1, 5, 7, 11 \}</mrow>
           </md>.
           An isomorphism <m>\phi : U(8) \rightarrow U(12)</m> is then given by
-          <md permid="dmH">
+          <md>
             <mrow>1 &amp; \mapsto  1</mrow>
             <mrow>3 &amp; \mapsto  5</mrow>
             <mrow>5 &amp; \mapsto  7</mrow>
@@ -123,8 +123,8 @@
         </p>
       </example>
 
-      <example xml:id="example-isomorph-not-isomorph" permid="EJK">
-        <p permid="oCK">
+      <example xml:id="example-isomorph-not-isomorph">
+        <p>
           Even though <m>S_3</m> and
           <m>{\mathbb Z}_6</m> possess the same number of elements,
           we would suspect that they are not isomorphic,
@@ -134,50 +134,50 @@
           Let <m>a , b \in S_3</m> be two elements such that <m>ab \neq ba</m>.
           Since <m>\phi</m> is an isomorphism,
           there exist elements <m>m</m> and <m>n</m> in <m>{\mathbb Z}_6</m> such that
-          <me permid="JtQ">
+          <me>
             \phi( m ) = a \quad \text{and} \quad \phi( n ) = b
           </me>.
           However,
-          <me permid="pAZ">
+          <me>
             ab = \phi(m ) \phi(n) = \phi(m + n) = \phi(n + m) = \phi(n ) \phi(m) = ba
           </me>,
           which contradicts the fact that <m>a</m> and <m>b</m> do not commute.
         </p>
       </example>
 
-      <theorem xml:id="theorem-isomorph-1" permid="bxh">
+      <theorem xml:id="theorem-isomorph-1">
         <statement>
-          <p permid="idE">
+          <p>
             Let <m>\phi : G \rightarrow H</m> be an isomorphism of two groups.
             Then the following statements are true.
 
-            <ol permid="gvv">
-              <li permid="Cdz">
-                <p permid="UQX">
+            <ol>
+              <li>
+                <p>
                   <m>\phi^{-1} : H \rightarrow G</m> is an isomorphism.
                 </p>
               </li>
 
-              <li permid="ikI">
-                <p permid="AYg">
+              <li>
+                <p>
                   <m>|G| = |H|</m>.
                 </p>
               </li>
 
-              <li permid="OrR">
-                <p permid="hfp">
+              <li>
+                <p>
                   If <m>G</m> is abelian, then <m>H</m> is abelian.
                 </p>
               </li>
 
-              <li permid="uza">
-                <p permid="Nmy">
+              <li>
+                <p>
                   If <m>G</m> is cyclic, then <m>H</m> is cyclic.
                 </p>
               </li>
 
-              <li permid="aGj">
-                <p permid="ttH">
+              <li>
+                <p>
                   If <m>G</m> has a subgroup of order <m>n</m>,
                   then <m>H</m> has a subgroup of order <m>n</m>.
                 </p>
@@ -186,42 +186,42 @@
           </p>
         </statement>
 
-        <proof permid="JtD">
-          <p permid="nSQ">
+        <proof>
+          <p>
             Assertions (1) and (2) follow from the fact that <m>\phi</m> is a bijection.
             We will prove (3) here and leave the remainder of the theorem to be proved in the exercises.
           </p>
 
-          <p permid="TZZ">
+          <p>
             (3) Suppose that <m>h_1</m> and <m>h_2</m> are elements of <m>H</m>.
             Since <m>\phi</m> is onto,
             there exist elements <m>g_1, g_2 \in G</m> such that
             <m>\phi(g_1) = h_1</m> and <m>\phi(g_2) = h_2</m>.
             Therefore,
-            <me permid="VIi">
+            <me>
               h_1 h_2 = \phi(g_1) \phi(g_2) =  \phi(g_1 g_2) = \phi(g_2 g_1) = \phi(g_2) \phi(g_1) = h_2 h_1
             </me>.
           </p>
         </proof>
       </theorem>
 
-      <p permid="CGp">
+      <p>
         We are now in a position to characterize all cyclic groups.
       </p>
 
-      <theorem xml:id="theorem-isomorph-2" permid="HEq">
+      <theorem xml:id="theorem-isomorph-2">
         <statement>
-          <p permid="OkN">
+          <p>
             All cyclic groups of infinite order are isomorphic to <m>{\mathbb Z}</m>.
           </p>
         </statement>
 
-        <proof permid="pAM">
-          <p permid="Ahi">
+        <proof>
+          <p>
             Let <m>G</m> be a cyclic group with infinite order and suppose that <m>a</m> is a generator of <m>G</m>.
             Define a map <m>\phi : {\mathbb Z} \rightarrow  G</m> by <m>\phi : n \mapsto a^n</m>.
             Then
-            <me permid="BPr">
+            <me>
               \phi( m+n ) = a^{m+n} = a^m a^n = \phi( m ) \phi( n )
             </me>.
             To show that <m>\phi</m> is injective,
@@ -238,16 +238,16 @@
         </proof>
       </theorem>
 
-      <theorem xml:id="theorem-isomorph-3" permid="nLz">
+      <theorem xml:id="theorem-isomorph-3">
         <statement>
-          <p permid="urW">
+          <p>
             If <m>G</m> is a cyclic group of order <m>n</m>,
             then <m>G</m> is isomorphic to <m>{\mathbb Z}_n</m>.
           </p>
         </statement>
 
-        <proof permid="VHV">
-          <p permid="gor">
+        <proof>
+          <p>
             Let <m>G</m> be a cyclic group of order <m>n</m> generated by <m>a</m> and define a map
             <m>\phi : {\mathbb Z}_n \rightarrow G</m> by <m>\phi : k \mapsto a^k</m>,
             where <m>0 \leq k \lt n</m>.
@@ -257,47 +257,47 @@
       </theorem>
             <!-- RAB: 2014/08/18 Should ref be "corollary-isomorph-4"?   -->
             <!-- If so, search for refs (or see them fail with xsltproc) -->
-      <corollary xml:id="theorem-isomorph-4" permid="zZR">
+      <corollary xml:id="theorem-isomorph-4">
         <statement>
-          <p permid="rxq">
+          <p>
             If <m>G</m> is a group of order <m>p</m>,
             where <m>p</m> is a prime number,
             then <m>G</m> is isomorphic to <m>{\mathbb Z}_p</m>.
           </p>
         </statement>
 
-        <proof permid="GyX">
-          <p permid="MvA">
+        <proof>
+          <p>
             The proof is a direct result of <xref ref="corollary-cosets-theorem-7"/>.
           </p>
         </proof>
       </corollary>
 
-      <p permid="iNy">
+      <p>
         The main goal in group theory is to classify all groups;
         however, it makes sense to consider two groups to be the same if they are isomorphic.
         We state this result in the following theorem,
         whose proof is left as an exercise.
       </p>
 
-      <theorem xml:id="theorem-isomorph-5" permid="TSI">
+      <theorem xml:id="theorem-isomorph-5">
         <statement>
-          <p permid="azf">
+          <p>
             The isomorphism of groups determines an equivalence relation on the class of all groups.
           </p>
         </statement>
       </theorem>
 
-      <p permid="OUH">
+      <p>
         Hence, we can modify our goal of classifying all groups to classifying all groups
         <term>up to isomorphism</term>;
         that is, we will consider two groups to be the same if they are isomorphic.
       </p>
     </introduction>
 
-    <subsection xml:id="isomorph-subsection-cayleys-theorem" permid="vbD">
+    <subsection xml:id="isomorph-subsection-cayleys-theorem">
       <title>Cayley's Theorem</title>
-      <p permid="rLL">
+      <p>
         Cayley proved that if <m>G</m> is a group,
         it is isomorphic to a group of permutations on some set;
         hence, every group is a permutation group.
@@ -306,16 +306,16 @@
         such as a group of permutations or matrices.
       </p>
 
-      <example xml:id="example-isomorph-cayley" permid="cXZ">
-        <p permid="UJT">
+      <example xml:id="example-isomorph-cayley">
+        <p>
           Consider the group <m>{\mathbb Z}_3</m>.
           The Cayley table for <m>{\mathbb Z}_3</m> is as follows.
         </p>
 
-        <sidebyside width="100%" permid="Jfi">
+        <sidebyside width="100%">
             <!-- math table -->
-          <p permid="ARc">
-            <me permid="hWA">
+          <p>
+            <me>
               \begin{array}{c|ccc}
               + &amp; 0 &amp; 1 &amp; 2 \\ \hline
               0       &amp; 0 &amp; 1 &amp; 2 \\
@@ -326,10 +326,10 @@
           </p>
         </sidebyside>
 
-        <p permid="gYl">
+        <p>
           The addition table of <m>{\mathbb Z}_3</m> suggests that it is the same as the permutation group <m>G = \{ (0), (0 1 2), (0 2 1) \}</m>.
           The isomorphism here is
-          <md permid="OdJ">
+          <md>
             <mrow>0 &amp; \mapsto
             \begin{pmatrix}
             0 &amp; 1 &amp; 2 \\ 0 &amp; 1 &amp; 2
@@ -349,19 +349,19 @@
         </p>
       </example>
 
-      <theorem xml:id="theorem-cayleys" permid="wQQ">
+      <theorem xml:id="theorem-cayleys">
         <title>Cayley</title>
         <idx>
         <h>Cayley's Theorem</h>
         </idx>
         <statement>
-          <p permid="GGo">
+          <p>
             Every group is isomorphic to a group of permutations.
           </p>
         </statement>
 
-        <proof permid="BPe">
-          <p permid="sCJ">
+        <proof>
+          <p>
             Let <m>G</m> be a group.
             We must find a group of permutations
             <m>\overline{G}</m> that is isomorphic to <m>G</m>.
@@ -371,7 +371,7 @@
             To show that <m>\lambda_g</m> is one-to-one,
             suppose that <m>\lambda_g(a) = \lambda_g(b)</m>.
             Then
-            <me permid="ukS">
+            <me>
               ga =\lambda_g(a) = \lambda_g(b) = gb
             </me>.
             Hence, <m>a = b</m>.
@@ -381,36 +381,36 @@
             Let <m>b = g^{-1} a</m>.
           </p>
 
-          <p permid="YJS">
+          <p>
             Now we are ready to define our group <m>\overline{G}</m>.
             Let
-            <me permid="asb">
+            <me>
               \overline{G} = \{ \lambda_g : g \in G \}
             </me>.
             We must show that <m>\overline{G}</m> is a group under composition of functions and find an isomorphism between <m>G</m> and <m>\overline{G}</m>.
             We have closure under composition of functions since
-            <me permid="Gzk">
+            <me>
               (\lambda_g \circ \lambda_h )(a) = \lambda_g(ha) = gha = \lambda_{gh} (a)
             </me>.
             Also,
-            <me permid="mGt">
+            <me>
               \lambda_e (a) = ea = a
             </me>
             and
-            <me permid="SNC">
+            <me>
               (\lambda_{g^{-1}} \circ \lambda_g) (a) = \lambda_{g^{-1}} (ga) = g^{-1} g a = a = \lambda_e (a)
             </me>.
           </p>
 
-          <p permid="ERb">
+          <p>
             We can define an isomorphism from <m>G</m> to
             <m>\overline{G}</m> by <m>\phi : g \mapsto \lambda_g</m>.
             The group operation is preserved since
-            <me permid="yUL">
+            <me>
               \phi(gh) = \lambda_{gh} = \lambda_g \lambda_h = \phi(g) \phi(h)
             </me>.
             It is also one-to-one, because if <m>\phi(g)(a) = \phi(h)(a)</m>, then
-            <me permid="fbU">
+            <me>
               ga = \lambda_g a = \lambda_h a=  ha
             </me>.
             Hence, <m>g = h</m>.
@@ -420,15 +420,15 @@
         </proof>
       </theorem>
 
-      <p permid="XSU">
+      <p>
         The isomorphism <m>g \mapsto \lambda_g</m> is known as the
         <term>left regular representation</term><idx><h>Left regular representation</h></idx> of <m>G</m>.
       </p>
     </subsection>
 
-    <subsection xml:id="isomorph-subsection-historical-note" permid="biM">
+    <subsection xml:id="isomorph-subsection-historical-note">
       <title>Historical Note</title>
-      <p permid="Ead">
+      <p>
         Arthur Cayley
             <idx><h>Cayley, Arthur</h></idx>
         was born in England in 1821,
@@ -451,10 +451,10 @@
     </subsection>
   </section>
 
-  <section xml:id="section-direct-products" permid="kCy">
+  <section xml:id="section-direct-products">
     <title>Direct Products</title>
-    <introduction permid="xfl">
-      <p permid="vbQ">
+    <introduction>
+      <p>
         Given two groups <m>G</m> and <m>H</m>,
         it is possible to construct a new group from the Cartesian product of <m>G</m> and <m>H</m>,
         <m>G \times H</m>.
@@ -466,15 +466,15 @@
       </p>
     </introduction>
 
-    <subsection xml:id="isomorph-subsection-external-products" permid="HpV">
+    <subsection xml:id="isomorph-subsection-external-products">
       <title>External Direct Products</title>
-      <p permid="khm">
+      <p>
         If <m>(G,\cdot)</m> and <m>(H, \circ)</m> are groups,
         then we can make the Cartesian product of <m>G</m> and <m>H</m> into a new group.
         As a set, our group is just the ordered pairs
         <m>(g, h) \in G \times H</m> where <m>g \in G</m> and <m>h \in H</m>.
         We can define a binary operation on <m>G \times H</m> by
-        <me permid="Ljd">
+        <me>
           (g_1, h_1)(g_2, h_2) = (g_1 \cdot g_2, h_1 \circ h_2);
         </me>
         that is, we just multiply elements in the first coordinate as we do in <m>G</m> and elements in the second coordinate as we do in <m>H</m>.
@@ -482,17 +482,17 @@
         we usually just write <m>(g_1, h_1)(g_2, h_2) = (g_1  g_2, h_1 h_2)</m>.
       </p>
 
-      <proposition xml:id="theorem-isomorph-7" permid="BAJ">
+      <proposition xml:id="theorem-isomorph-7">
         <statement>
-          <p permid="Lqh">
+          <p>
             Let <m>G</m> and <m>H</m> be groups.
             The set <m>G \times H</m> is a group under the operation <m>(g_1, h_1)(g_2, h_2) = (g_1 g_2, h_1 h_2)</m> where
             <m>g_1, g_2 \in G</m> and <m>h_1, h_2 \in H</m>.
           </p>
         </statement>
 
-        <proof permid="arO">
-          <p permid="kYk">
+        <proof>
+          <p>
             Clearly the binary operation defined above is closed.
             If <m>e_G</m> and <m>e_H</m> are the identities of the groups <m>G</m> and <m>H</m> respectively,
             then <m>(e_G, e_H)</m> is the identity of <m>G \times H</m>.
@@ -502,8 +502,8 @@
         </proof>
       </proposition>
 
-      <example xml:id="example-isomorph-r2-product" permid="adt">
-        <p permid="Nfu">
+      <example xml:id="example-isomorph-r2-product">
+        <p>
           Let <m>{\mathbb R}</m> be the group of real numbers under addition.
           The Cartesian product of <m>{\mathbb R}</m> with itself,
           <m>{\mathbb R} \times {\mathbb R} = {\mathbb R}^2</m>,
@@ -514,10 +514,10 @@
         </p>
       </example>
 
-      <example xml:id="example-isomorph-z2xz2" permid="GkC">
-        <p permid="tmD">
+      <example xml:id="example-isomorph-z2xz2">
+        <p>
           Consider
-          <me permid="rqm">
+          <me>
             {\mathbb Z}_2 \times {\mathbb Z}_2 = \{ (0, 0), (0, 1), (1, 0),(1, 1) \}
           </me>.
           Although <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m> and
@@ -528,14 +528,14 @@
         </p>
       </example>
 
-      <p permid="Qov">
+      <p>
         The group <m>G \times H</m> is called the
         <term>external direct product</term><idx><h>Direct product of groups</h><h>external</h></idx>
             <idx><h>External direct product</h></idx>
         of  <m>G</m> and <m>H</m>.
         Notice that there is nothing special about the fact that we have used only two groups to build a new group.
         The direct product
-        <me permid="Xxv">
+        <me>
           \prod_{i = 1}^n G_i = G_1 \times G_2 \times \cdots \times G_n
         </me>
         of the groups <m>G_1, G_2, \ldots, G_n</m> is defined in exactly the same manner.
@@ -543,14 +543,14 @@
         we often write <m>G^n</m> instead of <m>G_1 \times G_2 \times \cdots \times G_n</m>.
       </p>
 
-      <example xml:id="example-isomorph-z2n" permid="mrL">
-        <p permid="ZtM">
+      <example xml:id="example-isomorph-z2n">
+        <p>
           The group <m>{\mathbb Z}_2^n</m>,
           considered as a set, is just the set of all binary <m>n</m>-tuples.
           The group operation is the <q>exclusive or</q>
           of two binary <m>n</m>-tuples.
           For example,
-          <me permid="DEE">
+          <me>
             (01011101) + (01001011) = (00010110)
           </me>.
           This group is important in coding theory,
@@ -558,9 +558,9 @@
         </p>
       </example>
 
-      <theorem xml:id="theorem-isomorph-lcm" permid="pmr">
+      <theorem xml:id="theorem-isomorph-lcm">
         <statement>
-          <p permid="mNx">
+          <p>
             Let <m>(g, h) \in G \times H</m>.
             If <m>g</m> and <m>h</m> have finite orders <m>r</m> and <m>s</m> respectively,
             then the order of <m>(g, h)</m> in
@@ -568,11 +568,11 @@
           </p>
         </statement>
 
-        <proof permid="hWn">
-          <p permid="Rft">
+        <proof>
+          <p>
             Suppose that <m>m</m> is the least common multiple of <m>r</m> and <m>s</m> and let <m>n = |(g,h)|</m>.
             Then
-            <md permid="jLN">
+            <md>
               <mrow>(g,h)^m  = (g^m, h^m) = (e_G,e_H)</mrow>
               <mrow>(g^n, h^n)  = (g, h)^n = (e_G,e_H)</mrow>
             </md>.
@@ -587,9 +587,9 @@
         </proof>
       </theorem>
 
-      <corollary permid="hHS">
+      <corollary>
         <statement>
-          <p permid="XEz">
+          <p>
             Let <m>(g_1, \ldots, g_n) \in \prod G_i</m>.
             If <m>g_i</m> has finite order <m>r_i</m> in <m>G_i</m>,
             then the order of <m>(g_1, \ldots,
@@ -598,8 +598,8 @@
         </statement>
       </corollary>
 
-      <example xml:id="example-isomorph-z12xz60" permid="SyU">
-        <p permid="FAV">
+      <example xml:id="example-isomorph-z12xz60">
+        <p>
           Let <m>(8, 56) \in {\mathbb Z}_{12} \times {\mathbb Z}_{60}</m>.
           Since <m>\gcd(8,12) = 4</m>,
           the order of <m>8</m> is <m>12/4 = 3</m> in <m>{\mathbb Z}_{12}</m>.
@@ -609,10 +609,10 @@
         </p>
       </example>
 
-      <example xml:id="example-isomorph-z2xz3" permid="yGd">
-        <p permid="lIe">
+      <example xml:id="example-isomorph-z2xz3">
+        <p>
           The group <m>{\mathbb Z}_2 \times {\mathbb Z}_3</m> consists of the pairs
-          <md permid="PSW">
+          <md>
             <mrow>&amp; (0,0), &amp; &amp; (0, 1), &amp; &amp; (0, 2), &amp; &amp; (1,0), &amp; &amp; (1, 1), &amp; &amp; (1, 2)</mrow>
           </md>.
           In this case, unlike that of
@@ -623,20 +623,20 @@
         </p>
       </example>
 
-      <p permid="wvE">
+      <p>
         The next theorem tells us exactly when the direct product of two cyclic groups is cyclic.
       </p>
 
-      <theorem xml:id="theorem-z-pq" permid="VtA">
+      <theorem xml:id="theorem-z-pq">
         <statement>
-          <p permid="SUG">
+          <p>
             The group <m>{\mathbb Z}_m \times {\mathbb Z}_n</m> is isomorphic to
             <m>{\mathbb Z}_{mn}</m> if and only if <m>\gcd(m,n)=1</m>.
           </p>
         </statement>
 
-        <proof permid="Odw">
-          <p permid="xmC">
+        <proof>
+          <p>
             We will first show that if <m>{\mathbb Z}_m \times {\mathbb Z}_n \cong {\mathbb Z}_{mn}</m>,
             then <m>\gcd(m, n) = 1</m>.
             We will prove the contrapositive;
@@ -644,25 +644,25 @@
             then <m>{\mathbb Z}_m \times {\mathbb Z}_n</m> cannot be cyclic.
             Notice that <m>mn/d</m> is divisible by both <m>m</m> and <m>n</m>;
             hence, for any element <m>(a,b) \in {\mathbb Z}_m \times {\mathbb Z}_n</m>,
-            <me permid="waf">
+            <me>
               \underbrace{(a,b) + (a,b)+ \cdots + (a,b)}_{mn/d \; \text{times}} = (0, 0)
             </me>.
             Therefore, no <m>(a, b)</m> can generate all of <m>{\mathbb Z}_m \times {\mathbb Z}_n</m>.
           </p>
 
-          <p permid="dtL">
+          <p>
             The converse follows directly from <xref ref="theorem-isomorph-lcm"/> since
             <m>\lcm(m,n) = mn</m> if and only if <m>\gcd(m,n)=1</m>.
           </p>
         </proof>
       </theorem>
 
-      <corollary xml:id="corollary-relatively-prime" permid="NPb">
+      <corollary xml:id="corollary-relatively-prime">
         <statement>
-          <p permid="DLI">
+          <p>
             Let <m>n_1, \ldots, n_k</m> be positive integers.
             Then
-            <me permid="cho">
+            <me>
               \prod_{i=1}^k {\mathbb Z}_{n_i} \cong {\mathbb Z}_{n_1 \cdots n_k}
             </me>
             if and only if <m>\gcd( n_i, n_j) =1</m> for <m>i \neq j</m>.
@@ -670,22 +670,22 @@
         </statement>
       </corollary>
 
-      <corollary permid="tWk">
+      <corollary>
         <statement>
-          <p permid="jSR">
+          <p>
             If
-            <me permid="Iox">
+            <me>
               m = p_1^{e_1} \cdots  p_k^{e_k}
             </me>,
             where the <m>p_i</m>s are distinct primes, then
-            <me permid="ovG">
+            <me>
               {\mathbb Z}_m \cong {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb Z}_{p_k^{e_k}}
             </me>.
           </p>
         </statement>
 
-        <proof permid="mGg">
-          <p permid="JAU">
+        <proof>
+          <p>
             Since the greatest common divisor of <m>p_i^{e_i}</m> and
             <m>p_j^{e_j}</m> is 1 for <m>i \neq j</m>,
             the proof follows from <xref ref="corollary-relatively-prime"/>.
@@ -693,10 +693,10 @@
         </proof>
       </corollary>
             <!-- This reference needs to be fixed - TWJ 6/2/2010 -->
-      <p permid="cCN">
+      <p>
         In <xref ref="struct"/>,
         we will prove that all finite abelian groups are isomorphic to direct products of the form
-        <me permid="UCP">
+        <me>
           {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb Z}_{p_k^{e_k}}
         </me>
         where <m>p_1, \ldots, p_k</m> are
@@ -705,32 +705,32 @@
       </p>
     </subsection>
 
-    <subsection xml:id="isomorph-subsection-internal-products" permid="nxe">
+    <subsection xml:id="isomorph-subsection-internal-products">
       <title>Internal Direct Products</title>
-      <p permid="IJW">
+      <p>
         The external direct product of two groups builds a large group out of two smaller groups.
         We would like to be able to reverse this process and conveniently break down a group into its direct product components;
         that is, we would like to be able to say when a group is isomorphic to the direct product of two of its subgroups.
       </p>
 
-      <p permid="oRf">
+      <p>
         Let <m>G</m> be a group with subgroups <m>H</m> and <m>K</m> satisfying the following conditions.
 
-        <ul permid="EYf">
-          <li permid="Rmx">
-            <p permid="ZAQ">
+        <ul>
+          <li>
+            <p>
               <m>G = HK = \{ hk : h \in H, k \in K \}</m>;
             </p>
           </li>
 
-          <li permid="xtG">
-            <p permid="FHZ">
+          <li>
+            <p>
               <m>H \cap K = \{ e \}</m>;
             </p>
           </li>
 
-          <li permid="dAP">
-            <p permid="lPi">
+          <li>
+            <p>
               <m>hk = kh</m> for all <m>k \in K</m> and <m>h \in H</m>.
             </p>
           </li>
@@ -741,19 +741,19 @@
         of <m>H</m> and <m>K</m>.
       </p>
 
-      <example xml:id="example-isomorph-u8" permid="rbE">
-        <p permid="RPn">
+      <example xml:id="example-isomorph-u8">
+        <p>
           The group <m>U(8)</m> is the internal direct product of
-          <me permid="AJY">
+          <me>
             H = \{1, 3 \} \quad \text{and} \quad K  = \{1, 5 \}
           </me>.
         </p>
       </example>
 
-      <example xml:id="example-isomorph-d6-product" permid="XiN">
-        <p permid="xWw">
+      <example xml:id="example-isomorph-d6-product">
+        <p>
           The dihedral group <m>D_6</m> is an internal direct product of its two subgroups
-          <me permid="gRh">
+          <me>
             H = \{\identity, r^3  \} \quad \text{and} \quad K  = \{\identity, r^2, r^4, s, r^2s, r^4 s \}
           </me>.
           It can easily be shown that <m>K \cong S_3</m>;
@@ -761,8 +761,8 @@
         </p>
       </example>
 
-      <example xml:id="example-isomorph-s3-not-a-product" permid="DpW">
-        <p permid="edF">
+      <example xml:id="example-isomorph-s3-not-a-product">
+        <p>
           Not every group can be written as the internal direct product of two of its proper subgroups.
           If the group <m>S_3</m> were an internal direct product of its proper subgroups <m>H</m> and <m>K</m>,
           then one of the subgroups, say <m>H</m>,
@@ -774,22 +774,22 @@
         </p>
       </example>
 
-      <theorem xml:id="theorem-isomorph-directproducts" permid="eNm">
+      <theorem xml:id="theorem-isomorph-directproducts">
         <statement>
-          <p permid="zbP">
+          <p>
             Let <m>G</m> be the internal direct product of subgroups <m>H</m> and <m>K</m>.
             Then <m>G</m> is isomorphic to <m>H \times K</m>.
           </p>
         </statement>
 
-        <proof permid="ukF">
-          <p permid="pId">
+        <proof>
+          <p>
             Since <m>G</m> is an internal direct product,
             we can write any element <m>g \in G</m> as <m>g =hk</m> for some <m>h \in H</m> and some <m>k \in K</m>.
             Define a map <m>\phi : G \rightarrow H \times K</m> by <m>\phi(g) = (h,k)</m>.
           </p>
 
-          <p permid="VPm">
+          <p>
             The first problem that we must face is to show that <m>\phi</m> is a well-defined map;
             that is, we must show that <m>h</m> and <m>k</m> are uniquely determined by <m>g</m>.
             Suppose that <m>g = hk=h'k'</m>.
@@ -799,10 +799,10 @@
             which proves that <m>\phi</m> is, indeed, well-defined.
           </p>
 
-          <p permid="BWv">
+          <p>
             To show that <m>\phi</m> preserves the group operation,
             let <m>g_1 = h_1 k_1</m> and <m>g_2 = h_2 k_2</m> and observe that
-            <md permid="MYq">
+            <md>
               <mrow>\phi( g_1 g_2 ) &amp; = \phi( h_1 k_1 h_2 k_2 )</mrow>
               <mrow>&amp; = \phi(h_1  h_2 k_1 k_2)</mrow>
               <mrow>&amp; = (h_1  h_2, k_1 k_2)</mrow>
@@ -814,31 +814,31 @@
         </proof>
       </theorem>
 
-      <example xml:id="example-isomorph-z6-product" permid="jxf">
-        <p permid="KkO">
+      <example xml:id="example-isomorph-z6-product">
+        <p>
           The group <m>{\mathbb Z}_6</m> is an internal direct product isomorphic to <m>\{ 0, 2, 4\} \times \{ 0, 3 \}</m>.
         </p>
       </example>
 
-      <p permid="UYo">
+      <p>
         We can extend the definition of an internal direct product of <m>G</m> to a collection of subgroups
         <m>H_1, H_2, \ldots, H_n</m> of <m>G</m>, by requiring that
 
-        <ul permid="lfo">
-          <li permid="JHY">
-            <p permid="RWr">
+        <ul>
+          <li>
+            <p>
               <m>G = H_1 H_2 \cdots H_n = \{ h_1 h_2 \cdots h_n : h_i \in H_i \}</m>;
             </p>
           </li>
 
-          <li permid="pPh">
-            <p permid="ydA">
+          <li>
+            <p>
               <m>H_i \cap \langle \cup_{j \neq i} H_j \rangle = \{ e \}</m>;
             </p>
           </li>
 
-          <li permid="VWq">
-            <p permid="ekJ">
+          <li>
+            <p>
               <m>h_i h_j = h_j h_i</m> for all
               <m>h_i \in H_i</m> and <m>h_j \in H_j</m>.
             </p>
@@ -848,9 +848,9 @@
         We will leave the proof of the following theorem as an exercise.
       </p>
 
-      <theorem permid="KUv">
+      <theorem>
         <statement>
-          <p permid="fiY">
+          <p>
             Let <m>G</m> be the internal direct product of subgroups <m>H_i</m>,
             where <m>i = 1, 2, \ldots, n</m>.
             Then <m>G</m> is isomorphic to <m>\prod_i H_i</m>.
@@ -858,9 +858,9 @@
         </statement>
       </theorem>
 
-      <paragraphs permid="Yog">
+      <paragraphs>
         <title>Sage</title>
-        <p permid="Bfx">
+        <p>
           Sage can quickly determine if two permutation groups are isomorphic,
           even though this should, in theory,
           be a very difficult computation.
@@ -871,28 +871,28 @@
     <!-- Exercises with Solutions  -->
     <!-- File: isomorph.xml  -->
     <!-- Title: Isomorphisms -->
-  <exercises xml:id="exercises-isomorph" filenamebase="isomorph" permid="LZO">
+  <exercises xml:id="exercises-isomorph" filenamebase="isomorph">
     <title>Exercises</title>
-    <exercise number="1" permid="PEo">
+    <exercise number="1">
       <statement>
-        <p permid="Hqi">
+        <p>
           Prove that <m>\mathbb Z \cong n \mathbb Z</m> for <m>n \neq 0</m>.
         </p>
       </statement>
-      <hint permid="yUy">
-        <p permid="mdD">
+      <hint>
+        <p>
           Every infinite cyclic group is isomorphic to
           <m>{\mathbb Z}</m> by <xref ref="theorem-isomorph-2"/>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="2" permid="vLx">
+    <exercise number="2">
       <statement>
-        <p permid="nxr">
+        <p>
           Prove that <m>{\mathbb C}^\ast</m> is isomorphic to the subgroup of
           <m>GL_2( {\mathbb R} )</m> consisting of matrices of the form
-          <me permid="ZmI">
+          <me>
             \begin{pmatrix}
             a &amp; b \\
             -b &amp; a
@@ -900,10 +900,10 @@
           </me>.
         </p>
       </statement>
-      <hint permid="LiQ">
-        <p permid="SkM">
+      <hint>
+        <p>
           Define <m>\phi: {\mathbb C}^* \rightarrow GL_2( {\mathbb R})</m> by
-          <me permid="FtR">
+          <me>
             \phi(a + bi) = 
             \begin{pmatrix}
             a &amp; b \\
@@ -914,24 +914,24 @@
       </hint>
     </exercise>
 
-    <exercise number="3" permid="bSG">
+    <exercise number="3">
       <statement>
-        <p permid="TEA">
+        <p>
           Prove or disprove: <m>U(8) \cong {\mathbb Z}_4</m>.
         </p>
       </statement>
-      <hint permid="Xxi">
-        <p permid="yrV">
+      <hint>
+        <p>
           False.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="4" permid="HZP">
+    <exercise number="4">
       <statement>
-        <p permid="zLJ">
+        <p>
           Prove that <m>U(8)</m> is isomorphic to the group of matrices
-          <me permid="xPs">
+          <me>
             \begin{pmatrix}
             1 &amp; 0 \\
             0 &amp; 1
@@ -953,53 +953,53 @@
       </statement>
     </exercise>
 
-    <exercise number="5" permid="ogY">
+    <exercise number="5">
       <statement>
-        <p permid="fSS">
+        <p>
           Show that <m>U(5)</m> is isomorphic to <m>U(10)</m>, but <m>U(12)</m> is not.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="6" permid="Uoh">
+    <exercise number="6">
       <statement>
-        <p permid="Mab">
+        <p>
           Show that the <m>n</m>th roots of unity are isomorphic to <m>{\mathbb Z}_n</m>.
         </p>
       </statement>
-      <hint permid="vZS">
-        <p permid="eze">
+      <hint>
+        <p>
           Define a map from <m>{\mathbb Z}_n</m> into the <m>n</m>th roots of unity by <m>k \mapsto \cis(2k\pi / n)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="7" permid="Avq">
+    <exercise number="7">
       <statement>
-        <p permid="shk">
+        <p>
           Show that any cyclic group of order <m>n</m> is isomorphic to <m>{\mathbb Z}_n</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="8" permid="gCz">
+    <exercise number="8">
       <statement>
-        <p permid="Yot">
+        <p>
           Prove that <m>{\mathbb Q}</m> is not isomorphic to <m>{\mathbb Z}</m>.
         </p>
       </statement>
-      <hint permid="ovt">
-        <p permid="KGn">
+      <hint>
+        <p>
           Assume that <m>{\mathbb Q}</m> is cyclic and try to find a generator.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="9" permid="MJI">
+    <exercise number="9">
       <statement>
-        <p permid="EvC">
+        <p>
           Let <m>G = {\mathbb R} \setminus \{ -1 \}</m> and define a binary operation on <m>G</m> by
-          <me permid="Czl">
+          <me>
             a \ast b = a + b + ab
           </me>.
           Prove that <m>G</m> is a group under this operation.
@@ -1008,11 +1008,11 @@
       </statement>
     </exercise>
 
-    <exercise number="10" permid="sQR">
+    <exercise number="10">
       <statement>
-        <p permid="kCL">
+        <p>
           Show that the matrices
-          <md permid="uUM">
+          <md>
             <mrow>\begin{pmatrix}
             1 &amp; 0 &amp; 0 \\
             0 &amp; 1 &amp; 0 \\
@@ -1054,33 +1054,33 @@
       </statement>
     </exercise>
 
-    <exercise number="11" permid="YYa">
+    <exercise number="11">
       <statement>
-        <p permid="QJU">
+        <p>
           Find five non-isomorphic groups of order <m>8</m>.
         </p>
       </statement>
-      <hint permid="MYd">
-        <p permid="qNw">
+      <hint>
+        <p>
           There are two nonabelian and three abelian groups that are not isomorphic.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="12" permid="Ffj">
+    <exercise number="12">
       <statement>
-        <p permid="wRd">
+        <p>
           Prove <m>S_4</m> is not isomorphic to <m>D_{12}</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="13" permid="lms">
+    <exercise number="13">
       <statement>
-        <p permid="cYm">
+        <p>
           Let <m>\omega = \cis(2 \pi /n)</m> be a primitive <m>n</m>th root of unity.
           Prove that the matrices
-          <me permid="Hje">
+          <me>
             A =
             \begin{pmatrix}
             \omega &amp; 0 \\
@@ -1098,11 +1098,11 @@
       </statement>
     </exercise>
 
-    <exercise number="14" permid="RtB">
+    <exercise number="14">
       <statement>
-        <p permid="Jfv">
+        <p>
           Show that the set of all matrices of the form
-          <me permid="Txw">
+          <me>
             \begin{pmatrix}
             \pm 1 &amp; k \\
             0 &amp; 1
@@ -1114,64 +1114,64 @@
       </statement>
     </exercise>
 
-    <exercise number="15" permid="xAK">
+    <exercise number="15">
       <statement>
-        <p permid="pmE">
+        <p>
           List all of the elements of <m>{\mathbb Z}_4 \times {\mathbb Z}_2</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="16" permid="dHT">
+    <exercise number="16">
       <statement>
-        <p permid="VtN">
+        <p>
           Find the order of each of the following elements.
 
-          <ol permid="MCE">
-            <li permid="GNs">
-              <p permid="KrS">
+          <ol>
+            <li>
+              <p>
                 <m>(3, 4)</m> in <m>{\mathbb Z}_4 \times {\mathbb Z}_6</m>
               </p>
             </li>
 
-            <li permid="mUB">
-              <p permid="qzb">
+            <li>
+              <p>
                 <m>(6, 15, 4)</m> in <m>{\mathbb Z}_{30} \times {\mathbb Z}_{45} \times {\mathbb Z}_{24}</m>
               </p>
             </li>
 
-            <li permid="TbK">
-              <p permid="WGk">
+            <li>
+              <p>
                 <m>(5, 10, 15)</m> in <m>{\mathbb Z}_{25} \times {\mathbb Z}_{25} \times {\mathbb Z}_{25}</m>
               </p>
             </li>
 
-            <li permid="ziT">
-              <p permid="iUC">
+            <li>
+              <p>
                 <m>(8, 8, 8)</m> in <m>{\mathbb Z}_{10} \times {\mathbb Z}_{24} \times {\mathbb Z}_{80}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="xPf">
-        <p permid="WUF">
+      <hint>
+        <p>
           (a) <m>12</m>; (c) <m>5</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="17" permid="JPc">
+    <exercise number="17">
       <statement>
-        <p permid="BAW">
+        <p>
           Prove that <m>D_4</m> cannot be the internal direct product of two of its proper subgroups.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="18" permid="pWl">
+    <exercise number="18">
       <statement>
-        <p permid="hIf">
+        <p>
           Prove that the subgroup of
           <m>{\mathbb Q}^\ast</m> consisting of elements of the form <m>2^m 3^n</m> for
           <m>m,n \in {\mathbb Z}</m> is an internal direct product isomorphic to <m>{\mathbb Z} \times {\mathbb Z}</m>.
@@ -1179,29 +1179,29 @@
       </statement>
     </exercise>
 
-    <exercise number="19" permid="Wdu">
+    <exercise number="19">
       <statement>
-        <p permid="NPo">
+        <p>
           Prove that <m>S_3 \times {\mathbb Z}_2</m> is isomorphic to <m>D_6</m>.
           Can you make a conjecture about <m>D_{2n}</m>?
           Prove your conjecture.
         </p>
       </statement>
-      <hint permid="WrP">
-        <p permid="DbO">
+      <hint>
+        <p>
           Draw the picture.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="20" permid="CkD">
+    <exercise number="20">
       <statement>
-        <p permid="tWx">
+        <p>
           Prove or disprove: Every abelian group of order divisible by <m>3</m> contains a subgroup of order <m>3</m>.
         </p>
       </statement>
-      <hint permid="iGh">
-        <p permid="jiX">
+      <hint>
+        <p>
           True.
         </p>
       </hint>
@@ -1209,17 +1209,17 @@
 
     <todo>Fix the solution to Exercise 20</todo>
 
-    <exercise number="21" permid="irM">
+    <exercise number="21">
       <statement>
-        <p permid="adG">
+        <p>
           Prove or disprove: Every nonabelian group of order divisible by 6 contains a subgroup of order <m>6</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="22" permid="OyV">
+    <exercise number="22">
       <statement>
-        <p permid="GkP">
+        <p>
           Let <m>G</m> be a group of order <m>20</m>.
           If <m>G</m> has subgroups <m>H</m> and <m>K</m> of orders <m>4</m> and <m>5</m> respectively such that <m>hk = kh</m> for all <m>h \in H</m> and <m>k \in K</m>,
           prove that <m>G</m> is the internal direct product of <m>H</m> and <m>K</m>.
@@ -1227,9 +1227,9 @@
       </statement>
     </exercise>
 
-    <exercise number="23" permid="uGe">
+    <exercise number="23">
       <statement>
-        <p permid="mrY">
+        <p>
           Prove or disprove the following assertion.
           Let <m>G</m>, <m>H</m>, and <m>K</m> be groups.
           If <m>G \times K \cong H \times K</m>, then <m>G \cong H</m>.
@@ -1237,30 +1237,30 @@
       </statement>
     </exercise>
 
-    <exercise number="24" permid="aNn">
+    <exercise number="24">
       <statement>
-        <p permid="Szh">
+        <p>
           Prove or disprove: There is a noncyclic abelian group of order <m>51</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="25" permid="GUw">
+    <exercise number="25">
       <statement>
-        <p permid="yGq">
+        <p>
           Prove or disprove: There is a noncyclic abelian group of order <m>52</m>.
         </p>
       </statement>
-      <hint permid="Txj">
-        <p permid="Pqg">
+      <hint>
+        <p>
           True.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="26" permid="nbF">
+    <exercise number="26">
       <statement>
-        <p permid="eNz">
+        <p>
           Let <m>\phi : G \rightarrow H</m> be a group isomorphism.
           Show that <m>\phi( x) = e_H</m> if and only if <m>x=e_G</m>,
           where <m>e_G</m> and <m>e_H</m> are the identities of <m>G</m> and <m>H</m>,
@@ -1269,15 +1269,15 @@
       </statement>
     </exercise>
 
-    <exercise number="27" permid="TiO">
+    <exercise number="27">
       <statement>
-        <p permid="KUI">
+        <p>
           Let <m>G \cong H</m>.
           Show that if <m>G</m> is cyclic, then so is <m>H</m>.
         </p>
       </statement>
-      <hint permid="LSK">
-        <p permid="vxp">
+      <hint>
+        <p>
           Let <m>a</m> be a generator for <m>G</m>.
           If <m>\phi :G \rightarrow H</m> is an isomorphism,
           show that <m>\phi(a)</m> is a generator for <m>H</m>.
@@ -1285,34 +1285,34 @@
       </hint>
     </exercise>
 
-    <exercise number="28" permid="zpX">
+    <exercise number="28">
       <statement>
-        <p permid="rbR">
+        <p>
           Prove that any group <m>G</m> of order <m>p</m>,
           <m>p</m> prime, must be isomorphic to <m>{\mathbb Z}_p</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="29" permid="fxg">
+    <exercise number="29">
       <statement>
-        <p permid="Xja">
+        <p>
           Show that <m>S_n</m> is isomorphic to a subgroup of <m>A_{n+2}</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="30" permid="LEp">
+    <exercise number="30">
       <statement>
-        <p permid="Dqj">
+        <p>
           Prove that <m>D_n</m> is isomorphic to a subgroup of <m>S_n</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="31" xml:id="isomorph-exercise-comp-inv" permid="rLy">
+    <exercise number="31" xml:id="isomorph-exercise-comp-inv">
       <statement>
-        <p permid="jxs">
+        <p>
           Let <m>\phi : G_1 \rightarrow G_2</m> and <m>\psi : G_2 \rightarrow G_3</m> be isomorphisms.
           Show that <m>\phi^{-1}</m> and
           <m>\psi \circ \phi</m> are both isomorphisms.
@@ -1322,26 +1322,26 @@
       </statement>
     </exercise>
 
-    <exercise number="32" permid="XSH">
+    <exercise number="32">
       <statement>
-        <p permid="PEB">
+        <p>
           Prove <m>U(5) \cong {\mathbb Z}_4</m>.
           Can you generalize this result for <m>U(p)</m>, where <m>p</m> is prime?
         </p>
       </statement>
     </exercise>
 
-    <exercise number="33" permid="DZQ">
+    <exercise number="33">
       <statement>
-        <p permid="vLK">
+        <p>
           Write out the permutations associated with each element of <m>S_3</m> in the proof of Cayley's Theorem.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="34" permid="kgZ">
+    <exercise number="34">
       <statement>
-        <p permid="bST">
+        <p>
           An <term>automorphism</term> of a group <m>G</m> is an isomorphism with itself.
           Prove that complex conjugation is an automorphism of the additive group of complex numbers;
           that is, show that the map
@@ -1351,26 +1351,26 @@
       </statement>
     </exercise>
 
-    <exercise number="35" permid="Qoi">
+    <exercise number="35">
       <statement>
-        <p permid="Iac">
+        <p>
           Prove that <m>a + ib \mapsto a - ib</m> is an automorphism of <m>{\mathbb C}^*</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="36" permid="wvr">
+    <exercise number="36">
       <statement>
-        <p permid="ohl">
+        <p>
           Prove that <m>A \mapsto B^{-1}AB</m> is an automorphism of
           <m>SL_2({\mathbb R})</m> for all <m>B</m> in <m>GL_2({\mathbb R})</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="37" permid="cCA">
+    <exercise number="37">
       <statement>
-        <p permid="Uou">
+        <p>
           We will denote the set of all automorphisms of <m>G</m> by <m>\aut(G)</m>.
 
           <notation>
@@ -1384,38 +1384,38 @@
       </statement>
     </exercise>
 
-    <exercise number="38" permid="IJJ">
+    <exercise number="38">
       <statement>
-        <p permid="AvD">
+        <p>
           Find <m>\aut( {\mathbb Z}_6)</m>.
         </p>
       </statement>
-      <hint permid="hAO">
-        <p permid="bEy">
+      <hint>
+        <p>
           Any automorphism of <m>{\mathbb Z}_6</m> must send 1 to another generator of <m>{\mathbb Z}_6</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="39" permid="oQS">
+    <exercise number="39">
       <statement>
-        <p permid="gCM">
+        <p>
           Find <m>\aut( {\mathbb Z})</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="40" permid="UYb">
+    <exercise number="40">
       <statement>
-        <p permid="MJV">
+        <p>
           Find two nonisomorphic groups <m>G</m> and <m>H</m> such that <m>\aut(G) \cong \aut(H)</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="41" xml:id="isomorph-exercise-inner-aut" permid="Bfk">
+    <exercise number="41" xml:id="isomorph-exercise-inner-aut">
       <statement>
-        <p permid="sRe">
+        <p>
           Let <m>G</m> be a group and <m>g \in G</m>.
           Define a map <m>i_g : G \rightarrow G</m> by <m>i_g(x) = g x g^{-1}</m>.
           Prove that <m>i_g</m> defines an automorphism of <m>G</m>.
@@ -1437,26 +1437,26 @@
       </statement>
     </exercise>
 
-    <exercise number="42" permid="hmt">
+    <exercise number="42">
       <statement>
-        <p permid="YYn">
+        <p>
           Prove that <m>\inn(G)</m> is a subgroup of <m>\aut(G)</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="43" permid="NtC">
+    <exercise number="43">
       <statement>
-        <p permid="Ffw">
+        <p>
           What are the inner automorphisms of the quaternion group <m>Q_8</m>?
           Is <m>\inn(G) = \aut(G)</m> in this case?
         </p>
       </statement>
     </exercise>
 
-    <exercise number="44" permid="tAL">
+    <exercise number="44">
       <statement>
-        <p permid="lmF">
+        <p>
           Let <m>G</m> be a group and <m>g \in G</m>.
           Define maps <m>\lambda_g :G \rightarrow G</m> and <m>\rho_g :G \rightarrow G</m> by
           <m>\lambda_g(x) = gx</m> and <m>\rho_g(x) = xg^{-1}</m>.
@@ -1473,16 +1473,16 @@
       </statement>
     </exercise>
 
-    <exercise number="45" permid="ZHU">
+    <exercise number="45">
       <statement>
-        <p permid="RtO">
+        <p>
           Let <m>G</m> be the internal direct product of subgroups <m>H</m> and <m>K</m>.
           Show that the map <m>\phi : G \rightarrow H \times K</m> defined by <m>\phi(g) = (h,k)</m> for <m>g =hk</m>,
           where <m>h \in H</m> and <m>k \in K</m>, is one-to-one and onto.
         </p>
       </statement>
-      <hint permid="eGi">
-        <p permid="HLH">
+      <hint>
+        <p>
           To show that <m>\phi</m> is one-to-one,
           let <m>g_1 = h_1 k_1</m> and
           <m>g_2 = h_2 k_2</m> and consider <m>\phi(g_1) = \phi(g_2)</m>.
@@ -1490,9 +1490,9 @@
       </hint>
     </exercise>
 
-    <exercise number="46" permid="FPd">
+    <exercise number="46">
       <statement>
-        <p permid="xAX">
+        <p>
           Let <m>G</m> and <m>H</m> be isomorphic groups.
           If <m>G</m> has a subgroup of order <m>n</m>,
           prove that <m>H</m> must also have a subgroup of order <m>n</m>.
@@ -1500,29 +1500,29 @@
       </statement>
     </exercise>
 
-    <exercise number="47" permid="lWm">
+    <exercise number="47">
       <statement>
-        <p permid="dIg">
+        <p>
           If <m>G \cong \overline{G}</m> and <m>H \cong \overline{H}</m>,
           show that <m>G \times H \cong \overline{G} \times \overline{H}</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="48" permid="Sdv">
+    <exercise number="48">
       <statement>
-        <p permid="JPp">
+        <p>
           Prove that <m>G \times H</m> is isomorphic to <m>H \times G</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="49" permid="ykE">
+    <exercise number="49">
       <statement>
-        <p permid="pWy">
+        <p>
           Let <m>n_1, \ldots, n_k</m> be positive integers.
           Show that
-          <me permid="NIk">
+          <me>
             \prod_{i=1}^k {\mathbb Z}_{n_i} \cong {\mathbb Z}_{n_1 \cdots n_k}
           </me>
           if and only if <m>\gcd( n_i, n_j) =1</m> for <m>i \neq j</m>.
@@ -1530,26 +1530,26 @@
       </statement>
     </exercise>
 
-    <exercise number="50" permid="erN">
+    <exercise number="50">
       <statement>
-        <p permid="WdH">
+        <p>
           Prove that <m>A \times B</m> is abelian if and only if <m>A</m> and <m>B</m> are abelian.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="51" permid="KyW">
+    <exercise number="51">
       <statement>
-        <p permid="CkQ">
+        <p>
           If <m>G</m> is the internal direct product of <m>H_1, H_2, \ldots, H_n</m>,
           prove that <m>G</m> is isomorphic to <m>\prod_i H_i</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="52" permid="qGf">
+    <exercise number="52">
       <statement>
-        <p permid="irZ">
+        <p>
           Let <m>H_1</m> and <m>H_2</m> be subgroups of <m>G_1</m> and <m>G_2</m>,
           respectively.
           Prove that <m>H_1 \times H_2</m> is a subgroup of <m>G_1 \times G_2</m>.
@@ -1557,34 +1557,34 @@
       </statement>
     </exercise>
 
-    <exercise number="53" permid="WNo">
+    <exercise number="53">
       <statement>
-        <p permid="Ozi">
+        <p>
           Let <m>m, n \in {\mathbb Z}</m>.
           Prove that <m>\langle m,n \rangle = \langle d \rangle</m> if and only if <m>d = \gcd(m,n)</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="54" permid="CUx">
+    <exercise number="54">
       <statement>
-        <p permid="uGr">
+        <p>
           Let <m>m, n \in {\mathbb Z}</m>.
           Prove that <m>\langle m \rangle \cap \langle n \rangle = \langle l \rangle</m> if and only if <m>l = \lcm(m,n)</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="55" xml:id="exercise-classify-2p" permid="jbG">
+    <exercise number="55" xml:id="exercise-classify-2p">
       <title>Groups of order <m>2p</m></title>
       <statement>
-        <p permid="aNA">
+        <p>
           In this series of exercises we will classify all groups of order <m>2p</m>,
           where <m>p</m> is an odd prime.
 
-          <ol permid="sJN">
-            <li permid="fqc">
-              <p permid="PbL">
+          <ol>
+            <li>
+              <p>
                 Assume <m>G</m> is a group of order <m>2p</m>,
                 where <m>p</m> is an odd prime.
                 If <m>a \in G</m>, show that <m>a</m> must have order <m>1</m>,
@@ -1592,38 +1592,38 @@
               </p>
             </li>
 
-            <li permid="Lxl">
-              <p permid="viU">
+            <li>
+              <p>
                 Suppose that <m>G</m> has an element of order <m>2p</m>.
                 Prove that <m>G</m> is isomorphic to <m>{\mathbb Z}_{2p}</m>.
                 Hence, <m>G</m> is cyclic.
               </p>
             </li>
 
-            <li permid="rEu">
-              <p permid="bqd">
+            <li>
+              <p>
                 Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
                 Show that <m>G</m> must contain an element of order <m>p</m>.
                 <em>Hint</em>: Assume that <m>G</m> does not contain an element of order <m>p</m>.
               </p>
             </li>
 
-            <li permid="XLD">
-              <p permid="Hxm">
+            <li>
+              <p>
                 Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
                 Show that <m>G</m> must contain an element of order <m>2</m>.
               </p>
             </li>
 
-            <li permid="DSM">
-              <p permid="nEv">
+            <li>
+              <p>
                 Let <m>P</m> be a subgroup of <m>G</m> with order <m>p</m> and <m>y \in G</m> have order <m>2</m>.
                 Show that <m>yP = Py</m>.
               </p>
             </li>
 
-            <li permid="jZV">
-              <p permid="TLE">
+            <li>
+              <p>
                 Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
                 <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m>.
                 If <m>y</m> is an element of order <m>2</m>,
@@ -1631,23 +1631,23 @@
               </p>
             </li>
 
-            <li permid="Qhe">
-              <p permid="zSN">
+            <li>
+              <p>
                 Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
                 Prove that <m>G</m> is not abelian.
               </p>
             </li>
 
-            <li permid="won">
-              <p permid="fZW">
+            <li>
+              <p>
                 Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
                 <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m> and <m>y</m> is an element of order <m>2</m>.
                 Show that we can list the elements of <m>G</m> as <m>\{z^iy^j\mid 0\leq i \lt p, 0\leq j \lt 2\}</m>.
               </p>
             </li>
 
-            <li permid="cvw">
-              <p permid="Mhf">
+            <li>
+              <p>
                 Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
                 <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m> and <m>y</m> is an element of order <m>2</m>.
                 Prove that the product <m>(z^iy^j)(z^ry^s)</m> can be expressed as a uniquely as <m>z^m y^n</m> for some non negative integers <m>m, n</m>.

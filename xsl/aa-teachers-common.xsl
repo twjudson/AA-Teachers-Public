@@ -29,7 +29,7 @@
 <!-- Last level where subdivision (section) numbering takes place     -->
 <!-- For example, "2" would mean subsections of a book are unnumbered -->
 <!-- N.B.: the levels above cannot be numerically larger              -->
-<xsl:param name="numbering.maximum.level" select="'2'" />
+<xsl:param name="numbering.maximum.level" select="'3'" />
 
 <!-- Thius is a quick fix for a bigger problem with arbitrary "apply-templates" in back matter mode -->
 <xsl:template match="todo" mode="backmatter" />

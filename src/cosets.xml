@@ -7,10 +7,10 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="cosets" permid="Uzy">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="cosets">
   <title>Cosets and Lagrange's Theorem</title>
-  <introduction permid="EVb">
-    <p permid="QGQ">
+  <introduction>
+    <p>
       Lagrange's Theorem,
       one of the most important results in finite group theory,
       states that the order of a subgroup must divide the order of the group.
@@ -20,20 +20,20 @@
     </p>
   </introduction>
 
-  <section xml:id="section-cosets" permid="xMb">
+  <section xml:id="section-cosets">
     <title>Cosets</title>
-    <p permid="oOb">
+    <p>
       Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>.
       Define a <term>left coset</term>
           <idx><h>Coset</h><h>left</h></idx>
       of <m>H</m> with <term>representative</term><idx><h>Coset</h><h>representative</h></idx> <m>g \in G</m> to be the set
-      <me permid="ZFd">
+      <me>
         gH = \{ gh : h \in H \}
       </me>.
       <term>Right cosets</term>
           <idx><h>Coset</h><h>right</h></idx>
       can be defined similarly by
-      <me permid="FMm">
+      <me>
         Hg = \{ hg : h \in H \}
       </me>.
       If left and right cosets coincide or if it is clear from the context to which type of coset that we are referring,
@@ -41,12 +41,12 @@
       without specifying left or right.
     </p>
 
-    <example xml:id="example-cosets-z6-cosets" permid="UdZ">
-      <p permid="zIF">
+    <example xml:id="example-cosets-z6-cosets">
+      <p>
         Let <m>H</m> be the subgroup of
         <m>{\mathbb Z}_6</m> consisting of the elements <m>0</m> and <m>3</m>.
         The cosets are
-        <md permid="lTv">
+        <md>
           <mrow>0 + H = 3 + H = \{ 0, 3 \}</mrow>
           <mrow>1 + H = 4 + H = \{ 1, 4 \}</mrow>
           <mrow>2 + H = 5 + H = \{ 2, 5 \}</mrow>
@@ -57,32 +57,32 @@
       </p>
     </example>
 
-    <example xml:id="example-cosets-s3-cosets" permid="Ali">
-      <p permid="fPO">
+    <example xml:id="example-cosets-s3-cosets">
+      <p>
         Let <m>H</m> be the subgroup of <m>S_3</m> defined by the permutations <m>\{(1), (123), (132) \}</m>.
         The left cosets of <m>H</m> are
-        <md permid="SaE">
+        <md>
           <mrow>(1)H = (1 2 3)H =  (132)H = \{(1), (1 23), (132) \}</mrow>
           <mrow>(1 2)H = (1 3)H = (2 3)H =  \{ (1 2), (1 3), (2 3)  \}</mrow>
         </md>.
         The right cosets of <m>H</m> are exactly the same as the left cosets:
-        <md permid="yhN">
+        <md>
           <mrow>H(1) = H(1 2 3) =  H(132) = \{(1), (1 23), (132) \}</mrow>
           <mrow>H(1 2) = H(1 3) = H(2 3) =  \{ (1 2), (1 3), (2 3)  \}</mrow>
         </md>.
       </p>
 
-      <p permid="LWX">
+      <p>
         It is not always the case that a left coset is the same as a right coset.
         Let <m>K</m> be the subgroup of <m>S_3</m> defined by the permutations <m>\{(1), (1 2)\}</m>.
         Then the left cosets of <m>K</m> are
-        <md permid="eoW">
+        <md>
           <mrow>(1)K = (1 2)K = \{(1), (1 2)\}</mrow>
           <mrow>(1 3)K = (1 2 3)K = \{(1 3), (1 2 3)\}</mrow>
           <mrow>(2 3)K = (1 3 2)K = \{(2 3), (1 3 2)\};</mrow>
         </md>
         however, the right cosets of <m>K</m> are
-        <md permid="Kwf">
+        <md>
           <mrow>K(1) = K(1 2) = \{(1), (1 2)\}</mrow>
           <mrow>K(1 3) = K(1 3 2) = \{(1 3), (1 3 2)\}</mrow>
           <mrow>K(2 3) = K(1 2 3) = \{(2 3), (1 2 3)\}</mrow>
@@ -90,44 +90,44 @@
       </p>
     </example>
 
-    <p permid="UVk">
+    <p>
       The following lemma is quite useful when dealing with cosets.
       (We leave its proof as an exercise.)
     </p>
 
-    <lemma xml:id="lemma-cosets-theorem-1" permid="vBp">
+    <lemma xml:id="lemma-cosets-theorem-1">
       <statement>
-        <p permid="bfV">
+        <p>
           Let <m>H</m> be a subgroup of a group <m>G</m> and suppose that <m>g_1, g_2 \in G</m>.
           The following conditions are equivalent.
 
-          <ol permid="fWS">
-            <li permid="ahG">
-              <p permid="dMg">
+          <ol>
+            <li>
+              <p>
                 <m>g_1 H = g_2 H</m>;
               </p>
             </li>
 
-            <li permid="GoP">
-              <p permid="JTp">
+            <li>
+              <p>
                 <m>H g_1^{-1} = H g_2^{-1}</m>;
               </p>
             </li>
 
-            <li permid="mvY">
-              <p permid="qay">
+            <li>
+              <p>
                 <m>g_1 H \subset g_2 H</m>;
               </p>
             </li>
 
-            <li permid="SDh">
-              <p permid="WhH">
+            <li>
+              <p>
                 <m>g_2 \in g_1 H</m>;
               </p>
             </li>
 
-            <li permid="yKq">
-              <p permid="CoQ">
+            <li>
+              <p>
                 <m>g_1^{-1} g_2 \in H</m>.
               </p>
             </li>
@@ -136,22 +136,22 @@
       </statement>
     </lemma>
 
-    <p permid="Bct">
+    <p>
       In all of our examples the cosets of a subgroup <m>H</m> partition the larger group <m>G</m>.
       The following theorem proclaims that this will always be the case.
     </p>
 
-    <theorem xml:id="theorem-cosets-theorem-2" permid="SoM">
+    <theorem xml:id="theorem-cosets-theorem-2">
       <statement>
-        <p permid="xTs">
+        <p>
           Let <m>H</m> be a subgroup of a group <m>G</m>.
           Then the left cosets of <m>H</m> in <m>G</m> partition <m>G</m>.
           That is, the group <m>G</m> is the disjoint union of the left cosets of <m>H</m> in <m>G</m>.
         </p>
       </statement>
 
-      <proof permid="xqC">
-        <p permid="ozG">
+      <proof>
+        <p>
           Let <m>g_1 H</m> and <m>g_2 H</m> be two cosets of <m>H</m> in <m>G</m>.
           We must show that either <m>g_1 H \cap g_2 H = \emptyset</m> or <m>g_1 H = g_2 H</m>.
           Suppose that <m>g_1 H \cap g_2 H \neq \emptyset</m> and <m>a \in g_1 H \cap g_2 H</m>.
@@ -163,15 +163,15 @@
       </proof>
     </theorem>
 
-    <remark permid="sGJ">
-      <p permid="Esy">
+    <remark>
+      <p>
         There is nothing special in this theorem about left cosets.
         Right cosets also partition <m>G</m>;
         the proof of this fact is exactly the same as the proof for left cosets except that all group multiplications are done on the opposite side of <m>H</m>.
       </p>
     </remark>
 
-    <p permid="hjC">
+    <p>
       Let <m>G</m> be a group and <m>H</m> be a subgroup of <m>G</m>.
       Define the <term>index</term>
           <idx><h>Index of a subgroup</h></idx>
@@ -186,15 +186,15 @@
 
     </p>
 
-    <example xml:id="example-cosets-z6-index" permid="gsr">
-      <p permid="seg">
+    <example xml:id="example-cosets-z6-index">
+      <p>
         Let <m>G= {\mathbb Z}_6</m> and <m>H = \{ 0, 3 \}</m>.
         Then <m>[G:H] = 3</m>.
       </p>
     </example>
 
-    <example xml:id="example-cosets-s3-index" permid="MzA">
-      <p permid="Ylp">
+    <example xml:id="example-cosets-s3-index">
+      <p>
         Suppose that <m>G= S_3</m>,
         <m>H = \{ (1),(123), (132) \}</m>,
         and <m>K= \{ (1), (12) \}</m>.
@@ -202,16 +202,16 @@
       </p>
     </example>
 
-    <theorem xml:id="theorem-cosets-theorem-3" permid="yvV">
+    <theorem xml:id="theorem-cosets-theorem-3">
       <statement>
-        <p permid="eaB">
+        <p>
           Let <m>H</m> be a subgroup of a group <m>G</m>.
           The number of left cosets of <m>H</m> in <m>G</m> is the same as the number of right cosets of <m>H</m> in <m>G</m>.
         </p>
       </statement>
 
-      <proof permid="dxL">
-        <p permid="UGP">
+      <proof>
+        <p>
           Let <m>{\mathcal L}_H</m> and
           <m>{\mathcal R}_H</m> denote the set of left and right cosets of <m>H</m> in <m>G</m>,
           respectively.
@@ -234,7 +234,7 @@
           that is, if <m>g_1 H = g_2 H</m>,
           then <m>H g_1^{-1} = H g_2^{-1}</m>.
           To show that <m>\phi</m> is one-to-one, suppose that
-          <me permid="qDo">
+          <me>
             H g_1^{-1} = \phi( g_1 H ) = \phi( g_2 H ) = H g_2^{-1}
           </me>.
           Again by <xref ref="lemma-cosets-theorem-1"/>, <m>g_1 H = g_2 H</m>.
@@ -244,11 +244,11 @@
     </theorem>
   </section>
 
-  <section xml:id="section-lagranges-theorem" permid="dTk">
+  <section xml:id="section-lagranges-theorem">
     <title>Lagrange's Theorem</title>
-    <proposition xml:id="cosets_theorem_4" permid="jmX">
+    <proposition xml:id="cosets_theorem_4">
       <statement>
-        <p permid="ORD">
+        <p>
           Let <m>H</m> be a subgroup of <m>G</m> with <m>g \in G</m> and define a map
           <m>\phi:H \rightarrow gH</m> by <m>\phi(h) = gh</m>.
           The map <m>\phi</m> is bijective;
@@ -256,8 +256,8 @@
         </p>
       </statement>
 
-      <proof permid="Cav">
-        <p permid="ANY">
+      <proof>
+        <p>
           We first show that the map <m>\phi</m> is one-to-one.
           Suppose that <m>\phi(h_1) = \phi(h_2)</m> for elements <m>h_1, h_2 \in H</m>.
           We must show that <m>h_1 = h_2</m>,
@@ -269,13 +269,13 @@
       </proof>
     </proposition>
 
-    <theorem xml:id="theorem-lagrange" permid="eDe">
+    <theorem xml:id="theorem-lagrange">
       <title>Lagrange</title>
       <idx>
       <h>Lagrange's Theorem</h>
       </idx>
       <statement>
-        <p permid="KhK">
+        <p>
           Let <m>G</m> be a finite group and let <m>H</m> be a subgroup of <m>G</m>.
           Then <m>|G|/|H| = [G : H]</m> is the number of distinct left cosets of <m>H</m> in <m>G</m>.
           In particular,
@@ -283,8 +283,8 @@
         </p>
       </statement>
 
-      <proof permid="JEU">
-        <p permid="gVh">
+      <proof>
+        <p>
           The group <m>G</m> is partitioned into <m>[G : H]</m> distinct left cosets.
           Each left coset has <m>|H|</m> elements;
           therefore, <m>|G| = [G : H] |H|</m>.
@@ -292,25 +292,25 @@
       </proof>
     </theorem>
 
-    <corollary xml:id="corollary-cosets-theorem-6" permid="bIy">
+    <corollary xml:id="corollary-cosets-theorem-6">
       <statement>
-        <p permid="Hne">
+        <p>
           Suppose that <m>G</m> is a finite group and <m>g \in G</m>.
           Then the order of <m>g</m> must divide the number of elements in <m>G</m>.
         </p>
       </statement>
     </corollary>
 
-    <corollary xml:id="corollary-cosets-theorem-7" permid="HPH">
+    <corollary xml:id="corollary-cosets-theorem-7">
       <statement>
-        <p permid="nun">
+        <p>
           Let <m>|G| = p</m> with <m>p</m> a prime number.
           Then <m>G</m> is cyclic and any <m>g \in G</m> such that <m>g \neq e</m> is a generator.
         </p>
       </statement>
 
-      <proof permid="OoN">
-        <p permid="Ncq">
+      <proof>
+        <p>
           Let <m>g</m> be in <m>G</m> such that <m>g \neq e</m>.
           Then by <xref ref="corollary-cosets-theorem-6"/>,
           the order of <m>g</m> must divide the order of the group.
@@ -320,34 +320,34 @@
       </proof>
     </corollary>
 
-    <p permid="NqL">
+    <p>
       <xref ref="corollary-cosets-theorem-7"/> suggests that groups of prime order <m>p</m> must somehow look like <m>{\mathbb Z}_p</m>.
     </p>
 
-    <corollary xml:id="corollary-cosets-theorem-8" permid="nWQ">
+    <corollary xml:id="corollary-cosets-theorem-8">
       <statement>
-        <p permid="TBw">
+        <p>
           Let <m>H</m> and <m>K</m> be subgroups of a finite group <m>G</m> such that <m>G \supset H \supset K</m>.
           Then
-          <me permid="WKx">
+          <me>
             [G:K] = [G:H][H:K]
           </me>.
         </p>
       </statement>
 
-      <proof permid="uvW">
-        <p permid="tjz">
+      <proof>
+        <p>
           Observe that
-          <me permid="CRG">
+          <me>
             [G:K] = \frac{|G|}{|K|} = \frac{|G|}{|H|} \cdot \frac{|H|}{|K|} = [G:H][H:K]
           </me>.
         </p>
       </proof>
     </corollary>
 
-    <remark permid="YNS">
+    <remark>
       <title>The converse of Lagrange's Theorem is false</title>
-      <p permid="kzH">
+      <p>
         The group <m>A_4</m> has order <m>12</m>;
         however, it can be shown that it does not possess a subgroup of order <m>6</m>.
         According to Lagrange's Theorem,
@@ -366,15 +366,15 @@
         <!-- % TWJ, 2011/11/20 -->
         <!-- % Fixed the proof that <m>A_4</m> contains no subgroup of order 6.  This mistake was -->
         <!-- % pointed out by Z. Teitler. -->
-    <proposition xml:id="proposition-cosets-theorem-10" permid="Pug">
+    <proposition xml:id="proposition-cosets-theorem-10">
       <statement>
-        <p permid="uYM">
+        <p>
           The group <m>A_4</m> has no subgroup of order <m>6</m>.
         </p>
       </statement>
 
-      <proof permid="ihE">
-        <p permid="ZqI">
+      <proof>
+        <p>
           Since <m>[A_4 : H] = 2</m>,
           there are only two cosets of <m>H</m> in <m>A_4</m>.
           Inasmuch as one of the cosets is <m>H</m> itself,
@@ -387,12 +387,12 @@
           Then <m>(123)^{-1} = (132)</m> must also be in <m>H</m>.
           Since <m>g h g^{-1} \in H</m> for all
           <m>g \in A_4</m> and all <m>h \in H</m> and
-          <md permid="PfY">
+          <md>
             <mrow>(124)(123)(124)^{-1} &amp; = (124)(123)(142)  = (243)</mrow>
             <mrow>(243)(123)(243)^{-1} &amp; = (243)(123)(234)  = (142)</mrow>
           </md>
           we can conclude that <m>H</m> must have at least seven elements
-          <me permid="iYP">
+          <me>
             (1), (123), (132), (243), (243)^{-1} = (234), (142), (142)^{-1} = (124)
           </me>.
           Therefore, <m>A_4</m> has no subgroup of order <m>6</m>.
@@ -400,27 +400,27 @@
       </proof>
     </proposition>
 
-    <p permid="txU">
+    <p>
       In fact, we can say more about when two cycles have the same length.
     </p>
 
-    <theorem xml:id="theorem-cycle-length-theorem" permid="KKn">
+    <theorem xml:id="theorem-cycle-length-theorem">
       <statement>
-        <p permid="qoT">
+        <p>
           Two cycles <m>\tau</m> and <m>\mu</m> in <m>S_n</m> have the same length if and only if there exists a
           <m>\sigma \in S_n</m> such that <m>\mu = \sigma \tau \sigma^{-1}</m>.
         </p>
       </statement>
 
-      <proof permid="pMd">
-        <p permid="FxR">
+      <proof>
+        <p>
           Suppose that
-          <md permid="vnh">
+          <md>
             <mrow>\tau &amp; = (a_1, a_2, \ldots, a_k )</mrow>
             <mrow>\mu  &amp; = (b_1, b_2, \ldots, b_k )</mrow>
           </md>.
           Define <m>\sigma</m> to be the permutation
-          <md permid="buq">
+          <md>
             <mrow>\sigma( a_1 ) &amp; = b_1</mrow>
             <mrow>\sigma( a_2 ) &amp; = b_2</mrow>
             <mrow>&amp; \vdots</mrow>
@@ -429,13 +429,13 @@
           Then <m>\mu = \sigma \tau \sigma^{-1}</m>.
         </p>
 
-        <p permid="lFa">
+        <p>
           Conversely, suppose that <m>\tau = (a_1, a_2, \ldots,
           a_k )</m> is a <m>k</m>-cycle and <m>\sigma \in S_n</m>.
           If <m>\sigma( a_i ) = b</m> and
           <m>\sigma( a_{(i \bmod k) + 1}) = b'</m>, then <m>\mu( b) = b'</m>.
           Hence,
-          <me permid="HBz">
+          <me>
             \mu = ( \sigma(a_1), \sigma(a_2), \ldots, \sigma(a_k) )
           </me>.
           Since <m>\sigma</m> is one-to-one and onto,
@@ -445,17 +445,17 @@
     </theorem>
   </section>
 
-  <section xml:id="section-fermat-euler" permid="Kat">
+  <section xml:id="section-fermat-euler">
     <title>Fermat's and Euler's Theorems</title>
-    <introduction permid="lck">
-      <p permid="wNZ">
+    <introduction>
+      <p>
         The <term>Euler</term> <m>\phi</m>-<term>function</term><idx><h>Euler <m>\phi</m>-function</h></idx> is the map <m>\phi : {\mathbb N } \rightarrow {\mathbb N}</m> defined by
         <m>\phi(n) = 1</m> for <m>n=1</m>, and, for <m>n \gt 1</m>,
         <m>\phi(n)</m> is the number of positive integers <m>m</m> with
         <m>1 \leq m \lt n</m> and <m>\gcd(m,n) = 1</m>.
       </p>
 
-      <p permid="cVi">
+      <p>
         From <xref ref="proposition-zn-equiv-classes"/>, we know that the order of <m>U(n)</m>,
         the group of units in <m>{\mathbb Z}_n</m>, is <m>\phi(n)</m>.
         For example,
@@ -464,31 +464,31 @@
         We state these results in the following theorem.
       </p>
 
-      <theorem xml:id="theorem-cosets-theorem-11" permid="qRw">
+      <theorem xml:id="theorem-cosets-theorem-11">
         <statement>
-          <p permid="Wwc">
+          <p>
             Let <m>U(n)</m> be the group of units in <m>{\mathbb Z}_n</m>.
             Then <m>|U(n)| = \phi(n)</m>.
           </p>
         </statement>
       </theorem>
 
-      <p permid="Jcr">
+      <p>
         The following theorem is an important result in number theory,
         due to Leonhard Euler.
       </p>
 
-      <theorem xml:id="theorem-eulers_theorem" permid="WYF">
+      <theorem xml:id="theorem-eulers_theorem">
         <title>Euler's Theorem</title>
         <statement>
-          <p permid="CDl">
+          <p>
             Let <m>a</m> and <m>n</m> be integers such that <m>n \gt 0</m> and <m>\gcd(a, n) = 1</m>.
             Then <m>a^{\phi(n)} \equiv 1 \pmod{n}</m>.
           </p>
         </statement>
 
-        <proof permid="VTm">
-          <p permid="RMj">
+        <proof>
+          <p>
             By <xref ref="theorem-cosets-theorem-11"/> the order of <m>U(n)</m> is <m>\phi(n)</m>.
             Consequently, <m>a^{\phi(n)} = 1</m> for all <m>a \in U(n)</m>;
             or <m>a^{\phi(n)} - 1</m> is divisible by <m>n</m>.
@@ -497,19 +497,19 @@
         </proof>
       </theorem>
 
-      <p permid="pjA">
+      <p>
         If we consider the special case of Euler's Theorem in which <m>n = p</m> is prime and recall that <m>\phi(p) = p - 1</m>,
         we obtain the following result, due to Pierre de Fermat.
             <idx><h>Fermat, Pierre de</h></idx>
       </p>
 
-      <theorem xml:id="theorem-cosets-theorem-13" permid="DfO">
+      <theorem xml:id="theorem-cosets-theorem-13">
         <title>Fermat's Little Theorem</title>
         <idx>
         <h>Fermat's Little Theorem</h>
         </idx>
         <statement>
-          <p permid="iKu">
+          <p>
             Let <m>p</m> be any prime number and suppose that <m>p \notdivide a</m>
             (<m>p</m> does not divide <m>a</m>).
 
@@ -519,7 +519,7 @@
             </notation>
 
             Then
-            <me permid="nII">
+            <me>
               a^{p-1} \equiv 1 \pmod{ p }
             </me>.
             Furthermore, for any integer <m>b</m>,
@@ -527,9 +527,9 @@
           </p>
         </statement>
       </theorem>
-      <paragraphs permid="RES">
+      <paragraphs>
         <title>Sage</title>
-        <p permid="VqJ">
+        <p>
           Sage can create all the subgroups of a group,
           so long as the group is not too large.
           It can also create the cosets of a subgroup.
@@ -538,9 +538,9 @@
 
     </introduction>
 
-    <subsection xml:id="cosets-subsection-historical-note" permid="AGH">
+    <subsection xml:id="cosets-subsection-historical-note">
       <title>Historical Note</title>
-      <p permid="Owe">
+      <p>
         Joseph-Louis Lagrange
             <idx><h>Lagrange, Joseph-Louis</h></idx>
         (1736<ndash/>1813), born in Turin, Italy,
@@ -569,120 +569,120 @@
     <!-- Exercises with Solutions  -->
     <!-- File: cosets.xml  -->
     <!-- Title: Cosets and Lagrange's Theorem -->
-  <exercises xml:id="exercises-cosets" filenamebase="cosets" permid="FqA">
+  <exercises xml:id="exercises-cosets" filenamebase="cosets">
     <title>Exercises</title>
-    <exercise number="1" permid="WoL">
+    <exercise number="1">
       <statement>
-        <p permid="aaC">
+        <p>
           Suppose that <m>G</m> is a finite group with an element <m>g</m> of order <m>5</m> and an element <m>h</m> of order <m>7</m>.
           Why must <m>|G| \geq 35</m>?
         </p>
       </statement>
-      <hint permid="GKo">
-        <p permid="ffU">
+      <hint>
+        <p>
           The order of <m>g</m> and the order <m>h</m> must both divide the order of <m>G</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="2" permid="CvU">
+    <exercise number="2">
       <statement>
-        <p permid="GhL">
+        <p>
           Suppose that <m>G</m> is a finite group with <m>60</m> elements.
           What are the orders of possible subgroups of <m>G</m>?
         </p>
       </statement>
-      <hint permid="SYG">
-        <p permid="Lnd">
+      <hint>
+        <p>
           The possible orders must divide <m>60</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="3" permid="iDd">
+    <exercise number="3">
       <statement>
-        <p permid="moU">
+        <p>
           Prove or disprove: Every subgroup of the integers has finite index.
         </p>
       </statement>
-      <hint permid="fmY">
-        <p permid="rum">
+      <hint>
+        <p>
           This is true for every proper nontrivial subgroup.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="4" permid="OKm">
+    <exercise number="4">
       <statement>
-        <p permid="Swd">
+        <p>
           Prove or disprove: Every subgroup of the integers has finite order.
         </p>
       </statement>
-      <hint permid="rBq">
-        <p permid="XBv">
+      <hint>
+        <p>
           False.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="5" permid="uRv">
+    <exercise number="5">
       <statement>
-        <p permid="yDm">
+        <p>
           List the left and right cosets of the subgroups in each of the following.
 
-          <ol cols="2" permid="Meb">
-            <li permid="eRz">
-              <p permid="ivZ">
+          <ol cols="2">
+            <li>
+              <p>
                 <m>\langle 8 \rangle</m> in <m>{\mathbb Z}_{24}</m>
               </p>
             </li>
 
-            <li permid="KYI">
-              <p permid="ODi">
+            <li>
+              <p>
                 <m>\langle 3 \rangle</m> in <m>U(8)</m>
               </p>
             </li>
 
-            <li permid="rfR">
-              <p permid="uKr">
+            <li>
+              <p>
                 <m>3 {\mathbb Z}</m> in <m>{\mathbb Z}</m>
               </p>
             </li>
 
-            <li permid="Xna">
-              <p permid="aRA">
+            <li>
+              <p>
                 <m>A_4</m> in <m>S_4</m>
               </p>
             </li>
 
-            <li permid="Duj">
-              <p permid="GYJ">
+            <li>
+              <p>
                 <m>A_n</m> in <m>S_n</m>
               </p>
             </li>
 
-            <li permid="jBs">
-              <p permid="nfS">
+            <li>
+              <p>
                 <m>D_4</m> in <m>S_4</m>
               </p>
             </li>
 
-            <li permid="PIB">
-              <p permid="Tnb">
+            <li>
+              <p>
                 <m>{\mathbb T}</m> in <m>{\mathbb C}^\ast</m>
               </p>
             </li>
 
-            <li permid="vPK">
-              <p permid="zuk">
+            <li>
+              <p>
                 <m>H = \{ (1), (123), (132) \}</m> in <m>S_4</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="DPI">
-        <p permid="jPN">
+      <hint>
+        <p>
           (a) <m>\langle 8 \rangle</m>,
           <m>1 + \langle 8 \rangle</m>,
           <m>2 + \langle 8 \rangle</m>,
@@ -696,9 +696,9 @@
       </hint>
     </exercise>
 
-    <exercise number="6" permid="aYE">
+    <exercise number="6">
       <statement>
-        <p permid="eKv">
+        <p>
           Describe the left cosets of
           <m>SL_2( {\mathbb R} )</m> in <m>GL_2( {\mathbb R})</m>.
           What is the index of <m>SL_2( {\mathbb R} )</m> in <m>GL_2( {\mathbb R})</m>?
@@ -706,77 +706,77 @@
       </statement>
     </exercise>
 
-    <exercise number="7" permid="HfN">
+    <exercise number="7">
       <statement>
-        <p permid="KRE">
+        <p>
           Verify Euler's Theorem for <m>n = 15</m> and <m>a = 4</m>.
         </p>
       </statement>
-      <hint permid="wlj">
-        <p permid="PWW">
+      <hint>
+        <p>
           <m>4^{\phi(15)} \equiv 4^8 \equiv 1 \pmod{15}</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="8" permid="nmW">
+    <exercise number="8">
       <statement>
-        <p permid="qYN">
+        <p>
           Use Fermat's Little Theorem to show that if <m>p = 4n + 3</m> is prime,
           there is no solution to the equation <m>x^2 \equiv -1 \pmod{p}</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="9" permid="Tuf">
+    <exercise number="9">
       <statement>
-        <p permid="XfW">
+        <p>
           Show that the integers have infinite index in the additive group of rational numbers.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="10" permid="zBo">
+    <exercise number="10">
       <statement>
-        <p permid="Dnf">
+        <p>
           Show that the additive group of real numbers has infinite index in the additive group of the complex numbers.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="11" permid="fIx">
+    <exercise number="11">
       <statement>
-        <p permid="juo">
+        <p>
           Let <m>H</m> be a subgroup of a group <m>G</m> and suppose that <m>g_1, g_2 \in G</m>.
           Prove that the following conditions are equivalent.
 
-          <ol permid="slk">
-            <li permid="Zcn">
-              <p permid="cGN">
+          <ol>
+            <li>
+              <p>
                 <m>g_1 H = g_2 H</m>
               </p>
             </li>
 
-            <li permid="Fjw">
-              <p permid="INW">
+            <li>
+              <p>
                 <m>H g_1^{-1} = H g_2^{-1}</m>
               </p>
             </li>
 
-            <li permid="lqF">
-              <p permid="oVf">
+            <li>
+              <p>
                 <m>g_1 H \subset g_2 H</m>
               </p>
             </li>
 
-            <li permid="RxO">
-              <p permid="Vco">
+            <li>
+              <p>
                 <m>g_2 \in g_1 H</m>
               </p>
             </li>
 
-            <li permid="xEX">
-              <p permid="Bjx">
+            <li>
+              <p>
                 <m>g_1^{-1} g_2 \in H</m>
               </p>
             </li>
@@ -785,43 +785,43 @@
       </statement>
     </exercise>
 
-    <exercise number="12" permid="LPG">
+    <exercise number="12">
       <statement>
-        <p permid="PBx">
+        <p>
           If <m>ghg^{-1} \in H</m> for all <m>g \in G</m> and <m>h \in H</m>,
           show that right cosets are identical to left cosets.
           That is, show that <m>gH = Hg</m> for all <m>g \in G</m>.
         </p>
       </statement>
-      <hint permid="hcl">
-        <p permid="wef">
+      <hint>
+        <p>
           Let <m>g_1 \in gH</m>.
           Show that <m>g_1 \in Hg</m> and thus <m>gH \subset Hg</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="13" permid="rWP">
+    <exercise number="13">
       <statement>
-        <p permid="vIG">
+        <p>
           What fails in the proof of <xref ref="theorem-cosets-theorem-3"/> if
           <m>\phi : {\mathcal L}_H \rightarrow {\mathcal R}_H</m> is defined by <m>\phi( gH ) = Hg</m>?
         </p>
       </statement>
     </exercise>
 
-    <exercise number="14" permid="YdY">
+    <exercise number="14">
       <statement>
-        <p permid="bPP">
+        <p>
           Suppose that <m>g^n = e</m>.
           Show that the order of <m>g</m> divides <m>n</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="15" permid="Elh">
+    <exercise number="15">
       <statement>
-        <p permid="HWY">
+        <p>
           The <term>cycle structure</term><idx><h>Permutation</h><h>cycle structure of</h></idx> of a permutation <m>\sigma</m> is defined as the unordered list of the sizes of the cycles in the cycle decomposition <m>\sigma</m>. For example, the permutation <m>\sigma = (12)(345)(78)(9)</m> has cycle structure <m>(2,3,2,1)</m> which can also be written as <m>(1, 2, 2, 3)</m>.
         </p>
 
@@ -834,9 +834,9 @@
       </statement>
     </exercise>
 
-    <exercise number="16" permid="ksq">
+    <exercise number="16">
       <statement>
-        <p permid="oeh">
+        <p>
           If <m>|G| = 2n</m>,
           prove that the number of elements of order <m>2</m> is odd.
           Use this result to show that <m>G</m> must contain a subgroup of order 2.
@@ -844,9 +844,9 @@
       </statement>
     </exercise>
 
-    <exercise number="17" permid="Qzz">
+    <exercise number="17">
       <statement>
-        <p permid="Ulq">
+        <p>
           Suppose that <m>[G : H] = 2</m>.
           If <m>a</m> and <m>b</m> are not in <m>H</m>,
           show that <m>ab \in H</m>.
@@ -854,31 +854,31 @@
       </statement>
     </exercise>
 
-    <exercise number="18" permid="wGI">
+    <exercise number="18">
       <statement>
-        <p permid="Asz">
+        <p>
           If <m>[G : H] = 2</m>, prove that <m>gH = Hg</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="19" permid="cNR">
+    <exercise number="19">
       <statement>
-        <p permid="gzI">
+        <p>
           Let <m>H</m> and <m>K</m> be subgroups of a group <m>G</m>.
           Prove that <m>gH \cap gK</m> is a coset of <m>H \cap K</m> in <m>G</m>.
         </p>
       </statement>
-      <hint permid="ehF">
-        <p permid="clo">
+      <hint>
+        <p>
           Show that <m>g(H \cap K) = gH \cap gK</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="20" permid="IVa">
+    <exercise number="20">
       <statement>
-        <p permid="MGR">
+        <p>
           Let <m>H</m> and <m>K</m> be subgroups of a group <m>G</m>.
           Define a relation <m>\sim</m> on <m>G</m> by
           <m>a \sim b</m> if there exists an <m>h \in H</m> and a <m>k \in K</m> such that <m>hak = b</m>.
@@ -890,39 +890,39 @@
       </statement>
     </exercise>
 
-    <exercise number="21" permid="pcj">
+    <exercise number="21">
       <statement>
-        <p permid="sOa">
+        <p>
           Let <m>G</m> be a cyclic group of order <m>n</m>.
           Show that there are exactly <m>\phi(n)</m> generators for <m>G</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="22" permid="Vjs">
+    <exercise number="22">
       <statement>
-        <p permid="YVj">
+        <p>
           Let <m>n = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k}</m>,
           where <m>p_1, p_2, \ldots, p_k</m> are distinct primes.
           Prove that
-          <me permid="YzK">
+          <me>
             \phi(n) =  n \left( 1 - \frac{1}{p_1} \right) \left( 1 - \frac{1}{p_2} \right)\cdots \left( 1 - \frac{1}{p_k} \right)
           </me>.
         </p>
       </statement>
-      <hint permid="CKp">
-        <p permid="Isx">
+      <hint>
+        <p>
           If <m>\gcd(m,n) = 1</m>,
           then <m>\phi(mn) = \phi(m)\phi(n)</m> (<xref ref="exercise-integers-gcd-products"/> in <xref ref="integers"/>).
         </p>
       </hint>
     </exercise>
 
-    <exercise number="23" permid="BqB">
+    <exercise number="23">
       <statement>
-        <p permid="Fcs">
+        <p>
           Show that
-          <me permid="QVl">
+          <me>
             n = \sum_{d \mid n} \phi(d)
           </me>
           for all positive integers <m>n</m>.
