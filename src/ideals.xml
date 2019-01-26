@@ -6,19 +6,11 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<<<<<<< HEAD
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="rings" permid="bhz">
-  <title>Ring Homomorphisms and Ideals</title>
-
-  <section xml:id="section-ring-homomorphisms" permid="wPD">
-    <title>Ring Homomorphisms and Ideals</title>
-=======
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ideals">
   <title>Ideals</title>
     <section xml:id="section-ring-homomorphisms">
     <title>Ring Homomorphisms and Ideals</title>
     
->>>>>>> dev
     <p permid="ajK">
       In the study of groups,
       a homomorphism is a map that preserves the operation of the group.
