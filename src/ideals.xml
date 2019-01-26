@@ -6,11 +6,19 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
+<<<<<<< HEAD
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="rings" permid="bhz">
   <title>Ring Homomorphisms and Ideals</title>
 
   <section xml:id="section-ring-homomorphisms" permid="wPD">
     <title>Ring Homomorphisms and Ideals</title>
+=======
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ideals">
+  <title>Ideals</title>
+    <section xml:id="section-ring-homomorphisms">
+    <title>Ring Homomorphisms and Ideals</title>
+    
+>>>>>>> dev
     <p permid="ajK">
       In the study of groups,
       a homomorphism is a map that preserves the operation of the group.
@@ -420,7 +428,10 @@
 
   <section xml:id="section-maximal-prime-ideals" permid="cWM">
     <title>Maximal and Prime Ideals</title>
+<<<<<<< HEAD
     <introduction permid="BNR">
+=======
+>>>>>>> dev
       <p permid="hzO">
         In this particular section we are especially interested in certain ideals of commutative rings.
         These ideals give us special types of factor rings.
@@ -428,6 +439,10 @@
         we would like to characterize those ideals <m>I</m> of a commutative ring <m>R</m> such that <m>R/I</m> is an integral domain or a field.
       </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
       <p permid="NGX">
         A proper ideal <m>M</m> of a ring <m>R</m> is a
         <term>maximal ideal</term>
@@ -581,6 +596,7 @@
           </p>
         </statement>
       </corollary>
+<<<<<<< HEAD
     </introduction>
         <!-- Updated to say that Noether lived in the 20th century and not the current (21st century). -->
         <!-- Suggested by K. Halasz. -->
@@ -650,6 +666,13 @@
   </section>
 
 
+=======
+
+  </section>
+
+
+
+>>>>>>> dev
     <!-- Exercises with Solutions  -->
     <!-- File: rings.xml  -->
     <!-- Title: Rings -->

@@ -7,10 +7,10 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="fields" permid="pNh">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="fields">
   <title>Fields</title>
-  <introduction permid="GZN">
-    <p permid="Kqf">
+  <introduction>
+    <p>
       It is natural to ask whether or not some field <m>F</m> is contained in a larger field.
       We think of the rational numbers,
       which reside inside the real numbers,
@@ -19,11 +19,11 @@
       <m>{\mathbb R}</m> and inquire as to the nature of these fields.
     </p>
 
-    <p permid="qxo">
+    <p>
       More specifically if we are given a field <m>F</m> and a polynomial <m>p(x) \in F[x]</m>,
       we can ask whether or not we can find a field <m>E</m> containing <m>F</m> such that <m>p(x)</m> factors into linear factors over <m>E[x]</m>.
       For example, if we consider the polynomial
-      <me permid="pGq">
+      <me>
         p(x) = x^4 -5 x^2 + 6
       </me>
       in <m>{\mathbb Q}[x]</m>,
@@ -32,21 +32,21 @@
       If we wish to find a zero of <m>p(x)</m>,
       we must go to a larger field.
       Certainly the field of real numbers will work, since
-      <me permid="VNz">
+      <me>
         p(x) = (x - \sqrt{2} ) (x + \sqrt{2} )( x - \sqrt{3})(x + \sqrt{3})
       </me>.
       It is possible to find a smaller field in which <m>p(x)</m> has a zero, namely
-      <me permid="BUI">
+      <me>
         {\mathbb Q }( \sqrt{2} ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
       </me>.
       We wish to be able to compute and study such fields for arbitrary polynomials over a field <m>F</m>.
     </p>
   </introduction>
 
-  <section xml:id="section-extension-fields" permid="Qfe">
+  <section xml:id="section-extension-fields">
     <title>Extension Fields</title>
-    <introduction permid="ngW">
-      <p permid="WEx">
+    <introduction>
+      <p>
         A field <m>E</m> is an <term>extension field</term>
             <idx><h>Extension</h><h>field</h></idx>
             <idx><h>Field</h><h>extension</h></idx>
@@ -56,10 +56,10 @@
         We write <m>F \subset E</m>.
       </p>
 
-      <example xml:id="example-fields-q-sqrt2" permid="qbC">
-        <p permid="oIb">
+      <example xml:id="example-fields-q-sqrt2">
+        <p>
           For example, let
-          <me permid="ibR">
+          <me>
             F = {\mathbb Q}( \sqrt{2}\,) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
           </me>
           and let <m>E =  {\mathbb Q }( \sqrt{2} + \sqrt{3}\,)</m> be the smallest field containing both
@@ -77,8 +77,8 @@
         </p>
       </example>
 
-      <example xml:id="example-fields-finite-f4" permid="WiL">
-        <p permid="UPk">
+      <example xml:id="example-fields-finite-f4">
+        <p>
           Let <m>p(x) = x^2 + x + 1 \in {\mathbb Z}_2[x]</m>.
           Since neither 0 nor 1 is a root of this polynomial,
           we know that <m>p(x)</m> is irreducible over <m>{\mathbb Z}_2</m>.
@@ -89,12 +89,12 @@
           hence, <m>{\mathbb Z}_2[x] / \langle p(x) \rangle</m> is a field.
           Let <m>f(x) + \langle p(x) \rangle</m> be an arbitrary element of <m>{\mathbb Z}_2[x] / \langle p(x) \rangle</m>.
           By the division algorithm,
-          <me permid="Oja">
+          <me>
             f(x) = (x^2 + x + 1) q(x) + r(x)
           </me>,
           where the degree of <m>r(x)</m> is less than the degree of <m>x^2 + x + 1</m>.
           Therefore,
-          <me permid="uqj">
+          <me>
             f(x) + \langle x^2 + x + 1 \rangle = r(x) + \langle x^2 + x + 1 \rangle
           </me>.
           The only possibilities for <m>r(x)</m> are then <m>0</m>,
@@ -103,7 +103,7 @@
           <m>E = {\mathbb Z}_2[x] / \langle x^2 + x + 1 \rangle</m> is a field with four elements and must be a field extension of <m>{\mathbb Z}_2</m>,
           containing a zero <m>\alpha</m> of <m>p(x)</m>.
           The field <m>{\mathbb Z}_2(  \alpha)</m> consists of elements
-          <md permid="GEB">
+          <md>
             <mrow>0 + 0 \alpha &amp; = 0</mrow>
             <mrow>1 + 0 \alpha &amp; = 1</mrow>
             <mrow>0 + 1 \alpha &amp; = \alpha</mrow>
@@ -111,7 +111,7 @@
           </md>.
           Notice that <m>{\alpha}^2 + {\alpha} + 1 = 0</m>;
           hence, if we compute <m>(1 + \alpha)^2</m>,
-          <me permid="axs">
+          <me>
             (1 + \alpha)(1 + \alpha)= 1 + \alpha + \alpha + (\alpha)^2 = \alpha
           </me>.
           Other calculations are accomplished in a similar manner.
@@ -120,11 +120,11 @@
         </p>
       </example>
 
-      <table xml:id="table-addition-z2-alpha" permid="UmH">
+      <table xml:id="table-addition-z2-alpha">
             <!-- math table -->
         <caption>Addition Table for <m>{\mathbb Z}_2(\alpha)</m></caption>
-        <p permid="CLG">
-          <me permid="mLK">
+        <p>
+          <me>
             \begin{array}{c|cccc}
             + &amp; 0 &amp; 1 &amp; \alpha &amp; 1 + \alpha \\
             \hline
@@ -137,11 +137,11 @@
         </p>
       </table>
 
-      <table xml:id="table-multiplication-z2-alpha" permid="AtQ">
+      <table xml:id="table-multiplication-z2-alpha">
             <!-- math table -->
         <caption>Multiplication Table for <m>{\mathbb Z}_2(\alpha)</m></caption>
-        <p permid="iSP">
-          <me permid="SST">
+        <p>
+          <me>
             \begin{array}{c|cccc}
             \cdot &amp; 0 &amp; 1 &amp; \alpha &amp; 1 + \alpha \\
             \hline
@@ -154,22 +154,22 @@
         </p>
       </table>
 
-      <p permid="OZY">
+      <p>
         The following theorem, due to Kronecker,
         is so important and so basic to our understanding of fields that it is often known as the Fundamental Theorem of Field Theory.
       </p>
 
-      <theorem xml:id="theorem-fundamental-of-field-theory" permid="lrJ">
+      <theorem xml:id="theorem-fundamental-of-field-theory">
         <statement>
-          <p permid="ldB">
+          <p>
             Let <m>F</m> be a field and let <m>p(x)</m> be a nonconstant polynomial in <m>F[x]</m>.
             Then there exists an extension field <m>E</m> of <m>F</m> and an element
             <m>\alpha \in E</m> such that <m>p(\alpha) = 0</m>.
           </p>
         </statement>
 
-        <proof permid="fCx">
-          <p permid="wHZ">
+        <proof>
+          <p>
             To prove this theorem,
             we will employ the method that we used to construct <xref ref="example-fields-finite-f4"/>.
             Clearly, we can assume that <m>p(x)</m> is an irreducible polynomial.
@@ -179,21 +179,21 @@
             We claim that <m>E = F[x]/\langle p(x) \rangle</m> is the desired field.
           </p>
 
-          <p permid="cPi">
+          <p>
             We first show that <m>E</m> is a field extension of <m>F</m>.
             We can define a homomorphism of commutative rings by the map <m>\psi:F \rightarrow F[x]/\langle p(x) \rangle</m>,
             where <m>\psi(a) = a + \langle p(x)\rangle</m> for <m>a \in F</m>.
             It is easy to check that <m>\psi</m> is indeed a ring homomorphism.
             Observe that
-            <me permid="zac">
+            <me>
               \psi( a ) + \psi( b ) = (a + \langle p(x) \rangle) + (b + \langle p(x) \rangle) = (a + b) + \langle p(x) \rangle = \psi( a + b )
             </me>
             and
-            <me permid="fhl">
+            <me>
               \psi( a ) \psi( b ) = (a + \langle p(x) \rangle)  (b + \langle p(x) \rangle) = ab + \langle p(x) \rangle = \psi( ab )
             </me>.
             To prove that <m>\psi</m> is one-to-one, assume that
-            <me permid="Lou">
+            <me>
               a + \langle p(x) \rangle = \psi(a) = \psi(b) = b + \langle p(x) \rangle
             </me>.
             Then <m>a - b</m> is a multiple of <m>p(x)</m>,
@@ -206,12 +206,12 @@
             <m>\{ a + \langle p(x) \rangle : a \in F \}</m> of <m>E</m> and view <m>E</m> as an extension field of <m>F</m>.
           </p>
             <!-- \alpha is in E not F - TWJ 4/23/2011 -->
-          <p permid="IWr">
+          <p>
             It remains for us to prove that <m>p(x)</m> has a zero <m>\alpha \in E</m>.
             Set <m>\alpha = x + \langle p(x) \rangle</m>.
             Then <m>\alpha</m> is in <m>E</m>.
             If <m>p(x) = a_0 + a_1 x + \cdots + a_n x^n</m>, then
-            <md permid="rvD">
+            <md>
               <mrow>p( \alpha ) &amp; =  a_0 + a_1( x + \langle p(x) \rangle) + \cdots + a_n ( x + \langle p(x) \rangle)^n</mrow>
               <mrow>&amp; = a_0 + ( a_1 x + \langle p(x) \rangle) + \cdots + (a_n  x^n + \langle p(x) \rangle)</mrow>
               <mrow>&amp; = a_0 + a_1 x + \cdots + a_n x^n + \langle p(x) \rangle</mrow>
@@ -223,8 +223,8 @@
         </proof>
       </theorem>
 
-      <example xml:id="example-fields-finite-f8" permid="CpU">
-        <p permid="AWt">
+      <example xml:id="example-fields-finite-f8">
+        <p>
           Let <m>p(x) = x^5 + x^4 + 1 \in {\mathbb Z}_2[x]</m>.
           Then <m>p(x)</m> has irreducible factors
           <m>x^2 + x + 1</m> and <m>x^3 + x + 1</m>.
@@ -238,9 +238,9 @@
       </example>
     </introduction>
 
-    <subsection xml:id="fields-subsection-algebraic-elements" permid="VUq">
+    <subsection xml:id="fields-subsection-algebraic-elements">
       <title>Algebraic Elements</title>
-      <p permid="lrW">
+      <p>
         An element <m>\alpha</m> in an extension field <m>E</m> over <m>F</m> is <term>algebraic</term>
         over <m>F</m> if <m>f(\alpha)=0</m> for some nonzero polynomial <m>f(x) \in F[x]</m>.
         An element in <m>E</m> that is not algebraic over <m>F</m> is
@@ -269,8 +269,8 @@
         of <m>F</m>.
       </p>
 
-      <example xml:id="example-fields-extension-pi" permid="RUr">
-        <p permid="hdC">
+      <example xml:id="example-fields-extension-pi">
+        <p>
           Both <m>\sqrt{2}</m> and <m>i</m> are algebraic over
           <m>{\mathbb Q}</m> since they are zeros of the polynomials <m>x^2 -2</m> and <m>x^2 + 1</m>,
           respectively.
@@ -286,7 +286,7 @@
         </p>
       </example>
 
-      <p permid="Rzf">
+      <p>
         A complex number that is algebraic over <m>{\mathbb Q}</m> is an
         <term>algebraic number</term>.
             <idx><h>Algebraic number</h></idx>
@@ -295,8 +295,8 @@
         is an element of <m>{\mathbb C}</m> that is transcendental over <m>{\mathbb Q}</m>.
       </p>
 
-      <example xml:id="example-fields-sqrt2-sqrt3" permid="ybA">
-        <p permid="NkL">
+      <example xml:id="example-fields-sqrt2-sqrt3">
+        <p>
           We will show that <m>\sqrt{2 + \sqrt{3} }</m> is algebraic over <m>{\mathbb Q}</m>.
           If <m>\alpha = \sqrt{2 + \sqrt{3} }</m>,
           then <m>\alpha^2 = 2 + \sqrt{3}</m>.
@@ -306,15 +306,15 @@
         </p>
       </example>
 
-      <p permid="xGo">
+      <p>
         It is very easy to give an example of an extension field <m>E</m> over a field <m>F</m>,
         where <m>E</m> contains an element transcendental over <m>F</m>.
         The following theorem characterizes transcendental extensions.
       </p>
 
-      <theorem permid="oHO">
+      <theorem>
         <statement>
-          <p permid="RkK">
+          <p>
             Let <m>E</m> be an extension field of <m>F</m> and <m>\alpha \in E</m>.
             Then <m>\alpha</m> is transcendental over <m>F</m> if and only if
             <m>F( \alpha )</m> is isomorphic to <m>F(x)</m>,
@@ -322,8 +322,8 @@
           </p>
         </statement>
 
-        <proof permid="LJG">
-          <p permid="pdA">
+        <proof>
+          <p>
             Let <m>\phi_{\alpha} : F[x] \rightarrow E</m> be the evaluation homomorphism for <m>\alpha</m>.
             Then <m>\alpha</m> is transcendental over <m>F</m> if and only if
             <m>\phi_{\alpha} (p(x)) = p(\alpha) \neq 0</m> for all nonconstant polynomials <m>p(x) \in F[x]</m>.
@@ -336,13 +336,13 @@
         </proof>
       </theorem>
 
-      <p permid="dNx">
+      <p>
         We have a more interesting situation in the case of algebraic extensions.
       </p>
 
-      <theorem permid="UOX">
+      <theorem>
         <statement>
-          <p permid="xrT">
+          <p>
             Let <m>E</m> be an extension field of a field <m>F</m> and
             <m>\alpha \in E</m> with <m>\alpha</m> algebraic over <m>F</m>.
             Then there is a unique irreducible monic polynomial
@@ -352,8 +352,8 @@
           </p>
         </statement>
             <!--  Removed the hypothesis that f(x) be monic.  Suggested by Davis Schubert. - TWJ 4/24/2013 -->
-        <proof permid="rQP">
-          <p permid="VkJ">
+        <proof>
+          <p>
             Let <m>\phi_{\alpha} : F[x] \rightarrow E</m> be the evaluation homomorphism.
             The kernel of <m>\phi_{\alpha}</m> is a principal ideal generated by some
             <m>p(x) \in F[x]</m> with <m>\deg p(x) \geq 1</m>.
@@ -367,7 +367,7 @@
             <m>\beta p( x)</m> for some <m>\beta \in F</m>.
           </p>
 
-          <p permid="BrS">
+          <p>
             Suppose now that <m>p(x) = r(x) s(x)</m> is a factorization of <m>p(x)</m> into polynomials of lower degree.
             Since <m>p( \alpha ) = 0</m>,
             <m>r( \alpha ) s( \alpha ) = 0</m>;
@@ -379,7 +379,7 @@
         </proof>
       </theorem>
 
-      <p permid="JUG">
+      <p>
         Let <m>E</m> be an extension field of <m>F</m> and
         <m>\alpha \in E</m> be algebraic over <m>F</m>.
         The unique monic polynomial <m>p(x)</m> of the last theorem is called the
@@ -390,17 +390,17 @@
         <term>degree of <m>\alpha</m> over <m>F</m></term>.
       </p>
 
-      <example xml:id="example-fields-minimal-poly" permid="eiJ">
-        <p permid="trU">
+      <example xml:id="example-fields-minimal-poly">
+        <p>
           Let <m>f(x) = x^2 - 2</m> and <m>g(x) = x^4 - 4 x^2 + 1</m>.
           These polynomials are the minimal polynomials of
           <m>\sqrt{2}</m> and <m>\sqrt{2 + \sqrt{3} }</m>, respectively.
         </p>
       </example>
 
-      <proposition xml:id="proposition-minimal-poly" permid="ZyQ">
+      <proposition xml:id="proposition-minimal-poly">
         <statement>
-          <p permid="zhg">
+          <p>
             Let <m>E</m> be a field extension of <m>F</m> and
             <m>\alpha \in E</m> be algebraic over <m>F</m>.
             Then <m>F( \alpha ) \cong F[x] / \langle p(x) \rangle</m>,
@@ -408,8 +408,8 @@
           </p>
         </statement>
 
-        <proof permid="hrK">
-          <p permid="hzb">
+        <proof>
+          <p>
             Let <m>\phi_{\alpha} : F[x] \rightarrow E</m> be the evaluation homomorphism.
             The kernel of this map is <m>\langle p(x) \rangle</m>,
             where <m>p(x)</m> is the minimal polynomial of <m>\alpha</m>.
@@ -420,36 +420,36 @@
         </proof>
       </proposition>
             <!--  Corrected the kernel of <m>\phi_{\alpha}</m>.  Suggested by Aleks Vlasev. - TWJ 8/10/2011 -->
-      <theorem xml:id="theorem-simple_extension" permid="AWg">
+      <theorem xml:id="theorem-simple_extension">
         <statement>
-          <p permid="dzc">
+          <p>
             Let <m>E = F( \alpha )</m> be a simple extension of <m>F</m>,
             where <m>\alpha \in E</m> is algebraic over <m>F</m>.
             Suppose that the degree of <m>\alpha</m> over <m>F</m> is <m>n</m>.
             Then every element <m>\beta \in E</m> can be expressed uniquely in the form
-            <me permid="XCM">
+            <me>
               \beta = b_0 + b_1 \alpha + \cdots + b_{n-1} \alpha^{n - 1}
             </me>
             for <m>b_i \in F</m>.
           </p>
         </statement>
 
-        <proof permid="XXY">
-          <p permid="NGk">
+        <proof>
+          <p>
             Since <m>\phi_{\alpha} ( F[x] ) \cong F( \alpha )</m>,
             every element in <m>E = F( \alpha )</m> must be of the form <m>\phi_{\alpha} ( f(x) ) = f( \alpha )</m>,
             where <m>f(\alpha)</m> is a polynomial in <m>\alpha</m> with coefficients in <m>F</m>.
             Let
-            <me permid="DJV">
+            <me>
               p(x) = x^n + a_{n - 1} x^{n - 1} + \cdots + a_0
             </me>
             be the minimal polynomial of <m>\alpha</m>.
             Then <m>p( \alpha ) = 0</m>; hence,
-            <me permid="jRe">
+            <me>
               {\alpha}^n = - a_{n - 1} {\alpha}^{n - 1} - \cdots - a_0
             </me>.
             Similarly,
-            <md permid="wfw">
+            <md>
               <mrow>{\alpha}^{n + 1} &amp; = {\alpha} {\alpha}^n</mrow>
               <mrow>&amp; = - a_{n - 1} {\alpha}^n - a_{n - 2} {\alpha}^{n - 1} - \cdots - a_0 {\alpha}</mrow>
               <mrow>&amp; = - a_{n - 1}( - a_{n - 1} {\alpha}^{n - 1} - \cdots - a_0) - a_{n - 2} {\alpha}^{n - 1} - \cdots - a_0 {\alpha}</mrow>
@@ -459,19 +459,19 @@
             as a linear combination of powers of
             <m>{\alpha}</m> that are less than <m>n</m>.
             Hence, any <m>\beta \in F( \alpha )</m> can be written as
-            <me permid="PYn">
+            <me>
               \beta = b_0 + b_1 \alpha + \cdots + b_{n - 1} \alpha^{n - 1}
             </me>.
           </p>
 
-          <p permid="tNt">
+          <p>
             To show uniqueness, suppose that
-            <me permid="cmF">
+            <me>
               \beta = b_0 + b_1 \alpha + \cdots + b_{n-1} \alpha^{n-1} = c_0 + c_1 \alpha + \cdots + c_{n - 1} \alpha^{n - 1}
             </me>
             for <m>b_i</m> and <m>c_i</m> in <m>F</m>.
             Then
-            <me permid="ItO">
+            <me>
               g(x) = (b_0 - c_0) + (b_1 - c_1) x + \cdots + (b_{n - 1} - c_{n - 1})x^{n - 1}
             </me>
             is in <m>F[x]</m> and <m>g( \alpha ) = 0</m>.
@@ -479,7 +479,7 @@
             the irreducible polynomial of <m>\alpha</m>,
             <m>g(x)</m> must be the zero polynomial.
             Consequently,
-            <me permid="oAX">
+            <me>
               b_0 - c_0 = b_1 - c_1 = \cdots = b_{n - 1} - c_{n - 1} = 0
             </me>,
             or <m>b_i = c_i</m> for <m>i = 0, 1, \ldots, n-1</m>.
@@ -488,8 +488,8 @@
         </proof>
       </theorem>
             <!--  Changed = to \cong.  Suggested by Aleks Vlasev. - TWJ 8/10/2011 -->
-      <example xml:id="example-fields-isomorph" permid="KpS">
-        <p permid="Zzd">
+      <example xml:id="example-fields-isomorph">
+        <p>
           Since <m>x^2 + 1</m> is irreducible over <m>{\mathbb R}</m>,
           <m>\langle x^2 + 1 \rangle</m> is a maximal ideal in <m>{\mathbb R}[x]</m>.
           So <m>E = {\mathbb R}[x]/\langle x^2 + 1 \rangle</m> is a field extension of
@@ -499,7 +499,7 @@
           By <xref ref="proposition-minimal-poly"/>,
           <m>E</m> is isomorphic to <m>{\mathbb R}( \alpha ) = \{ a + b \alpha : a, b \in {\mathbb R} \}</m>.
           We know that <m>\alpha^2 = -1</m> in <m>E</m>, since
-          <md permid="UIg">
+          <md>
             <mrow>\alpha^2 + 1 &amp; = (x + \langle x^2 + 1  \rangle)^2 + (1 + \langle x^2 + 1 \rangle)</mrow>
             <mrow>&amp; = (x^2 + 1) + \langle x^2 + 1  \rangle</mrow>
             <mrow>&amp; = 0</mrow>
@@ -509,7 +509,7 @@
         </p>
       </example>
 
-      <p permid="qbP">
+      <p>
         Let <m>E</m> be a field extension of a field <m>F</m>.
         If we regard <m>E</m> as a vector space over <m>F</m>,
         then we can bring the machinery of linear algebra to bear on the problems that we will encounter in our study of fields.
@@ -523,13 +523,13 @@
         <m>E = F(\alpha )</m> is finite dimensional vector space over <m>F</m> with basis <m>\{ 1, \alpha, {\alpha}^2, \ldots, {\alpha}^{n - 1} \}</m>.
       </p>
 
-      <p permid="WiY">
+      <p>
         If an extension field <m>E</m> of a field <m>F</m> is a finite dimensional vector space over <m>F</m> of dimension <m>n</m>,
         then we say that <m>E</m> is a 
         <term>finite extension of degree <m>n</m> over <m>F</m></term>.
             <idx><h>Extension</h><h>finite</h></idx>
         We write
-        <me permid="APp">
+        <me>
           [E:F]= n
         </me>.
         to indicate the dimension of <m>E</m> over <m>F</m>.
@@ -541,27 +541,27 @@
 
       </p>
 
-      <theorem xml:id="theorem-finite-extension" permid="hdp">
+      <theorem xml:id="theorem-finite-extension">
         <statement>
-          <p permid="JGl">
+          <p>
             Every finite extension field <m>E</m> of a field <m>F</m> is an algebraic extension.
           </p>
         </statement>
 
-        <proof permid="Efh">
-          <p permid="ZUC">
+        <proof>
+          <p>
             Let <m>\alpha \in E</m>.
             Since <m>[E:F] = n</m>, the elements
-            <me permid="gWy">
+            <me>
               1, \alpha, \ldots, {\alpha}^n
             </me>
             cannot be linearly independent.
             Hence, there exist <m>a_i \in F</m>, not all zero, such that
-            <me permid="NdH">
+            <me>
               a_n {\alpha}^n + a_{n - 1} {\alpha}^{n - 1} + \cdots + a_1 \alpha + a_0 = 0
             </me>.
             Therefore,
-            <me permid="tkQ">
+            <me>
               p(x) = a_n x^n + \cdots + a_0 \in F[x]
             </me>
             is a nonzero polynomial with <m>p( \alpha ) = 0</m>.
@@ -569,8 +569,8 @@
         </proof>
       </theorem>
 
-      <remark permid="CLt">
-        <p permid="eiW">
+      <remark>
+        <p>
           <xref ref="theorem-finite-extension"/> says that every finite extension of a field <m>F</m> is an algebraic extension.
           The converse is false, however.
           We will leave it as an exercise to show that the set of all elements in
@@ -579,25 +579,25 @@
         </p>
       </remark>
 
-      <p permid="Cqh">
+      <p>
         The next theorem is a counting theorem,
         similar to Lagrange's Theorem in group theory.
         <xref ref="theorem-tower-indices"/> will prove to be an extremely useful tool in our investigation of finite field extensions.
       </p>
             <!--Changed the refrerence in the preceding paragraph to the next theorem instead of the previous theorem.  TWJ 13/6/2014-->
-      <theorem xml:id="theorem-tower-indices" permid="Nky">
+      <theorem xml:id="theorem-tower-indices">
         <statement>
-          <p permid="pNu">
+          <p>
             If <m>E</m> is a finite extension of <m>F</m> and <m>K</m> is a finite extension of <m>E</m>,
             then <m>K</m> is a finite extension of <m>F</m> and
-            <me permid="ZrZ">
+            <me>
               [K:F]= [K:E] [E:F]
             </me>.
           </p>
         </statement>
 
-        <proof permid="kmq">
-          <p permid="GbL">
+        <proof>
+          <p>
             Let <m>\{ \alpha_1, \ldots, \alpha_n \}</m> be a basis for <m>E</m> as a vector space over <m>F</m> and
             <m>\{ \beta_1, \ldots, \beta_m \}</m> be a basis for <m>K</m> as a vector space over <m>E</m>.
             We claim that <m>\{ \alpha_i \beta_j \}</m> is a basis for <m>K</m> over <m>F</m>.
@@ -606,38 +606,38 @@
             Then <m>u = \sum_{j = 1}^{m} b_j \beta_j</m> and <m>b_j = \sum_{i = 1}^{n} a_{ij} \alpha_i</m>,
             where <m>b_j \in E</m> and <m>a_{ij} \in F</m>.
             Then
-            <me permid="Fzi">
+            <me>
               u = \sum_{j = 1}^{m} \left( \sum_{i = 1}^{n} a_{ij} \alpha_i  \right) \beta_j = \sum_{i,j} a_{ij} ( \alpha_i \beta_j )
             </me>.
             So the <m>mn</m> vectors <m>\alpha_i \beta_j</m> must span <m>K</m> over <m>F</m>.
           </p>
 
-          <p permid="miU">
+          <p>
             We must show that <m>\{ \alpha_i \beta_j \}</m> are linearly independent.
             Recall that a set of vectors
             <m>v_1, v_2, \ldots,
             v_n</m> in a vector space <m>V</m> are linearly independent if
-            <me permid="lGr">
+            <me>
               c_1 v_1 + c_2 v_2 + \cdots + c_n v_n = 0
             </me>
             implies that
-            <me permid="RNA">
+            <me>
               c_1 = c_2 = \cdots = c_n = 0
             </me>.
             Let
-            <me permid="xUJ">
+            <me>
               u = \sum_{i,j} c_{ij} ( \alpha_i \beta_j ) = 0
             </me>
             for <m>c_{ij} \in F</m>.
             We need to prove that all of the <m>c_{ij}</m>'s are zero.
             We can rewrite <m>u</m> as
-            <me permid="ebS">
+            <me>
               \sum_{j = 1}^{m} \left( \sum_{i = 1}^{n} c_{ij} \alpha_i \right) \beta_j = 0
             </me>,
             where <m>\sum_i c_{ij} \alpha_i \in E</m>.
             Since the <m>\beta_j</m>'s are linearly independent over <m>E</m>,
             it must be the case that
-            <me permid="Kjb">
+            <me>
               \sum_{i = 1}^n c_{ij} \alpha_i = 0
             </me>
             for all <m>j</m>.
@@ -648,27 +648,27 @@
         </proof>
       </theorem>
 
-      <p permid="ixq">
+      <p>
         The following corollary is easily proved using mathematical induction.
       </p>
 
-      <corollary permid="FFZ">
+      <corollary>
         <statement>
-          <p permid="DQZ">
+          <p>
             If <m>F_i</m> is a field for
             <m>i = 1, \dots,
             k</m> and <m>F_{i+1}</m> is a finite extension of <m>F_i</m>,
             then <m>F_k</m> is a finite extension of <m>F_1</m> and
-            <me permid="qqk">
+            <me>
               [F_k : F_1] = [F_k : F_{k-1} ] \cdots [F_2 : F_1 ]
             </me>.
           </p>
         </statement>
       </corollary>
 
-      <corollary permid="lNi">
+      <corollary>
         <statement>
-          <p permid="jYi">
+          <p>
             Let <m>E</m> be an extension field of <m>F</m>.
             If <m>\alpha \in E</m> is algebraic over <m>F</m> with minimal polynomial <m>p(x)</m> and
             <m>\beta \in F( \alpha )</m> with minimal polynomial <m>q(x)</m>,
@@ -676,25 +676,25 @@
           </p>
         </statement>
 
-        <proof permid="FUu">
-          <p permid="Sqd">
+        <proof>
+          <p>
             We know that <m>\deg p(x) = [F( \alpha ) : F ]</m> and <m>\deg q(x) = [F( \beta ) : F ]</m>.
             Since <m>F \subset F( \beta ) \subset F( \alpha )</m>,
-            <me permid="Wxt">
+            <me>
               [F( \alpha ) : F ]= [ F( \alpha ) : F( \beta ) ] [ F( \beta ) : F ]
             </me>.
           </p>
         </proof>
       </corollary>
 
-      <example xml:id="example-fields-sqrt3-sqrt5" permid="qxb">
-        <p permid="FGm">
+      <example xml:id="example-fields-sqrt3-sqrt5">
+        <p>
           Let us determine an extension field of
           <m>{\mathbb Q}</m> containing <m>\sqrt{3} + \sqrt{5}</m>.
           It is easy to determine that the minimal  polynomial of
           <m>\sqrt{3} + \sqrt{5}</m> is <m>x^4 - 16 x^2 + 4</m>.
           It follows that
-          <me permid="CEC">
+          <me>
             [{\mathbb Q}( \sqrt{3} + \sqrt{5}\, ) : {\mathbb Q} ] = 4
           </me>.
           We know that <m>\{ 1, \sqrt{3}\, \}</m> is a basis for 
@@ -709,13 +709,13 @@
         </p>
       </example>
             <!-- Changed minimal polynomial from  <m>x^4 - 16 x + 4</m> to <m>x^4 - 16 x^2 + 4</m>.  Discovered by Bradley Noyes - TWJ 3/25/2011 -->
-      <example xml:id="example-fields-cubert5-sqrt5-i" permid="WEk">
-        <p permid="lNv">
+      <example xml:id="example-fields-cubert5-sqrt5-i">
+        <p>
           Let us compute a basis for <m>{\mathbb Q}( \sqrt[3]{5}, \sqrt{5} \, i )</m>,
           where <m>\sqrt{5}</m> is the positive square root of <m>5</m> and
           <m>\sqrt[3]{5}</m> is the real cube root of <m>5</m>.
           We know that <m>\sqrt{5} \, i \notin {\mathbb Q}(\sqrt[3]{5}\, )</m>, so
-          <me permid="iLL">
+          <me>
             [ {\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i) : {\mathbb Q}(\sqrt[3]{5}\, )] = 2
           </me>.
           It is easy to determine that <m>\{ 1, \sqrt{5}i\, \}</m> is a basis for
@@ -723,7 +723,7 @@
           We also know that <m>\{ 1, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2  \}</m> is a basis for
           <m>{\mathbb Q}(\sqrt[3]{5}\, )</m> over <m>{\mathbb Q}</m>.
           Hence, a basis for <m>{\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i )</m> over <m>{\mathbb Q}</m> is
-          <me permid="OSU">
+          <me>
             \{ 1, \sqrt{5}\, i, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2, (\sqrt[6]{5}\, )^5 i, (\sqrt[6]{5}\, )^7 i = 5 \sqrt[6]{5}\, i \text{ or } \sqrt[6]{5}\, i \}
           </me>.
           Notice that <m>\sqrt[6]{5}\, i</m> is a zero of <m>x^6 + 5</m>.
@@ -731,7 +731,7 @@
           <m>{\mathbb Q}</m> using Eisenstein's Criterion,
           where we let <m>p = 5</m>.
           Consequently,
-          <me permid="vad">
+          <me>
             {\mathbb Q} \subset {\mathbb Q}( \sqrt[6]{5}\, i) \subset {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )
           </me>.
           But it must be the case that <m>{\mathbb Q}( \sqrt[6]{5}\, i) = {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )</m>,
@@ -739,30 +739,30 @@
         </p>
       </example>
             <!-- Corrected typo in the last set inclusion.  Suggest2/9/2013 -->
-      <theorem permid="trH">
+      <theorem>
         <statement>
-          <p permid="VUD">
+          <p>
             Let <m>E</m> be a field extension of <m>F</m>.
             Then  the following statements are equivalent.
 
-            <ol permid="UHT">
-              <li permid="KiO">
-                <p permid="xyX">
+            <ol>
+              <li>
+                <p>
                   <m>E</m> is a finite extension of <m>F</m>.
                 </p>
               </li>
 
-              <li permid="qpX">
-                <p permid="dGg">
+              <li>
+                <p>
                   There exists a finite number of algebraic elements
                   <m>\alpha_1, \ldots, \alpha_n \in E</m> such that <m>E = F(\alpha_1, \ldots, \alpha_n)</m>.
                 </p>
               </li>
 
-              <li permid="Wxg">
-                <p permid="JNp">
+              <li>
+                <p>
                   There exists a sequence of fields
-                  <me permid="bhm">
+                  <me>
                     E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n-1} ) \supset \cdots \supset F( \alpha_1 ) \supset F
                   </me>,
                   where each field <m>F(\alpha_1, \ldots, \alpha_i)</m> is algebraic over <m>F(\alpha_1, \ldots, \alpha_{i-1})</m>.
@@ -772,8 +772,8 @@
           </p>
         </statement>
 
-        <proof permid="Qtz">
-          <p permid="yxm">
+        <proof>
+          <p>
             (1) <m>\Rightarrow</m> (2).
             Let <m>E</m> be a finite algebraic extension of <m>F</m>.
             Then <m>E</m> is a finite dimensional vector space over <m>F</m> and there exists a basis consisting of elements
@@ -781,31 +781,31 @@
             Each <m>\alpha_i</m> is algebraic over <m>F</m> by <xref ref="theorem-finite-extension"/>.
           </p>
 
-          <p permid="eEv">
+          <p>
             (2) <m>\Rightarrow</m> (3).
             Suppose that <m>E = F(\alpha_1, \ldots, \alpha_n)</m>,
             where every <m>\alpha_i</m> is algebraic over <m>F</m>.
             Then
-            <me permid="Hov">
+            <me>
               E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n - 1} ) \supset \cdots \supset F( \alpha_1 ) \supset F
             </me>,
             where each field <m>F(\alpha_1, \ldots, \alpha_i)</m> is algebraic over <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>.
           </p>
 
-          <p permid="KLE">
+          <p>
             (3) <m>\Rightarrow</m> (1).
             Let
-            <me permid="nvE">
+            <me>
               E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n - 1} ) \supset \cdots \supset F( \alpha_1 ) \supset F
             </me>,
             where each field <m>F(\alpha_1, \ldots, \alpha_i)</m> is algebraic over <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>.
             Since
-            <me permid="TCN">
+            <me>
               F(\alpha_1, \ldots, \alpha_i) =  F(\alpha_1, \ldots, \alpha_{i - 1} )(\alpha_i)
             </me>
             is simple extension and <m>\alpha_i</m> is algebraic over <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>,
             it follows that
-            <me permid="zJW">
+            <me>
               [ F(\alpha_1, \ldots, \alpha_i) : F(\alpha_1, \ldots, \alpha_{i - 1} )]
             </me>
             is finite for each <m>i</m>.
@@ -815,17 +815,17 @@
       </theorem>
     </subsection>
 
-    <subsection xml:id="fields-subsection-algebraic-closure" permid="Cbz">
+    <subsection xml:id="fields-subsection-algebraic-closure">
       <title>Algebraic Closure</title>
-      <p permid="OEz">
+      <p>
         Given a field <m>F</m>,
         the question arises as to whether or not we can find a field <m>E</m> such that every polynomial <m>p(x)</m> has a root in <m>E</m>.
         This leads us to the following theorem.
       </p>
 
-      <theorem permid="iSC">
+      <theorem>
         <statement>
-          <p permid="CbM">
+          <p>
             Let <m>E</m> be an extension field of <m>F</m>.
             The set of elements in <m>E</m> that are algebraic over <m>F</m> form a field.
           </p>
@@ -833,8 +833,8 @@
             <!--  Changed <m>\alpha \pm \beta</m>, $\alpha / -->
             <!-- \beta<m>, and </m>\alpha / \beta<m> to </m>\alpha \pm \beta<m>, </m>\alpha  -->
             <!-- \beta<m>, and </m>\alpha / \beta$  Suggested by Aleks Vlasev. - TWJ 8/10/2011 -->
-        <proof permid="wAI">
-          <p permid="qSN">
+        <proof>
+          <p>
             Let <m>\alpha, \beta \in E</m> be algebraic over <m>F</m>.
             Then <m>F( \alpha, \beta )</m> is a finite extension of <m>F</m>.
             Since every element of <m>F( \alpha, \beta )</m> is algebraic over <m>F</m>,
@@ -846,16 +846,16 @@
         </proof>
       </theorem>
 
-      <corollary xml:id="corollary-algebraic-numbers-field" permid="Hvm">
+      <corollary xml:id="corollary-algebraic-numbers-field">
         <statement>
-          <p permid="Qfr">
+          <p>
             The set of all algebraic numbers forms a field;
             that is, the set of all complex numbers that are algebraic over <m>{\mathbb Q}</m> makes up a field.
           </p>
         </statement>
       </corollary>
 
-      <p permid="uLI">
+      <p>
         Let <m>E</m> be a field extension of a field <m>F</m>.
         We define the <term>algebraic closure</term>
             <idx><h>Algebraic closure</h></idx>
@@ -863,29 +863,29 @@
         A field <m>F</m> is <term>algebraically closed</term><idx><h>Field</h><h>algebraically closed</h></idx> if every nonconstant polynomial in <m>F[x]</m> has a root in <m>F</m>.
       </p>
 
-      <theorem permid="OZL">
+      <theorem>
         <statement>
-          <p permid="iiV">
+          <p>
             A field <m>F</m> is algebraically closed if and only if every nonconstant polynomial in <m>F[x]</m> factors into linear factors over <m>F[x]</m>.
           </p>
         </statement>
 
-        <proof permid="cHR">
-          <p permid="WZW">
+        <proof>
+          <p>
             Let <m>F</m> be an algebraically closed field.
             If <m>p(x) \in F[x]</m> is a nonconstant polynomial,
             then <m>p(x)</m> has a zero in <m>F</m>, say <m>\alpha</m>.
             Therefore, <m>x-\alpha</m> must be a factor of <m>p(x)</m> and so <m>p(x) = (x - \alpha) q_1(x)</m>,
             where <m>\deg q_1(x) = \deg p(x) - 1</m>.
             Continue this process with <m>q_1(x)</m> to find a factorization
-            <me permid="fRf">
+            <me>
               p(x) = (x - \alpha)(x - \beta)q_2(x)
             </me>,
             where <m>\deg q_2(x) = \deg p(x) -2</m>.
             The process must eventually stop since the degree of <m>p(x)</m> is finite.
           </p>
 
-          <p permid="Dhf">
+          <p>
             Conversely, suppose that every nonconstant polynomial <m>p(x)</m> in <m>F[x]</m> factors into linear factors.
             Let <m>ax - b</m> be such a factor.
             Then <m>p( b/a ) = 0</m>.
@@ -894,15 +894,15 @@
         </proof>
       </theorem>
 
-      <corollary permid="nCv">
+      <corollary>
         <statement>
-          <p permid="wmA">
+          <p>
             An algebraically closed field <m>F</m> has no proper algebraic extension <m>E</m>.
           </p>
         </statement>
 
-        <proof permid="mbD">
-          <p permid="joo">
+        <proof>
+          <p>
             Let <m>E</m> be an algebraic extension of <m>F</m>;
             then <m>F \subset E</m>.
             For <m>\alpha \in E</m>,
@@ -912,36 +912,36 @@
         </proof>
       </corollary>
 
-      <theorem permid="vgU">
+      <theorem>
         <statement>
-          <p permid="Oqe">
+          <p>
             Every field <m>F</m> has a unique algebraic closure.
           </p>
         </statement>
       </theorem>
 
-      <p permid="aSR">
+      <p>
         It is a nontrivial fact that every field has a unique algebraic closure.
         The proof is not extremely difficult,
         but requires some rather sophisticated set theory.
         We refer the reader to [3], [4], or [8] for a proof of this result.
       </p>
             <!-- not sure how to number these references within the chapter - 19 August 2010 - TWJ -->
-      <p permid="Haa">
+      <p>
         We now state the Fundamental Theorem of Algebra,
         first proven by Gauss at the age of 22 in his doctoral thesis.
         This theorem states that every polynomial with coefficients in the complex numbers has a root in the complex numbers.
         The proof of this theorem will be given in <xref ref="galois"/>.
       </p>
 
-      <theorem permid="bod">
+      <theorem>
         <title>Fundamental Theorem of Algebra</title>
         <idx>
         <h>Fundamental Theorem</h>
         <h>of Algebra</h>
         </idx>
         <statement>
-          <p permid="uxn">
+          <p>
             The field of complex numbers is algebraically closed.
           </p>
         </statement>
@@ -949,9 +949,9 @@
     </subsection>
 
 
-    <subsection xml:id="fields-subsection-historical-note" permid="aEj">
+    <subsection xml:id="fields-subsection-historical-note">
       <title>Historical Note</title>
-      <p permid="IPn">
+      <p>
         Algebraic number theory uses the tools of algebra to solve problems in number theory.
         Modern algebraic number theory began with Pierre de Fermat
             <idx><h>Fermat, Pierre de</h></idx>
@@ -966,7 +966,7 @@
         Wiles's achievement was reported on the front page of the <pubtitle>New York Times</pubtitle>.
       </p>
 
-      <p permid="oWw">
+      <p>
         Attempts to prove Fermat's Last Theorem have led to important contributions to algebraic number theory by such notable mathematicians as Leonhard Euler
             <idx><h>Euler, Leonhard</h></idx>
         (1707<ndash/>1783).
@@ -979,7 +979,7 @@
         Kronecker's theory of ideals and his study of algebraic number theory added much to the understanding of fields.
       </p>
 
-      <p permid="VdF">
+      <p>
         David Hilbert
             <idx><h>Hilbert, David</h></idx>
         (1862<ndash/>1943) and Hermann Minkowski
@@ -991,7 +991,7 @@
         and Weyl.
       </p>
 
-      <p permid="BkO">
+      <p>
         André Weil
             <idx><h>Weil, André</h></idx>
         answered questions in number theory using algebraic geometry,
@@ -1015,189 +1015,189 @@
     <!-- Exercises with Solutions  -->
     <!-- File: fields.xml  -->
     <!-- Title: Fields -->
-  <exercises xml:id="exercises-fields" filenamebase="fields" permid="Lvl">
+  <exercises xml:id="exercises-fields" filenamebase="fields">
     <title>Exercises</title>
-    <exercise number="1" permid="kHP">
+    <exercise number="1">
       <statement>
-        <p permid="nCI">
+        <p>
           Show that each of the following numbers is algebraic over
           <m>{\mathbb Q}</m> by finding the minimal polynomial of the number over <m>{\mathbb Q}</m>.
 
-          <ol permid="Ndu">
-            <li permid="zJJ">
-              <p permid="mZS">
+          <ol>
+            <li>
+              <p>
                 <m>\sqrt{ 1/3 + \sqrt{7} }</m>
               </p>
             </li>
 
-            <li permid="fQS">
-              <p permid="Thb">
+            <li>
+              <p>
                 <m>\sqrt{ 3} + \sqrt[3]{5}</m>
               </p>
             </li>
 
-            <li permid="LYb">
-              <p permid="zok">
+            <li>
+              <p>
                 <m>\sqrt{3} + \sqrt{2}\, i</m>
               </p>
             </li>
 
-            <li permid="sfk">
-              <p permid="fvt">
+            <li>
+              <p>
                 <m>\cos \theta + i \sin \theta</m> for
                 <m>\theta = 2 \pi /n</m> with <m>n \in {\mathbb N}</m>
               </p>
             </li>
 
-            <li permid="Ymt">
-              <p permid="LCC">
+            <li>
+              <p>
                 <m>\sqrt{ \sqrt[3]{2} - i }</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="ypV">
-        <p permid="Tvw">
+      <hint>
+        <p>
           (a) <m>x^4 - (2/3) x^2 - 62/9</m>; (c) <m>x^4 - 2 x^2 + 25</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="2" permid="QOY">
+    <exercise number="2">
       <statement>
-        <p permid="TJR">
+        <p>
           Find a basis for each of the following field extensions.
           What is the degree of each extension?
 
-          <ol permid="tkD">
-            <li permid="Jdv">
-              <p permid="wtE">
+          <ol>
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt{3}, \sqrt{6}\, )</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
 
-            <li permid="pkE">
-              <p permid="cAN">
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt[3]{2}, \sqrt[3]{3}\, )</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
 
-            <li permid="VrN">
-              <p permid="IHW">
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt{2}, i)</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
 
-            <li permid="ByW">
-              <p permid="oPf">
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt{3}, \sqrt{5}, \sqrt{7}\, )</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
 
-            <li permid="hGf">
-              <p permid="UWo">
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt{2}, \root 3 \of{2}\, )</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
 
-            <li permid="NNo">
-              <p permid="Bdx">
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt{8}\, )</m> over <m>{\mathbb Q}(\sqrt{2}\, )</m>
               </p>
             </li>
 
-            <li permid="tUx">
-              <p permid="hkG">
+            <li>
+              <p>
                 <m>{\mathbb Q}(i, \sqrt{2} +i, \sqrt{3} + i )</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
 
-            <li permid="abG">
-              <p permid="NrP">
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt{2} + \sqrt{5}\, )</m> over <m>{\mathbb Q} ( \sqrt{5}\, )</m>
               </p>
             </li>
 
-            <li permid="GiP">
-              <p permid="tyY">
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt{2}, \sqrt{6} + \sqrt{10}\, )</m> over <m>{\mathbb Q} ( \sqrt{3} + \sqrt{5}\, )</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="KEn">
-        <p permid="zCF">
+      <hint>
+        <p>
           (a) <m>\{ 1, \sqrt{2}, \sqrt{3}, \sqrt{6}\, \}</m>; (c)
           <m>\{ 1, i, \sqrt{2}, \sqrt{2}\, i \}</m>; (e) <m>\{1, 2^{1/6}, 2^{1/3}, 2^{1/2}, 2^{2/3}, 2^{5/6} \}</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="3" permid="wWh">
+    <exercise number="3">
       <statement>
-        <p permid="zRa">
+        <p>
           Find the splitting field for each of the following polynomials.
 
-          <ol cols="2" permid="ZrM">
-            <li permid="PCB">
-              <p permid="CSK">
+          <ol cols="2">
+            <li>
+              <p>
                 <m>x^4 - 10 x^2 + 21</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
 
-            <li permid="vJK">
-              <p permid="iZT">
+            <li>
+              <p>
                 <m>x^4 + 1</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
 
-            <li permid="bQT">
-              <p permid="Phc">
+            <li>
+              <p>
                 <m>x^3 + 2x + 2</m> over <m>{\mathbb Z}_3</m>
               </p>
             </li>
 
-            <li permid="HYc">
-              <p permid="vol">
+            <li>
+              <p>
                 <m>x^3 - 3</m> over <m>{\mathbb Q}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="WSF">
-        <p permid="fJO">
+      <hint>
+        <p>
           (a) <m>{\mathbb Q}(\sqrt{3}, \sqrt{7}\, )</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="4" permid="ddq">
+    <exercise number="4">
       <statement>
-        <p permid="fYj">
+        <p>
           Consider the field extension
           <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> over <m>\mathbb Q</m>.
 
-          <ol permid="FyV">
-            <li permid="MHV">
-              <p permid="zYe">
+          <ol>
+            <li>
+              <p>
                 Find a basis for the field extension
                 <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> over <m>\mathbb Q</m>.
                 Conclude that <m>[{\mathbb Q}( \sqrt[4]{3}, i ): \mathbb Q] = 8</m>.
               </p>
             </li>
 
-            <li permid="sPe">
-              <p permid="gfn">
+            <li>
+              <p>
                 Find all subfields <m>F</m> of
                 <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> such that <m>[F:\mathbb Q] = 2</m>.
               </p>
             </li>
 
-            <li permid="YWn">
-              <p permid="Mmw">
+            <li>
+              <p>
                 Find all subfields <m>F</m> of
                 <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> such that <m>[F:\mathbb Q] = 4</m>.
               </p>
@@ -1207,15 +1207,15 @@
       </statement>
     </exercise>
 
-    <exercise number="5" permid="Jkz">
+    <exercise number="5">
       <statement>
-        <p permid="Mfs">
+        <p>
           Show that <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m> is a field with eight elements.
           Construct a multiplication table for the multiplicative group of the field.
         </p>
       </statement>
-      <hint permid="Pog">
-        <p permid="LQX">
+      <hint>
+        <p>
           Use the fact that the elements of
           <m>{\mathbb Z}_2[x]/ \langle x^3 + x + 1 \rangle</m> are 0, 1, <m>\alpha</m>,
           <m>1 + \alpha</m>,
@@ -1226,45 +1226,45 @@
     </exercise>
 
 
-    <exercise number="9" permid="hNj">
+    <exercise number="9">
       <statement>
-        <p permid="kIc">
+        <p>
           Prove that <m>{\mathbb Q}(\sqrt{3}, \sqrt[4]{3}, \sqrt[8]{3}, \ldots )</m> is an algebraic extension of
           <m>{\mathbb Q}</m> but not a finite extension.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="10" permid="NUs">
+    <exercise number="10">
       <statement>
-        <p permid="QPl">
+        <p>
           Prove or disprove:
           <m>\pi</m> is algebraic over <m>{\mathbb Q}(\pi^3)</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="11" permid="ubB">
+    <exercise number="11">
       <statement>
-        <p permid="wWu">
+        <p>
           Let <m>p(x)</m> be a nonconstant polynomial of degree <m>n</m> in <m>F[x]</m>.
           Prove that there exists a splitting field <m>E</m> for <m>p(x)</m> such that <m>[E : F] \leq n!</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="12" permid="aiK">
+    <exercise number="12">
       <statement>
-        <p permid="ddD">
+        <p>
           Prove or disprove:
           <m>{\mathbb Q}( \sqrt{2}\, ) \cong {\mathbb Q}( \sqrt{3}\, )</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="13" permid="GpT">
+    <exercise number="13">
       <statement>
-        <p permid="JkM">
+        <p>
           Prove that the fields <m>{\mathbb Q}(\sqrt[4]{3}\, )</m> and
           <m>{\mathbb Q}(\sqrt[4]{3}\, i)</m> are isomorphic but not equal.
         </p>
@@ -1273,16 +1273,16 @@
 
     <todo>Finish the proof.</todo>
 
-    <exercise number="14" permid="mxc">
+    <exercise number="14">
       <statement>
-        <p permid="prV">
+        <p>
           Let <m>K</m> be an algebraic extension of <m>E</m>,
           and <m>E</m> an algebraic extension of <m>F</m>.
           Prove that <m>K</m> is algebraic over <m>F</m>. [<em> Caution</em>: Do not assume that the extensions are finite.]
         </p>
       </statement>
-      <hint permid="EPb">
-        <p permid="Yfp">
+      <hint>
+        <p>
           Suppose that <m>E</m> is algebraic over <m>F</m> and <m>K</m> is algebraic over <m>E</m>.
           Let <m>\alpha \in K</m>.
           It suffices to show that <m>\alpha</m> is algebraic over some finite extension of <m>F</m>.
@@ -1293,9 +1293,9 @@
       </hint>
     </exercise>
 
-    <exercise number="15" permid="SEl">
+    <exercise number="15">
       <statement>
-        <p permid="Vze">
+        <p>
           Prove or disprove:
           <m>{\mathbb Z}[x] / \langle x^3 -2 \rangle</m> is a field.
         </p>
@@ -1304,9 +1304,9 @@
 
     <todo>Finish the proof.</todo>
 
-    <exercise number="16" permid="yLu">
+    <exercise number="16">
       <statement>
-        <p permid="BGn">
+        <p>
           Let <m>F</m> be a field of characteristic <m>p</m>.
           Prove that <m>p(x) = x^p - a</m> either is irreducible over <m>F</m> or splits in <m>F</m>.
         </p>
@@ -1315,18 +1315,18 @@
 
     <todo>Finish the proof.</todo>
 
-    <exercise number="17" permid="eSD">
+    <exercise number="17">
       <statement>
-        <p permid="hNw">
+        <p>
           Let <m>E</m> be the algebraic closure of a field <m>F</m>.
           Prove that every polynomial <m>p(x)</m> in <m>F[x]</m> splits in <m>E</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="18" permid="KZM">
+    <exercise number="18">
       <statement>
-        <p permid="NUF">
+        <p>
           If every irreducible polynomial <m>p(x)</m> in <m>F[x]</m> is linear,
           show that <m>F</m> is an algebraically closed field.
         </p>
@@ -1335,9 +1335,9 @@
 
     <todo>Fix this proof.</todo>
 
-    <exercise number="19" permid="rgV">
+    <exercise number="19">
       <statement>
-        <p permid="ubO">
+        <p>
           Prove that if <m>\alpha</m> and <m>\beta</m> are constructible numbers such that <m>\beta \neq 0</m>,
           then so is <m>\alpha / \beta</m>.
         </p>
@@ -1346,9 +1346,9 @@
 
     <todo>Fix this proof.</todo>
 
-    <exercise number="20" permid="Xoe">
+    <exercise number="20">
       <statement>
-        <p permid="aiX">
+        <p>
           Show that the set of all elements in
           <m>{\mathbb R}</m> that are algebraic over
           <m>{\mathbb Q}</m> form a field extension of <m>{\mathbb Q}</m> that is not finite.
@@ -1356,9 +1356,9 @@
       </statement>
     </exercise>
 
-    <exercise number="21" permid="Dvn">
+    <exercise number="21">
       <statement>
-        <p permid="Gqg">
+        <p>
           Let <m>E</m> be an algebraic extension of a field <m>F</m>,
           and let <m>\sigma</m> be an automorphism of <m>E</m> leaving <m>F</m> fixed.
           Let <m>\alpha \in E</m>.
@@ -1367,16 +1367,16 @@
       </statement>
     </exercise>
 
-    <exercise number="22" permid="jCw">
+    <exercise number="22">
       <statement>
-        <p permid="mxp">
+        <p>
           Show that <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{7}\, )</m>.
           Extend your proof to show that <m>{\mathbb Q}( \sqrt{a}, \sqrt{b}\, ) = {\mathbb Q}( \sqrt{a} + \sqrt{b}\, )</m>,
           where <m>\gcd(a, b) = 1</m>.
         </p>
       </statement>
-      <hint permid="ibE">
-        <p permid="Emy">
+      <hint>
+        <p>
           Since <m>\{ 1, \sqrt{3}, \sqrt{7}, \sqrt{21}\, \}</m> is a basis for
           <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, )</m> over <m>{\mathbb Q}</m>,
           <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) \supset {\mathbb Q}( \sqrt{3} +\sqrt{7}\, )</m>.
@@ -1390,9 +1390,9 @@
 
     <todo>Finish the proof.</todo>
 
-    <exercise number="23" permid="PJF">
+    <exercise number="23">
       <statement>
-        <p permid="SEy">
+        <p>
           Let <m>E</m> be a finite extension of a field <m>F</m>.
           If <m>[E:F] = 2</m>,
           show that <m>E</m> is a splitting field of <m>F</m> for some polynomial <m>f(x) \in F[x]</m>.
@@ -1400,9 +1400,9 @@
       </statement>
     </exercise>
 
-    <exercise number="24" permid="vQO">
+    <exercise number="24">
       <statement>
-        <p permid="yLH">
+        <p>
           Prove or disprove: Given a polynomial <m>p(x)</m> in <m>{\mathbb Z}_6[x]</m>,
           it is possible to construct a ring <m>R</m> such that <m>p(x)</m> has a root in <m>R</m>.
         </p>
@@ -1411,9 +1411,9 @@
 
     <todo>Finish this proof.</todo>
 
-    <exercise number="25" permid="bXX">
+    <exercise number="25">
       <statement>
-        <p permid="eSQ">
+        <p>
           Let <m>E</m> be a field extension of <m>F</m> and <m>\alpha \in E</m>.
           Determine <m>[F(\alpha): F(\alpha^3)]</m>.
         </p>
@@ -1422,9 +1422,9 @@
 
     <todo>Finish the solution.</todo>
 
-    <exercise number="26" permid="Ifg">
+    <exercise number="26">
       <statement>
-        <p permid="KZZ">
+        <p>
           Let <m>\alpha, \beta</m> be transcendental over <m>{\mathbb Q}</m>.
           Prove that either <m>\alpha \beta</m> or
           <m>\alpha + \beta</m> is also transcendental.
@@ -1432,17 +1432,17 @@
       </statement>
     </exercise>
 
-    <exercise number="27" permid="omp">
+    <exercise number="27">
       <statement>
-        <p permid="rhi">
+        <p>
           Let <m>E</m> be an extension field of <m>F</m> and
           <m>\alpha \in E</m> be transcendental over <m>F</m>.
           Prove that every element in
           <m>F(\alpha)</m> that is not in <m>F</m> is also transcendental over <m>F</m>.
         </p>
       </statement>
-      <hint permid="SSG">
-        <p permid="ktH">
+      <hint>
+        <p>
           Let <m>\beta \in F(\alpha)</m> not in <m>F</m>.
           Then <m>\beta = p(\alpha)/q(\alpha)</m>,
           where <m>p</m> and <m>q</m> are polynomials in <m>\alpha</m> with
@@ -1452,7 +1452,7 @@
           <m>f(x) \in F[x]</m> such that <m>f(\beta) = 0</m>.
           Let <m>f(x) = a_0 + a_1 x + \cdots + a_n x^n</m>.
           Then
-          <me permid="rae">
+          <me>
             0 = f(\beta) = f\left( \frac{p(\alpha)}{q(\alpha)} \right) = a_0 + a_1 \left( \frac{p(\alpha)}{q(\alpha)} \right) + \cdots + a_n \left( \frac{p(\alpha)}{q(\alpha)} \right)^n
           </me>.
           Now multiply both sides by
@@ -1461,16 +1461,16 @@
       </hint>
     </exercise>
 
-    <exercise number="28" xml:id="exercise-fields-degree-irred-poly" permid="Uty">
+    <exercise number="28" xml:id="exercise-fields-degree-irred-poly">
       <statement>
-        <p permid="Xor">
+        <p>
           Let <m>\alpha</m> be a root of an irreducible monic polynomial
           <m>p(x) \in F[x]</m>, with <m>\deg p = n</m>.
           Prove that <m>[F(\alpha) : F] = n</m>.
         </p>
       </statement>
-      <hint permid="fgY">
-        <p permid="QAQ">
+      <hint>
+        <p>
           See the comments following <xref ref="theorem-simple_extension"/>.
         </p>
       </hint>

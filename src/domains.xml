@@ -6,10 +6,10 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="domains" permid="HlR">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="domains">
   <title>Integral Domains</title>
-  <introduction permid="oMO">
-    <p permid="TVV">
+  <introduction>
+    <p>
       One of the most important rings we study is the ring of integers.
       It was our first example of an algebraic structure:
       the first polynomial ring that we examined was <m>{\mathbb Z}[x]</m>.
@@ -23,9 +23,9 @@
     </p>
   </introduction>
 
-  <section xml:id="section-field-of-fractions" permid="cTV">
+  <section xml:id="section-field-of-fractions">
     <title>Fields of Fractions</title>
-    <p permid="iJu">
+    <p>
       Every field is also an integral domain;
       however, there are many integral domains that are not fields.
       For example,
@@ -40,12 +40,12 @@
       We will do this in the same way as we constructed the rationals from the integers.
     </p>
 
-    <p permid="OQD">
+    <p>
       An element <m>p/q \in {\mathbb Q}</m> is the quotient of two integers <m>p</m> and <m>q</m>;
       however, different pairs of integers can represent the same rational number.
       For instance, <m>1/2 = 2/4 = 3/6</m>.
       We know that
-      <me permid="TAw">
+      <me>
         \frac{a}{b} = \frac{c}{d}
       </me>
       if and only if <m>ad = bc</m>.
@@ -62,25 +62,25 @@
       The second problem is solved by considering two pairs <m>(a, b)</m> and <m>(c, d)</m> to be equivalent if <m>ad = bc</m>.
     </p>
 
-    <p permid="uXM">
+    <p>
       If we use the approach of ordered pairs instead of fractions,
       then we can study integral domains in general.
       Let <m>D</m> be any integral domain and let
-      <me permid="zHF">
+      <me>
         S = \{ (a, b) : a, b \in D \text{ and } b \neq 0 \}
       </me>.
       Define a relation on <m>S</m> by <m>(a, b) \sim (c, d)</m> if <m>ad = bc</m>.
     </p>
 
-    <lemma permid="LAl">
+    <lemma>
       <statement>
-        <p permid="rOL">
+        <p>
           The relation <m>\sim</m> between elements of <m>S</m> is an equivalence relation.
         </p>
       </statement>
 
-      <proof permid="RZr">
-        <p permid="jAs">
+      <proof>
+        <p>
           Since <m>D</m> is commutative, <m>ab = ba</m>;
           hence, <m>\sim</m> is reflexive on <m>D</m>.
           Now suppose that <m>(a,b) \sim (c,d)</m>.
@@ -90,7 +90,7 @@
           let <m>(a, b) \sim (c, d)</m> and <m>(c, d) \sim (e,f)</m>.
           In this case <m>ad = bc</m> and <m>cf = de</m>.
           Multiplying both sides of <m>ad = bc</m> by <m>f</m> yields
-          <me permid="fOO">
+          <me>
             a f d = a d f = b c f = b d e = bed
           </me>.
           Since <m>D</m> is an integral domain,
@@ -99,52 +99,52 @@
       </proof>
     </lemma>
 
-    <p permid="beV">
+    <p>
       We will denote the set of equivalence classes on <m>S</m> by <m>F_D</m>.
       We now need to define the operations of addition and multiplication on <m>F_D</m>.
       Recall how fractions are added and multiplied in <m>{\mathbb Q}</m>:
-      <md permid="Ykp">
+      <md>
         <mrow>\frac{a}{b} + \frac{c}{d} &amp; = \frac{ad + b c}{b d};</mrow>
         <mrow>\frac{a}{b} \cdot \frac{c}{d} &amp; = \frac{ac}{b d}</mrow>
       </md>.
       It seems reasonable to define the operations of addition and multiplication on <m>F_D</m> in a similar manner.
       If we denote the equivalence class of <m>(a, b) \in S</m> by <m>[a, b]</m>,
       then we are led to define the operations of addition and multiplication on <m>F_D</m> by
-      <me permid="LVX">
+      <me>
         [a, b] + [c, d] = [ad + b c,b d]
       </me>
       and
-      <me permid="sdg">
+      <me>
         [a, b] \cdot [c, d] = [ac, b d]
       </me>,
       respectively.
       The next lemma demonstrates that these operations are independent of the choice of representatives from each equivalence class.
     </p>
 
-    <lemma permid="rHu">
+    <lemma>
       <statement>
-        <p permid="XVU">
+        <p>
           The operations of addition and multiplication on <m>F_D</m> are well-defined.
         </p>
       </statement>
 
-      <proof permid="ygA">
-        <p permid="PHB">
+      <proof>
+        <p>
           We will prove that the operation of addition is well-defined.
           The proof that multiplication is well-defined is left as an exercise.
           Let <m>[a_1, b_1] = [a_2, b_2]</m> and <m>[c_1, d_1] =[ c_2, d_2]</m>.
           We must show that
-          <me permid="Ery">
+          <me>
             [a_1 d_1 + b_1 c_1,b_1 d_1] = [a_2 d_2 + b_2 c_2,b_2 d_2]
           </me>
           or, equivalently, that
-          <me permid="kyH">
+          <me>
             (a_1 d_1 + b_1 c_1)( b_2 d_2) = (b_1 d_1) (a_2 d_2 + b_2 c_2)
           </me>.
           Since  <m>[a_1, b_1] = [a_2, b_2]</m> and <m>[c_1, d_1] =[ c_2, d_2]</m>,
           we know that <m>a_1 b_2 = b_1 a_2</m> and <m>c_1 d_2 = d_1 c_2</m>.
           Therefore,
-          <md permid="QFQ">
+          <md>
             <mrow>(a_1 d_1 + b_1 c_1)( b_2 d_2)  &amp; =  a_1 d_1 b_2 d_2 + b_1 c_1 b_2 d_2</mrow>
             <mrow>&amp; = a_1 b_2 d_1 d_2 + b_1 b_2 c_1 d_2</mrow>
             <mrow>&amp; = b_1 a_2 d_1 d_2 + b_1 b_2 d_1 c_2</mrow>
@@ -154,13 +154,13 @@
       </proof>
     </lemma>
 
-    <lemma xml:id="lemma-field-of-fractions" permid="XOD">
+    <lemma xml:id="lemma-field-of-fractions">
       <statement>
-        <p permid="Edd">
+        <p>
           The set of equivalence classes of <m>S</m>,
           <m>F_D</m>, under the equivalence relation <m>\sim</m>,
           together with the operations of addition and  multiplication defined by
-          <md permid="wMZ">
+          <md>
             <mrow>[a, b] + [c, d] &amp; = [ad + b c, b d]</mrow>
             <mrow>[ a, b] \cdot [c, d] &amp; = [ac, b d]</mrow>
           </md>,
@@ -168,12 +168,12 @@
         </p>
       </statement>
 
-      <proof permid="enJ">
-        <p permid="vOK">
+      <proof>
+        <p>
           The additive and multiplicative identities are <m>[0,1]</m> and <m>[1,1]</m>,
           respectively.
           To show that <m>[0,1]</m> is the additive identity, observe that
-          <me permid="cUi">
+          <me>
             [a, b] + [0, 1] =  [ a 1 + b 0, b 1] = [a,b]
           </me>.
           It is easy to show that <m>[1, 1]</m> is the multiplicative identity.
@@ -185,9 +185,9 @@
           We also leave it to the reader to show that <m>F_D</m> is an abelian group under addition.
         </p>
 
-        <p permid="bVT">
+        <p>
           It remains to show that the distributive property holds in <m>F_D</m>; however,
-          <md permid="Jbr">
+          <md>
             <mrow>[a, b] [e, f] + [c, d][ e, f ] &amp; = [a e, b f ] + [c e, d f]</mrow>
             <mrow>&amp; = [a e d f + b f c e, b d f^2 ]</mrow>
             <mrow>&amp; = [a e d + b c e, b d f ]</mrow>
@@ -199,15 +199,15 @@
       </proof>
     </lemma>
 
-    <p permid="Hme">
+    <p>
       The field <m>F_D</m> in <xref ref="lemma-field-of-fractions"/> is called the
       <term>field of fractions</term><idx><h>Field</h><h>of fractions</h></idx> or
       <term>field of quotients</term><idx><h>Field</h><h>of quotients</h></idx> of the integral domain <m>D</m>.
     </p>
 
-    <theorem xml:id="theorem-field-of-quotients" permid="ftc">
+    <theorem xml:id="theorem-field-of-quotients">
       <statement>
-        <p permid="GXJ">
+        <p>
           Let <m>D</m> be an integral domain.
           Then <m>D</m> can be embedded in a field of fractions <m>F_D</m>,
           where any element in <m>F_D</m> can be expressed as the quotient of two elements in <m>D</m>.
@@ -219,16 +219,16 @@
         </p>
       </statement>
 
-      <proof permid="hip">
-        <p permid="Idc">
+      <proof>
+        <p>
           We will first demonstrate that <m>D</m> can be embedded in the field  <m>F_D</m>.
           Define a map <m>\phi : D \rightarrow F_D</m> by <m>\phi(a)  = [a, 1]</m>.
           Then for <m>a</m> and <m>b</m> in <m>D</m>,
-          <me permid="piA">
+          <me>
             \phi( a + b ) = [a+b, 1] = [a, 1] + [b, 1] = \phi(a ) + \phi(b)
           </me>
           and
-          <me permid="VpJ">
+          <me>
             \phi( a b ) = [a b, 1] = [a, 1]  [b, 1] = \phi(a ) \phi(b);
           </me>
           hence, <m>\phi</m> is a homomorphism.
@@ -236,13 +236,13 @@
           suppose that <m>\phi(a) = \phi( b)</m>.
           Then <m>[a, 1] = [b, 1]</m>, or <m>a = a1 = 1b = b</m>.
           Finally, any element of <m>F_D</m> can be expressed as the quotient of two elements in <m>D</m>, since
-          <me permid="BwS">
+          <me>
             \phi(a) [\phi(b)]^{-1} = [a, 1] [b, 1]^{-1} = [a, 1] \cdot [1, b] = [a, b]
           </me>.
         </p>
             <!-- Typo corrected.  Suggested by Nathan Lander. -->
             <!-- TWJ 2/13/2012 -->
-        <p permid="okl">
+        <p>
           Now let <m>E</m> be a field containing <m>D</m> and define a map
           <m>\psi :F_D \rightarrow E</m> by <m>\psi([a, b]) = a b^{-1}</m>.
           To show that <m>\psi</m> is well-defined,
@@ -251,16 +251,16 @@
           Therefore, <m>a_1 b_1^{-1} = a_2 b_2^{-1}</m> and <m>\psi( [a_1, b_1]) = \psi( [a_2, b_2])</m>.
         </p>
 
-        <p permid="Uru">
+        <p>
           If <m>[a, b ]</m> and <m>[c, d]</m> are in <m>F_D</m>, then
-          <md permid="hEb">
+          <md>
             <mrow>\psi( [a, b] + [c, d] )  &amp; = \psi( [ad + b c, b d ] )</mrow>
             <mrow>&amp; =  (ad + b c)(b d)^{-1}</mrow>
             <mrow>&amp; = a b^{-1} + c d^{-1}</mrow>
             <mrow>&amp; = \psi( [a, b] ) + \psi( [c, d] )</mrow>
           </md>
           and
-          <md permid="NLk">
+          <md>
             <mrow>\psi( [a, b] \cdot [c, d] ) &amp; = \psi( [ac, b d ] )</mrow>
             <mrow>&amp; =  (ac)(b d)^{-1}</mrow>
             <mrow>&amp; = a b^{-1}  c d^{-1}</mrow>
@@ -269,7 +269,7 @@
           Therefore, <m>\psi</m> is a homomorphism.
         </p>
 
-        <p permid="AyD">
+        <p>
           To complete the proof of the theorem,
           we need to show that <m>\psi</m> is one-to-one.
           Suppose that <m>\psi( [a, b] ) = ab^{-1} = 0</m>.
@@ -280,8 +280,8 @@
       </proof>
     </theorem>
 
-    <example xml:id="example-domains-rational-polys" permid="Qke">
-      <p permid="SgI">
+    <example xml:id="example-domains-rational-polys">
+      <p>
         Since <m>{\mathbb Q}</m> is a field,
         <m>{\mathbb Q}[x]</m> is an integral domain.
         The field of fractions of <m>{\mathbb Q}[x]</m> is the set of all rational expressions <m>p(x)/q(x)</m>,
@@ -296,31 +296,31 @@
       </p>
     </example>
 
-    <p permid="ntn">
+    <p>
       We will leave the proofs of the following corollaries of <xref ref="theorem-field-of-quotients"/> as exercises.
     </p>
 
-    <corollary xml:id="corollary-char-zero-rationals" permid="DVM">
+    <corollary xml:id="corollary-char-zero-rationals">
       <statement>
-        <p permid="IMW">
+        <p>
           Let <m>F</m> be a field of characteristic zero.
           Then <m>F</m> contains a subfield isomorphic to <m>{\mathbb Q}</m>.
         </p>
       </statement>
     </corollary>
 
-    <corollary xml:id="corollary-char-p-zp" permid="kcV">
+    <corollary xml:id="corollary-char-p-zp">
       <statement>
-        <p permid="oUf">
+        <p>
           Let <m>F</m> be a field of characteristic <m>p</m>.
           Then <m>F</m> contains a subfield isomorphic to <m>{\mathbb Z}_p</m>.
         </p>
       </statement>
     </corollary>
 
-    <subsection xml:id="domains-subsection-historical-note" permid="fOB">
+    <subsection xml:id="domains-subsection-historical-note">
       <title>Historical Note</title>
-      <p permid="gUh">
+      <p>
         Karl Friedrich Gauss,
             <idx><h>Gauss, Karl Friedrich</h></idx>
         born in Brunswick, Germany on April 30, 1777,
@@ -334,7 +334,7 @@
         then it was possible to construct a regular <m>N</m>-sided polygon.
       </p>
 
-      <p permid="Nbq">
+      <p>
         Gauss obtained his Ph.D. in 1799 under the direction of Pfaff at the University of Helmstedt.
         In his dissertation he gave the first complete proof of the Fundamental Theorem of Algebra,
         which states that every polynomial with real coefficients can be factored into linear factors over the complex numbers.
@@ -342,7 +342,7 @@
         who was the first person to use the notation of <m>i</m> for <m>\sqrt{-1}</m>.
       </p>
 
-      <p permid="tiz">
+      <p>
         Gauss then turned his attention toward number theory;
         in 1801, he published his famous book on number theory,
         <em>Disquisitiones Arithmeticae</em>.
@@ -351,7 +351,7 @@
         and the theory of numbers is the queen of mathematics.</q>
       </p>
 
-      <p permid="ZpI">
+      <p>
         In 1807, Gauss was appointed director of the Observatory at the University of Göttingen,
         a position he held until his death.
         This position required him to study applications of mathematics to the sciences.
@@ -362,7 +362,7 @@
         he coinvented the first practical electric telegraph some years before a better version was invented by Samuel F. B. Morse.
       </p>
 
-      <p permid="FwR">
+      <p>
         Gauss was clearly the most prominent mathematician in the world in the early nineteenth century.
         His status naturally made his discoveries subject to intense scrutiny.
         Gauss's cold and distant personality many times led him to ignore the work of his contemporaries,
@@ -381,19 +381,19 @@
     <!-- Exercises with Solutions  -->
     <!-- File: domains.xml  -->
     <!-- Title: Integral Domains -->
-  <exercises xml:id="exercises-domains" filenamebase="domains" permid="kyu">
+  <exercises xml:id="exercises-domains" filenamebase="domains">
     <title>Exercises</title>
-    <exercise number="1" permid="gyv">
+    <exercise number="1">
       <statement>
-        <p permid="kUg">
+        <p>
           Let <m>z = a + b \sqrt{3}\, i</m> be in <m>{\mathbb Z}[ \sqrt{3}\, i]</m>.
           If <m>a^2 + 3 b^2 = 1</m>, show that <m>z</m> must be a unit.
           Show that the only units of
           <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> are <m>1</m> and <m>-1</m>.
         </p>
       </statement>
-      <hint permid="vlU">
-        <p permid="yJq">
+      <hint>
+        <p>
           Note that <m>z^{-1} = 1/(a + b\sqrt{3}\, i) = (a -b \sqrt{3}\, i)/(a^2 + 3b^2)</m> is in
           <m>{\mathbb Z}[\sqrt{3}\, i]</m> if and only if <m>a^2 + 3 b^2 = 1</m>.
           The only integer solutions to the equation are <m>a = \pm 1, b = 0</m>.
@@ -401,68 +401,68 @@
       </hint>
     </exercise>
 
-    <exercise number="2" permid="MFE">
+    <exercise number="2">
       <statement>
-        <p permid="Rbp">
+        <p>
           The Gaussian integers, <m>{\mathbb Z}[i]</m>, are a <acro>UFD</acro>.
           Factor each of the following elements in
           <m>{\mathbb Z}[i]</m> into a product of irreducibles.
 
-          <ol cols="2" permid="POF">
-            <li permid="WnL">
-              <p permid="xpC">
+          <ol cols="2">
+            <li>
+              <p>
                 <m>5</m>
               </p>
             </li>
 
-            <li permid="CuU">
-              <p permid="dwL">
+            <li>
+              <p>
                 <m>1 + 3i</m>
               </p>
             </li>
 
-            <li permid="iCd">
-              <p permid="JDU">
+            <li>
+              <p>
                 <m>6 + 8i</m>
               </p>
             </li>
 
-            <li permid="OJm">
-              <p permid="pLd">
+            <li>
+              <p>
                 <m>2</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="HAm">
-        <p permid="eQz">
+      <hint>
+        <p>
           (a) <m>5 = -i(1 + 2i)(2 + i)</m>; (c) <m>6 + 8i = -i(1 + i)^2(2 + i)^2</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="3" permid="sMN">
+    <exercise number="3">
       <statement>
-        <p permid="xiy">
+        <p>
           Let <m>D</m> be an integral domain.
 
-          <ol permid="vVO">
-            <li permid="Ttf">
-              <p permid="uuW">
+          <ol>
+            <li>
+              <p>
                 Prove that <m>F_D</m> is an abelian group under the operation of addition.
               </p>
             </li>
 
-            <li permid="zAo">
-              <p permid="aCf">
+            <li>
+              <p>
                 Show that the operation of multiplication is well-defined in the field of fractions,
                 <m>F_D</m>.
               </p>
             </li>
 
-            <li permid="fHx">
-              <p permid="GJo">
+            <li>
+              <p>
                 Verify the associative and commutative properties for multiplication in <m>F_D</m>.
               </p>
             </li>
@@ -471,22 +471,22 @@
       </statement>
     </exercise>
 
-    <exercise number="4" permid="YTW">
+    <exercise number="4">
       <statement>
-        <p permid="dpH">
+        <p>
           Prove or disprove: Any subring of a field <m>F</m> containing <m>1</m> is an integral domain.
         </p>
       </statement>
-      <hint permid="zVN">
-        <p permid="KXI">
+      <hint>
+        <p>
           True.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="5" permid="Fbf">
+    <exercise number="5">
       <statement>
-        <p permid="JwQ">
+        <p>
           Prove or disprove: If <m>D</m> is an integral domain,
           then every prime element in <m>D</m> is also irreducible in <m>D</m>.
         </p>
@@ -495,9 +495,9 @@
 
     <todo>Check this solution.</todo>
 
-    <exercise number="6" permid="lio">
+    <exercise number="6">
       <statement>
-        <p permid="pDZ">
+        <p>
           Let <m>F</m> be a field of characteristic zero.
           Prove that <m>F</m> contains a subfield isomorphic to <m>{\mathbb Q}</m>.
         </p>
@@ -506,14 +506,14 @@
 
     <todo>Complete the solution.</todo>
 
-    <exercise number="7" permid="Rpx">
+    <exercise number="7">
       <statement>
-        <p permid="VLi">
+        <p>
           Let <m>F</m> be a field.
 
-          <ol permid="ccX">
-            <li permid="Ekh">
-              <p permid="flY">
+          <ol>
+            <li>
+              <p>
                 Prove that the field of fractions of <m>F[x]</m>, denoted by <m>F(x)</m>,
                 is isomorphic to the set all rational expressions <m>p(x) / q(x)</m>,
                 where <m>q(x)</m> is not the zero polynomial.
@@ -526,8 +526,8 @@
               </p>
             </li>
 
-            <li permid="krq">
-              <p permid="Lth">
+            <li>
+              <p>
                 Let <m>p(x_1, \ldots, x_n)</m> and
                 <m>q(x_1, \ldots,
                 x_n)</m> be polynomials in <m>F[x_1, \ldots, x_n]</m>.
@@ -553,9 +553,9 @@
 
     <todo>Complete the solution.</todo>
 
-    <exercise number="8" permid="xwG">
+    <exercise number="8">
       <statement>
-        <p permid="BSr">
+        <p>
           Let <m>p</m> be prime and denote the field of fractions of
           <m>{\mathbb Z}_p[x]</m> by <m>{\mathbb Z}_p(x)</m>.
           Prove that <m>{\mathbb Z}_p(x)</m> is an infinite field of characteristic <m>p</m>.
@@ -565,18 +565,18 @@
 
     <todo>Complete the solution.</todo>
 
-    <exercise number="9" permid="dDP">
+    <exercise number="9">
       <statement>
-        <p permid="hZA">
+        <p>
           Prove that the field of fractions of the Gaussian integers,
           <m>{\mathbb Z}[i]</m>, is
-          <me permid="sNa">
+          <me>
             {\mathbb Q}(i) = \{ p + q i : p, q \in {\mathbb Q}  \}
           </me>.
         </p>
       </statement>
-      <hint permid="kMP">
-        <p permid="reR">
+      <hint>
+        <p>
           Let <m>z = a + bi</m> and <m>w = c + di \neq 0</m> be in <m>{\mathbb Z}[i]</m>.
           Prove that <m>z/w \in {\mathbb Q}(i)</m>.
         </p>
@@ -585,30 +585,30 @@
 
     <todo>Complete the solution.</todo>
 
-    <exercise number="10" permid="JKY">
+    <exercise number="10">
       <statement>
-        <p permid="OgJ">
+        <p>
           A field <m>F</m> is called a <term>prime field</term>
           if it has no proper subfields.
           If <m>E</m> is a subfield of <m>F</m> and <m>E</m> is a prime field,
           then <m>E</m> is a <term>prime subfield</term> of <m>F</m>.
 
-          <ol permid="Ikg">
-            <li permid="Qyz">
-              <p permid="rAq">
+          <ol>
+            <li>
+              <p>
                 Prove that every field contains a unique prime subfield.
               </p>
             </li>
 
-            <li permid="wFI">
-              <p permid="XHz">
+            <li>
+              <p>
                 If <m>F</m> is a field of characteristic 0, prove that the prime subfield of <m>F</m> is isomorphic to the field of rational numbers,
                 <m>{\mathbb Q}</m>.
               </p>
             </li>
 
-            <li permid="cMR">
-              <p permid="DOI">
+            <li>
+              <p>
                 If <m>F</m> is a field of characteristic <m>p</m>,
                 prove that the prime subfield of <m>F</m> is isomorphic to <m>{\mathbb Z}_p</m>.
               </p>
@@ -620,32 +620,32 @@
 
     <todo>Complete the solution.</todo>
 
-    <exercise number="11" permid="pSh">
+    <exercise number="11">
       <statement>
-        <p permid="unS">
+        <p>
           Let <m>{\mathbb Z}[ \sqrt{2}\, ] = \{ a + b \sqrt{2} : a, b \in {\mathbb Z} \}</m>.
 
-          <ol permid="orp">
-            <li permid="BpB">
-              <p permid="crs">
+          <ol>
+            <li>
+              <p>
                 Prove that <m>{\mathbb Z}[ \sqrt{2}\, ]</m> is an integral domain.
               </p>
             </li>
 
-            <li permid="hwK">
-              <p permid="IyB">
+            <li>
+              <p>
                 Find all of the units in <m>{\mathbb Z}[\sqrt{2}\, ]</m>.
               </p>
             </li>
 
-            <li permid="NDT">
-              <p permid="oFK">
+            <li>
+              <p>
                 Determine the field of fractions of <m>{\mathbb Z}[ \sqrt{2}\, ]</m>.
               </p>
             </li>
 
-            <li permid="tLc">
-              <p permid="UMT">
+            <li>
+              <p>
                 Prove that <m>{\mathbb Z}[ \sqrt{2} i ]</m> is a Euclidean domain under the Euclidean valuation <m>\nu( a + b \sqrt{2}\, i) = a^2 + 2b^2</m>.
               </p>
             </li>
@@ -656,16 +656,16 @@
 
     <todo>Complete the solution.</todo>
 
-    <exercise number="12" permid="VZq">
+    <exercise number="12">
       <statement>
-        <p permid="avb">
+        <p>
           Let <m>D</m> be a <acro>UFD</acro>.
           An element <m>d \in D</m> is a <term>greatest common divisor of <m>a</m> and <m>b</m> in <m>D</m></term>
           if <m>d \mid a</m> and <m>d \mid b</m> and <m>d</m> is divisible by any other element dividing both <m>a</m> and <m>b</m>.
 
-          <ol permid="Uyy">
-            <li permid="yuV">
-              <p permid="ZwM">
+          <ol>
+            <li>
+              <p>
                 If <m>D</m> is a <acro>PID</acro> and <m>a</m> and <m>b</m> are both nonzero elements of <m>D</m>,
                 prove there exists a unique greatest common divisor of <m>a</m> and <m>b</m> up to associates.
                 That is, if <m>d</m> and <m>d'</m> are both greatest common divisors of <m>a</m> and <m>b</m>,
@@ -674,8 +674,8 @@
               </p>
             </li>
 
-            <li permid="eCe">
-              <p permid="FDV">
+            <li>
+              <p>
                 Let <m>D</m> be a <acro>PID</acro> and <m>a</m> and <m>b</m> be nonzero elements of <m>D</m>.
                 Prove that there exist elements <m>s</m> and <m>t</m> in <m>D</m> such that <m>\gcd(a, b) = as + bt</m>.
               </p>
@@ -687,9 +687,9 @@
 
     <todo>Complete the solution.</todo>
 
-    <exercise number="13" permid="Cgz">
+    <exercise number="13">
       <statement>
-        <p permid="GCk">
+        <p>
           Let <m>D</m> be an integral domain.
           Define a relation on <m>D</m> by
           <m>a \sim b</m> if <m>a</m> and <m>b</m> are associates in <m>D</m>.
@@ -698,9 +698,9 @@
       </statement>
     </exercise>
 
-    <exercise number="14" permid="inI">
+    <exercise number="14">
       <statement>
-        <p permid="mJt">
+        <p>
           Let <m>D</m> be a Euclidean domain with Euclidean valuation <m>\nu</m>.
           If <m>u</m> is a unit in <m>D</m>,
           show that <m>\nu(u) = \nu(1)</m>.
@@ -708,16 +708,16 @@
       </statement>
     </exercise>
 
-    <exercise number="15" permid="OuR">
+    <exercise number="15">
       <statement>
-        <p permid="SQC">
+        <p>
           Let <m>D</m> be a Euclidean domain with Euclidean valuation <m>\nu</m>.
           If <m>a</m> and <m>b</m> are associates in <m>D</m>,
           prove that <m>\nu(a) = \nu(b)</m>.
         </p>
       </statement>
-      <hint permid="BLa">
-        <p permid="Xma">
+      <hint>
+        <p>
           Let <m>a = ub</m> with <m>u</m> a unit.
           Then <m>\nu(b) \leq \nu(ub) \leq \nu(a)</m>.
           Similarly, <m>\nu(a) \leq \nu(b)</m>.
@@ -725,14 +725,14 @@
       </hint>
     </exercise>
 
-    <exercise number="16" permid="uCa">
+    <exercise number="16">
       <statement>
-        <p permid="yXL">
+        <p>
           Show that <m>{\mathbb Z}[\sqrt{5}\, i]</m> is not a unique factorization domain.
         </p>
       </statement>
-      <hint permid="NZs">
-        <p permid="Dtj">
+      <hint>
+        <p>
           Show that 21 can be factored in two different ways.
         </p>
       </hint>
@@ -740,17 +740,17 @@
 
     <todo>Complete the solution.</todo>
 
-    <exercise number="17" permid="aJj">
+    <exercise number="17">
       <statement>
-        <p permid="feU">
+        <p>
           Prove or disprove: Every subdomain of a <acro>UFD</acro> is also a <acro>UFD</acro>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="18" permid="GQs">
+    <exercise number="18">
       <statement>
-        <p permid="Lmd">
+        <p>
           An ideal of a commutative ring <m>R</m> is said to be
           <term>finitely generated</term>
           if there exist elements <m>a_1, \ldots,
@@ -762,9 +762,9 @@
       </statement>
     </exercise>
 
-    <exercise number="19" permid="mXB">
+    <exercise number="19">
       <statement>
-        <p permid="rtm">
+        <p>
           Let <m>D</m> be an integral domain with a descending chain of ideals <m>I_1 \supset I_2 \supset I_3 \supset \cdots</m>.
           Suppose that there exists an <m>N</m> such that
           <m>I_k = I_N</m> for all <m>k \geq N</m>.
@@ -778,17 +778,17 @@
       </statement>
     </exercise>
 
-    <exercise number="20" permid="TeK">
+    <exercise number="20">
       <statement>
-        <p permid="XAv">
+        <p>
           Let <m>R</m> be a commutative ring with identity.
           We define a <term>multiplicative subset</term>
           of <m>R</m> to be a subset <m>S</m> such that <m>1 \in S</m> and
           <m>ab \in S</m> if <m>a, b \in S</m>.
 
-          <ol permid="AFH">
-            <li permid="KJn">
-              <p permid="lLe">
+          <ol>
+            <li>
+              <p>
                 Define a relation <m>\sim</m> on
                 <m>R \times S</m> by <m>(a, s) \sim (a', s')</m> if there exists an
                 <m>s^\ast \in S</m> such that <m>s^\ast(s' a -s a') = 0</m>.
@@ -796,12 +796,12 @@
               </p>
             </li>
 
-            <li permid="qQw">
-              <p permid="RSn">
+            <li>
+              <p>
                 Let <m>a/s</m> denote the equivalence class of <m>(a,s) \in R \times S</m> and let
                 <m> S^{-1}R</m> be the set of all equivalence classes with respect to <m>\sim</m>.
                 Define the operations of addition and multiplication on <m>S^{-1} R</m> by
-                <md permid="liB">
+                <md>
                   <mrow>\frac{a}{s} + \frac{b}{t} &amp; = \frac{at + b s}{s t}</mrow>
                   <mrow>\frac{a}{s}  \frac{b}{t} &amp; = \frac{a b}{s t}</mrow>
                 </md>,
@@ -813,29 +813,29 @@
               </p>
             </li>
 
-            <li permid="WXF">
-              <p permid="xZw">
+            <li>
+              <p>
                 Show that the map <m>\psi : R \rightarrow S^{-1}R</m> defined by
                 <m>\psi(a) = a/1</m> is a ring homomorphism.
               </p>
             </li>
 
-            <li permid="DeO">
-              <p permid="egF">
+            <li>
+              <p>
                 If <m>R</m> has no zero divisors and <m>0 \notin S</m>,
                 show that <m>\psi</m> is one-to-one.
               </p>
             </li>
 
-            <li permid="jlX">
-              <p permid="KnO">
+            <li>
+              <p>
                 Prove that <m>P</m> is a prime ideal of <m>R</m> if and only if
                 <m>S = R \setminus P</m> is a multiplicative subset of <m>R</m>.
               </p>
             </li>
 
-            <li permid="Ptg">
-              <p permid="quX">
+            <li>
+              <p>
                 If <m>P</m> is a prime ideal of <m>R</m> and <m>S = R \setminus P</m>,
                 show that the ring of quotients <m>S^{-1}R</m> has a unique maximal ideal.
                 Any ring that has a unique maximal ideal is called a <term>local ring</term>.
