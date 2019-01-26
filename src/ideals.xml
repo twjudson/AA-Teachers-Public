@@ -11,7 +11,7 @@
     <section xml:id="section-ring-homomorphisms">
     <title>Ring Homomorphisms and Ideals</title>
     
-    <p permid="ajK">
+    <p>
       In the study of groups,
       a homomorphism is a map that preserves the operation of the group.
       Similarly, a homomorphism between rings preserves the operations of addition and multiplication in the ring.
@@ -20,7 +20,7 @@
           <idx><h>Homomorphism</h><h>ring</h></idx>
           <idx><h>Ring</h><h>homomorphism</h></idx>
       is a map <m>\phi : R \rightarrow S</m> satisfying
-      <md permid="OFm">
+      <md>
         <mrow>\phi( a + b ) &amp; = \phi( a ) + \phi(b)</mrow>
         <mrow>\phi( a b ) &amp; = \phi( a ) \phi(b)</mrow>
       </md>
@@ -32,27 +32,27 @@
       of rings.
     </p>
 
-    <p permid="GqT">
+    <p>
       The set of elements that a ring homomorphism maps to <m>0</m> plays a fundamental role in the theory of rings.
       For any ring homomorphism <m>\phi : R \rightarrow S</m>,
       we define the <term>kernel</term><idx><h>Homomorphism</h><h>kernel of a ring</h></idx><idx><h>Kernel</h><h>of a ring homomorphism</h></idx> of a ring homomorphism to be the set
-      <me permid="uMv">
+      <me>
         \ker \phi = \{ r \in R : \phi( r ) = 0 \}
       </me>.
     </p>
 
-    <example xml:id="example-rings-homo" permid="zYE">
-      <p permid="zDs">
+    <example xml:id="example-rings-homo">
+      <p>
         For any integer <m>n</m> we can define a ring homomorphism
         <m>\phi : {\mathbb Z} \rightarrow {\mathbb Z}_n</m> by <m>a \mapsto a \pmod{n}</m>.
         This is indeed a ring homomorphism, since
-        <md permid="aTE">
+        <md>
           <mrow>\phi( a + b ) &amp; = (a + b) \pmod{n}</mrow>
           <mrow>&amp; = a \pmod{n} + b \pmod{n}</mrow>
           <mrow>&amp; = \phi( a ) + \phi(b)</mrow>
         </md>
         and
-        <md permid="HaN">
+        <md>
           <mrow>\phi( a b ) &amp; = ab \pmod{n}</mrow>
           <mrow>&amp; = a \pmod{n}\cdot b \pmod{n}</mrow>
           <mrow>&amp; = \phi( a ) \phi(b)</mrow>
@@ -61,14 +61,14 @@
       </p>
     </example>
 
-    <example xml:id="example-rings-continuous-function-homomorph" permid="gfN">
-      <p permid="fKB">
+    <example xml:id="example-rings-continuous-function-homomorph">
+      <p>
         Let <m>C[a, b]</m> be the ring of continuous real-valued functions on an interval <m>[a,b]</m> as in <xref ref="example-rings-functions"/>.
         For a fixed  <m>\alpha \in [a, b]</m>,
         we can define a ring homomorphism
         <m>\phi_{\alpha} : C[a, b] \rightarrow {\mathbb R}</m> by <m>\phi_{\alpha} (f ) = f( \alpha)</m>.
         This  is a ring homomorphism since
-        <md permid="nhW">
+        <md>
           <mrow>\phi_{\alpha}( f + g ) = (f + g)( \alpha) = f(\alpha) + g(\alpha) = \phi_{\alpha}( f ) + \phi_{\alpha}(g )</mrow>
           <mrow>\phi_{\alpha}( f g ) = (f  g)( \alpha) = f(\alpha) g(\alpha) = \phi_{\alpha}( f ) \phi_{\alpha}(g )</mrow>
         </md>.
@@ -78,40 +78,40 @@
       </p>
     </example>
 
-    <p permid="myc">
+    <p>
       In the next proposition we will examine some fundamental properties of ring homomorphisms.
       The proof of the proposition is left as an exercise.
     </p>
 
-    <proposition permid="tzy">
+    <proposition>
       <statement>
-        <p permid="MXd">
+        <p>
           Let <m>\phi : R \rightarrow S</m> be a ring homomorphism.
 
-          <ol permid="YPJ">
-            <li permid="oIB">
-              <p permid="nRD">
+          <ol>
+            <li>
+              <p>
                 If <m>R</m> is a commutative ring,
                 then <m>\phi(R)</m> is a commutative ring.
               </p>
             </li>
 
-            <li permid="UPK">
-              <p permid="TYM">
+            <li>
+              <p>
                 <m>\phi( 0 ) = 0</m>.
               </p>
             </li>
 
-            <li permid="AWT">
-              <p permid="AfV">
+            <li>
+              <p>
                 Let <m>1_R</m> and <m>1_S</m> be the identities for <m>R</m> and <m>S</m>,
                 respectively.
                 If <m>\phi</m> is onto, then <m>\phi(1_R) = 1_S</m>.
               </p>
             </li>
 
-            <li permid="hec">
-              <p permid="gne">
+            <li>
+              <p>
                 If <m>R</m> is a field and <m>\phi(R) \neq \{ 0 \}</m>,
                 then <m>\phi(R)</m> is a field.
               </p>
@@ -122,7 +122,7 @@
     </proposition>
         <!-- Last statement changed from 0 to \{ 0 \}.  Suggested by B. Cohen. -->
         <!-- TWJ 2012/10/21 -->
-    <p permid="SFl">
+    <p>
       In group theory we found that normal subgroups play a special role.
       These subgroups have nice characteristics that make them more interesting to study than arbitrary subgroups.
       In ring theory the objects corresponding to normal subgroups are a special class of subrings called ideals.
@@ -132,8 +132,8 @@
       <m>Ir \subset I</m> for all <m>r \in R</m>.
     </p>
 
-    <example xml:id="example-rings-trivial-ideal" permid="MmW">
-      <p permid="LRK">
+    <example xml:id="example-rings-trivial-ideal">
+      <p>
         Every ring <m>R</m> has at least two ideals,
         <m>\{ 0 \}</m> and <m>R</m>.
         These ideals are called the <term>trivial ideals</term>.
@@ -142,17 +142,17 @@
     </example>
         <!-- % TWJ, 2010/12/13 -->
         <!-- % Fixed the error <m>1</m> is in <m>I</m>.  Thanks to Stuart McAlpine -->
-    <p permid="yMu">
+    <p>
       Let <m>R</m> be a ring with identity and suppose that <m>I</m> is an ideal in <m>R</m> such that <m>1</m> is in <m>I</m>.
       Since for any <m>r \in R</m>,
       <m>r1 = r \in I</m> by the definition of an ideal, <m>I = R</m>.
     </p>
 
-    <example xml:id="example-rings-principal-ideal" permid="suf">
-      <p permid="rYT">
+    <example xml:id="example-rings-principal-ideal">
+      <p>
         If <m>a</m> is any element in a commutative ring <m>R</m> with identity,
         then the set
-        <me permid="Tpf">
+        <me>
           \langle a \rangle = \{ ar : r \in R \}
         </me>
         is an ideal in <m>R</m>.
@@ -167,7 +167,7 @@
       </p>
     </example>
 
-    <p permid="eTD">
+    <p>
       If <m>R</m> is a commutative ring with identity,
       then an ideal of the form <m>\langle a \rangle = \{ ar : r \in R \}</m> is called a
       <term>principal ideal</term>.
@@ -175,16 +175,16 @@
           <idx><h>Principal ideal</h></idx>
     </p>
 
-    <theorem xml:id="theorem-z-ideals" permid="XRu">
+    <theorem xml:id="theorem-z-ideals">
       <statement>
-        <p permid="roZ">
+        <p>
           Every ideal in the ring of integers
           <m>{\mathbb Z}</m> is a principal ideal.
         </p>
       </statement>
 
-      <proof permid="aqB">
-        <p permid="JsD">
+      <proof>
+        <p>
           The zero ideal <m>\{ 0 \}</m> is a principal ideal since <m>\langle 0 \rangle = \{ 0 \}</m>.
           If  <m>I</m> is any nonzero ideal in <m>{\mathbb Z}</m>,
           then  <m>I</m> must contain some positive integer <m>m</m>.
@@ -192,7 +192,7 @@
           Now let <m>a</m> be any element in <m>I</m>.
           Using the division algorithm,
           we know that there exist integers <m>q</m> and <m>r</m> such that
-          <me permid="zwo">
+          <me>
             a = nq + r
           </me>
           where <m>0 \leq r \lt n</m>.
@@ -204,8 +204,8 @@
     </theorem>
         <!-- application of the PWO corrected in the proof.  Suggested by  P. Diethelm. -->
         <!-- TWJ 24/4/2013 -->
-    <example xml:id="example-rings-integer-ideal" permid="YBo">
-      <p permid="Ygc">
+    <example xml:id="example-rings-integer-ideal">
+      <p>
         The set <m>n {\mathbb Z}</m> is ideal in the ring of integers.
         If <m>na</m> is in <m>n{\mathbb Z}</m> and <m>b</m> is in <m>{\mathbb Z}</m>,
         then <m>nab</m> is in <m>n {\mathbb Z}</m> as required.
@@ -213,34 +213,34 @@
       </p>
     </example>
 
-    <proposition permid="ZGH">
+    <proposition>
       <statement>
-        <p permid="tem">
+        <p>
           The kernel of any ring homomorphism
           <m>\phi : R \rightarrow S</m> is an ideal in <m>R</m>.
         </p>
       </statement>
 
-      <proof permid="XvV">
-        <p permid="pzM">
+      <proof>
+        <p>
           We know from group theory that
           <m>\ker \phi</m> is an additive subgroup of <m>R</m>.
           Suppose that <m>r \in R</m> and <m>a \in \ker \phi</m>.
           Then we must show that <m>ar</m> and <m>ra</m> are in <m>\ker \phi</m>.
           However,
-          <me permid="fDx">
+          <me>
             \phi(ar) = \phi(a) \phi(r) = 0 \phi(r) = 0
           </me>
           and
-          <me permid="LKG">
+          <me>
             \phi(ra) = \phi(r) \phi(a) =  \phi(r)0 = 0
           </me>.
         </p>
       </proof>
     </proposition>
 
-    <remark permid="pzz">
-      <p permid="Vlw">
+    <remark>
+      <p>
         In our definition of an ideal we have required that <m>rI \subset I</m> and
         <m>Ir \subset I</m> for all <m>r \in R</m>.
         Such ideals are sometimes referred to as
@@ -257,19 +257,19 @@
       </p>
     </remark>
 
-    <theorem xml:id="theorem-factor-ring" permid="DYD">
+    <theorem xml:id="theorem-factor-ring">
       <statement>
-        <p permid="Xwi">
+        <p>
           Let <m>I</m> be an ideal of <m>R</m>.
           The factor group <m>R/I</m> is a ring with multiplication defined by
-          <me permid="rRP">
+          <me>
             (r + I)(s + I) = rs + I
           </me>.
         </p>
       </statement>
 
-      <proof permid="GxK">
-        <p permid="VGV">
+      <proof>
+        <p>
           We already know that <m>R/I</m> is an abelian group under addition.
           Let <m>r+I</m> and <m>s +I</m> be in <m>R/I</m>.
           We must show that the product
@@ -280,7 +280,7 @@
           there exists an element <m>a</m>  in <m>I</m> such that <m>r' = r + a</m>.
           Similarly, there exists a <m>b \in I</m> such that <m>s' = s + b</m>.
           Notice that
-          <me permid="XYY">
+          <me>
             r' s' = (r+a)(s+b) = rs + as + rb + ab
           </me>
           and <m>as + rb + ab \in I</m> since <m>I</m> is an ideal;
@@ -290,7 +290,7 @@
       </proof>
     </theorem>
 
-    <p permid="LaM">
+    <p>
       The ring <m>R/I</m> in <xref ref="theorem-factor-ring"/> is called the <term>factor</term>
           <idx><h>Ring</h><h>factor</h></idx>
       or <term>quotient ring</term>.
@@ -299,22 +299,22 @@
       there is a relationship between ring homomorphisms and ideals.
     </p>
 
-    <theorem permid="kfM">
+    <theorem>
       <statement>
-        <p permid="DDr">
+        <p>
           Let <m>I</m> be an ideal of <m>R</m>.
           The map <m>\phi : R \rightarrow R/I</m> defined by
           <m>\phi( r ) = r + I</m> is a ring homomorphism of <m>R</m> onto <m>R/I</m> with kernel <m>I</m>.
         </p>
       </statement>
 
-      <proof permid="mET">
-        <p permid="BOe">
+      <proof>
+        <p>
           Certainly <m>\phi : R \rightarrow R/I</m> is a surjective abelian group homomorphism.
           It remains to show that <m>\phi</m> works correctly under ring multiplication.
           Let <m>r</m> and <m>s</m> be in <m>R</m>.
           Then
-          <me permid="Egh">
+          <me>
             \phi(r) \phi(s) = (r + I)(s+I) = rs + I = \phi(rs)
           </me>,
           which completes the proof of the theorem.
@@ -322,7 +322,7 @@
       </proof>
     </theorem>
 
-    <p permid="rhV">
+    <p>
       The map <m>\phi : R \rightarrow R/I</m> is often called the
       <term>natural</term><idx><h>Homomorphism</h><h>natural</h></idx> or
       <term>canonical homomorphism</term>.
@@ -332,14 +332,14 @@
       All of the proofs are similar to the proofs of the isomorphism theorems for groups.
     </p>
 
-    <theorem permid="QmV">
+    <theorem>
       <title>First Isomorphism Theorem</title>
       <idx>
       <h>First Isomorphism Theorem</h>
       <h>for rings</h>
       </idx>
       <statement>
-        <p permid="jKA">
+        <p>
           Let <m>\psi : R \rightarrow S</m> be a ring homomorphism.
           Then <m>\ker \psi</m> is an ideal of <m>R</m>.
           If <m>\phi : R \rightarrow R/\ker \psi</m> is the canonical homomorphism,
@@ -348,15 +348,15 @@
         </p>
       </statement>
 
-      <proof permid="SMc">
-        <p permid="hVn">
+      <proof>
+        <p>
           Let <m>K = \ker \psi</m>.
           By the First Isomorphism Theorem for groups,
           there exists a well-defined group homomorphism <m>\eta: R/K \rightarrow \psi(R)</m> defined by
           <m>\eta(r + K) = \psi(r)</m> for the additive abelian groups <m>R</m> and <m>R/K</m>.
           To show that this is a ring homomorphism,
           we need only show that <m>\eta( (r + K)(s + K) ) = \eta(r + K) \eta( s + K)</m>; but
-          <md permid="knq">
+          <md>
             <mrow>\eta( (r + K)( s +K )) &amp; = \eta(r s +K )</mrow>
             <mrow>&amp; = \psi(r s)</mrow>
             <mrow>&amp; = \psi(r) \psi(s)</mrow>
@@ -367,48 +367,48 @@
     </theorem>
         <!-- Map corrected to be <m>\phi</m> in the proof.  Suggested by K. Halasz. -->
         <!-- TWJ 2/6/2013 -->
-    <theorem permid="wue">
+    <theorem>
       <title>Second Isomorphism Theorem</title>
       <idx>
       <h>Second Isomorphism Theorem</h>
       <h>for rings</h>
       </idx>
       <statement>
-        <p permid="PRJ">
+        <p>
           Let <m>I</m> be a subring of a ring <m>R</m>  and  <m>J</m> an ideal of <m>R</m>.
           Then <m>I \cap J</m> is an ideal of <m>I</m> and
-          <me permid="Quz">
+          <me>
             I / I \cap J \cong (I+ J) /J
           </me>.
         </p>
       </statement>
     </theorem>
 
-    <theorem permid="cBn">
+    <theorem>
       <title>Third Isomorphism Theorem</title>
       <idx>
       <h>Third Isomorphism Theorem</h>
       <h>for rings</h>
       </idx>
       <statement>
-        <p permid="vYS">
+        <p>
           Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals of <m>R</m> where <m>J \subset I</m>.
           Then
-          <me permid="wBI">
+          <me>
             R/I \cong \frac{R/J}{I/J}
           </me>.
         </p>
       </statement>
     </theorem>
 
-    <theorem xml:id="theorem-correspondence-rings" permid="IIw">
+    <theorem xml:id="theorem-correspondence-rings">
       <title>Correspondence Theorem</title>
       <idx>
       <h>Correspondence Theorem</h>
       <h>for rings</h>
       </idx>
       <statement>
-        <p permid="cgb">
+        <p>
           Let <m>I</m> be an ideal of a ring <m>R</m>.
           Then <m>S \mapsto S/I</m> is a one-to-one correspondence between the set of subrings <m>S</m> containing <m>I</m> and the set of subrings of <m>R/I</m>.
           Furthermore,
@@ -418,24 +418,17 @@
     </theorem>
   </section>
 
-  <section xml:id="section-maximal-prime-ideals" permid="cWM">
+  <section xml:id="section-maximal-prime-ideals">
     <title>Maximal and Prime Ideals</title>
-<<<<<<< HEAD
-    <introduction permid="BNR">
-=======
->>>>>>> dev
-      <p permid="hzO">
+
+      <p>
         In this particular section we are especially interested in certain ideals of commutative rings.
         These ideals give us special types of factor rings.
         More specifically,
         we would like to characterize those ideals <m>I</m> of a commutative ring <m>R</m> such that <m>R/I</m> is an integral domain or a field.
       </p>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> dev
-      <p permid="NGX">
+      <p>
         A proper ideal <m>M</m> of a ring <m>R</m> is a
         <term>maximal ideal</term>
             <idx><h>Ideal</h><h>maximal</h></idx>
@@ -446,16 +439,16 @@
         The following theorem completely characterizes maximal ideals for commutative rings with identity in terms of their corresponding factor rings.
       </p>
 
-      <theorem xml:id="theorem-maximal-ideal-field" permid="oPF">
+      <theorem xml:id="theorem-maximal-ideal-field">
         <statement>
-          <p permid="Ink">
+          <p>
             Let <m>R</m> be a commutative ring with identity and <m>M</m> an ideal in <m>R</m>.
             Then <m>M</m> is a maximal ideal of <m>R</m> if and only if <m>R/M</m> is a field.
           </p>
         </statement>
 
-        <proof permid="yTl">
-          <p permid="Ocw">
+        <proof>
+          <p>
             Let <m>M</m> be a maximal ideal in <m>R</m>.
             If <m>R</m> is a commutative ring,
             then <m>R/M</m> must also be a commutative ring.
@@ -466,7 +459,7 @@
             We will show that <m>I</m> is an ideal in <m>R</m>.
             The set <m>I</m> is nonempty since <m>0a+0=0</m> is in <m>I</m>.
             If <m>r_1 a + m_1</m> and <m>r_2 a + m_2</m> are two elements in <m>I</m>, then
-            <me permid="cIR">
+            <me>
               (r_1 a + m_1) - ( r_2 a + m_2) = (r_1 - r_2)a + (m_1 - m_2)
             </me>
             is in <m>I</m>.
@@ -478,13 +471,13 @@
             consequently,
             by the definition of <m>I</m> there must be an <m>m</m> in <m>M</m> and an element <m>b</m> in <m>R</m> such that <m>1=ab+m</m>.
             Therefore,
-            <me permid="IQa">
+            <me>
               1 + M = ab + M = ba + M = (a+M)(b+M)
             </me>.
           </p>
             <!-- Label repaired.  Suggested by R. Beezer. -->
             <!-- TWJ - 12/19/2011 -->
-          <p permid="ujF">
+          <p>
             Conversely, suppose that <m>M</m> is an ideal and <m>R/M</m> is a field.
             Since <m>R/M</m> is a field, it must contain at least two elements:
             <m>0 + M = M</m> and <m>1 + M</m>.
@@ -502,15 +495,15 @@
         </proof>
       </theorem>
 
-      <example xml:id="example-rings-prime-ideal" permid="EIx">
-        <p permid="Enl">
+      <example xml:id="example-rings-prime-ideal">
+        <p>
           Let <m>p{\mathbb Z}</m> be an ideal in
           <m>{\mathbb Z}</m>, where <m>p</m> is prime.
           Then <m>p{\mathbb Z}</m> is a maximal ideal since <m>{\mathbb Z}/ p {\mathbb Z} \cong {\mathbb Z}_p</m> is a field.
         </p>
       </example>
 
-      <p permid="tOg">
+      <p>
         A proper ideal <m>P</m> in a commutative ring <m>R</m> is called a <term>prime ideal</term>
             <idx><h>Ideal</h><h>prime</h></idx>
             <idx><h>Prime ideal</h></idx>
@@ -522,8 +515,8 @@
             <!--  TWJ 19/3/2013 -->
             <!-- Grammatical correction.  Suggested by D. Keeler -->
             <!-- TWJ 1/10/2014 -->
-      <example xml:id="example-rings-z12-ideal" permid="kPG">
-        <p permid="kuu">
+      <example xml:id="example-rings-z12-ideal">
+        <p>
           It is easy to check that the set
           <m>P = \{ 0, 2, 4, 6, 8, 10 \}</m> is an ideal in <m>{\mathbb Z}_{12}</m>.
           This ideal is prime.
@@ -531,17 +524,17 @@
         </p>
       </example>
 
-      <proposition permid="FNQ">
+      <proposition>
         <statement>
-          <p permid="Zlv">
+          <p>
             Let <m>R</m> be a commutative ring with identity <m>1</m>,
             where <m>1 \neq 0</m>.
             Then <m>P</m> is a prime ideal in <m>R</m> if and only if <m>R/P</m> is an integral domain.
           </p>
         </statement>
 
-        <proof permid="DDe">
-          <p permid="aqO">
+        <proof>
+          <p>
             First let us assume that <m>P</m> is an ideal in <m>R</m> and <m>R/P</m> is an integral domain.
             Suppose that <m>ab \in P</m>.
             If <m>a + P</m> and <m>b + P</m> are two elements of <m>R/P</m> such that <m>(a + P)(b + P) = 0 + P = P</m>,
@@ -550,9 +543,9 @@
             which shows that <m>P</m> must be prime.
           </p>
 
-          <p permid="GxX">
+          <p>
             Conversely, suppose that <m>P</m> is prime and
-            <me permid="oXj">
+            <me>
               (a + P)(b + P) = ab + P = 0 + P = P
             </me>.
             Then <m>ab \in P</m>.
@@ -564,8 +557,8 @@
       </proposition>
             <!-- Added <m>1 \neq 0</m> to the statement of the proposition..  Suggested by D. Keeler. -->
             <!--  TWJ 19/3/2013 -->
-      <example xml:id="example-rings-nz-ideal" permid="QWP">
-        <p permid="QBD">
+      <example xml:id="example-rings-nz-ideal">
+        <p>
           Every ideal in <m>{\mathbb Z}</m> is of the form <m>n {\mathbb Z}</m>.
           The factor ring <m>{\mathbb Z} / n{\mathbb Z} \cong {\mathbb Z}_n</m> is an integral domain only when <m>n</m> is prime.
           It is actually a field.
@@ -576,26 +569,25 @@
         </p>
       </example>
 
-      <p permid="ZVp">
+      <p>
         Since every field is an integral domain,
         we have the following corollary.
       </p>
 
-      <corollary xml:id="corollary-maximal-ideal" permid="yjr">
+      <corollary xml:id="corollary-maximal-ideal">
         <statement>
-          <p permid="RGW">
+          <p>
             Every maximal ideal in a commutative ring with identity is also a prime ideal.
           </p>
         </statement>
       </corollary>
-<<<<<<< HEAD
-    </introduction>
+
         <!-- Updated to say that Noether lived in the 20th century and not the current (21st century). -->
         <!-- Suggested by K. Halasz. -->
         <!-- TWJ 2/5/2013 -->
-    <subsection xml:id="rings-subsection-historical-note" permid="HoI">
+    <subsection xml:id="rings-subsection-historical-note">
       <title>Historical Note</title>
-      <p permid="cuw">
+      <p>
         Amalie Emmy Noether,
             <idx><h>Noether, A. Emmy</h></idx>
         one of the outstanding mathematicians of the twentieth century,
@@ -614,7 +606,7 @@
         occasionally lecturing when her father was ill.
       </p>
 
-      <p permid="IBF">
+      <p>
         Noether went to Göttingen to study in 1916.
         David Hilbert
             <idx><h>Hilbert, David</h></idx>
@@ -631,7 +623,7 @@
         she was given a title and was paid a small sum for her lectures.
       </p>
 
-      <p permid="oIO">
+      <p>
         In 1922, Noether became a Privatdozent at Göttingen.
         Over the next 11 years she used axiomatic methods to develop an abstract theory of rings and ideals.
         Though she was not good at lecturing, Noether was an inspiring teacher.
@@ -645,7 +637,7 @@
         She was never promoted to full professor by the Prussian academic bureaucracy.
       </p>
 
-      <p permid="UPX">
+      <p>
         In 1933, Noether, who was Jewish,
         was banned from participation in all academic activities in Germany.
         She emigrated to the United States,
@@ -657,89 +649,81 @@
     </subsection>
   </section>
 
-
-=======
-
-  </section>
-
-
-
->>>>>>> dev
     <!-- Exercises with Solutions  -->
     <!-- File: rings.xml  -->
     <!-- Title: Rings -->
-  <exercises xml:id="exercises-rings" filenamebase="rings" permid="LYB">
+  <exercises xml:id="exercises-rings" filenamebase="rings">
     <title>Exercises</title>
-    <exercise number="1" permid="Vsn">
+    <exercise number="1">
       <statement>
-        <p permid="mjH">
+        <p>
           Which of the following sets are rings with respect to the usual operations of addition and multiplication?
           If the set is a ring, is it also a field?
 
-          <ol permid="EWS">
-            <li permid="Nll">
-              <p permid="Mun">
+          <ol>
+            <li>
+              <p>
                 <m>7 {\mathbb Z}</m>
               </p>
             </li>
 
-            <li permid="tsu">
-              <p permid="sBw">
+            <li>
+              <p>
                 <m>{\mathbb Z}_{18}</m>
               </p>
             </li>
 
-            <li permid="ZzD">
-              <p permid="YIF">
+            <li>
+              <p>
                 <m>{\mathbb Q} ( \sqrt{2}\, ) = \{a + b \sqrt{2} : a, b \in {\mathbb Q}\}</m>
               </p>
             </li>
 
-            <li permid="FGM">
-              <p permid="EPO">
+            <li>
+              <p>
                 <m>{\mathbb Q} ( \sqrt{2}, \sqrt{3}\, ) = \{a + b \sqrt{2} + c \sqrt{3} + d \sqrt{6} : a, b, c, d \in {\mathbb Q}\}</m>
               </p>
             </li>
 
-            <li permid="lNV">
-              <p permid="kWX">
+            <li>
+              <p>
                 <m>{\mathbb Z}[\sqrt{3}\, ] = \{ a + b \sqrt{3} : a, b \in {\mathbb Z} \}</m>
               </p>
             </li>
 
-            <li permid="RVe">
-              <p permid="Reg">
+            <li>
+              <p>
                 <m>R = \{a + b \sqrt[3]{3} : a, b \in {\mathbb Q} \}</m>
               </p>
             </li>
 
-            <li permid="ycn">
-              <p permid="xlp">
+            <li>
+              <p>
                 <m>{\mathbb Z}[ i ] = \{ a + b i : a, b \in {\mathbb Z} \text{ and } i^2 = -1 \}</m>
               </p>
             </li>
 
-            <li permid="ejw">
-              <p permid="dsy">
+            <li>
+              <p>
                 <m>{\mathbb Q}( \sqrt[3]{3}\, ) = \{ a + b \sqrt[3]{3} + c \sqrt[3]{9} : a, b, c \in {\mathbb Q} \}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="cfO">
-        <p permid="CTx">
+      <hint>
+        <p>
           (a) <m>7 {\mathbb Z}</m> is a ring but not a field; (c)
           <m>{\mathbb Q}(\sqrt{2}\, )</m> is a field; (f) <m>R</m> is not a ring.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="2" permid="Bzw">
+    <exercise number="2">
       <statement>
-        <p permid="SqQ">
+        <p>
           Let <m>R</m> be the ring of <m>2 \times 2</m> matrices of the form
-          <me permid="TYZ">
+          <me>
             \begin{pmatrix}
             a &amp; b \\
             0 &amp; 0
@@ -752,39 +736,39 @@
       </statement>
     </exercise>
 
-    <exercise number="3" permid="hGF">
+    <exercise number="3">
       <statement>
-        <p permid="yxZ">
+        <p>
           List or characterize all of the units in each of the following rings.
 
-          <ol permid="leb">
-            <li permid="HvZ">
-              <p permid="GFb">
+          <ol>
+            <li>
+              <p>
                 <m>{\mathbb Z}_{10}</m>
               </p>
             </li>
 
-            <li permid="nDi">
-              <p permid="mMk">
+            <li>
+              <p>
                 <m>{\mathbb Z}_{12}</m>
               </p>
             </li>
 
-            <li permid="TKr">
-              <p permid="STt">
+            <li>
+              <p>
                 <m>{\mathbb Z}_{7}</m>
               </p>
             </li>
 
-            <li permid="zRA">
-              <p permid="zaC">
+            <li>
+              <p>
                 <m>{\mathbb M}_2( {\mathbb Z} )</m>,
                 the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m>
               </p>
             </li>
 
-            <li permid="fYJ">
-              <p permid="fhL">
+            <li>
+              <p>
                 <m>{\mathbb M}_2( {\mathbb Z}_2 )</m>,
                 the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}_2</m>
               </p>
@@ -792,10 +776,10 @@
           </ol>
         </p>
       </statement>
-      <hint permid="UBp">
-        <p permid="jaG">
+      <hint>
+        <p>
           (a) <m>\{1, 3, 7, 9 \}</m>; (c) <m>\{ 1, 2, 3, 4, 5, 6 \}</m>; (e)
-          <me permid="MuA">
+          <me>
             \left\{
             \begin{pmatrix}
             1 &amp; 0 \\
@@ -827,49 +811,49 @@
       </hint>
     </exercise>
 
-    <exercise number="4" permid="NNO">
+    <exercise number="4">
       <statement>
-        <p permid="eFi">
+        <p>
           Find all of the ideals in each of the following rings.
           Which of these ideals are maximal and which are prime?
 
-          <ol permid="Rlk">
-            <li permid="QPL">
-              <p permid="PYN">
+          <ol>
+            <li>
+              <p>
                 <m>{\mathbb Z}_{18}</m>
               </p>
             </li>
 
-            <li permid="wWU">
-              <p permid="wfW">
+            <li>
+              <p>
                 <m>{\mathbb Z}_{25}</m>
               </p>
             </li>
 
-            <li permid="ded">
-              <p permid="cnf">
+            <li>
+              <p>
                 <m>{\mathbb M}_2( {\mathbb R} )</m>,
                 the <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>
               </p>
             </li>
 
-            <li permid="Jlm">
-              <p permid="Iuo">
+            <li>
+              <p>
                 <m>{\mathbb M}_2( {\mathbb Z} )</m>,
                 the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m>
               </p>
             </li>
 
-            <li permid="psv">
-              <p permid="oBx">
+            <li>
+              <p>
                 <m>{\mathbb Q}</m>
               </p>
             </li>
           </ol>
         </p>
       </statement>
-      <hint permid="gPH">
-        <p permid="PhP">
+      <hint>
+        <p>
           (a) <m>\{0 \}</m>, <m>\{0, 9 \}</m>,
           <m>\{0, 6, 12 \}</m>, <m>\{0, 3, 6, 9, 12, 15 \}</m>,
           <m>\{0, 2, 4, 6, 8, 10, 12, 14, 16 \}</m>; (c) there are no nontrivial ideals.
@@ -877,21 +861,21 @@
       </hint>
     </exercise>
 
-    <exercise number="5" permid="tUX">
+    <exercise number="5">
       <statement>
-        <p permid="KMr">
+        <p>
           For each of the following rings <m>R</m> with ideal <m>I</m>,
           give an addition table and a multiplication table for <m>R/I</m>.
 
-          <ol permid="xst">
-            <li permid="ajx">
-              <p permid="Zsz">
+          <ol>
+            <li>
+              <p>
                 <m>R = {\mathbb Z}</m> and <m>I = 6 {\mathbb Z}</m>
               </p>
             </li>
 
-            <li permid="GqG">
-              <p permid="FzI">
+            <li>
+              <p>
                 <m>R = {\mathbb Z}_{12}</m> and <m>I = \{ 0, 3, 6, 9 \}</m>
               </p>
             </li>
@@ -900,9 +884,9 @@
       </statement>
     </exercise>
 
-    <exercise number="6" permid="acg">
+    <exercise number="6">
       <statement>
-        <p permid="qTA">
+        <p>
           Find all homomorphisms <m>\phi : {\mathbb Z} / 6 {\mathbb Z} \rightarrow {\mathbb Z} / 15 {\mathbb Z}</m>.
         </p>
       </statement>
@@ -910,29 +894,29 @@
 
     <todo>Add solution.</todo>
 
-    <exercise number="7" permid="Gjp">
+    <exercise number="7">
       <statement>
-        <p permid="XaJ">
+        <p>
           Prove that <m>{\mathbb R}</m> is not isomorphic to <m>{\mathbb C}</m>.
         </p>
       </statement>
-      <hint permid="Fsr">
-        <p permid="voY">
+      <hint>
+        <p>
           Assume there is an isomorphism
           <m>\phi: {\mathbb C} \rightarrow {\mathbb R}</m> with <m>\phi(i) = a</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="8" permid="mqy">
+    <exercise number="8">
       <statement>
-        <p permid="DhS">
+        <p>
           Prove or disprove: The ring
           <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> is isomorphic to the ring <m>{\mathbb Q}( \sqrt{3}\, ) = \{a + b \sqrt{3} : a, b \in {\mathbb Q} \}</m>.
         </p>
       </statement>
-      <hint permid="RGJ">
-        <p permid="bwh">
+      <hint>
+        <p>
           False.
           Assume there is an isomorphism
           <m>\phi: {\mathbb Q}(\sqrt{2}\, ) \rightarrow {\mathbb Q}(\sqrt{3}\, )</m> such that <m>\phi(\sqrt{2}\, ) = a</m>.
@@ -940,11 +924,11 @@
       </hint>
     </exercise>
 
-    <exercise number="9" permid="SxH">
+    <exercise number="9">
       <statement>
-        <p permid="jpb">
+        <p>
           What is the characteristic of the field formed by the set of matrices
-          <me permid="xlC">
+          <me>
             F =
             \left\{
             \begin{pmatrix}
@@ -970,11 +954,11 @@
       </statement>
     </exercise>
 
-    <exercise number="10" permid="yEQ">
+    <exercise number="10">
       <statement>
-        <p permid="Pwk">
+        <p>
           Define a map <m>\phi : {\mathbb C} \rightarrow {\mathbb M}_2 ({\mathbb R})</m> by
-          <me permid="dsL">
+          <me>
             \phi( a + bi) =
             \begin{pmatrix}
             a &amp; b \\
@@ -989,41 +973,41 @@
 
     <todo>Finish the proof.</todo>
 
-    <exercise number="11" permid="eLZ">
+    <exercise number="11">
       <statement>
-        <p permid="vDt">
+        <p>
           Prove that the Gaussian integers,
           <m>{\mathbb Z}[i ]</m>, are an integral domain.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="12" xml:id="exercise-rings-gaussian" permid="KTi">
+    <exercise number="12" xml:id="exercise-rings-gaussian">
       <statement>
-        <p permid="bKC">
+        <p>
           Prove that <m>{\mathbb Z}[ \sqrt{3}\, i ] = \{ a + b \sqrt{3}\, i : a, b \in {\mathbb Z} \}</m> is an integral domain.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="13" permid="rar">
+    <exercise number="13">
       <statement>
-        <p permid="HRL">
+        <p>
           Solve each of the following systems of congruences.
 
-          <ol cols="2" permid="dzC">
-            <li permid="yMh">
-              <p permid="xVj">
-                <md permid="OjN">
+          <ol cols="2">
+            <li>
+              <p>
+                <md>
                   <mrow>x &amp; \equiv  2 \pmod{5}</mrow>
                   <mrow>x &amp; \equiv  6 \pmod{11}</mrow>
                 </md>
               </p>
             </li>
 
-            <li permid="eTq">
-              <p permid="ecs">
-                <md permid="uqW">
+            <li>
+              <p>
+                <md>
                   <mrow>x &amp; \equiv  3 \pmod{7}</mrow>
                   <mrow>x &amp; \equiv  0 \pmod{8}</mrow>
                   <mrow>x &amp; \equiv  5 \pmod{15}</mrow>
@@ -1031,9 +1015,9 @@
               </p>
             </li>
 
-            <li permid="Laz">
-              <p permid="KjB">
-                <md permid="ayf">
+            <li>
+              <p>
+                <md>
                   <mrow>x &amp; \equiv  2 \pmod{4}</mrow>
                   <mrow>x &amp; \equiv  4 \pmod{7}</mrow>
                   <mrow>x &amp; \equiv  7 \pmod{9}</mrow>
@@ -1042,9 +1026,9 @@
               </p>
             </li>
 
-            <li permid="rhI">
-              <p permid="qqK">
-                <md permid="GFo">
+            <li>
+              <p>
+                <md>
                   <mrow>x &amp; \equiv  3 \pmod{5}</mrow>
                   <mrow>x &amp; \equiv  0 \pmod{8}</mrow>
                   <mrow>x &amp; \equiv  1 \pmod{11}</mrow>
@@ -1055,16 +1039,16 @@
           </ol>
         </p>
       </statement>
-      <hint permid="CxL">
-        <p permid="HDq">
+      <hint>
+        <p>
           (a) <m>x \equiv 17 \pmod{55}</m>; (c) <m>x \equiv 214 \pmod{2772}</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="14" permid="XhA">
+    <exercise number="14">
       <statement>
-        <p permid="nYU">
+        <p>
           Use the method of parallel computation outlined in the text to calculate
           <m>2234 + 4121</m> by dividing the calculation into four separate additions modulo <m>95</m>,
           <m>97</m>, <m>98</m>, and <m>99</m>.
@@ -1074,68 +1058,68 @@
 
     <todo>Finish the solution.</todo>
 
-    <exercise number="15" permid="DoJ">
+    <exercise number="15">
       <statement>
-        <p permid="Ugd">
+        <p>
           Explain why the method of parallel computation outlined in the text fails for
           <m>2134 \cdot 1531</m> if we attempt to break the calculation down into two smaller calculations modulo <m>98</m> and <m>99</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="16" permid="jvS">
+    <exercise number="16">
       <statement>
-        <p permid="Anm">
+        <p>
           If <m>R</m> is a field,
           show that the only two ideals of <m>R</m> are <m>\{ 0 \}</m> and <m>R</m> itself.
         </p>
       </statement>
-      <hint permid="bav">
-        <p permid="nKz">
+      <hint>
+        <p>
           If <m>I \neq \{ 0 \}</m>, show that <m>1 \in I</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="17" permid="PDb">
+    <exercise number="17">
       <statement>
-        <p permid="guv">
+        <p>
           Let <m>a</m> be any element in a ring <m>R</m> with identity.
           Show that <m>(-1)a = -a</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="18" permid="vKk">
+    <exercise number="18">
       <statement>
-        <p permid="MBE">
+        <p>
           Let <m>\phi : R \rightarrow S</m> be a ring homomorphism.
           Prove each of the following statements.
 
-          <ol permid="JGL">
-            <li permid="vRB">
-              <p permid="vaD">
+          <ol>
+            <li>
+              <p>
                 If <m>R</m> is a commutative ring,
                 then <m>\phi(R)</m> is a commutative ring.
               </p>
             </li>
 
-            <li permid="bYK">
-              <p permid="bhM">
+            <li>
+              <p>
                 <m>\phi( 0 ) = 0</m>.
               </p>
             </li>
 
-            <li permid="IfT">
-              <p permid="HoV">
+            <li>
+              <p>
                 Let <m>1_R</m> and <m>1_S</m> be the identities for <m>R</m> and <m>S</m>,
                 respectively.
                 If <m>\phi</m> is onto, then <m>\phi(1_R) = 1_S</m>.
               </p>
             </li>
 
-            <li permid="onc">
-              <p permid="nwe">
+            <li>
+              <p>
                 If <m>R</m> is a field and <m>\phi(R) \neq 0</m>,
                 then <m>\phi(R)</m> is a field.
               </p>
@@ -1143,27 +1127,27 @@
           </ol>
         </p>
       </statement>
-      <hint permid="TvW">
-        <p permid="TRI">
+      <hint>
+        <p>
           (a) <m>\phi(a) \phi(b) = \phi(ab) = \phi(ba) = \phi(b) \phi(a)</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="19" permid="bRt">
+    <exercise number="19">
       <statement>
-        <p permid="sIN">
+        <p>
           Prove that the associative law for multiplication and the distributive laws hold in <m>R/I</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="20" permid="HYC">
+    <exercise number="20">
       <statement>
-        <p permid="YPW">
+        <p>
           Prove the Second Isomorphism Theorem for rings: Let <m>I</m> be a subring of a ring <m>R</m>  and  <m>J</m> an ideal in <m>R</m>.
           Then <m>I \cap J</m> is an ideal in <m>I</m> and
-          <me permid="fhY">
+          <me>
             I / I \cap J \cong I + J /J
           </me>.
         </p>
@@ -1172,13 +1156,13 @@
 
     <todo>Finish the solution.</todo>
 
-    <exercise number="21" permid="ofL">
+    <exercise number="21">
       <statement>
-        <p permid="EXf">
+        <p>
           Prove the Third Isomorphism Theorem for rings: Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals of <m>R</m>,
           where <m>J \subset I</m>.
           Then
-          <me permid="Lph">
+          <me>
             R/I \cong \frac{R/J}{I/J}
           </me>.
         </p>
@@ -1187,9 +1171,9 @@
 
     <todo>Finish the solution.</todo>
 
-    <exercise number="22" permid="UmU">
+    <exercise number="22">
       <statement>
-        <p permid="leo">
+        <p>
           Prove the Correspondence Theorem: Let <m>I</m> be an ideal of a ring <m>R</m>.
           Then <m>S \rightarrow S/I</m> is a one-to-one correspondence between the set of subrings <m>S</m> containing <m>I</m> and the set of subrings of <m>R/I</m>.
           Furthermore,
@@ -1200,27 +1184,27 @@
 
     <todo>Finish the solution.</todo>
 
-    <exercise number="23" xml:id="exercise-rings-subring-conditions" permid="Aud">
+    <exercise number="23" xml:id="exercise-rings-subring-conditions">
       <statement>
-        <p permid="Rlx">
+        <p>
           Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
           Show that <m>S</m> is a subring of <m>R</m> if and only if each of the following conditions is satisfied.
 
-          <ol permid="pNU">
-            <li permid="sWV">
-              <p permid="sfX">
+          <ol>
+            <li>
+              <p>
                 <m>S \neq \emptyset</m>.
               </p>
             </li>
 
-            <li permid="Zee">
-              <p permid="Yng">
+            <li>
+              <p>
                 <m>rs \in S</m> for all <m>r, s \in S</m>.
               </p>
             </li>
 
-            <li permid="Fln">
-              <p permid="Eup">
+            <li>
+              <p>
                 <m>r - s \in S</m> for all <m>r, s \in S</m>.
               </p>
             </li>
@@ -1229,9 +1213,9 @@
       </statement>
     </exercise>
 
-    <exercise number="24" xml:id="exercise-rings-subring-intersection" permid="gBm">
+    <exercise number="24" xml:id="exercise-rings-subring-intersection">
       <statement>
-        <p permid="xsG">
+        <p>
           Let <m>R</m> be a ring with a collection of subrings <m>\{ R_{\alpha} \}</m>.
           Prove that <m>\bigcap R_{\alpha}</m> is a subring of <m>R</m>.
           Give an example to show that the union of two subrings is not necessarily a subring.
@@ -1239,9 +1223,9 @@
       </statement>
     </exercise>
 
-    <exercise number="25" permid="MIv">
+    <exercise number="25">
       <statement>
-        <p permid="dzP">
+        <p>
           Let <m>\{ I_{\alpha} \}_{\alpha \in A}</m> be a collection of ideals in a ring <m>R</m>.
           Prove that <m>\bigcap_{\alpha \in A} I_{\alpha}</m> is also an ideal in <m>R</m>.
           Give an example to show that if <m>I_1</m> and <m>I_2</m> are ideals in <m>R</m>,
@@ -1250,16 +1234,16 @@
       </statement>
     </exercise>
 
-    <exercise number="26" permid="sPE">
+    <exercise number="26">
       <statement>
-        <p permid="JGY">
+        <p>
           Let <m>R</m> be an integral domain.
           Show that if the only ideals in <m>R</m> are <m>\{ 0 \}</m> and <m>R</m> itself,
           <m>R</m> must be a field.
         </p>
       </statement>
-      <hint permid="wIz">
-        <p permid="zYR">
+      <hint>
+        <p>
           Let <m>a \in R</m> with <m>a \neq 0</m>.
           Then the principal ideal generated by <m>a</m> is <m>R</m>.
           Thus, there exists a <m>b \in R</m> such that <m>ab =1</m>.
@@ -1267,9 +1251,9 @@
       </hint>
     </exercise>
 
-    <exercise number="27" permid="YWN">
+    <exercise number="27">
       <statement>
-        <p permid="pOh">
+        <p>
           Let <m>R</m> be a commutative ring.
           An element <m>a</m> in <m>R</m> is <term>nilpotent</term>
           if <m>a^n = 0</m> for some positive integer <m>n</m>.
@@ -1278,16 +1262,16 @@
       </statement>
     </exercise>
 
-    <exercise number="28" permid="FdW">
+    <exercise number="28">
       <statement>
-        <p permid="VVq">
+        <p>
           A ring <m>R</m> is a <term>Boolean ring</term>
           if for every <m>a \in R</m>, <m>a^2 = a</m>.
           Show that every Boolean ring is a commutative ring.
         </p>
       </statement>
-      <hint permid="pea">
-        <p permid="gga">
+      <hint>
+        <p>
           Compute <m>(a+b)^2</m> and <m>(-ab)^2</m>.
         </p>
       </hint>
@@ -1295,9 +1279,9 @@
 
     <todo>Finish solution.</todo>
 
-    <exercise number="29" permid="llf">
+    <exercise number="29">
       <statement>
-        <p permid="Ccz">
+        <p>
           Let <m>R</m> be a ring, where <m>a^3 =a</m> for all <m>a \in R</m>.
           Prove that <m>R</m> must be a commutative ring.
         </p>
@@ -1306,9 +1290,9 @@
 
     <todo>Check solution.</todo>
 
-    <exercise number="30" permid="Rso">
+    <exercise number="30">
       <statement>
-        <p permid="ijI">
+        <p>
           Let <m>R</m> be a ring with identity <m>1_R</m> and <m>S</m> a subring of <m>R</m> with identity <m>1_S</m>.
           Prove or disprove that <m>1_R = 1_S</m>.
         </p>
@@ -1317,9 +1301,9 @@
 
     <todo>Finish solution.</todo>
 
-    <exercise number="31" permid="xzx">
+    <exercise number="31">
       <statement>
-        <p permid="OqR">
+        <p>
           If we do not require the identity of a ring to be distinct from 0, we will not have a very interesting mathematical structure.
           Let <m>R</m> be a ring such that <m>1 = 0</m>.
           Prove that <m>R = \{ 0 \}</m>.
@@ -1327,21 +1311,21 @@
       </statement>
     </exercise>
 
-    <exercise number="32" permid="dGG">
+    <exercise number="32">
       <statement>
-        <p permid="uya">
+        <p>
           Let <m>S</m> be a nonempty subset of a ring <m>R</m>.
           Prove that there is a subring <m>R'</m> of <m>R</m> that contains <m>S</m>.
         </p>
       </statement>
     </exercise>
 
-    <exercise number="33" permid="JNP">
+    <exercise number="33">
       <statement>
-        <p permid="aFj">
+        <p>
           Let <m>R</m> be a ring.
           Define the <term>center</term> of <m>R</m> to be
-          <me permid="rwq">
+          <me>
             Z(R) = \{ a \in R : ar = ra \text{ for all } r \in R \}
           </me>.
           Prove that <m>Z(R)</m> is a commutative subring of <m>R</m>.
@@ -1349,12 +1333,12 @@
       </statement>
     </exercise>
 
-    <exercise number="34" permid="pUY">
+    <exercise number="34">
       <statement>
-        <p permid="GMs">
+        <p>
           Let <m>p</m> be prime.
           Prove that
-          <me permid="XDz">
+          <me>
             {\mathbb Z}_{(p)} = \{ a / b :  a, b \in {\mathbb Z} \text{ and } \gcd( b,p) =  1 \}
           </me>
           is a ring.
@@ -1368,8 +1352,8 @@
 
         </p>
       </statement>
-      <hint permid="Gcl">
-        <p permid="Mnj">
+      <hint>
+        <p>
           Let <m>a/b, c/d \in {\mathbb Z}_{(p)}</m>.
           Then <m>a/b + c/d = (ad + bc)/bd</m> and
           <m>(a/b) \cdot (c/d) = (ac)/(bd)</m> are both in <m>{\mathbb Z}_{(p)}</m>,
@@ -1380,9 +1364,9 @@
 
     <todo>Finish solution.</todo>
 
-    <exercise number="35" permid="Wch">
+    <exercise number="35">
       <statement>
-        <p permid="mTB">
+        <p>
           Prove or disprove: Every finite integral domain is isomorphic to <m>{\mathbb Z}_p</m>.
         </p>
       </statement>
@@ -1390,14 +1374,14 @@
 
     <todo>Finish solution.</todo>
 
-    <exercise number="36" permid="Cjq">
+    <exercise number="36">
       <statement>
-        <p permid="TaK">
+        <p>
           Let <m>R</m> be a ring with identity.
 
-          <ol permid="VVd">
-            <li permid="lsw">
-              <p permid="kBy">
+          <ol>
+            <li>
+              <p>
                 Let <m>u</m> be a unit in <m>R</m>.
                 Define a map <m>i_u : R \rightarrow R</m> by <m>r \mapsto uru^{-1}</m>.
                 Prove that <m>i_u</m> is an automorphism of <m>R</m>.
@@ -1406,18 +1390,18 @@
               </p>
             </li>
 
-            <li permid="RzF">
-              <p permid="QIH">
+            <li>
+              <p>
                 Denote the set of all automorphisms of <m>R</m> by <m>\aut(R)</m>.
                 Prove that <m>\inn(R)</m> is a normal subgroup of <m>\aut(R)</m>.
               </p>
             </li>
 
-            <li permid="xGO">
-              <p permid="wPQ">
+            <li>
+              <p>
                 Let <m>U(R)</m> be the group of units in <m>R</m>.
                 Prove that the map
-                <me permid="DKI">
+                <me>
                   \phi : U(R) \rightarrow \inn(R)
                 </me>
                 defined by <m>u \mapsto i_u</m> is a homomorphism.
@@ -1425,8 +1409,8 @@
               </p>
             </li>
 
-            <li permid="dNX">
-              <p permid="cWZ">
+            <li>
+              <p>
                 Compute <m>\aut( {\mathbb Z})</m>,
                 <m>\inn( {\mathbb Z})</m>, and <m>U( {\mathbb Z})</m>.
               </p>
@@ -1436,21 +1420,21 @@
       </statement>
     </exercise>
 
-    <exercise number="37" permid="iqz">
+    <exercise number="37">
       <statement>
-        <p permid="zhT">
+        <p>
           Let <m>R</m> and <m>S</m> be arbitrary rings.
           Show that their Cartesian product is a ring if we define addition and multiplication in <m>R \times S</m> by
 
-          <ol permid="Ccm">
-            <li permid="ixQ">
-              <p permid="hGS">
+          <ol>
+            <li>
+              <p>
                 <m>(r, s) + (r', s') = ( r + r', s + s')</m>
               </p>
             </li>
 
-            <li permid="OEZ">
-              <p permid="NOb">
+            <li>
+              <p>
                 <m>(r, s)(r', s') = ( rr', ss')</m>
               </p>
             </li>
@@ -1461,17 +1445,17 @@
 
     <todo>Finish solution.</todo>
 
-    <exercise number="38" permid="OxI">
+    <exercise number="38">
       <statement>
-        <p permid="fpc">
+        <p>
           An element <m>x</m> in a ring is called an
           <term>idempotent</term> if <m>x^2 = x</m>.
           Prove that the only idempotents in an integral domain are <m>0</m> and <m>1</m>.
           Find a ring with a idempotent <m>x</m> not equal to 0 or 1.
         </p>
       </statement>
-      <hint permid="KMe">
-        <p permid="sus">
+      <hint>
+        <p>
           Suppose that <m>x^2 = x</m> and <m>x \neq 0</m>.
           Since <m>R</m> is an integral domain, <m>x = 1</m>.
           To find a nontrivial idempotent,
@@ -1482,9 +1466,9 @@
 
     <todo>Finish solution.</todo>
 
-    <exercise number="39" permid="uER">
+    <exercise number="39">
       <statement>
-        <p permid="Lwl">
+        <p>
           Let <m>\gcd(a, n) = d</m> and <m>\gcd(b, d) \neq 1</m>.
           Prove that <m>ax \equiv b \pmod{n}</m> does not have a solution.
         </p>
@@ -1493,17 +1477,17 @@
 
     <todo>Finish solution.</todo>
 
-    <exercise number="40" permid="aMa">
+    <exercise number="40">
       <title>The Chinese Remainder Theorem for Rings</title>
       <statement>
-        <p permid="rDu">
+        <p>
           Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals in <m>R</m> such that <m>I+J = R</m>.
 
-          <ol permid="ijv">
-            <li permid="uMi">
-              <p permid="tVk">
+          <ol>
+            <li>
+              <p>
                 Show that for any <m>r</m> and <m>s</m> in <m>R</m>, the system of equations
-                <md permid="IuB">
+                <md>
                   <mrow>x &amp; \equiv r \pmod{I}</mrow>
                   <mrow>x &amp; \equiv s \pmod{J}</mrow>
                 </md>
@@ -1511,18 +1495,18 @@
               </p>
             </li>
 
-            <li permid="aTr">
-              <p permid="act">
+            <li>
+              <p>
                 In addition,
                 prove that any two solutions of the system are congruent modulo <m>I \cap J</m>.
               </p>
             </li>
 
-            <li permid="HaA">
-              <p permid="GjC">
+            <li>
+              <p>
                 Let <m>I</m> and <m>J</m> be ideals in a ring <m>R</m> such that <m>I + J = R</m>.
                 Show that there exists a ring isomorphism
-                <me permid="oBK">
+                <me>
                   R/(I \cap J) \cong R/I \times R/J
                 </me>.
               </p>
