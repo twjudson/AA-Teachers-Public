@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--                                                  -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<!-- Abstract Algebra for Teachers        -->
+<!-- Abstract Algebra for Teachers                    -->
 <!--                                                  -->
 <!-- Text: Copyright (C) 1997-2019  Thomas W. Judson  -->
-<!-- See the file COPYING for copying conditions.     -->
-<!-- This file is part of the book                    -->
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
+<!--                                                  -->
 <!-- USE XINCLUDE SWITCH ON XSLTPROC                  -->
-<!-- Master file for AATA                             -->
+<!-- Master file for aa-teachers                      -->
 <!-- Use XSL stylesheets to create subsets            -->
 <!--    Important: Always process all of the source   -->
 <!--    to preserve numbering and cross-references!   -->
@@ -27,23 +27,23 @@
         <xi:include href="./integers.xml" />                    <!-- Integers -->
         <xi:include href="./groups.xml" />                      <!-- Groups -->
         <xi:include href="./rings.xml" />                       <!-- Introduction to Rings -->
-        <xi:include href="./cyclic.xml" />                      <!-- Cyclic Groups -->
-        <xi:include href="./cosets.xml" />                      <!-- Cosets and Lagrange's Theorem -->
-        <xi:include href="./isomorph.xml" />                    <!-- Isomorphisms -->
-        <xi:include href="./ideals.xml" />                      <!-- Ideals -->
-        <xi:include href="./poly.xml" />                        <!-- Polynomial Rings -->
-        <xi:include href="./domains.xml" />                     <!-- Integral Domains -->
     </part>
 
     <part xml:id="part-topics-in-groups">
         <title>Topics in Group Theory</title>
+        <xi:include href="./cyclic.xml" />                      <!-- Cyclic Groups -->
         <xi:include href="./permute.xml" />                     <!-- Permutation Groups -->
+        <xi:include href="./cosets.xml" />                      <!-- Cosets and Lagrange's Theorem -->
+        <xi:include href="./isomorph.xml" />                    <!-- Isomorphisms -->
         <xi:include href="./normal.xml" />                      <!-- Normal Subgroups -->
         <xi:include href="./homomorph.xml" />                   <!-- Homomorphisms -->
     </part>
 
     <part xml:id="part-topics-in-rings-fields">
         <title>Topics in Ring and Field Theory</title>
+        <xi:include href="./ideals.xml" />                      <!-- Ideals -->
+        <xi:include href="./poly.xml" />                        <!-- Polynomial Rings -->
+        <xi:include href="./domains.xml" />                     <!-- Integral Domains -->
         <xi:include href="./vect.xml" />                        <!-- Vector Spaces -->
         <xi:include href="./fields.xml" />                      <!-- Extension Fields -->
         <xi:include href="./constructions.xml" />               <!-- Constructions -->

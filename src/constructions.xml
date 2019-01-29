@@ -1,14 +1,12 @@
 <?xml version="1.0"?>
+<!--                                                  -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<!-- Abstract Algebra: Theory and Applications        -->
+<!-- Abstract Algebra for Teachers                    -->
 <!--                                                  -->
-<!-- Text: Copyright (C) 1997-2018  Thomas W. Judson  -->
-<!-- Sage: Copyright (C) 2010-2018  Robert A. Beezer  -->
+<!-- Text: Copyright (C) 1997-2019  Thomas W. Judson  -->
 <!-- See the file COPYING for copying conditions.     -->
-<!-- This file is part of the book                    -->
 <!--                                                  -->
-<!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="constructions">
   <title>Constructions</title>
 

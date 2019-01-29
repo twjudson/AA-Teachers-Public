@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <!--                                                  -->
-<!-- Abstract Algebra for Teachers        -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- Abstract Algebra for Teachers                    -->
 <!--                                                  -->
 <!-- Text: Copyright (C) 1997-2019  Thomas W. Judson  -->
 <!-- See the file COPYING for copying conditions.     -->
-<!-- This file is part of the book                    -->
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="vect">
   <title>Vector Spaces</title>

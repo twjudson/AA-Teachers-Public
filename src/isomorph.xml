@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <!--                                                  -->
-<!-- Abstract Algebra for Teachers        -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- Abstract Algebra for Teachers                    -->
 <!--                                                  -->
 <!-- Text: Copyright (C) 1997-2019  Thomas W. Judson  -->
 <!-- See the file COPYING for copying conditions.     -->
-<!-- This file is part of the book                    -->
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="isomorph">
   <title>Isomorphisms</title>
@@ -692,17 +693,7 @@
           </p>
         </proof>
       </corollary>
-            <!-- This reference needs to be fixed - TWJ 6/2/2010 -->
-      <p>
-        In <xref ref="struct"/>,
-        we will prove that all finite abelian groups are isomorphic to direct products of the form
-        <me>
-          {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb Z}_{p_k^{e_k}}
-        </me>
-        where <m>p_1, \ldots, p_k</m> are
-        (not necessarily distinct)
-        primes.
-      </p>
+      
     </subsection>
 
     <subsection xml:id="isomorph-subsection-internal-products">
@@ -858,14 +849,7 @@
         </statement>
       </theorem>
 
-      <paragraphs>
-        <title>Sage</title>
-        <p>
-          Sage can quickly determine if two permutation groups are isomorphic,
-          even though this should, in theory,
-          be a very difficult computation.
-        </p>
-      </paragraphs>
+
     </subsection>
   </section>
     <!-- Exercises with Solutions  -->

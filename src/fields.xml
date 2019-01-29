@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
+<!--                                                  -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
-<!-- Abstract Algebra for Teachers        -->
+<!-- Abstract Algebra for Teachers                    -->
 <!--                                                  -->
 <!-- Text: Copyright (C) 1997-2019  Thomas W. Judson  -->
 <!-- See the file COPYING for copying conditions.     -->
-<!-- This file is part of the book                    -->
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="fields">
   <title>Fields</title>
@@ -931,7 +931,7 @@
         We now state the Fundamental Theorem of Algebra,
         first proven by Gauss at the age of 22 in his doctoral thesis.
         This theorem states that every polynomial with coefficients in the complex numbers has a root in the complex numbers.
-        The proof of this theorem will be given in <xref ref="galois"/>.
+
       </p>
 
       <theorem>
