@@ -9,7 +9,7 @@
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ideals">
   <title>Ideals</title>
-    <section xml:id="section-ring-homomorphisms">
+    <section xml:id="section-ideals-homomorphisms">
     <title>Ring Homomorphisms and Ideals</title>
     
     <p>
@@ -42,7 +42,7 @@
       </me>.
     </p>
 
-    <example xml:id="example-rings-homo">
+    <example xml:id="example-ideals-homo">
       <p>
         For any integer <m>n</m> we can define a ring homomorphism
         <m>\phi : {\mathbb Z} \rightarrow {\mathbb Z}_n</m> by <m>a \mapsto a \pmod{n}</m>.
@@ -62,9 +62,9 @@
       </p>
     </example>
 
-    <example xml:id="example-rings-continuous-function-homomorph">
+    <example xml:id="example-ideals-continuous-function-homomorph">
       <p>
-        Let <m>C[a, b]</m> be the ring of continuous real-valued functions on an interval <m>[a,b]</m> as in <xref ref="example-rings-functions"/>.
+        Let <m>C[a, b]</m> be the ring of continuous real-valued functions on an interval <m>[a,b]</m> as in <xref ref="example-ideals-functions"/>.
         For a fixed  <m>\alpha \in [a, b]</m>,
         we can define a ring homomorphism
         <m>\phi_{\alpha} : C[a, b] \rightarrow {\mathbb R}</m> by <m>\phi_{\alpha} (f ) = f( \alpha)</m>.
@@ -133,7 +133,7 @@
       <m>Ir \subset I</m> for all <m>r \in R</m>.
     </p>
 
-    <example xml:id="example-rings-trivial-ideal">
+    <example xml:id="example-ideals-trivial-ideal">
       <p>
         Every ring <m>R</m> has at least two ideals,
         <m>\{ 0 \}</m> and <m>R</m>.
@@ -149,7 +149,7 @@
       <m>r1 = r \in I</m> by the definition of an ideal, <m>I = R</m>.
     </p>
 
-    <example xml:id="example-rings-principal-ideal">
+    <example xml:id="example-ideals-principal-ideal">
       <p>
         If <m>a</m> is any element in a commutative ring <m>R</m> with identity,
         then the set
@@ -205,7 +205,7 @@
     </theorem>
         <!-- application of the PWO corrected in the proof.  Suggested by  P. Diethelm. -->
         <!-- TWJ 24/4/2013 -->
-    <example xml:id="example-rings-integer-ideal">
+    <example xml:id="example-ideals-integer-ideal">
       <p>
         The set <m>n {\mathbb Z}</m> is ideal in the ring of integers.
         If <m>na</m> is in <m>n{\mathbb Z}</m> and <m>b</m> is in <m>{\mathbb Z}</m>,
@@ -496,7 +496,7 @@
         </proof>
       </theorem>
 
-      <example xml:id="example-rings-prime-ideal">
+      <example xml:id="example-ideals-prime-ideal">
         <p>
           Let <m>p{\mathbb Z}</m> be an ideal in
           <m>{\mathbb Z}</m>, where <m>p</m> is prime.
@@ -516,7 +516,7 @@
             <!--  TWJ 19/3/2013 -->
             <!-- Grammatical correction.  Suggested by D. Keeler -->
             <!-- TWJ 1/10/2014 -->
-      <example xml:id="example-rings-z12-ideal">
+      <example xml:id="example-ideals-z12-ideal">
         <p>
           It is easy to check that the set
           <m>P = \{ 0, 2, 4, 6, 8, 10 \}</m> is an ideal in <m>{\mathbb Z}_{12}</m>.
@@ -558,7 +558,7 @@
       </proposition>
             <!-- Added <m>1 \neq 0</m> to the statement of the proposition..  Suggested by D. Keeler. -->
             <!--  TWJ 19/3/2013 -->
-      <example xml:id="example-rings-nz-ideal">
+      <example xml:id="example-ideals-nz-ideal">
         <p>
           Every ideal in <m>{\mathbb Z}</m> is of the form <m>n {\mathbb Z}</m>.
           The factor ring <m>{\mathbb Z} / n{\mathbb Z} \cong {\mathbb Z}_n</m> is an integral domain only when <m>n</m> is prime.
@@ -983,7 +983,7 @@
       </statement>
     </exercise>
 
-    <exercise number="12" xml:id="exercise-rings-gaussian">
+    <exercise number="12" xml:id="exercise-ideals-gaussian">
       <statement>
         <p>
           Prove that <m>{\mathbb Z}[ \sqrt{3}\, i ] = \{ a + b \sqrt{3}\, i : a, b \in {\mathbb Z} \}</m> is an integral domain.
@@ -1185,7 +1185,7 @@
 
     <todo>Finish the solution.</todo>
 
-    <exercise number="23" xml:id="exercise-rings-subring-conditions">
+    <exercise number="23" xml:id="exercise-ideals-subring-conditions">
       <statement>
         <p>
           Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
@@ -1214,7 +1214,7 @@
       </statement>
     </exercise>
 
-    <exercise number="24" xml:id="exercise-rings-subring-intersection">
+    <exercise number="24" xml:id="exercise-ideals-subring-intersection">
       <statement>
         <p>
           Let <m>R</m> be a ring with a collection of subrings <m>\{ R_{\alpha} \}</m>.
@@ -1583,6 +1583,12 @@
       <title>Commutative Algebra</title>, vols. I and II. Springer, New York, 1975, 1960.
     </biblio>
   </references>
+
+  <section xml:id="section-ideals-isomorphisn-in-the-classroom">
+    <title>Ideals in the Secondary Classroom</title>
+
+    <p>This appendix will relate ideals to the secondary classroom.</p>
+  </section>
 
 
 </chapter>
