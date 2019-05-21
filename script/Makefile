@@ -169,7 +169,7 @@ electronic:
 	cp -a $(SRC)/images $(PDFOUT)
 	cp $(XSL)/aa-teachers-common.xsl $(XSL)/aa-teachers-latex.xsl $(XSL)/aa-teachers-electronic.xsl $(MBUSR)
 	cd $(PDFOUT); \
-	xsltproc --xinclude $(MBUSR)/aa-teachers-electronic.xsl $(SRC)/aa-teachers.xml; \
+	xsltproc -o aa-teachers.tex --xinclude $(MBUSR)/aa-teachers-electronic.xsl $(SRC)/aa-teachers.xml; \
 	$(ENGINE) aa-teachers.tex; $(ENGINE) aa-teachers.tex; \
 	mv aa-teachers.pdf aa-teachers-electronic.pdf
 
