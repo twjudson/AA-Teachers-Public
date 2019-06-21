@@ -11,7 +11,7 @@
   <title>Rings</title>
   <introduction>
     <p>
-      Up to this point we have studied sets with a single binary operation satisfying certain axioms,
+      In <xref ref="groups"/> we studied sets with a single binary operation satisfying certain axioms,
       but we are often more interested in working with sets that have two binary operations.
       For example,
       one of the most natural algebraic structures to study is the integers with the operations of addition and multiplication.
@@ -971,7 +971,7 @@
       </statement>
     </exercise>
 
-    <todo>Add solution.</todo>
+    <!-- To do Add solution.-->
 
     <exercise number="7">
       <statement>
@@ -1050,7 +1050,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish the proof.</todo>
+    <!-- To do Finish the proof.-->
 
     <exercise number="11">
       <statement>
@@ -1135,7 +1135,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish the solution.</todo>
+    <!-- To do Finish the solution.-->
 
     <exercise number="15">
       <statement>
@@ -1233,7 +1233,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish the solution.</todo>
+    <!-- To do Finish the solution.-->
 
     <exercise number="21">
       <statement>
@@ -1248,7 +1248,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish the solution.</todo>
+    <!-- To do Finish the solution.-->
 
     <exercise number="22">
       <statement>
@@ -1261,7 +1261,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish the solution.</todo>
+    <!-- To do Finish the solution.-->
 
     <exercise number="23" xml:id="exercise-rings-subring-conditions">
       <statement>
@@ -1356,7 +1356,7 @@
       </hint>
     </exercise>
 
-    <todo>Finish solution.</todo>
+    <!-- To do Finish solution.-->
 
     <exercise number="29">
       <statement>
@@ -1367,7 +1367,7 @@
       </statement>
     </exercise>
 
-    <todo>Check solution.</todo>
+    <!-- To do Check solution.-->
 
     <exercise number="30">
       <statement>
@@ -1378,7 +1378,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish solution.</todo>
+    <!-- To do Finish solution.-->
 
     <exercise number="31">
       <statement>
@@ -1441,7 +1441,7 @@
       </hint>
     </exercise>
 
-    <todo>Finish solution.</todo>
+    <!-- To do Finish solution.-->
 
     <exercise number="35">
       <statement>
@@ -1451,7 +1451,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish solution.</todo>
+    <!-- To do Finish solution.-->
 
     <exercise number="36">
       <statement>
@@ -1522,7 +1522,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish solution.</todo>
+    <!-- To do Finish solution.-->
 
     <exercise number="38">
       <statement>
@@ -1543,7 +1543,7 @@
       </hint>
     </exercise>
 
-    <todo>Finish solution.</todo>
+    <!-- To do Finish solution.-->
 
     <exercise number="39">
       <statement>
@@ -1554,7 +1554,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish solution.</todo>
+    <!-- To do Finish solution.-->
 
     <exercise number="40">
       <title>The Chinese Remainder Theorem for Rings</title>
@@ -1595,7 +1595,7 @@
       </statement>
     </exercise>
 
-    <todo>Finish solution.</todo>
+    <!-- To do Finish solution.-->
   </exercises>
 
   <section xml:id="section-rings-zero-divisors-in-the-classroom">

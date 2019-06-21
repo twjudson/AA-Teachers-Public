@@ -192,8 +192,8 @@
             </ol>
           </p>
         </statement>
-        <todo>RAB: consider cases in proofs for mathBook XML</todo>
-        <todo>See if id/ref works on items in ordered lists</todo>
+        <!-- To do RAB: consider cases in proofs for mathBook XML-->
+        <!-- To do See if id/ref works on items in ordered lists-->
 
         <proof>
           <p>
@@ -1445,7 +1445,7 @@
       </statement>
     </exercise>
 
-    <todo>Check references to Heisenberg group</todo>
+    <!-- To do Check references to Heisenberg group-->
 
     <exercise number="10">
       <statement>
@@ -1972,7 +1972,7 @@
       </statement>
     </exercise>
 
-    <todo>Move the old Exercise 50 to struct.xml</todo>
+    <!-- To do Move the old Exercise 50 to struct.xml-->
         <!--
 	<exercise number="50">
 		<statement>
@@ -2001,7 +2001,7 @@
       </statement>
     </exercise>
 
-    <todo>Fix references to centralizer</todo>
+    <!-- To do Fix references to centralizer-->
 
     <exercise number="53">
       <statement>

@@ -1547,7 +1547,7 @@
       </statement>
     </exercise>
 
-    <todo>Fix references to torsion subgroup</todo>
+    <!-- To do Fix references to torsion subgroup-->
 
     <exercise number="31">
       <statement>
@@ -1719,7 +1719,7 @@
   </exercises>
 
   <section xml:id="section-cyclic-cyclic-groups-in-the-classroom">
-    <title>Mopdular Arithmetic in the Secondary Classroom</title>
+    <title>Modular Arithmetic in the Secondary Classroom</title>
 
     <p>This appendix will connect cyclic groups and modular arithmetic to the high school classroom.</p>
   </section>
