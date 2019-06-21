@@ -890,119 +890,7 @@
       </hint>
     </exercise>
 
-    <exercise number="4">
-      <statement>
-        <p>
-          Find all of the ideals in each of the following rings.
-          Which of these ideals are maximal and which are prime?
-
-          <ol>
-            <li>
-              <p>
-                <m>{\mathbb Z}_{18}</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>{\mathbb Z}_{25}</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>{\mathbb M}_2( {\mathbb R} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>{\mathbb M}_2( {\mathbb Z} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>{\mathbb Q}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>\{0 \}</m>, <m>\{0, 9 \}</m>,
-          <m>\{0, 6, 12 \}</m>, <m>\{0, 3, 6, 9, 12, 15 \}</m>,
-          <m>\{0, 2, 4, 6, 8, 10, 12, 14, 16 \}</m>; (c) there are no nontrivial ideals.
-        </p>
-      </hint>
-    </exercise>
-
-    <exercise number="5">
-      <statement>
-        <p>
-          For each of the following rings <m>R</m> with ideal <m>I</m>,
-          give an addition table and a multiplication table for <m>R/I</m>.
-
-          <ol>
-            <li>
-              <p>
-                <m>R = {\mathbb Z}</m> and <m>I = 6 {\mathbb Z}</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>R = {\mathbb Z}_{12}</m> and <m>I = \{ 0, 3, 6, 9 \}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise number="6">
-      <statement>
-        <p>
-          Find all homomorphisms <m>\phi : {\mathbb Z} / 6 {\mathbb Z} \rightarrow {\mathbb Z} / 15 {\mathbb Z}</m>.
-        </p>
-      </statement>
-    </exercise>
-
-    <!-- To do Add solution.-->
-
-    <exercise number="7">
-      <statement>
-        <p>
-          Prove that <m>{\mathbb R}</m> is not isomorphic to <m>{\mathbb C}</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Assume there is an isomorphism
-          <m>\phi: {\mathbb C} \rightarrow {\mathbb R}</m> with <m>\phi(i) = a</m>.
-        </p>
-      </hint>
-    </exercise>
-
-    <exercise number="8">
-      <statement>
-        <p>
-          Prove or disprove: The ring
-          <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> is isomorphic to the ring <m>{\mathbb Q}( \sqrt{3}\, ) = \{a + b \sqrt{3} : a, b \in {\mathbb Q} \}</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          False.
-          Assume there is an isomorphism
-          <m>\phi: {\mathbb Q}(\sqrt{2}\, ) \rightarrow {\mathbb Q}(\sqrt{3}\, )</m> such that <m>\phi(\sqrt{2}\, ) = a</m>.
-        </p>
-      </hint>
-    </exercise>
-
+   
     <exercise number="9">
       <statement>
         <p>
@@ -1033,24 +921,8 @@
       </statement>
     </exercise>
 
-    <exercise number="10">
-      <statement>
-        <p>
-          Define a map <m>\phi : {\mathbb C} \rightarrow {\mathbb M}_2 ({\mathbb R})</m> by
-          <me>
-            \phi( a + bi) =
-            \begin{pmatrix}
-            a &amp; b \\
-            -b &amp; a
-            \end{pmatrix}
-          </me>.
-          Show that <m>\phi</m> is an isomorphism of
-          <m>{\mathbb C}</m> with its image in <m>{\mathbb M}_2 ({\mathbb R})</m>.
-        </p>
-      </statement>
-    </exercise>
 
-    <!-- To do Finish the proof.-->
+
 
     <exercise number="11">
       <statement>
@@ -1125,40 +997,8 @@
       </hint>
     </exercise>
 
-    <exercise number="14">
-      <statement>
-        <p>
-          Use the method of parallel computation outlined in the text to calculate
-          <m>2234 + 4121</m> by dividing the calculation into four separate additions modulo <m>95</m>,
-          <m>97</m>, <m>98</m>, and <m>99</m>.
-        </p>
-      </statement>
-    </exercise>
 
-    <!-- To do Finish the solution.-->
 
-    <exercise number="15">
-      <statement>
-        <p>
-          Explain why the method of parallel computation outlined in the text fails for
-          <m>2134 \cdot 1531</m> if we attempt to break the calculation down into two smaller calculations modulo <m>98</m> and <m>99</m>.
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise number="16">
-      <statement>
-        <p>
-          If <m>R</m> is a field,
-          show that the only two ideals of <m>R</m> are <m>\{ 0 \}</m> and <m>R</m> itself.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          If <m>I \neq \{ 0 \}</m>, show that <m>1 \in I</m>.
-        </p>
-      </hint>
-    </exercise>
 
     <exercise number="17">
       <statement>
@@ -1169,97 +1009,7 @@
       </statement>
     </exercise>
 
-    <exercise number="18">
-      <statement>
-        <p>
-          Let <m>\phi : R \rightarrow S</m> be a ring homomorphism.
-          Prove each of the following statements.
 
-          <ol>
-            <li>
-              <p>
-                If <m>R</m> is a commutative ring,
-                then <m>\phi(R)</m> is a commutative ring.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>\phi( 0 ) = 0</m>.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Let <m>1_R</m> and <m>1_S</m> be the identities for <m>R</m> and <m>S</m>,
-                respectively.
-                If <m>\phi</m> is onto, then <m>\phi(1_R) = 1_S</m>.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                If <m>R</m> is a field and <m>\phi(R) \neq 0</m>,
-                then <m>\phi(R)</m> is a field.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>\phi(a) \phi(b) = \phi(ab) = \phi(ba) = \phi(b) \phi(a)</m>.
-        </p>
-      </hint>
-    </exercise>
-
-    <exercise number="19">
-      <statement>
-        <p>
-          Prove that the associative law for multiplication and the distributive laws hold in <m>R/I</m>.
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise number="20">
-      <statement>
-        <p>
-          Prove the Second Isomorphism Theorem for rings: Let <m>I</m> be a subring of a ring <m>R</m>  and  <m>J</m> an ideal in <m>R</m>.
-          Then <m>I \cap J</m> is an ideal in <m>I</m> and
-          <me>
-            I / I \cap J \cong I + J /J
-          </me>.
-        </p>
-      </statement>
-    </exercise>
-
-    <!-- To do Finish the solution.-->
-
-    <exercise number="21">
-      <statement>
-        <p>
-          Prove the Third Isomorphism Theorem for rings: Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals of <m>R</m>,
-          where <m>J \subset I</m>.
-          Then
-          <me>
-            R/I \cong \frac{R/J}{I/J}
-          </me>.
-        </p>
-      </statement>
-    </exercise>
-
-    <!-- To do Finish the solution.-->
-
-    <exercise number="22">
-      <statement>
-        <p>
-          Prove the Correspondence Theorem: Let <m>I</m> be an ideal of a ring <m>R</m>.
-          Then <m>S \rightarrow S/I</m> is a one-to-one correspondence between the set of subrings <m>S</m> containing <m>I</m> and the set of subrings of <m>R/I</m>.
-          Furthermore,
-          the ideals of <m>R</m> correspond to ideals of <m>R/I</m>.
-        </p>
-      </statement>
-    </exercise>
 
     <!-- To do Finish the solution.-->
 
