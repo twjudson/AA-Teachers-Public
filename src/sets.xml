@@ -291,522 +291,342 @@
 
         </subsection>
 
-        <subsection xml:id="sets-subsection-cartesian-products" permid="pxV">
+        <subsection xml:id="sets-subsection-cartesian-products">
             <title>Cartesian Products and Mappings</title>
-      <p permid="Spm">
-        Given sets <m>A</m> and <m>B</m>,
-        we can define a new set <m>A \times B</m>,
-        called the <term>Cartesian product</term>
-        of <m>A</m> and <m>B</m>,
-        as a set of ordered pairs.
-        That is,
 
-        <notation>
-          <usage>A \times B</usage>
-          <description>Cartesian product of sets <m>A</m> and <m>B</m></description>
-        </notation>
+            <p>Given sets <m>A</m> and <m>B</m>,we can define a new set <m>A \times B</m>,called the <term>Cartesian product</term>
+            of <m>A</m> and <m>B</m>,as a set of ordered pairs. That is,
+            <notation>
+            <usage>A \times B</usage>
+            <description>Cartesian product of sets <m>A</m> and <m>B</m></description>
+            </notation>
+                <me>A \times B = \{ (a,b) : a \in A \text{ and } b \in B \}.</me></p>
 
-        <me permid="zQj">
-          A \times B = \{ (a,b) : a \in A \text{ and } b \in B \}
-        </me>.
-      </p>
+            <example xml:id="example-sets-cartesian-products">
+                <p>If <m>A = \{ x, y \}</m>, <m>B = \{ 1, 2, 3 \}</m>, and <m>C = \emptyset</m>, then <m>A \times B</m> is the set
+                    <me>\{ (x, 1), (x, 2), (x, 3), (y, 1), (y, 2), (y, 3) \}</me>
+                and
+                    <me>A \times C = \emptyset.</me></p>
+            </example>
 
-      <example xml:id="example-sets-cartesian-products" permid="cek">
-        <p permid="ssO">
-          If <m>A = \{ x, y \}</m>, <m>B = \{ 1, 2, 3 \}</m>,
-          and <m>C = \emptyset</m>, then <m>A \times B</m> is the set
-          <me permid="fXs">
-            \{ (x, 1), (x, 2), (x, 3), (y, 1), (y, 2), (y, 3) \}
-          </me>
-          and
-          <me permid="MeB">
-            A \times C = \emptyset
-          </me>.
-        </p>
-      </example>
+            <p>We define the <term>Cartesian product of <m>n</m> sets</term> to be
+                <me>A_1 \times \cdots \times A_n = \{ (a_1, \ldots, a_n): a_i \in A_i \text{ for } i = 1, \ldots, n \}.</me>
+            If <m>A = A_1 = A_2 = \cdots = A_n</m>, we often write <m>A^n</m> for <m>A \times \cdots \times A</m> (where <m>A</m> would be written <m>n</m> times).
+            <notation>
+            <usage>A^n</usage>
+            <description><m>A \times \cdots \times A</m> (<m>n</m> times)</description>
+            </notation>
+            For example, the set <m>{\mathbb R}^3</m> consists of all of 3-tuples of real numbers.</p>
 
-      <p permid="ywv">
-        We define the <term>Cartesian product of <m>n</m> sets</term> to be
-        <me permid="slK">
-          A_1 \times \cdots \times A_n = \{ (a_1, \ldots, a_n): a_i \in A_i \text{ for } i = 1, \ldots, n \}
-        </me>.
-        If <m>A = A_1 = A_2 = \cdots = A_n</m>,
-        we often write <m>A^n</m> for <m>A \times \cdots \times A</m>
-        (where <m>A</m> would be written <m>n</m> times).
-
-        <notation>
-          <usage>A^n</usage>
-          <description><m>A \times \cdots \times A</m> (<m>n</m> times)</description>
-        </notation>
-
-        For example,
-        the set <m>{\mathbb R}^3</m> consists of all of 3-tuples of real numbers.
-      </p>
-
-      <p permid="eDE">
-        Subsets of <m>A \times B</m> are called <term>relations</term>.
-        We will define a  <term>mapping</term><idx><h>Mapping</h><see>Function</see></idx> or
-        <term>function</term><idx><h>Function</h><h>definition of</h></idx>
-        <m>f \subset A \times B</m> from a set <m>A</m> to a set <m>B</m> to be the special type of relation where
-        <m>(a, b) \in f</m> if for every element <m>a \in A</m> there exists a unique element <m>b \in B</m>.
-        Another way of saying this is that for every element in <m>A</m>,
-        <m>f</m> assigns a unique element in <m>B</m>.
-        We usually write <m>f:A \rightarrow B</m> or <m>A \stackrel{f}{\rightarrow} B</m>.
-        Instead of writing down ordered pairs  <m>(a,b) \in A \times B</m>,
-        we write <m>f(a) = b</m> or <m>f : a \mapsto b</m>.
-        The set  <m>A</m> is called the
-        <term>domain</term><idx><h>Function</h><h>domain of</h></idx> of <m>f</m> and
-        <me permid="YsT">
-          f(A) = \{ f(a) : a \in A \} \subset B
-        </me>
-        is called the <term>range</term>
-            <idx><h>Function</h><h>range of</h></idx>
-        or <term>image</term> of <m>f</m>.
-        We can think of the elements in the function's domain as input values and the elements in the function's range as output values.
-      </p>
+            <p>Subsets of <m>A \times B</m> are called <term>relations</term>. We will define a  <term>mapping</term><idx><h>Mapping</h><see>Function</see></idx> or
+            <term>function</term><idx><h>Function</h><h>definition of</h></idx> <m>f \subset A \times B</m> from a set <m>A</m> to a set <m>B</m> to be the special type of relation where <m>(a, b) \in f</m> if for every element <m>a \in A</m> there exists a unique element <m>b \in B</m>. Another way of saying this is that for every element in <m>A</m>, <m>f</m> assigns a unique element in <m>B</m>. We usually write <m>f:A \rightarrow B</m> or <m>A \stackrel{f}{\rightarrow} B</m>.
+            Instead of writing down ordered pairs  <m>(a,b) \in A \times B</m>, we write <m>f(a) = b</m> or <m>f : a \mapsto b</m>. The set  <m>A</m> is called the
+            <term>domain</term><idx><h>Function</h><h>domain of</h></idx> of <m>f</m> and
+                <me>f(A) = \{ f(a) : a \in A \} \subset B</me>
+            is called the <term>range</term> <idx><h>Function</h><h>range of</h></idx> or <term>image</term> of <m>f</m>. We can think of the elements in the function's domain as input values and the elements in the function's range as output values.</p>
 
 
 
-      <example xml:id="example-sets-mappings" permid="Ilt">
-        <p permid="YzX">
-          Suppose <m>A = \{1, 2, 3 \}</m> and <m>B = \{a, b, c \}</m>.
-          In <xref ref="figure-sets-mappings"/> we define relations <m>f</m> and <m>g</m> from <m>A</m> to <m>B</m>.
-          The relation <m>f</m> is a mapping,
-          but <m>g</m> is not because <m>1 \in A</m> is not assigned to a unique element in <m>B</m>;
-          that is, <m>g(1) = a</m> and <m>g(1) = b</m>.
-        </p>
+            <example xml:id="example-sets-mappings">
+                <p>Suppose <m>A = \{1, 2, 3 \}</m> and <m>B = \{a, b, c \}</m>. In <xref ref="figure-sets-mappings"/> we define relations <m>f</m> and <m>g</m> from <m>A</m> to <m>B</m>. The relation <m>f</m> is a mapping, but <m>g</m> is not because <m>1 \in A</m> is not assigned to a unique element in <m>B</m>; that is, <m>g(1) = a</m> and <m>g(1) = b</m>.</p>
 
-        <figure xml:id="figure-sets-mappings" permid="EHg">
-          <caption>Mappings and relations</caption>
-            <!-- Changed the figure to a tikz diagram - TWJ 5/4/2010 -->
-          <image width="60%" xml:id="sets-mappings" permid="JTP">
-
-            <latex-image>
+                <figure xml:id="figure-sets-mappings">
+                <caption>Mappings and relations</caption>
+                <image width="60%" xml:id="sets-mappings">
+                <latex-image>
                 <xi:include href="tikz/sets-mappings.tex" parse="text"/>
-            </latex-image>
-          </image>
-            <!-- Changed the caption to avoid confusion -->
-            <!--  Suggested by B. Torrence.  TWJ 10/1/2014 -->
-        </figure>
-      </example>
+                </latex-image>
+                </image>
+                </figure>
 
-      <p permid="KKN">
-        Given a function <m>f : A \rightarrow B</m>,
-        it is often possible to write a list describing what the function does to each specific element in the domain.
-        However, not all functions can be described in this manner.
-        For example,
-        the function <m>f: {\mathbb R} \rightarrow {\mathbb R}</m> that sends each real number to its cube is a mapping that must be described by writing
-        <m>f(x) = x^3</m> or <m>f:x \mapsto x^3</m>.
-      </p>
+            </example>
 
-      <p permid="qRW">
-        Consider the relation <m>f : {\mathbb Q} \rightarrow {\mathbb Z}</m> given by <m>f(p/q) = p</m>.
-        We know that <m>1/2 = 2/4</m>,
-        but is <m>f(1/2) = 1</m> or <m>2</m>?
-        This relation cannot be a mapping because it is not well-defined.
-        A relation is <term>well-defined</term>
-            <idx><h>Well-defined map</h></idx>
-        if each element in the domain is assigned to a
-        <em>unique</em> element in the range.
-      </p>
 
-      <p permid="WZf">
-        If <m>f:A \rightarrow B</m> is a map and the image of <m>f</m> is <m>B</m>,
-        i.e., <m>f(A) = B</m>, then <m>f</m> is said to be <term>onto</term>
-            <idx><h>Function</h><h>onto</h></idx>
-        or <term>surjective</term>.
-            <idx><h>Function</h><h>surjective</h></idx>
-        In other words,
-        if there exists an <m>a \in A</m> for each <m>b \in B</m> such that
-        <m>f(a) = b</m>, then <m>f</m> is onto.
-        A map is <term>one-to-one</term><idx><h>Function</h><h>one-to-one</h></idx> or
-        <term>injective</term><idx><h>Function</h><h>injective</h></idx> if
-        <m>a_1 \neq a_2</m> implies <m>f(a_1) \neq f(a_2)</m>.
-        Equivalently, a function is one-to-one if
-        <m>f(a_1) = f(a_2)</m> implies <m>a_1 = a_2</m>.
-        A map that is both one-to-one and onto is called <term>bijective</term>.
-            <idx><h>Function</h><h>bijective</h></idx>
-      </p>
-            <!-- Added explanation for onto map - TWJ 1/25/2011 -->
-      <example xml:id="example-sets-one-to-one-onto" permid="osC">
-        <p permid="kOp">
-          Let <m>f:{\mathbb Z} \rightarrow {\mathbb Q}</m> be defined by <m>f(n) = n/1</m>.
-          Then <m>f</m> is one-to-one but not onto.
-          Define <m>g : {\mathbb Q} \rightarrow {\mathbb Z}</m> by
-          <m>g(p/q) = p</m> where <m>p/q</m> is a rational number expressed in its lowest terms with a positive denominator.
-          The function <m>g</m> is onto but not one-to-one.
-        </p>
-      </example>
+            <p>Given a function <m>f : A \rightarrow B</m>, it is often possible to write a list describing what the function does to each specific element in the domain. However, not all functions can be described in this manner. For example, the function <m>f: {\mathbb R} \rightarrow {\mathbb R}</m> that sends each real number to its cube is a mapping that must be described by writing <m>f(x) = x^3</m> or <m>f:x \mapsto x^3</m>.</p>
 
-      <p permid="Dgo">
-        Given two functions,
-        we can construct a new function by using the range of the first function as the domain of the second function.
-        Let <m>f : A \rightarrow B</m> and <m>g : B \rightarrow C</m> be mappings.
-        Define a new map,
-        the <term>composition</term><idx><h>Function</h><h>composition of</h></idx> of <m>f</m> and <m>g</m> from <m>A</m> to <m>C</m>,
-        by <m>(g \circ f)(x) = g(f(x))</m>.
-      </p>
+            <p>Consider the relation <m>f : {\mathbb Q} \rightarrow {\mathbb Z}</m> given by <m>f(p/q) = p</m>. We know that <m>1/2 = 2/4</m>, but is <m>f(1/2) = 1</m> or <m>2</m>? This relation cannot be a mapping because it is not well-defined. A relation is <term>well-defined</term> <idx><h>Well-defined map</h></idx> if each element in the domain is assigned to a <em>unique</em> element in the range.</p>
 
-      <figure xml:id="figure-sets-composition" permid="PuG">
-        <caption>Composition of maps</caption>
-            <!-- Changed the figure to a tikz diagram - TWJ 5/4/2010 -->
-        <image width="90%" xml:id="sets-composition" permid="qaY">
+            <p>If <m>f:A \rightarrow B</m> is a map and the image of <m>f</m> is <m>B</m>, i.e., <m>f(A) = B</m>, then <m>f</m> is said to be <term>onto</term> <idx><h>Function</h><h>onto</h></idx> or <term>surjective</term>. <idx><h>Function</h><h>surjective</h></idx> In other words, if there exists an <m>a \in A</m> for each <m>b \in B</m> such that <m>f(a) = b</m>, then <m>f</m> is onto. A map is <term>one-to-one</term><idx><h>Function</h><h>one-to-one</h></idx> or <term>injective</term><idx><h>Function</h><h>injective</h></idx> if <m>a_1 \neq a_2</m> implies <m>f(a_1) \neq f(a_2)</m>. Equivalently, a function is one-to-one if <m>f(a_1) = f(a_2)</m> implies <m>a_1 = a_2</m>. A map that is both one-to-one and onto is called <term>bijective</term>. <idx><h>Function</h><h>bijective</h></idx></p>
 
-            <latex-image>
-                <xi:include href="tikz/sets-composition.tex" parse="text"/>
-            </latex-image>
-        </image>
 
-      </figure>
+            <example xml:id="example-sets-one-to-one-onto">
+                <p>Let <m>f:{\mathbb Z} \rightarrow {\mathbb Q}</m> be defined by <m>f(n) = n/1</m>. Then <m>f</m> is one-to-one but not onto. Define <m>g : {\mathbb Q} \rightarrow {\mathbb Z}</m> by<m>g(p/q) = p</m> where <m>p/q</m> is a rational number expressed in its lowest terms with a positive denominator. The function <m>g</m> is onto but not one-to-one.</p>
+            </example>
 
-      <example xml:id="example-sets-composition" permid="UzL">
-        <p permid="QVy">
-          Consider the functions <m>f: A \rightarrow B</m> and
-          <m>g: B \rightarrow C</m> that are defined in <xref ref="figure-sets-composition"/>
-          (top).
-          The composition of these functions,
-          <m>g \circ f: A \rightarrow C</m>,
-          is defined in <xref ref="figure-sets-composition"/>
-          (bottom).
-        </p>
-      </example>
-            <!-- Changed figure references.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
-      <example xml:id="example-sets-composition-noncommute" permid="AGU">
-        <p permid="xcH">
-          Let <m>f(x) = x^2</m> and <m>g(x) = 2x + 5</m>.
-          Then
-          <me permid="EAc">
-            (f \circ g)(x) = f(g(x)) = (2x + 5)^2 = 4x^2 + 20x + 25
-          </me>
-          and
-          <me permid="kHl">
-            (g \circ f)(x) = g(f(x)) = 2x^2 + 5
-          </me>.
-          In general, order makes a difference;
-          that is, in most cases <m>f \circ g \neq g \circ f</m>.
-        </p>
-      </example>
+            <p>Given two functions, we can construct a new function by using the range of the first function as the domain of the second function. Let <m>f : A \rightarrow B</m> and <m>g : B \rightarrow C</m> be mappings. Define a new map, the <term>composition</term><idx><h>Function</h><h>composition of</h></idx> of <m>f</m> and <m>g</m> from <m>A</m> to <m>C</m>, by <m>(g \circ f)(x) = g(f(x))</m>.</p>
 
-      <example xml:id="example-sets-composition-commute" permid="MVm">
-        <p permid="djQ">
-          Sometimes it is the case that <m>f \circ g= g \circ f</m>.
-          Let <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}</m>.
-          Then
-          <me permid="QOu">
-            (f \circ g )(x) = f(g(x)) = f( \sqrt[3]{x}\, ) = (\sqrt[3]{x}\, )^3 = x
-          </me>
-          and
-          <me permid="wVD">
-            (g \circ f )(x) = g(f(x)) = g( x^3) = \sqrt[3]{ x^3} = x
-          </me>.
-        </p>
-      </example>
 
-      <example xml:id="example-sets-linear-map" permid="tcv">
-        <p permid="JqZ">
-          Given a <m>2 \times 2</m> matrix
-          <me permid="dcM">
-            A =
-            \begin{pmatrix}
-            a &amp; b \\
-            c &amp; d
-            \end{pmatrix}
-          </me>,
-          we can define a map <m>T_A : {\mathbb R}^2 \rightarrow {\mathbb R}^2</m> by
-          <me permid="JjV">
-            T_A (x,y) = (ax + by, cx +dy)
-          </me>
-          for <m>(x,y)</m> in <m>{\mathbb R}^2</m>.
-          This is actually matrix multiplication; that is,
-          <me permid="pre">
-            \begin{pmatrix}
-            a &amp; b \\
-            c &amp; d
-            \end{pmatrix}
-            \begin{pmatrix}
-            x \\ y
-            \end{pmatrix}
-            =
-            \begin{pmatrix}
-            ax + by \\
-            cx +dy
-            \end{pmatrix}
-          </me>.
-          Maps from <m>{\mathbb R}^n</m> to
-          <m>{\mathbb R}^m</m> given by matrices are called <term>linear maps</term>
-          or <term>linear transformations</term>.
-              <idx><h>Linear transformation</h><h>definition of</h></idx>
-        </p>
-      </example>
 
-      <example xml:id="example-sets-permutation" permid="ZjE">
-        <p permid="pyi">
-          Suppose that <m>S = \{ 1,2,3  \}</m>.
-          Define a map <m>\pi :S\rightarrow S</m> by
-          <me permid="Vyn">
-            \pi( 1 )  = 2, \qquad \pi( 2 )  = 1, \qquad \pi( 3 )  = 3
-          </me>.
-          This is a bijective map.
-          An alternative way to  write <m>\pi</m> is
-          <me permid="BFw">
-            \begin{pmatrix}
-            1 &amp; 2 &amp; 3 \\
-            \pi(1) &amp; \pi(2) &amp; \pi(3)
-            \end{pmatrix}
-            =
-            \begin{pmatrix}
-            1 &amp; 2 &amp; 3 \\
-            2 &amp; 1 &amp; 3
-            \end{pmatrix}
-          </me>.
-          For any set <m>S</m>,
-          a one-to-one and onto mapping <m>\pi : S \rightarrow S</m> is called a
-          <term>permutation</term><idx><h>Permutation</h><h>definition of</h></idx> of <m>S</m>.
-        </p>
-      </example>
+            <figure xml:id="figure-sets-composition" permid="PuG">
+                <caption>Composition of maps</caption>
+                <image width="90%" xml:id="sets-composition" permid="qaY">
+                <latex-image>
+                    <xi:include href="tikz/sets-composition.tex" parse="text"/>
+                </latex-image>
+                </image>
+            </figure>
 
-      <theorem permid="PPS">
-        <statement>
-          <p permid="buD">
-            Let <m>f : A \rightarrow B</m>,
-            <m>g : B \rightarrow C</m>, and <m>h : C \rightarrow D</m>.
-            Then
+            <example xml:id="example-sets-composition">
+                <p>Consider the functions <m>f: A \rightarrow B</m> and <m>g: B \rightarrow C</m> that are defined in <xref ref="figure-sets-composition"/> (top). The composition of these functions, <m>g \circ f: A \rightarrow C</m>, is defined in <xref ref="figure-sets-composition"/> (bottom).</p>
+            </example>
 
-            <ol permid="bnm">
-              <li permid="oly">
-                <p permid="yYY">
-                  The composition of mappings is associative;
-                  that is, <m>(h \circ g) \circ f = h \circ (g \circ f)</m>;
-                </p>
-              </li>
+            <example xml:id="example-sets-composition-noncommute">
+                <p>Let <m>f(x) = x^2</m> and <m>g(x) = 2x + 5</m>. Then
+                    <me>(f \circ g)(x) = f(g(x)) = (2x + 5)^2 = 4x^2 + 20x + 25</me>
+                and
+                    <me>(g \circ f)(x) = g(f(x)) = 2x^2 + 5.</me>
+                In general, order makes a difference; that is, in most cases <m>f \circ g \neq g \circ f</m>.</p>
+            </example>
 
-              <li permid="UsH">
-                <p permid="fgh">
-                  If <m>f</m> and <m>g</m> are both one-to-one,
-                  then the mapping <m>g \circ f</m> is one-to-one;
-                </p>
-              </li>
+            <example xml:id="example-sets-composition-commute">
+                <p>Sometimes it is the case that <m>f \circ g= g \circ f</m>. Let <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}</m>. Then
+                    <me>(f \circ g )(x) = f(g(x)) = f( \sqrt[3]{x}\, ) = (\sqrt[3]{x}\, )^3 = x</me>
+                and
+                    <me>(g \circ f )(x) = g(f(x)) = g( x^3) = \sqrt[3]{ x^3} = x.</me></p>
+            </example>
 
-              <li permid="AzQ">
-                <p permid="Lnq">
-                  If <m>f</m> and <m>g</m> are both onto,
-                  then the mapping <m>g \circ f</m> is onto;
-                </p>
-              </li>
+            <example xml:id="example-sets-linear-map">
+                <p>Given a <m>2 \times 2</m> matrix
+                    <me>A =
+                    \begin{pmatrix}
+                    a &amp; b \\
+                    c &amp; d
+                    \end{pmatrix},</me>
+                we can define a map <m>T_A : {\mathbb R}^2 \rightarrow {\mathbb R}^2</m> by
+                    <me>T_A (x,y) = (ax + by, cx +dy)</me>
+                for <m>(x,y)</m> in <m>{\mathbb R}^2</m>. This is actually matrix multiplication; that is,
+                    <me>\begin{pmatrix}
+                    a &amp; b \\
+                    c &amp; d
+                    \end{pmatrix}
+                    \begin{pmatrix}
+                    x \\ y
+                    \end{pmatrix}
+                    =
+                    \begin{pmatrix}
+                    ax + by \\
+                    cx +dy
+                    \end{pmatrix}.</me>
+                Maps from <m>{\mathbb R}^n</m> to <m>{\mathbb R}^m</m> given by matrices are called <term>linear maps</term> or <term>linear transformations</term>.
+                <idx><h>Linear transformation</h><h>definition of</h></idx></p>
+            </example>
 
-              <li permid="gGZ">
-                <p permid="ruz">
-                  If <m>f</m> and <m>g</m> are bijective,
-                  then so is <m>g \circ f</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
+            <example xml:id="example-sets-permutation">
+                <p>Suppose that <m>S = \{ 1,2,3  \}</m>. Define a map <m>\pi :S\rightarrow S</m> by
+                    <me>\pi( 1 )  = 2, \qquad \pi( 2 )  = 1, \qquad \pi( 3 )  = 3.</me>
+                This is a bijective map. An alternative way to  write <m>\pi</m> is
+                    <me>\begin{pmatrix}
+                    1 &amp; 2 &amp; 3 \\
+                    \pi(1) &amp; \pi(2) &amp; \pi(3)
+                    \end{pmatrix}
+                    =
+                    \begin{pmatrix}
+                    1 &amp; 2 &amp; 3 \\
+                    2 &amp; 1 &amp; 3
+                    \end{pmatrix}.</me>
+                For any set <m>S</m>, a one-to-one and onto mapping <m>\pi : S \rightarrow S</m> is called a <term>permutation</term><idx><h>Permutation</h><h>definition of</h></idx> of <m>S</m>.</p>
+            </example>
 
-        <proof permid="nXd">
-          <p permid="epj">
-            We will prove (1) and (3).
-            Part (2) is left as an exercise.
-            Part (4) follows directly from (2) and (3).
-          </p>
+            <theorem>
+                <statement>
+                <p>Let <m>f : A \rightarrow B</m>, <m>g : B \rightarrow C</m>, and <m>h : C \rightarrow D</m>. Then
+                    <ol>
 
-          <p permid="Kws">
-            (1) We must show that
-            <me permid="hMF">
-              h \circ (g \circ f) = (h \circ g) \circ f
-            </me>.
-            For <m>a \in A</m> we have
-            <md permid="NTO">
-              <mrow>(h \circ (g \circ f))(a) &amp; = h((g \circ f)(a))</mrow>
-              <mrow>&amp; = h(g(f(a)))</mrow>
-              <mrow>&amp; = (h \circ g)(f(a))</mrow>
-              <mrow>&amp; = ((h \circ g) \circ f)(a)</mrow>
-            </md>.
-          </p>
+                        <li><p>The composition of mappings is associative; that is, <m>(h \circ g) \circ f = h \circ (g \circ f)</m>;</p></li>
 
-          <p permid="qDB">
-            (3) Assume that <m>f</m> and <m>g</m> are both onto functions.
-            Given <m>c \in C</m>,
-            we must show that there exists an <m>a \in A</m> such that <m>(g \circ f)(a) = g(f(a)) = c</m>.
-            However, since <m>g</m> is onto,
-            there is an element <m>b \in B</m> such that <m>g(b) = c</m>.
-            Similarly, there is an <m>a \in A</m> such that <m>f(a) = b</m>.
-            Accordingly,
-            <me permid="uaX">
-              (g \circ f)(a) = g(f(a)) = g(b) = c
-            </me>.
-          </p>
-        </proof>
-      </theorem>
+                        <li><p>If <m>f</m> and <m>g</m> are both one-to-one, then the mapping <m>g \circ f</m> is one-to-one;</p></li>
 
-      <p permid="jnx">
-        If <m>S</m> is any set, we will use <m>id_S</m> or <m>id</m> to denote the
-        <term>identity mapping</term>
-            <idx><h>Function</h><h>identity</h></idx>
-        from <m>S</m> to itself.
-        Define this map by <m>id(s) = s</m> for all <m>s \in S</m>.
-        A map <m>g: B \rightarrow A</m> is an
-        <term>inverse mapping</term>
-        of <m>f: A \rightarrow B</m> if
-        <m>g \circ f = id_A</m> and <m>f \circ g = id_B</m>;
-        in other words, the inverse function of a function simply
-        <q>undoes</q> the function.
-        A map is said to be <term>invertible</term><idx><h>Function</h><h>invertible</h></idx> if it has an inverse.
-        We usually write <m>f^{-1}</m> for the inverse of <m>f</m>.
+                        <li><p>If <m>f</m> and <m>g</m> are both onto, then the mapping <m>g \circ f</m> is onto;</p></li>
 
-        <notation>
-          <usage>id</usage>
-          <description>identity mapping</description>
-        </notation>
+                        <li><p>If <m>f</m> and <m>g</m> are bijective, then so is <m>g \circ f</m>.</p></li>
 
-        <notation>
-          <usage>f^{-1}</usage>
-          <description>inverse of the function <m>f</m></description>
-        </notation>
+                    </ol></p>
+                </statement>
+                <proof>
+                    <p>We will prove (1) and (3). Part (2) is left as an exercise. Part (4) follows directly from (2) and (3).</p>
 
-      </p>
+                    <p>(1) We must show that
+                        <me>h \circ (g \circ f) = (h \circ g) \circ f.</me>
+                    For <m>a \in A</m> we have
+                        <md>
+                            <mrow>(h \circ (g \circ f))(a) &amp; = h((g \circ f)(a))</mrow>
+                            <mrow>&amp; = h(g(f(a)))</mrow>
+                            <mrow>&amp; = (h \circ g)(f(a))</mrow>
+                            <mrow>&amp; = ((h \circ g) \circ f)(a).</mrow>
+                        </md></p>
 
-      <example xml:id="example-sets-inverse-function" permid="FqN">
-        <p permid="VFr">
-          The function <m>f(x) = x^3</m> has inverse
-          <m>f^{-1}(x) = \sqrt[3]{x}</m> by <xref ref="example-sets-composition-commute"/>.
-        </p>
-      </example>
+                        <p>(3) Assume that <m>f</m> and <m>g</m> are both onto functions. Given <m>c \in C</m>, we must show that there exists an <m>a \in A</m> such that <m>(g \circ f)(a) = g(f(a)) = c</m>. However, since <m>g</m> is onto, there is an element <m>b \in B</m> such that <m>g(b) = c</m>. Similarly, there is an <m>a \in A</m> such that <m>f(a) = b</m>. Accordingly,
+                            <me>(g \circ f)(a) = g(f(a)) = g(b) = c.</me></p>
+                </proof>
+            </theorem>
 
-      <example xml:id="example-sets-exponential" permid="lxW">
-        <p permid="BMA">
-          The natural logarithm and the exponential functions,
-          <m>f(x) = \ln x</m> and <m>f^{-1}(x) = e^x</m>,
-          are inverses of each other provided that we are careful about choosing domains.
-          Observe that
-          <me permid="aig">
-            f(f^{-1}(x)) = f(e^x) = \ln e^x = x
-          </me>
-          and
-          <me permid="Gpp">
-            f^{-1}(f(x)) = f^{-1}(\ln x) = e^{\ln x} = x
-          </me>
-          whenever composition makes sense.
-        </p>
-      </example>
+<p permid="jnx">
+If <m>S</m> is any set, we will use <m>id_S</m> or <m>id</m> to denote the
+<term>identity mapping</term>
+<idx><h>Function</h><h>identity</h></idx>
+from <m>S</m> to itself.
+Define this map by <m>id(s) = s</m> for all <m>s \in S</m>.
+A map <m>g: B \rightarrow A</m> is an
+<term>inverse mapping</term>
+of <m>f: A \rightarrow B</m> if
+<m>g \circ f = id_A</m> and <m>f \circ g = id_B</m>;
+in other words, the inverse function of a function simply
+<q>undoes</q> the function.
+A map is said to be <term>invertible</term><idx><h>Function</h><h>invertible</h></idx> if it has an inverse.
+We usually write <m>f^{-1}</m> for the inverse of <m>f</m>.
 
-      <example xml:id="example-sets-inverse-matrix" permid="RFf">
-        <p permid="hTJ">
-          Suppose that
-          <me permid="mwy">
-            A =
-            \begin{pmatrix}
-            3 &amp; 1 \\
-            5 &amp; 2
-            \end{pmatrix}
-          </me>.
-          Then <m>A</m> defines a map from
-          <m>{\mathbb R}^2</m> to <m>{\mathbb R}^2</m> by
-          <me permid="SDH">
-            T_A (x,y) = (3x +  y, 5x + 2y)
-          </me>.
-          We can find an inverse map of <m>T_A</m> by simply inverting the matrix <m>A</m>;
-          that is, <m>T_A^{-1} = T_{A^{-1}}</m>.
-          In this example,
-          <me permid="yKQ">
-            A^{-1} =
-            \begin{pmatrix}
-            2  &amp; -1 \\
-            -5 &amp;  3
-            \end{pmatrix};
-          </me>
-          hence, the inverse map is given by
-          <me permid="eRZ">
-            T_A^{-1} (x,y) = (2x -  y, -5x + 3y)
-          </me>.
-          It is easy to check that
-          <me permid="KZi">
-            T^{-1}_A \circ T_A (x,y) = T_A \circ T_A^{-1} (x,y) = (x,y)
-          </me>.
-          Not every map has an inverse.
-          If we consider the map
-          <me permid="rgr">
-            T_B (x,y) = (3x , 0 )
-          </me>
-          given by the matrix
-          <me permid="XnA">
-            B =
-            \begin{pmatrix}
-            3 &amp; 0 \\
-            0 &amp; 0
-            \end{pmatrix}
-          </me>,
-          then an inverse map would have to be of the form
-          <me permid="DuJ">
-            T_B^{-1} (x,y) = (ax + by, cx +dy)
-          </me>
-          and
-          <me permid="jBS">
-            (x,y) = T_B \circ T_B^{-1} (x,y) = (3ax + 3by, 0)
-          </me>
-          for all <m>x</m> and <m>y</m>.
-          Clearly this is  impossible because <m>y</m> might not be <m>0</m>.
-        </p>
-      </example>
+<notation>
+<usage>id</usage>
+<description>identity mapping</description>
+</notation>
 
-      <example xml:id="example-sets-inverse-permutation" permid="xMo">
-        <p permid="OaS">
-          Given the permutation
-          <me permid="PJb">
-            \pi =
-            \begin{pmatrix}
-            1 &amp; 2 &amp; 3 \\
-            2 &amp; 3 &amp; 1
-            \end{pmatrix}
-          </me>
-          on <m>S = \{ 1,2,3 \}</m>, it is easy to see that the permutation defined by
-          <me permid="vQk">
-            \pi^{-1} =
-            \begin{pmatrix}
-            1 &amp; 2 &amp; 3 \\
-            3 &amp; 1 &amp; 2
-            \end{pmatrix}
-          </me>
-          is the inverse of <m>\pi</m>.
-          In fact, any bijective mapping possesses an inverse,
-          as we will see in the next theorem.
-        </p>
-      </example>
+<notation>
+<usage>f^{-1}</usage>
+<description>inverse of the function <m>f</m></description>
+</notation>
 
-      <theorem permid="vXb">
-        <statement>
-          <p permid="HBM">
-            A mapping is invertible if and only if it is both one-to-one and onto.
-          </p>
-        </statement>
+</p>
 
-        <proof permid="Uem">
-          <p permid="WKK">
-            Suppose first that <m>f:A \rightarrow B</m> is invertible with inverse <m>g: B \rightarrow A</m>.
-            Then <m>g \circ f = id_A</m> is the identity map;
-            that is, <m>g(f(a)) = a</m>.
-            If <m>a_1, a_2 \in A</m> with <m>f(a_1) = f(a_2)</m>,
-            then <m>a_1 = g(f(a_1)) = g(f(a_2)) = a_2</m>.
-            Consequently, <m>f</m> is one-to-one.
-            Now suppose that <m>b \in B</m>.
-            To show that <m>f</m> is onto,
-            it is necessary to find an <m>a \in A</m> such that <m>f(a) = b</m>,
-            but <m>f(g(b)) = b</m> with <m>g(b) \in A</m>.
-            Let <m>a = g(b)</m>.
-          </p>
+<example xml:id="example-sets-inverse-function" permid="FqN">
+<p permid="VFr">
+The function <m>f(x) = x^3</m> has inverse
+<m>f^{-1}(x) = \sqrt[3]{x}</m> by <xref ref="example-sets-composition-commute"/>.
+</p>
+</example>
 
-          <p permid="CRT">
-            Conversely, let <m>f</m> be bijective and let <m>b \in B</m>.
-            Since <m>f</m> is onto,
-            there exists an <m>a \in A</m> such that <m>f(a) = b</m>.
-            Because <m>f</m> is one-to-one, <m>a</m> must be unique.
-            Define <m>g</m> by letting <m>g(b) = a</m>.
-            We have now constructed the inverse of <m>f</m>.
-          </p>
-        </proof>
-      </theorem>
-    </subsection>
+<example xml:id="example-sets-exponential" permid="lxW">
+<p permid="BMA">
+The natural logarithm and the exponential functions,
+<m>f(x) = \ln x</m> and <m>f^{-1}(x) = e^x</m>,
+are inverses of each other provided that we are careful about choosing domains.
+Observe that
+<me permid="aig">
+f(f^{-1}(x)) = f(e^x) = \ln e^x = x
+</me>
+and
+<me permid="Gpp">
+f^{-1}(f(x)) = f^{-1}(\ln x) = e^{\ln x} = x
+</me>
+whenever composition makes sense.
+</p>
+</example>
+
+<example xml:id="example-sets-inverse-matrix" permid="RFf">
+<p permid="hTJ">
+Suppose that
+<me permid="mwy">
+A =
+\begin{pmatrix}
+3 &amp; 1 \\
+5 &amp; 2
+\end{pmatrix}
+</me>.
+Then <m>A</m> defines a map from
+<m>{\mathbb R}^2</m> to <m>{\mathbb R}^2</m> by
+<me permid="SDH">
+T_A (x,y) = (3x +  y, 5x + 2y)
+</me>.
+We can find an inverse map of <m>T_A</m> by simply inverting the matrix <m>A</m>;
+that is, <m>T_A^{-1} = T_{A^{-1}}</m>.
+In this example,
+<me permid="yKQ">
+A^{-1} =
+\begin{pmatrix}
+2  &amp; -1 \\
+-5 &amp;  3
+\end{pmatrix};
+</me>
+hence, the inverse map is given by
+<me permid="eRZ">
+T_A^{-1} (x,y) = (2x -  y, -5x + 3y)
+</me>.
+It is easy to check that
+<me permid="KZi">
+T^{-1}_A \circ T_A (x,y) = T_A \circ T_A^{-1} (x,y) = (x,y)
+</me>.
+Not every map has an inverse.
+If we consider the map
+<me permid="rgr">
+T_B (x,y) = (3x , 0 )
+</me>
+given by the matrix
+<me permid="XnA">
+B =
+\begin{pmatrix}
+3 &amp; 0 \\
+0 &amp; 0
+\end{pmatrix}
+</me>,
+then an inverse map would have to be of the form
+<me permid="DuJ">
+T_B^{-1} (x,y) = (ax + by, cx +dy)
+</me>
+and
+<me permid="jBS">
+(x,y) = T_B \circ T_B^{-1} (x,y) = (3ax + 3by, 0)
+</me>
+for all <m>x</m> and <m>y</m>.
+Clearly this is  impossible because <m>y</m> might not be <m>0</m>.
+</p>
+</example>
+
+<example xml:id="example-sets-inverse-permutation" permid="xMo">
+<p permid="OaS">
+Given the permutation
+<me permid="PJb">
+\pi =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+2 &amp; 3 &amp; 1
+\end{pmatrix}
+</me>
+on <m>S = \{ 1,2,3 \}</m>, it is easy to see that the permutation defined by
+<me permid="vQk">
+\pi^{-1} =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+3 &amp; 1 &amp; 2
+\end{pmatrix}
+</me>
+is the inverse of <m>\pi</m>.
+In fact, any bijective mapping possesses an inverse,
+as we will see in the next theorem.
+</p>
+</example>
+
+<theorem permid="vXb">
+<statement>
+<p permid="HBM">
+A mapping is invertible if and only if it is both one-to-one and onto.
+</p>
+</statement>
+
+<proof permid="Uem">
+<p permid="WKK">
+Suppose first that <m>f:A \rightarrow B</m> is invertible with inverse <m>g: B \rightarrow A</m>.
+Then <m>g \circ f = id_A</m> is the identity map;
+that is, <m>g(f(a)) = a</m>.
+If <m>a_1, a_2 \in A</m> with <m>f(a_1) = f(a_2)</m>,
+then <m>a_1 = g(f(a_1)) = g(f(a_2)) = a_2</m>.
+Consequently, <m>f</m> is one-to-one.
+Now suppose that <m>b \in B</m>.
+To show that <m>f</m> is onto,
+it is necessary to find an <m>a \in A</m> such that <m>f(a) = b</m>,
+but <m>f(g(b)) = b</m> with <m>g(b) \in A</m>.
+Let <m>a = g(b)</m>.
+</p>
+
+<p permid="CRT">
+Conversely, let <m>f</m> be bijective and let <m>b \in B</m>.
+Since <m>f</m> is onto,
+there exists an <m>a \in A</m> such that <m>f(a) = b</m>.
+Because <m>f</m> is one-to-one, <m>a</m> must be unique.
+Define <m>g</m> by letting <m>g(b) = a</m>.
+We have now constructed the inverse of <m>f</m>.
+</p>
+</proof>
+</theorem>
+</subsection>
 
     <subsection xml:id="sets-subsection-equivalence-relations" permid="VFe">
       <title>Equivalence Relations and Partitions</title>
