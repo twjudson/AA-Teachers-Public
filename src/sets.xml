@@ -936,207 +936,152 @@
             </hint>
         </exercise>
 
-    <exercise number="25" permid="eDr">
-      <statement>
-        <p permid="rXp">
-          Determine whether or not the following relations are equivalence relations on the given set.
-          If the relation is an equivalence relation,
-          describe the partition given by it.
-          If the relation is not an equivalence relation,
-          state why it fails to be one.
+        <exercise>
+            <statement>
+                <p>Determine whether or not the following relations are equivalence relations on the given set. If the relation is an equivalence relation, describe the partition given by it. If the relation is not an equivalence relation, state why it fails to be one.
+                    <ol cols="2">
 
-          <ol cols="2" permid="kGY">
-            <li permid="jgg">
-              <p permid="mph">
-                <m>x \sim y</m> in <m>{\mathbb R}</m> if <m>x \geq y</m>
-              </p>
-            </li>
+                        <li><p><m>x \sim y</m> in <m>{\mathbb R}</m> if <m>x \geq y</m></p></li>
 
-            <li permid="Pnp">
-              <p permid="Swq">
-                <m>m \sim n</m> in <m>{\mathbb Z}</m> if <m>mn &gt; 0</m>
-              </p>
-            </li>
+                        <li><p><m>m \sim n</m> in <m>{\mathbb Z}</m> if <m>mn &gt; 0</m></p></li>
 
-            <li permid="vuy">
-              <p permid="yDz">
-                <m>x \sim y</m> in <m>{\mathbb R}</m> if <m>|x - y| \leq 4</m>
-              </p>
-            </li>
+                        <li><p><m>x \sim y</m> in <m>{\mathbb R}</m> if <m>|x - y| \leq 4</m></p></li>
 
-            <li permid="bBH">
-              <p permid="eKI">
-                <m>m \sim n</m> in <m>{\mathbb Z}</m> if <m>m \equiv n \pmod{6}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint permid="ZxZ">
-        <p permid="hjP">
-          (a) The relation fails to be symmetric. (b) The relation is not reflexive,
-          since <m>0</m> is not equivalent to itself. (c) The relation is not transitive.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p><m>m \sim n</m> in <m>{\mathbb Z}</m> if <m>m \equiv n \pmod{6}</m></p></li>
 
-    <exercise number="26" permid="KKA">
-      <statement>
-        <p permid="Yey">
-          Define a relation <m>\sim</m> on <m>{\mathbb R}^2</m> by stating that
-          <m>(a, b) \sim (c, d)</m> if and only if <m>a^2 + b^2 \leq c^2 + d^2</m>.
-          Show that <m>\sim</m> is reflexive and transitive but not symmetric.
-        </p>
-      </statement>
-    </exercise>
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) The relation fails to be symmetric. (b) The relation is not reflexive, since <m>0</m> is not equivalent to itself. (c) The relation is not transitive.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="27" permid="qRJ">
-      <statement>
-        <p permid="ElH">
-          Show that an <m>m \times n</m> matrix gives rise to a well-defined map from
-          <m>{\mathbb R}^n</m> to <m>{\mathbb R}^m</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Define a relation <m>\sim</m> on <m>{\mathbb R}^2</m> by stating that <m>(a, b) \sim (c, d)</m> if and only if <m>a^2 + b^2 \leq c^2 + d^2</m>. Show that <m>\sim</m> is reflexive and transitive but not symmetric.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="28" permid="WYS">
-      <statement>
-        <p permid="ksQ">
-          Find the error in the following argument by providing a counterexample.
-          <q>The reflexive property is redundant in the axioms for an equivalence relation.
-          If <m>x \sim y</m>, then <m>y \sim x</m> by the symmetric property.
-          Using the transitive property,
-          we can deduce that <m>x \sim x</m>.</q>
-        </p>
-      </statement>
-      <hint permid="yaJ">
-        <p permid="NqY">
-          Let <m>X = {\mathbb N} \cup \{ \sqrt{2}\, \}</m> and define
-          <m>x \sim y</m> if <m>x + y \in {\mathbb N}</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that an <m>m \times n</m> matrix gives rise to a well-defined map from <m>{\mathbb R}^n</m> to <m>{\mathbb R}^m</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="29" permid="Dgb">
-      <title>Projective Real Line</title>
-      <statement>
-        <p permid="QzZ">
-          Define a relation on <m>{\mathbb R}^2 \setminus \{ (0,0) \}</m> by letting
-          <m>(x_1, y_1) \sim (x_2, y_2)</m> if there exists a nonzero real number <m>\lambda</m> such that <m>(x_1, y_1) = ( \lambda x_2, \lambda y_2)</m>.
-          Prove that <m>\sim</m> defines an equivalence relation on <m>{\mathbb R}^2 \setminus (0,0)</m>.
-          What are the corresponding equivalence classes?
-          This equivalence relation defines the projective line,
-          denoted by <m>{\mathbb P}({\mathbb R}) </m>,
-          which is very important in geometry.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Find the error in the following argument by providing a counterexample. <q>The reflexive property is redundant in the axioms for an equivalence relation. If <m>x \sim y</m>, then <m>y \sim x</m> by the symmetric property. Using the transitive property, we can deduce that <m>x \sim x</m>.</q></p>
+            </statement>
+            <hint>
+                <p>Let <m>X = {\mathbb N} \cup \{ \sqrt{2}\, \}</m> and define <m>x \sim y</m> if <m>x + y \in {\mathbb N}</m>.</p>
+            </hint>
+        </exercise>
 
-  </exercises>
+        <exercise>
+            <title>Projective Real Line</title>
+            <statement>
+                <p>Define a relation on <m>{\mathbb R}^2 \setminus \{ (0,0) \}</m> by letting <m>(x_1, y_1) \sim (x_2, y_2)</m> if there exists a nonzero real number <m>\lambda</m> such that <m>(x_1, y_1) = ( \lambda x_2, \lambda y_2)</m>. Prove that <m>\sim</m> defines an equivalence relation on <m>{\mathbb R}^2 \setminus (0,0)</m>. What are the corresponding equivalence classes? This equivalence relation defines the projective line, denoted by <m>{\mathbb P}({\mathbb R})</m>, which is very important in geometry.</p>
+            </statement>
+        </exercise>
+
+    </exercises>
   <!--Todo Figure out how to include comments in front of the list of references-->
 
-  <references xml:id="sets-references">
-    <title>References and Suggested Readings</title>
+    <references xml:id="sets-references">
+        <title>References and Suggested Readings</title>
         <!--
-		<p>The following list contains references suitable for further reading.  With the exception of [8] and [9] and perhaps [1] and [3], all of these books are more or less  at the same level as this text.  Interesting applications of algebra  can be found in [2], [5], [10], and [11].</p>
--->
-    <biblio type="raw">
-<!-- was [1] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Artin, M.
-      <title>Abstract Algebra</title>. 2nd ed. Pearson, Upper Saddle River, NJ, 2011.
-    </biblio>
+        <p>The following list contains references suitable for further reading.  With the exception of [8] and [9] and perhaps [1] and [3], all of these books are more or less  at the same level as this text.  Interesting applications of algebra  can be found in [2], [5], [10], and [11].</p>
+        -->
+        <biblio type="raw">
+        <!-- was [1] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Artin, M.
+        <title>Abstract Algebra</title>. 2nd ed. Pearson, Upper Saddle River, NJ, 2011.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [2] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Childs, L.
-      <title>A Concrete Introduction to Higher Algebra</title>. 2nd ed. Springer-Verlag, New York, 1995.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [2] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Childs, L.
+        <title>A Concrete Introduction to Higher Algebra</title>. 2nd ed. Springer-Verlag, New York, 1995.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [3] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Dummit, D. and Foote, R.
-      <title>Abstract Algebra</title>. 3rd ed. Wiley, New York, 2003.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [3] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Dummit, D. and Foote, R.
+        <title>Abstract Algebra</title>. 3rd ed. Wiley, New York, 2003.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [2] --><!--Seems to be out of print 5/4/2010 - TWJ -->
-      Ehrlich, G.
-      <title>Fundamental Concepts of Algebra</title>. PWS-KENT, Boston, 1991.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [2] --><!--Seems to be out of print 5/4/2010 - TWJ -->
+        Ehrlich, G.
+        <title>Fundamental Concepts of Algebra</title>. PWS-KENT, Boston, 1991.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [4] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Fraleigh, J. B.
-      <title>A First Course in Abstract Algebra</title>. 7th ed. Pearson, Upper Saddle River, NJ, 2003.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [4] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Fraleigh, J. B.
+        <title>A First Course in Abstract Algebra</title>. 7th ed. Pearson, Upper Saddle River, NJ, 2003.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [5] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Gallian, J. A.
-      <title>Contemporary Abstract Algebra</title>. 7th ed. Brooks/Cole, Belmont, CA, 2009.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [5] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Gallian, J. A.
+        <title>Contemporary Abstract Algebra</title>. 7th ed. Brooks/Cole, Belmont, CA, 2009.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [6] --><!-- I believe that this is not still in print, but it is certainly available through amazon.com 5/4/2010 - TWJ -->
-      Halmos, P.
-      <title>Naive Set Theory</title>.  Springer, New York, 1991. One of the best references for set theory.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [6] --><!-- I believe that this is not still in print, but it is certainly available through amazon.com 5/4/2010 - TWJ -->
+        Halmos, P.
+        <title>Naive Set Theory</title>.  Springer, New York, 1991. One of the best references for set theory.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [7] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Herstein, I. N.
-      <title>Abstract Algebra</title>. 3rd ed. Wiley, New York, 1996.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [7] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Herstein, I. N.
+        <title>Abstract Algebra</title>. 3rd ed. Wiley, New York, 1996.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [8] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Hungerford, T. W.
-      <title>Algebra</title>. Springer, New York, 1974. One
-      of the standard graduate algebra texts.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [8] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Hungerford, T. W.
+        <title>Algebra</title>. Springer, New York, 1974. One of the standard graduate algebra texts.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [9] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Lang, S.
-      <title>Algebra</title>. 3rd ed. Springer, New York, 2002.
-      Another standard graduate text.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [9] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Lang, S.
+        <title>Algebra</title>. 3rd ed. Springer, New York, 2002. Another standard graduate text.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [10] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Lidl, R. and Pilz, G.
-      <title>Applied Abstract Algebra</title>. 2nd ed. Springer,
-      New York, 1998.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [10] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Lidl, R. and Pilz, G.
+        <title>Applied Abstract Algebra</title>. 2nd ed. Springer, New York, 1998.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [11] --><!-- No longer in print 5/4/2010 - TWJ -->
-      Mackiw, G.
-      <title>Applications of Abstract Algebra</title>. Wiley, New York,
-      1985.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [11] --><!-- No longer in print 5/4/2010 - TWJ -->
+        Mackiw, G.
+        <title>Applications of Abstract Algebra</title>. Wiley, New York, 1985.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [12] -->
-      Nickelson, W. K. <!-- Reference updated 5/4/2010 - TWJ -->
-      <title>Introduction to Abstract Algebra</title>. 3rd ed. Wiley, New York,
-      2006.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [12] -->
+        Nickelson, W. K. <!-- Reference updated 5/4/2010 - TWJ -->
+        <title>Introduction to Abstract Algebra</title>. 3rd ed. Wiley, New York, 2006.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [13] --><!-- Reference updated 5/4/2010 - TWJ -->
-      Solow, D.
-      <title>How to Read and Do Proofs</title>. 5th ed. Wiley, New York,
-      2009.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [13] --><!-- Reference updated 5/4/2010 - TWJ -->
+        Solow, D.
+        <title>How to Read and Do Proofs</title>. 5th ed. Wiley, New York, 2009.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [14] --><!-- No longer in print 5/4/2010 - TWJ -->
-      van der Waerden, B. L.
-      <title>A History of Algebra</title>. Springer-Verlag,
-      New York, 1985. An account of the historical development of algebra.
-    </biblio>
-  </references>
+        <biblio type="raw">
+        <!-- was [14] --><!-- No longer in print 5/4/2010 - TWJ -->
+        van der Waerden, B. L.
+        <title>A History of Algebra</title>. Springer-Verlag, New York, 1985. An account of the historical development of algebra.
+        </biblio>
+    </references>
 
 
 </chapter>
