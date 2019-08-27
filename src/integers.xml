@@ -8,203 +8,117 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="integers">
-  <title>The Integers</title>
-  <introduction>
-    <p>
-      The integers are the building blocks of mathematics.
-      In this chapter we will investigate the fundamental properties of the integers,
-      including mathematical induction,
-      the division algorithm, and the Fundamental Theorem of Arithmetic.
-    </p>
-  </introduction>
+    <title>The Integers</title>
 
-  <section xml:id="section-math-induction">
-    <title>Mathematical Induction</title>
-    <p>
-      Suppose we wish to show that
-      <me>
-        1 + 2 + \cdots + n = \frac{n(n + 1)}{2}
-      </me>
-      for any natural number <m>n</m>.
-      This formula is easily  verified for small numbers such as <m>n = 1</m>,
-      <m>2</m>, <m>3</m>, or <m>4</m>,
-      but it is impossible to verify for all natural numbers on a case-by-case basis.
-      To prove the formula true in general,
-      a more generic method is required.
-    </p>
+    <introduction>
+        <p>The integers are the building blocks of mathematics. In this chapter we will investigate the fundamental properties of the integers, including mathematical induction, the division algorithm, and the Fundamental Theorem of Arithmetic.</p>
+    </introduction>
 
-    <p>
-      Suppose we have verified the equation for the first <m>n</m> cases.
-      We will attempt to show that we can generate the formula for the <m>(n + 1)</m>th case from this knowledge.
-      The formula is true for <m>n = 1</m> since
-      <me>
-        1 = \frac{1(1 + 1)}{2}
-      </me>.
-      If we have verified the first <m>n</m> cases, then
-      <md>
-        <mrow>1 + 2 + \cdots + n + (n + 1) &amp; = \frac{n(n + 1)}{2} + n + 1</mrow>
-        <mrow>&amp; = \frac{n^2 + 3n + 2}{2}</mrow>
-        <mrow>&amp; = \frac{(n + 1)[(n + 1) + 1]}{2}</mrow>
-      </md>.
-      This is exactly the formula for the <m>(n + 1)</m>th case.
-    </p>
+    <section xml:id="section-math-induction">
+        <title>Mathematical Induction</title>
 
-    <p>
-      This method of proof is known as
-      <term>mathematical induction</term>.
-      Instead of attempting to verify a statement about some subset <m>S</m> of the positive integers
-      <m>{\mathbb N}</m> on a case-by-case basis,
-      an impossible task if <m>S</m> is an infinite set,
-      we give a specific proof for the smallest integer being considered,
-      followed by a generic argument showing that if the statement holds for a given case,
-      then it must also hold for the next case in the sequence.
-      We summarize mathematical induction in the following axiom.
-    </p>
+        <p>Suppose we wish to show that
+            <me>1 + 2 + \cdots + n = \frac{n(n + 1)}{2}</me>
+        for any natural number <m>n</m>. This formula is easily  verified for small numbers such as <m>n = 1</m>, <m>2</m>, <m>3</m>, or <m>4</m>, but it is impossible to verify for all natural numbers on a case-by-case basis. To prove the formula true in general, a more generic method is required.</p>
 
-    <principle xml:id="principle-integers-first-pmi">
-      <title>First Principle of Mathematical Induction</title>
-      <idx>
-      <h>Induction</h>
-      <h>first principle of</h>
-      </idx>
-      <statement>
-        <p>
-          Let <m>S(n)</m> be a statement about integers for
-          <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>.
-          If for all integers <m>k</m> with <m>k \geq n_0</m>,
-          <m>S(k)</m> implies that <m>S(k+1)</m> is true,
-          then <m>S(n)</m> is true for all integers <m>n</m> greater than or equal to <m>n_0</m>.
-        </p>
-      </statement>
-    </principle>
-        <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
-    <example xml:id="example-integers-induction-greater-than">
-      <p>
-        For all integers <m>n \geq 3</m>, <m>2^n \gt n + 4</m>.
-        Since
-        <me>
-          8 = 2^3 \gt 3 + 4 = 7
-        </me>,
-        the statement is true for <m>n_0 = 3</m>.
-        Assume that <m>2^k \gt k + 4</m> for <m>k \geq 3</m>.
-        Then <m>2^{k + 1} = 2 \cdot 2^{k} \gt 2(k + 4)</m>.
-        But
-        <me>
-          2(k + 4) = 2k + 8 \gt k + 5 = (k + 1) + 4
-        </me>
-        since <m>k</m> is positive.
-        Hence, by induction,
-        the statement holds for all integers <m>n \geq 3</m>.
-      </p>
-    </example>
+        <p>Suppose we have verified the equation for the first <m>n</m> cases. We will attempt to show that we can generate the formula for the <m>(n + 1)</m>th case from this knowledge. The formula is true for <m>n = 1</m> since
+            <me>1 = \frac{1(1 + 1)}{2}</me>.
+        If we have verified the first <m>n</m> cases, then
+            <md>
+                <mrow>1 + 2 + \cdots + n + (n + 1) &amp; = \frac{n(n + 1)}{2} + n + 1</mrow>
+                <mrow>&amp; = \frac{n^2 + 3n + 2}{2}</mrow>
+                <mrow>&amp; = \frac{(n + 1)[(n + 1) + 1]}{2}.</mrow>
+            </md>
+        This is exactly the formula for the <m>(n + 1)</m>th case.</p>
 
-    <example xml:id="example-integers-induction-divisible">
-      <p>
-        Every integer <m>10^{n + 1} + 3 \cdot 10^n + 5</m> is divisible by <m>9</m> for <m>n \in {\mathbb N}</m>.
-        For <m>n = 1</m>,
-        <me>
-          10^{1 + 1} + 3 \cdot 10 + 5 = 135 = 9 \cdot 15
-        </me>
-        is divisible by <m>9</m>.
-        Suppose that <m>10^{k + 1} + 3 \cdot 10^k + 5</m> is divisible by <m>9</m> for <m>k \geq 1</m>.
-        Then
-        <md>
-          <mrow>10^{(k + 1) + 1} + 3 \cdot 10^{k + 1} + 5&amp; = 10^{k + 2} + 3 \cdot 10^{k + 1} + 50 - 45</mrow>
-          <mrow>&amp; = 10 (10^{k + 1} + 3 \cdot 10^{k} + 5) - 45</mrow>
-        </md>
-        is divisible by <m>9</m>.
-      </p>
-    </example>
+        <p>This method of proof is known as <term>mathematical induction</term>. Instead of attempting to verify a statement about some subset <m>S</m> of the positive integers <m>{\mathbb N}</m> on a case-by-case basis, an impossible task if <m>S</m> is an infinite set, we give a specific proof for the smallest integer being considered, followed by a generic argument showing that if the statement holds for a given case, then it must also hold for the next case in the sequence. We summarize mathematical induction in the following axiom.</p>
 
-    <example xml:id="example-integers-binomial-theorem">
-      <p>
-        We will prove the binomial theorem using mathematical induction; that is,
-        <me>
-          (a + b)^n = \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}
-        </me>,
-        where <m>a</m> and <m>b</m> are real numbers,
-        <m>n \in \mathbb{N}</m>, and
-        <me>
-          \binom{n}{k} = \frac{n!}{k! (n - k)!}
-        </me>
-        is the binomial coefficient.
+        <principle xml:id="principle-integers-first-pmi">
+            <title>First Principle of Mathematical Induction</title>
+            <idx>
+            <h>Induction</h>
+            <h>first principle of</h>
+            </idx>
+            <statement>
+                <p>Let <m>S(n)</m> be a statement about integers for <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>. If for all integers <m>k</m> with <m>k \geq n_0</m>, <m>S(k)</m> implies that <m>S(k+1)</m> is true, then <m>S(n)</m> is true for all integers <m>n</m> greater than or equal to <m>n_0</m>.</p>
+            </statement>
+        </principle>
 
-        <notation>
-          <usage>n!</usage>
-          <description><m>n</m> factorial</description>
-        </notation>
+        <example xml:id="example-integers-induction-greater-than">
+            <p>For all integers <m>n \geq 3</m>, <m>2^n \gt n + 4</m>. Since
+                <me>8 = 2^3 \gt 3 + 4 = 7,</me>
+            the statement is true for <m>n_0 = 3</m>. Assume that <m>2^k \gt k + 4</m> for <m>k \geq 3</m>. Then <m>2^{k + 1} = 2 \cdot 2^{k} \gt 2(k + 4)</m>. But
+                <me>2(k + 4) = 2k + 8 \gt k + 5 = (k + 1) + 4</me>
+            since <m>k</m> is positive. Hence, by induction, the statement holds for all integers <m>n \geq 3</m>.</p>
+        </example>
 
-        <notation>
-          <usage>\binom{n}{k}</usage>
-          <description>binomial coefficient <m>n!/(k!(n-k)!)</m></description>
-        </notation>
+        <example xml:id="example-integers-induction-divisible">
+            <p>Every integer <m>10^{n + 1} + 3 \cdot 10^n + 5</m> is divisible by <m>9</m> for <m>n \in {\mathbb N}</m>. For <m>n = 1</m>,
+                <me>10^{1 + 1} + 3 \cdot 10 + 5 = 135 = 9 \cdot 15</me>
+            is divisible by <m>9</m>. Suppose that <m>10^{k + 1} + 3 \cdot 10^k + 5</m> is divisible by <m>9</m> for <m>k \geq 1</m>. Then
+                <md>
+                    <mrow>10^{(k + 1) + 1} + 3 \cdot 10^{k + 1} + 5&amp; = 10^{k + 2} + 3 \cdot 10^{k + 1} + 50 - 45</mrow>
+                    <mrow>&amp; = 10 (10^{k + 1} + 3 \cdot 10^{k} + 5) - 45</mrow>
+                </md>
+            is divisible by <m>9</m>.</p>
+        </example>
 
-        We first show that
-        <me>
-          \binom{n + 1}{k} = \binom{n}{k} + \binom{n}{k - 1}
-        </me>.
-        This result follows from
-        <md>
-          <mrow>\binom{n}{k} + \binom{n}{k - 1} &amp; = \frac{n!}{k!(n - k)!} +\frac{n!}{(k-1)!(n - k + 1)!}</mrow>
-          <mrow>&amp; = \frac{(n + 1)!}{k!(n + 1 - k)!}</mrow>
-          <mrow>&amp; =\binom{n + 1}{k}</mrow>
-        </md>.
-        If <m>n = 1</m>, the binomial theorem is easy to verify.
-        Now assume that the result is true for <m>n</m> greater than or equal to <m>1</m>.
-        Then
-        <md>
-          <mrow>(a + b)^{n + 1} &amp; = (a + b)(a + b)^n</mrow>
-          <mrow>&amp; = (a + b) \left( \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}\right)</mrow>
-          <mrow>&amp; = \sum_{k = 0}^{n} \binom{n}{k} a^{k + 1} b^{n - k} + \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n + 1 - k}</mrow>
-          <mrow>&amp; = a^{n + 1} + \sum_{k = 1}^{n} \binom{n}{k - 1} a^{k} b^{n + 1 - k} + \sum_{k = 1}^{n} \binom{n}{k}  a^k b^{n + 1 - k} + b^{n + 1}</mrow>
-          <mrow>&amp;  = a^{n + 1} + \sum_{k = 1}^{n} \left[ \binom{n}{k - 1} + \binom{n}{k} \right]a^k b^{n + 1 - k} + b^{n + 1}</mrow>
-          <mrow>&amp;  = \sum_{k = 0}^{n + 1}   \binom{n + 1}{k} a^k b^{n + 1- k}</mrow>
-        </md>.
-      </p>
-    </example>
+        <example xml:id="example-integers-binomial-theorem">
+            <p>We will prove the binomial theorem using mathematical induction; that is,
+                <me>(a + b)^n = \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k},</me>
+            where <m>a</m> and <m>b</m> are real numbers, <m>n \in \mathbb{N}</m>, and
+                <me>\binom{n}{k} = \frac{n!}{k! (n - k)!}</me>
+            is the binomial coefficient.
+            <notation>
+            <usage>n!</usage>
+            <description><m>n</m> factorial</description>
+            </notation>
+            <notation>
+            <usage>\binom{n}{k}</usage>
+            <description>binomial coefficient <m>n!/(k!(n-k)!)</m></description>
+            </notation>
+            We first show that
+                <me>\binom{n + 1}{k} = \binom{n}{k} + \binom{n}{k - 1}</me>.
+            This result follows from
+                <md>
+                    <mrow>\binom{n}{k} + \binom{n}{k - 1} &amp; = \frac{n!}{k!(n - k)!} +\frac{n!}{(k-1)!(n - k + 1)!}</mrow>
+                    <mrow>&amp; = \frac{(n + 1)!}{k!(n + 1 - k)!}</mrow>
+                    <mrow>&amp; =\binom{n + 1}{k}.</mrow>
+                </md>
+            If <m>n = 1</m>, the binomial theorem is easy to verify. Now assume that the result is true for <m>n</m> greater than or equal to <m>1</m>. Then
+                <md>
+                    <mrow>(a + b)^{n + 1} &amp; = (a + b)(a + b)^n</mrow>
+                    <mrow>&amp; = (a + b) \left( \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}\right)</mrow>
+                    <mrow>&amp; = \sum_{k = 0}^{n} \binom{n}{k} a^{k + 1} b^{n - k} + \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n + 1 - k}</mrow>
+                    <mrow>&amp; = a^{n + 1} + \sum_{k = 1}^{n} \binom{n}{k - 1} a^{k} b^{n + 1 - k} + \sum_{k = 1}^{n} \binom{n}{k}  a^k b^{n + 1 - k} + b^{n + 1}</mrow>
+                    <mrow>&amp;  = a^{n + 1} + \sum_{k = 1}^{n} \left[ \binom{n}{k - 1} + \binom{n}{k} \right]a^k b^{n + 1 - k} + b^{n + 1}</mrow>
+                    <mrow>&amp;  = \sum_{k = 0}^{n + 1}   \binom{n + 1}{k} a^k b^{n + 1- k}.</mrow>
+                </md></p>
+        </example>
 
-    <p>
-      We have an equivalent statement of the Principle of Mathematical Induction that is often very useful.
-    </p>
+        <p>We have an equivalent statement of the Principle of Mathematical Induction that is often very useful.</p>
 
-    <principle xml:id="principle-integers-second-pmi">
-      <title>Second Principle of Mathematical Induction</title>
-      <idx>
-      <h>Induction</h>
-      <h>second principle of</h>
-      </idx>
-      <statement>
-        <p>
-          Let <m>S(n)</m> be a statement about integers for
-          <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>.
-          If <m>S(n_0), S(n_0 + 1), \ldots, S(k)</m> imply that
-          <m>S(k + 1)</m> for <m>k \geq n_0</m>,
-          then the statement <m>S(n)</m> is true for all integers <m>n \geq n_0</m>.
-        </p>
-      </statement>
-    </principle>
-        <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
-    <p>
-      A nonempty subset <m>S</m> of
-      <m>{\mathbb Z}</m> is <term>well-ordered</term>
-          <idx><h>Well-ordered set</h></idx>
-      if <m>S</m> contains a least element.
-      Notice that the set <m>{\mathbb Z}</m> is not well-ordered since it does not contain a smallest element.
-      However, the natural numbers are well-ordered.
-    </p>
+        <principle xml:id="principle-integers-second-pmi">
+            <title>Second Principle of Mathematical Induction</title>
+            <idx>
+            <h>Induction</h>
+            <h>second principle of</h>
+            </idx>
+            <statement>
+                <p>Let <m>S(n)</m> be a statement about integers for <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>. If <m>S(n_0), S(n_0 + 1), \ldots, S(k)</m> imply that <m>S(k + 1)</m> for <m>k \geq n_0</m>, then the statement <m>S(n)</m> is true for all integers <m>n \geq n_0</m>.</p>
+            </statement>
+        </principle>
 
-    <principle>
-      <title>Principle of Well-Ordering</title>
-      <statement>
-        <p>
-          Every nonempty subset of the natural numbers is well-ordered.
-        </p>
-      </statement>
-    </principle>
+        <p>A nonempty subset <m>S</m> of <m>{\mathbb Z}</m> is <term>well-ordered</term> <idx><h>Well-ordered set</h></idx> if <m>S</m> contains a least element. Notice that the set <m>{\mathbb Z}</m> is not well-ordered since it does not contain a smallest element. However, the natural numbers are well-ordered.</p>
 
-    <p>
-      The Principle of Well-Ordering is equivalent to the Principle of Mathematical Induction.
-    </p>
+        <principle>
+            <title>Principle of Well-Ordering</title>
+            <statement> 
+                <p>Every nonempty subset of the natural numbers is well-ordered.</p>
+            </statement>
+        </principle>
+
+        <p>The Principle of Well-Ordering is equivalent to the Principle of Mathematical Induction.</p>
 
     <lemma xml:id="lemma-integers-smallest-number">
       <statement>
@@ -1191,11 +1105,11 @@
 
 
 
-  <section xml:id="section-integers-euclidean-algorithm-in-the-classroom">
-    <title>Finding the Greatest Common Divisor in the Secondary Classroom</title>
+    <section xml:id="section-integers-euclidean-algorithm-in-the-classroom">
+        <title>Finding the Greatest Common Divisor in the Secondary Classroom</title>
 
-    <p>This appendix will connect the Euclidean algorithm to the high school classroom.</p>
-  </section>
+        <p>This appendix will connect the Euclidean algorithm to the high school classroom.</p>
+    </section>
 
   <references xml:id="integers-references">
     <title>References and Suggested Readings</title>
