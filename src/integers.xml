@@ -217,98 +217,66 @@
             </proof>
         </theorem>
 
-      <corollary xml:id="corollary-integers-coprime">
-        <statement>
-          <p>
-            Let <m>a</m> and <m>b</m> be two integers that are relatively prime.
-            Then there exist integers <m>r</m> and <m>s</m> such that <m>ar + bs = 1</m>.
-          </p>
-        </statement>
-      </corollary>
+        <corollary xml:id="corollary-integers-coprime">
+            <statement>
+                <p>Let <m>a</m> and <m>b</m> be two integers that are relatively prime. Then there exist integers <m>r</m> and <m>s</m> such that <m>ar + bs = 1</m>.</p>
+            </statement>
+        </corollary>
+
     </introduction>
 
     <subsection xml:id="integers-subsection-euclidean-algorithm">
-      <title>The Euclidean Algorithm</title>
-      <p>
-        Among other things, <xref ref="theorem-integers-gcd"/> allows us to compute the greatest common divisor of two integers.
-      </p>
+        <title>The Euclidean Algorithm</title>
+      
+        <p>Among other things, <xref ref="theorem-integers-gcd"/> allows us to compute the greatest common divisor of two integers.</p>
 
-      <example xml:id="example-integers-gcd">
-        <p>
-          Let us compute the greatest common divisor of <m>945</m> and <m>2415</m>.
-          First observe that
-          <md>
-            <mrow>2415 &amp; = 945 \cdot 2 + 525</mrow>
-            <mrow>945 &amp; = 525 \cdot 1 + 420</mrow>
-            <mrow>525 &amp; = 420 \cdot 1 + 105</mrow>
-            <mrow>420 &amp; = 105 \cdot 4 + 0</mrow>
-          </md>.
-          Reversing our steps, <m>105</m> divides <m>420</m>,
-          <m>105</m> divides <m>525</m>,
-          <m>105</m> divides <m>945</m>,
-          and <m>105</m> divides <m>2415</m>.
-          Hence, <m>105</m> divides both <m>945</m> and <m>2415</m>.
-          If <m>d</m> were another common divisor of <m>945</m> and <m>2415</m>,
-          then <m>d</m> would also have to divide <m>105</m>.
-          Therefore, <m>\gcd( 945, 2415 ) = 105</m>.
-        </p>
+        <example xml:id="example-integers-gcd">
+            <p>Let us compute the greatest common divisor of <m>945</m> and <m>2415</m>. First observe that
+                <md>
+                    <mrow>2415 &amp; = 945 \cdot 2 + 525</mrow>
+                    <mrow>945 &amp; = 525 \cdot 1 + 420</mrow>
+                    <mrow>525 &amp; = 420 \cdot 1 + 105</mrow>
+                    <mrow>420 &amp; = 105 \cdot 4 + 0.</mrow>
+                </md>
+            Reversing our steps, <m>105</m> divides <m>420</m>, <m>105</m> divides <m>525</m>, <m>105</m> divides <m>945</m>, and <m>105</m> divides <m>2415</m>. Hence, <m>105</m> divides both <m>945</m> and <m>2415</m>. If <m>d</m> were another common divisor of <m>945</m> and <m>2415</m>, then <m>d</m> would also have to divide <m>105</m>. Therefore, <m>\gcd( 945, 2415 ) = 105</m>.</p>
 
-        <p>
-          If we work backward through the above sequence of equations,
-          we can also obtain numbers <m>r</m> and <m>s</m> such that <m>945 r + 2415 s = 105</m>.
-          Observe that
-          <md>
-            <mrow>105 &amp; = 525 + (-1) \cdot 420</mrow>
-            <mrow>&amp; = 525 + (-1) \cdot [945 + (-1) \cdot 525]</mrow>
-            <mrow>&amp; = 2 \cdot 525 + (-1) \cdot 945</mrow>
-            <mrow>&amp; = 2 \cdot [2415 + (-2) \cdot 945] + (-1) \cdot 945</mrow>
-            <mrow>&amp; = 2 \cdot 2415 + (-5) \cdot 945</mrow>
-          </md>.
-          So <m>r = -5</m> and <m>s= 2</m>.
-          Notice that <m>r</m> and <m>s</m> are not unique,
-          since <m>r = 41</m> and <m>s = -16</m> would also work.
-        </p>
-      </example>
+            <p>If we work backward through the above sequence of equations, we can also obtain numbers <m>r</m> and <m>s</m> such that <m>945 r + 2415 s = 105</m>. Observe that
+                <md>
+                    <mrow>105 &amp; = 525 + (-1) \cdot 420</mrow>
+                    <mrow>&amp; = 525 + (-1) \cdot [945 + (-1) \cdot 525]</mrow>
+                    <mrow>&amp; = 2 \cdot 525 + (-1) \cdot 945</mrow>
+                    <mrow>&amp; = 2 \cdot [2415 + (-2) \cdot 945] + (-1) \cdot 945</mrow>
+                    <mrow>&amp; = 2 \cdot 2415 + (-5) \cdot 945.</mrow>
+                </md>
+            So <m>r = -5</m> and <m>s= 2</m>. Notice that <m>r</m> and <m>s</m> are not unique, since <m>r = 41</m> and <m>s = -16</m> would also work.</p>
+        </example>
 
-      <p>
-        To compute <m>\gcd(a,b) = d</m>,
-        we are using repeated divisions to obtain a decreasing sequence of positive integers <m>r_1 \gt r_2 \gt \cdots \gt r_n = d</m>; that is,
-        <md>
-          <mrow>b &amp; = a q_1 + r_1</mrow>
-          <mrow>a &amp; = r_1 q_2 + r_2</mrow>
-          <mrow>r_1 &amp; = r_2 q_3 + r_3</mrow>
-          <mrow>&amp; \vdots</mrow>
-          <mrow>r_{n - 2} &amp; = r_{n - 1} q_{n} + r_{n}</mrow>
-          <mrow>r_{n - 1} &amp; = r_n q_{n + 1}</mrow>
-        </md>.
-        To find <m>r</m> and <m>s</m> such that <m>ar + bs = d</m>,
-        we begin with this last equation and substitute results obtained from the previous equations:
-        <md>
-          <mrow>d &amp; = r_n</mrow>
-          <mrow>&amp; = r_{n - 2} - r_{n - 1} q_n</mrow>
-          <mrow>&amp; = r_{n - 2} - q_n( r_{n - 3} - q_{n - 1} r_{n - 2} )</mrow>
-          <mrow>&amp; = -q_n r_{n - 3} + ( 1+ q_n q_{n-1} ) r_{n - 2}</mrow>
-          <mrow>&amp; \vdots</mrow>
-          <mrow>&amp; = ra + sb</mrow>
-        </md>.
-        The algorithm that we have just used to find the greatest common divisor <m>d</m> of two integers <m>a</m> and <m>b</m> and to write <m>d</m> as the linear combination of <m>a</m> and <m>b</m> is known as the
-        <term>Euclidean algorithm</term>.
+        <p>To compute <m>\gcd(a,b) = d</m>, we are using repeated divisions to obtain a decreasing sequence of positive integers <m>r_1 \gt r_2 \gt \cdots \gt r_n = d</m>; that is,
+            <md>
+                <mrow>b &amp; = a q_1 + r_1</mrow>
+                <mrow>a &amp; = r_1 q_2 + r_2</mrow>
+                <mrow>r_1 &amp; = r_2 q_3 + r_3</mrow>
+                <mrow>&amp; \vdots</mrow>
+                <mrow>r_{n - 2} &amp; = r_{n - 1} q_{n} + r_{n}</mrow>
+                <mrow>r_{n - 1} &amp; = r_n q_{n + 1}.</mrow>
+            </md>
+        To find <m>r</m> and <m>s</m> such that <m>ar + bs = d</m>, we begin with this last equation and substitute results obtained from the previous equations:
+            <md>
+                <mrow>d &amp; = r_n</mrow>
+                <mrow>&amp; = r_{n - 2} - r_{n - 1} q_n</mrow>
+                <mrow>&amp; = r_{n - 2} - q_n( r_{n - 3} - q_{n - 1} r_{n - 2} )</mrow>
+                <mrow>&amp; = -q_n r_{n - 3} + ( 1+ q_n q_{n-1} ) r_{n - 2}</mrow>
+                <mrow>&amp; \vdots</mrow>
+                <mrow>&amp; = ra + sb.</mrow>
+            The algorithm that we have just used to find the greatest common divisor <m>d</m> of two integers <m>a</m> and <m>b</m> and to write <m>d</m> as the linear combination of <m>a</m> and <m>b</m> is known as the <term>Euclidean algorithm</term>.
             <idx><h>Euclidean algorithm</h></idx>
-            <idx><h>Algorithm</h><h>Euclidean</h></idx>
-      </p>
+            <idx><h>Algorithm</h><h>Euclidean</h></idx></p>
+
     </subsection>
 
     <subsection xml:id="integers-subsection-prime-numbers">
-      <title>Prime Numbers</title>
-      <p>
-        Let <m>p</m> be an integer such that <m>p \gt 1</m>.
-        We say that <m>p</m> is a <term>prime number</term>,
-            <idx><h>Prime integer</h></idx>
-        or simply <m>p</m> is <term>prime</term>,
-        if the only positive numbers that divide <m>p</m> are <m>1</m> and <m>p</m> itself.
-        An integer <m>n \gt 1</m> that is not prime is said to be <term>composite</term>.
-            <idx><h>Composite integer</h></idx>
-      </p>
+        <title>Prime Numbers</title>
+            <p>Let <m>p</m> be an integer such that <m>p \gt 1</m>. We say that <m>p</m> is a <term>prime number</term>, <idx><h>Prime integer</h></idx> or simply <m>p</m> is <term>prime</term>, if the only positive numbers that divide <m>p</m> are <m>1</m> and <m>p</m> itself. An integer <m>n \gt 1</m> that is not prime is said to be <term>composite</term>. <idx><h>Composite integer</h></idx></p>
 
       <lemma xml:id="theorem-integers-prime-divisor">
         <title>Euclid</title>
