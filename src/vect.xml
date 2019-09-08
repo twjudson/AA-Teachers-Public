@@ -375,286 +375,159 @@
             </statement>
         </exercise>
 
-    <exercise xml:id="exercise-vect-linear-transformation">
-      <title>Linear Transformations</title>
-      <statement>
-        <p>
-          Let <m>V</m> and <m>W</m> be vector spaces over a field <m>F</m>,
-          of dimensions <m>m</m> and <m>n</m>, respectively.
-          If <m>T: V \rightarrow W</m> is a map satisfying
-          <md>
-            <mrow>T( u+ v ) &amp; =  T(u ) + T(v)</mrow>
-            <mrow>T( \alpha v ) &amp; =  \alpha T(v)</mrow>
-          </md>
-          for all <m>\alpha \in F</m> and all <m>u, v \in V</m>,
-          then <m>T</m> is called a <term>linear transformation</term>
-          from <m>V</m> into <m>W</m>.
+        <exercise xml:id="exercise-vect-linear-transformation">
+            <title>Linear Transformations</title>
+            <statement>
+                <p>Let <m>V</m> and <m>W</m> be vector spaces over a field <m>F</m>, of dimensions <m>m</m> and <m>n</m>, respectively. If <m>T: V \rightarrow W</m> is a map satisfying
+                    <md>
+                        <mrow>T( u+ v ) &amp; =  T(u ) + T(v)</mrow>
+                        <mrow>T( \alpha v ) &amp; =  \alpha T(v)</mrow>
+                    </md>
+                for all <m>\alpha \in F</m> and all <m>u, v \in V</m>, then <m>T</m> is called a <term>linear transformation</term> from <m>V</m> into <m>W</m>.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                Prove that the <term>kernel</term> of <m>T</m>,
-                <m>\ker(T) = \{ v \in V : T(v) = {\mathbf 0} \}</m>,
-                is a subspace of <m>V</m>.
-                The kernel of <m>T</m> is sometimes called the
-                <term>null space</term> of <m>T</m>.
-              </p>
-            </li>
+                        <li><p>Prove that the <term>kernel</term> of <m>T</m>, <m>\ker(T) = \{ v \in V : T(v) = {\mathbf 0} \}</m>, is a subspace of <m>V</m>. The kernel of <m>T</m> is sometimes called the <term>null space</term> of <m>T</m>.</p></li>
 
-            <li>
-              <p>
-                Prove that the <term>range</term>
-                or <term>range space</term> of <m>T</m>,
-                <m>R(V) = \{ w \in W : T(v) = w \text{ for some } v \in V \}</m>,
-                is a subspace of <m>W</m>.
-              </p>
-            </li>
+                        <li><p>Prove that the <term>range</term> or <term>range space</term> of <m>T</m>, <m>R(V) = \{ w \in W : T(v) = w \text{ for some } v \in V \}</m>, is a subspace of <m>W</m>.</p></li>
 
-            <li>
-              <p>
-                Show that <m>T : V \rightarrow W</m> is injective if and only if <m>\ker(T) = \{ \mathbf 0 \}</m>.
-              </p>
-            </li>
+                        <li><p>Show that <m>T : V \rightarrow W</m> is injective if and only if <m>\ker(T) = \{ \mathbf 0 \}</m>.</p></li>
 
-            <li>
-              <p>
-                Let <m>\{ v_1, \ldots,
-                v_k \}</m> be a basis for the null space of <m>T</m>.
-                We can extend this basis to be a basis <m>\{ v_1, \ldots,
-                v_k, v_{k + 1}, \ldots, v_m\}</m> of <m>V</m>.
-                Why?
-                Prove that <m>\{ T(v_{k + 1}), \ldots, T(v_m) \}</m> is a basis for the range of <m>T</m>.
-                Conclude that the range of <m>T</m> has dimension <m>m - k</m>.
-              </p>
-            </li>
+                        <li><p>Let <m>\{ v_1, \ldots, v_k \}</m> be a basis for the null space of <m>T</m>. We can extend this basis to be a basis <m>\{ v_1, \ldots, v_k, v_{k + 1}, \ldots, v_m\}</m> of <m>V</m>. Why? Prove that <m>\{ T(v_{k + 1}), \ldots, T(v_m) \}</m> is a basis for the range of <m>T</m>. Conclude that the range of <m>T</m> has dimension <m>m - k</m>.</p></li>
 
-            <li>
-              <p>
-                Let <m>\dim V = \dim W</m>.
-                Show that a linear transformation
-                <m>T : V \rightarrow W</m> is injective if and only if it is surjective.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) Let <m>u, v \in \ker(T)</m> and <m>\alpha \in F</m>.
-          Then
-          <md>
-            <mrow>T(u +v) = T(u) + T(v) = 0</mrow>
-            <mrow>T(\alpha v) = \alpha T(v) = \alpha 0 = 0</mrow>
-          </md>.
-          Hence, <m>u + v, \alpha v \in \ker(T)</m>,
-          and <m>\ker(T)</m> is a subspace of <m>V</m>.
-        </p>
+                        <li><p>Let <m>\dim V = \dim W</m>. Show that a linear transformation <m>T : V \rightarrow W</m> is injective if and only if it is surjective.</p></li>
 
-        <p>
-          (c) The statement that <m>T(u) = T(v)</m> is equivalent to <m>T(u-v) = T(u) - T(v) = 0</m>,
-          which is true if and only if <m>u-v = 0</m> or <m>u = v</m>.
-        </p>
-      </hint>
-    </exercise>
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) Let <m>u, v \in \ker(T)</m> and <m>\alpha \in F</m>. Then
+                    <md>
+                        <mrow>T(u +v) = T(u) + T(v) = 0</mrow>
+                        <mrow>T(\alpha v) = \alpha T(v) = \alpha 0 = 0.</mrow>
+                    </md>
+                Hence, <m>u + v, \alpha v \in \ker(T)</m>, and <m>\ker(T)</m> is a subspace of <m>V</m>.</p>
 
-    <exercise>
-      <statement>
-        <p>
-          Let <m>V</m> and <m>W</m> be finite dimensional vector spaces of dimension <m>n</m> over a field <m>F</m>.
-          Suppose that <m>T: V \rightarrow W</m> is a vector space isomorphism.
-          If <m>\{ v_1, \ldots, v_n \}</m> is a basis of <m>V</m>,
-          show that <m>\{ T(v_1), \ldots, T(v_n) \}</m> is a basis of <m>W</m>.
-          Conclude that any vector space over a field <m>F</m> of dimension <m>n</m> is isomorphic to <m>F^n</m>.
-        </p>
-      </statement>
-    </exercise>
+                <p>(c) The statement that <m>T(u) = T(v)</m> is equivalent to <m>T(u-v) = T(u) - T(v) = 0</m>, which is true if and only if <m>u-v = 0</m> or <m>u = v</m>.</p>
+            </hint>
+        </exercise>
 
-    <exercise>
-      <title>Direct Sums</title>
-      <statement>
-        <p>
-          Let <m>U</m> and <m>V</m> be subspaces of a vector space <m>W</m>.
-          The sum of <m>U</m> and <m>V</m>, denoted <m>U + V</m>,
-          is defined to be the set of all vectors of the form <m>u + v</m>,
-          where <m>u \in U</m> and <m>v \in V</m>.
+        <exercise>
+            <statement>
+                <p>Let <m>V</m> and <m>W</m> be finite dimensional vector spaces of dimension <m>n</m> over a field <m>F</m>. Suppose that <m>T: V \rightarrow W</m> is a vector space isomorphism. If <m>\{ v_1, \ldots, v_n \}</m> is a basis of <m>V</m>, show that <m>\{ T(v_1), \ldots, T(v_n) \}</m> is a basis of <m>W</m>. Conclude that any vector space over a field <m>F</m> of dimension <m>n</m> is isomorphic to <m>F^n</m>.</p>
+            </statement>
+        </exercise>
 
-          <ol>
-            <li>
-              <p>
-                Prove that <m>U + V</m> and
-                <m>U \cap V</m> are subspaces of <m>W</m>.
-              </p>
-            </li>
+        <exercise>
+            <title>Direct Sums</title>
+            <statement>
+                <p>Let <m>U</m> and <m>V</m> be subspaces of a vector space <m>W</m>. The sum of <m>U</m> and <m>V</m>, denoted <m>U + V</m>, is defined to be the set of all vectors of the form <m>u + v</m>, where <m>u \in U</m> and <m>v \in V</m>.
+                    <ol>
+            
+                        <li><p>Prove that <m>U + V</m> and <m>U \cap V</m> are subspaces of <m>W</m>.</p></li>
 
-            <li>
-              <p>
-                If <m>U + V = W</m> and <m>U \cap V = {\mathbf 0}</m>,
-                then <m>W</m> is said to be the
-                <term>direct sum.</term> In this case,
-                we write <m>W = U \oplus V</m>.
+                        <li><p>If <m>U + V = W</m> and <m>U \cap V = {\mathbf 0}</m>, then <m>W</m> is said to be the <term>direct sum.</term> In this case, we write <m>W = U \oplus V</m>.
+                        <notation>
+                        <usage>U \oplus V</usage>
+                        <description>direct sum of vector spaces <m>U</m> and <m>V</m></description>
+                        </notation>
+                        Show that every element <m>w \in W</m> can be written uniquely as <m>w = u + v</m>, where <m>u \in U</m> and <m>v \in V</m>.</p></li>
 
-                <notation>
-                  <usage>U \oplus V</usage>
-                  <description>direct sum of vector spaces <m>U</m> and <m>V</m></description>
-                </notation>
+                        <li><p>Let <m>U</m> be a subspace of dimension <m>k</m> of a vector space <m>W</m> of dimension <m>n</m>. Prove that there exists a subspace <m>V</m> of dimension <m>n-k</m> such that <m>W = U \oplus V</m>. Is the subspace <m>V</m> unique?</p></li>
 
-                Show that every element <m>w \in W</m> can be written uniquely as <m>w = u + v</m>,
-                where <m>u \in U</m> and <m>v \in V</m>.
-              </p>
-            </li>
+                        <li><p>If <m>U</m> and <m>V</m> are arbitrary subspaces of a vector space <m>W</m>, show that
+                            <me>\dim( U + V) = \dim U + \dim V - \dim( U \cap V).</me></p></li>
 
-            <li>
-              <p>
-                Let <m>U</m> be a subspace of dimension <m>k</m> of a vector space <m>W</m> of dimension <m>n</m>.
-                Prove that there exists a subspace <m>V</m> of dimension <m>n-k</m> such that <m>W = U \oplus V</m>.
-                Is the subspace <m>V</m> unique?
-              </p>
-            </li>
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) Let <m>u, u' \in U</m> and <m>v, v' \in V</m>. Then
+                    <md>
+                        <mrow>(u + v) + (u' + v') &amp; = (u + u') + (v + v') \in U + V</mrow>
+                        <mrow>\alpha(u + v) &amp; = \alpha u + \alpha v \in U + V.</mrow>
+                    </md></p>
+            </hint>
+        </exercise>
 
-            <li>
-              <p>
-                If <m>U</m> and <m>V</m> are arbitrary subspaces of a vector space <m>W</m>,
-                show that
-                <me>
-                  \dim( U + V) = \dim U + \dim V - \dim( U \cap V)
-                </me>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) Let <m>u, u' \in U</m> and <m>v, v' \in V</m>.
-          Then
-          <md>
-            <mrow>(u + v) + (u' + v') &amp; = (u + u') + (v + v') \in U + V</mrow>
-            <mrow>\alpha(u + v) &amp; = \alpha u + \alpha v \in U + V</mrow>
-          </md>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <title>Dual Spaces</title>
+            <statement>
+                <p>Let <m>V</m> and <m>W</m> be finite dimensional vector spaces over a field <m>F</m>.
+                    <ol>
+            
+                        <li><p>Show that the set of all linear transformations from <m>V</m> into <m>W</m>, denoted by <m>\Hom(V, W)</m>, is a vector space over <m>F</m>, where we define vector addition as follows:
+                        <notation>
+                        <usage>\Hom(V, W)</usage>
+                        <description>set of all linear transformations from <m>U</m> into <m>V</m></description>
+                        </notation>
+                            <md>
+                                <mrow>(S + T)(v) &amp; =  S(v) +T(v)</mrow>
+                                <mrow>(\alpha S)(v) &amp; = \alpha S(v),</mrow>
+                            </md>
+                        where <m>S, T \in \Hom(V, W)</m>, <m>\alpha \in F</m>, and <m>v \in V</m>.</p></li>
 
-    <exercise>
-      <title>Dual Spaces</title>
-      <statement>
-        <p>
-          Let <m>V</m> and <m>W</m> be finite dimensional vector spaces over a field <m>F</m>.
+                        <li><p>Let <m>V</m> be an <m>F</m>-vector space. Define the <term>dual space</term> of <m>V</m> to be <m>V^* = \Hom(V, F)</m>.
+                        <notation>
+                        <usage>V^*</usage>
+                        <description>dual of a vector space <m>V</m></description>
+                        </notation>
+                        Elements in the dual space of <m>V</m> are called <term>linear functionals.</term> Let <m>v_1, \ldots, v_n</m> be an ordered basis for <m>V</m>. If <m>v = \alpha_1 v_1 + \cdots + \alpha_n v_n</m> is any vector in <m>V</m>, define a linear functional <m>\phi_i : V \rightarrow F</m> by <m>\phi_i (v) = \alpha_i</m>. Show that the <m>\phi_i</m>'s form a basis for <m>V^*</m>. This basis is called the <term>dual basis</term> of <m>v_1, \ldots, v_n</m> (or simply the dual basis if the context makes the meaning clear).</p></li>
 
-          <ol>
-            <li>
-              <p>
-                Show that the set of all linear transformations from <m>V</m> into <m>W</m>,
-                denoted by <m>\Hom(V, W)</m>,
-                is a vector space over <m>F</m>,
-                where we define vector addition as follows:
+                        <li><p>Consider the basis <m>\{ (3, 1), (2, -2) \}</m> for <m>{\mathbb R}^2</m>. What is the dual basis for <m>({\mathbb R}^2)^*</m>?</p></li>
 
-                <notation>
-                  <usage>\Hom(V, W)</usage>
-                  <description>set of all linear transformations from <m>U</m> into <m>V</m></description>
-                </notation>
+                        <li><p>Let <m>V</m> be a vector space of dimension <m>n</m> over a field <m>F</m> and let <m>V^{* *}</m> be the dual space of <m>V^*</m>. Show that each element <m>v \in V</m> gives rise to an element <m>\lambda_v</m> in <m>V^{**}</m> and that the map <m>v \mapsto \lambda_v</m> is an isomorphism of <m>V</m> with <m>V^{**}</m>.</p></li>
 
-                <md>
-                  <mrow>(S + T)(v) &amp; =  S(v) +T(v)</mrow>
-                  <mrow>(\alpha S)(v) &amp; = \alpha S(v)</mrow>
-                </md>,
-                where <m>S, T \in \Hom(V, W)</m>,
-                <m>\alpha \in F</m>, and <m>v \in V</m>.
-              </p>
-            </li>
+                    </ol></p>
+            </statement>
+        </exercise>
 
-            <li>
-              <p>
-                Let <m>V</m> be an <m>F</m>-vector space.
-                Define the <term>dual space</term>
-                of <m>V</m> to be <m>V^* = \Hom(V, F)</m>.
+    </exercises>
 
-                <notation>
-                  <usage>V^*</usage>
-                  <description>dual of a vector space <m>V</m></description>
-                </notation>
+    <section xml:id="section-vect-vector-spaces-in-the-classroom">
+        <title>Vector Spaces in the Secondary Classroom</title>
 
-                Elements in the dual space of <m>V</m> are called
-                <term>linear functionals.</term> Let
-                <m>v_1, \ldots,
-                v_n</m> be an ordered basis for <m>V</m>.
-                If <m>v = \alpha_1 v_1 + \cdots + \alpha_n v_n</m> is any vector in <m>V</m>,
-                define a linear functional
-                <m>\phi_i : V \rightarrow F</m> by <m>\phi_i (v) = \alpha_i</m>.
-                Show that the <m>\phi_i</m>'s form a basis for <m>V^*</m>.
-                This basis is called the <term>dual basis</term>
-                of <m>v_1, \ldots, v_n</m>
-                (or simply the dual basis if the context makes the meaning clear).
-              </p>
-            </li>
+        <p>This appendix will relate vector spaces to the secondary classroom.</p>
 
-            <li>
-              <p>
-                Consider the basis <m>\{ (3, 1), (2, -2) \}</m> for <m>{\mathbb R}^2</m>.
-                What is the dual basis for <m>({\mathbb R}^2)^*</m>?
-              </p>
-            </li>
+    </section>
 
-            <li>
-              <p>
-                Let <m>V</m> be a vector space of dimension <m>n</m> over a field <m>F</m> and let <m>V^{* *}</m> be the dual space of <m>V^*</m>.
-                Show that each element <m>v \in V</m> gives rise to an element
-                <m>\lambda_v</m> in <m>V^{**}</m> and that the map
-                <m>v \mapsto \lambda_v</m> is an isomorphism of <m>V</m> with <m>V^{**}</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
-
-  </exercises>
-
-  <section xml:id="section-vect-vector-spaces-in-the-classroom">
-    <title>Vector Spaces in the Secondary Classroom</title>
-
-    <p>This appendix will relate vector spaces to the secondary classroom.</p>
-  </section>
-
-  <references xml:id="vect-references">
+    <references xml:id="vect-references">
         <!-- References updated - TWJ 8/19/2010 -->
-    <title>References and Suggested Readings</title>
-    <biblio type="raw">
-<!-- was [1] --><!-- Reference added - TWJ 8/19/2010 -->
-      Beezer, R.
-      <title>A First Course in Linear Algebra</title>
-      . Available online at <url href="http://linear.ups.edu/"/>.  2004<ndash/>2014.
-    </biblio>
+        <title>References and Suggested Readings</title>
+        <biblio type="raw">
+        <!-- was [1] --><!-- Reference added - TWJ 8/19/2010 -->
+        Beezer, R.
+        <title>A First Course in Linear Algebra</title>
+        . Available online at <url href="http://linear.ups.edu/"/>.  2004<ndash/>2014.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [2] --><!-- Reference added - TWJ 8/19/2010 -->
-      Bretscher, O.
-      <title>Linear Algebra with Applications</title>. 4th ed. Pearson, Upper Saddle River, NJ, 2009.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [2] --><!-- Reference added - TWJ 8/19/2010 -->
+        Bretscher, O.
+        <title>Linear Algebra with Applications</title>. 4th ed. Pearson, Upper Saddle River, NJ, 2009.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [3] -->
-      Curtis, C. W.
-      <title>Linear Algebra: An Introductory Approach</title>. 4th ed. Springer, New York, 1984.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [3] -->
+        Curtis, C. W.
+        <title>Linear Algebra: An Introductory Approach</title>. 4th ed. Springer, New York, 1984.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [4] -->
-      Hoffman, K. and Kunze, R.
-      <title>Linear Algebra</title>. 2nd ed. Prentice-Hall, Englewood Cliffs, NJ, 1971.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [4] -->
+        Hoffman, K. and Kunze, R.
+        <title>Linear Algebra</title>. 2nd ed. Prentice-Hall, Englewood Cliffs, NJ, 1971.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [5] --><!-- Reference updated.  Not yet published. - TWJ 8/19/2010 -->
-      Johnson, L. W., Riess, R. D., and Arnold, J. T.
-      <title>Introduction to Linear Algebra</title>. 6th ed. Pearson, Upper Saddle River, NJ, 2011.
-    </biblio>
+        <biblio type="raw">
+        <!-- was [5] --><!-- Reference updated.  Not yet published. - TWJ 8/19/2010 -->
+        Johnson, L. W., Riess, R. D., and Arnold, J. T.
+        <title>Introduction to Linear Algebra</title>. 6th ed. Pearson, Upper Saddle River, NJ, 2011.
+        </biblio>
 
-    <biblio type="raw">
-<!-- was [6] --><!-- Reference updated - TWJ 8/19/2010 -->
-      Leon, S. J.
-      <title>Linear Algebra with Applications</title>. 8th ed. Pearson, Upper Saddle River, NJ, 2010.
-    </biblio>
-  </references>
+        <biblio type="raw">
+        <!-- was [6] --><!-- Reference updated - TWJ 8/19/2010 -->
+        Leon, S. J.
+        <title>Linear Algebra with Applications</title>. 8th ed. Pearson, Upper Saddle River, NJ, 2010.
+        </biblio>
+        
+    </references>
 
 </chapter>
