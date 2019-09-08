@@ -435,572 +435,292 @@
                 </proof>
             </proposition>
 
-<proposition>
-<statement>
-<p>
-If <m>G</m> is a group and <m>a, b, c \in G</m>,
-then <m>ba = ca</m> implies <m>b = c</m> and <m>ab = ac</m> implies <m>b = c</m>.
-</p>
-</statement>
-</proposition>
+            <proposition>
+                <statement>
+                    <p>If <m>G</m> is a group and <m>a, b, c \in G</m>, then <m>ba = ca</m> implies <m>b = c</m> and <m>ab = ac</m> implies <m>b = c</m>.</p>
+                </statement>
+            </proposition>
 
-      <p>
-        This proposition tells us that the
-        <term>right and left cancellation laws</term><idx><h>Cancellation law</h><h>for groups</h></idx> are true in groups.
-        We leave the proof as an exercise.
-      </p>
+            <p>This proposition tells us that the <term>right and left cancellation laws</term><idx><h>Cancellation law</h><h>for groups</h></idx> are true in groups. We leave the proof as an exercise.</p>
 
-      <p>
-        We can use exponential notation for groups just as we do in ordinary algebra.
-        If <m>G</m> is a group and <m>g \in G</m>,
-        then we define <m>g^0 = e</m>.
-        For <m>n \in {\mathbb N}</m>, we define
-        <me>
-          g^n = \underbrace{g \cdot g \cdots g}_{n \; \text{times}}
-        </me>
-        and
-        <me>
-          g^{-n} = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{n \; \text{times}}
-        </me>.
-      </p>
+            <p>We can use exponential notation for groups just as we do in ordinary algebra. If <m>G</m> is a group and <m>g \in G</m>, then we define <m>g^0 = e</m>. For <m>n \in {\mathbb N}</m>, we define
+                <me>g^n = \underbrace{g \cdot g \cdots g}_{n \; \text{times}}</me>
+            and
+                <me>g^{-n} = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{n \; \text{times}}.</me></p>
 
-      <theorem xml:id="theorem-exponent-laws">
-        <statement>
-          <p>
-            In a group, the usual laws of exponents hold;
-            that is, for all <m>g, h \in G</m>,
+            <theorem xml:id="theorem-exponent-laws">
+                <statement>
+                    <p>In a group, the usual laws of exponents hold; that is, for all <m>g, h \in G</m>,
+                        <ol>
+              
+                            <li><p><m>g^mg^n = g^{m+n}</m> for all <m>m, n \in {\mathbb Z}</m>;</p></li>
 
-            <ol>
-              <li>
-                <p>
-                  <m>g^mg^n = g^{m+n}</m> for all <m>m, n \in {\mathbb Z}</m>;
-                </p>
-              </li>
+                            <li><p><m>(g^m)^n = g^{mn}</m> for all <m>m, n \in {\mathbb Z}</m>;</p></li>
 
-              <li>
-                <p>
-                  <m>(g^m)^n = g^{mn}</m> for all <m>m, n \in {\mathbb Z}</m>;
-                </p>
-              </li>
+                            <li><p><m>(gh)^n = (h^{-1}g^{-1})^{-n}</m> for all <m>n \in {\mathbb Z}</m>. Furthermore, if <m>G</m> is abelian, then <m>(gh)^n = g^nh^n</m>.</p></li>
+            
+                        </ol></p>
+                </statement>
+            </theorem>
 
-              <li>
-                <p>
-                  <m>(gh)^n = (h^{-1}g^{-1})^{-n}</m> for all <m>n \in {\mathbb Z}</m>.
-                  Furthermore, if <m>G</m> is abelian,
-                  then <m>(gh)^n = g^nh^n</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-      </theorem>
+            <p>We will leave the proof of this theorem as an exercise. Notice that <m>(gh)^n \neq g^nh^n</m> in general, since the group may not be abelian. If the group is <m>{\mathbb Z}</m> or <m>{\mathbb Z}_n</m>, we write the group operation additively and the exponential operation multiplicatively; that is, we write <m>ng</m> instead of <m>g^n</m>. The laws of exponents now become
+                <ol>
 
-      <p>
-        We will leave the proof of this theorem as an exercise.
-        Notice that <m>(gh)^n \neq g^nh^n</m> in general,
-        since the group may not be abelian.
-        If the group is <m>{\mathbb Z}</m> or <m>{\mathbb Z}_n</m>,
-        we write the group operation additively and the exponential operation multiplicatively;
-        that is, we write <m>ng</m> instead of <m>g^n</m>.
-        The laws of exponents now become
+                    <li><p><m>mg + ng = (m+n)g</m> for all <m>m, n \in {\mathbb Z}</m>;</p></li>
 
-        <ol>
-          <li>
-            <p>
-              <m>mg + ng = (m+n)g</m> for all <m>m, n \in {\mathbb Z}</m>;
-            </p>
-          </li>
+                    <li><p><m>m(ng) = (mn)g</m> for all <m>m, n \in {\mathbb Z}</m>;</p></li>
 
-          <li>
-            <p>
-              <m>m(ng) = (mn)g</m> for all <m>m, n \in {\mathbb Z}</m>;
-            </p>
-          </li>
+                    <li><p><m>m(g + h) = mg + mh</m> for all <m>n \in {\mathbb Z}</m>.</p></li>
+        
+                </ol></p>
 
-          <li>
-            <p>
-              <m>m(g + h) = mg + mh</m> for all <m>n \in {\mathbb Z}</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
+            <p>It is important to realize that the last statement can be made only because <m>{\mathbb Z}</m> and <m>{\mathbb Z}_n</m> are commutative groups.</p>
+    
+        </subsection>
 
-      <p>
-        It is important to realize that the last statement can be made only because <m>{\mathbb Z}</m> and
-        <m>{\mathbb Z}_n</m> are commutative groups.
-      </p>
-    </subsection>
+        <subsection xml:id="groups-subsection-historical-note">
+            <title>Historical Note</title>
+      
+            <p>Although the first clear axiomatic definition of a group was not given until the late 1800s, group-theoretic methods had been employed before this time in the development of many areas of mathematics, including geometry and the theory of algebraic equations.</p>
 
-    <subsection xml:id="groups-subsection-historical-note">
-      <title>Historical Note</title>
-      <p>
-        Although the first clear axiomatic definition of a group was not given until the late 1800s,
-        group-theoretic methods had been employed before this time in the development of many areas of mathematics,
-        including geometry and the theory of algebraic equations.
-      </p>
-
-      <p>
-        Joseph-Louis Lagrange
+            <p>Joseph-Louis Lagrange
             <idx><h>Lagrange, Joseph-Louis</h></idx>
-        used group-theoretic methods in a 1770<ndash/>1771 memoir to study methods of solving polynomial equations.
-        Later, Évariste Galois
+            used group-theoretic methods in a 1770<ndash/>1771 memoir to study methods of solving polynomial equations. Later, Évariste Galois
             <idx><h>Galois, Évariste</h></idx>
-        (1811<ndash/>1832) succeeded in developing the mathematics necessary to determine exactly which polynomial equations could be solved in terms of the coefficients of the polynomial.
-        Galois' primary tool was group theory.
-      </p>
+            (1811<ndash/>1832) succeeded in developing the mathematics necessary to determine exactly which polynomial equations could be solved in terms of the coefficients of the polynomial. Galois' primary tool was group theory.</p>
 
-      <p>
-        The study of geometry was revolutionized in 1872 when Felix Klein
+            <p>The study of geometry was revolutionized in 1872 when Felix Klein
             <idx><h>Klein, Felix</h></idx>
-        proposed that geometric spaces should be studied by examining those properties that are invariant under a transformation of the space.
-        Sophus Lie,
+            proposed that geometric spaces should be studied by examining those properties that are invariant under a transformation of the space. Sophus Lie,
             <idx><h>Lie, Sophus</h></idx>
-        a contemporary of Klein,
-        used group theory to study solutions of partial differential equations.
-        One of the first modern treatments of group theory appeared in William Burnside's
+            a contemporary of Klein, used group theory to study solutions of partial differential equations. One of the first modern treatments of group theory appeared in William Burnside's
             <idx><h>Burnside, William</h></idx>
-        <pubtitle>The Theory of Groups of Finite Order</pubtitle> [1], first published in 1897.
-      </p>
-    </subsection>
+            <pubtitle>The Theory of Groups of Finite Order</pubtitle> [1], first published in 1897.</p>
 
-  </section>
+        </subsection>
 
-  <section xml:id="section-subgroups">
-    <title>Subgroups</title>
-    <subsection xml:id="groups-subsection-subgroup-examples">
-      <title>Definitions and Examples</title>
-      <p>
-        Sometimes we wish to investigate smaller groups sitting inside a larger group.
-        The set of even integers <m>2{\mathbb Z} = \{\ldots, -2, 0, 2, 4, \ldots \}</m> is a group under the operation of addition.
-        This smaller group sits naturally inside of the group of integers under addition.
-        We define a <term>subgroup</term><idx><h>Subgroup</h><h>definition of</h></idx> <m>H</m> of a group <m>G</m> to be a subset <m>H</m> of <m>G</m> such that when the group operation of <m>G</m> is restricted to <m>H</m>,
-        <m>H</m> is a group in its own right.
-        Observe that every group <m>G</m> with at least two elements will always have at least two subgroups,
-        the subgroup consisting of the identity element alone and the entire group itself.
-        The subgroup <m>H = \{ e \}</m> of a group <m>G</m> is called the
-        <term>trivial subgroup</term>.
+    </section>
+
+    <section xml:id="section-subgroups">
+        <title>Subgroups</title>
+    
+        <subsection xml:id="groups-subsection-subgroup-examples">
+            <title>Definitions and Examples</title>
+      
+            <p>Sometimes we wish to investigate smaller groups sitting inside a larger group. The set of even integers <m>2{\mathbb Z} = \{\ldots, -2, 0, 2, 4, \ldots \}</m> is a group under the operation of addition. This smaller group sits naturally inside of the group of integers under addition. We define a <term>subgroup</term><idx><h>Subgroup</h><h>definition of</h></idx> <m>H</m> of a group <m>G</m> to be a subset <m>H</m> of <m>G</m> such that when the group operation of <m>G</m> is restricted to <m>H</m>, <m>H</m> is a group in its own right. Observe that every group <m>G</m> with at least two elements will always have at least two subgroups, the subgroup consisting of the identity element alone and the entire group itself. The subgroup <m>H = \{ e \}</m> of a group <m>G</m> is called the <term>trivial subgroup</term>.
             <idx><h>Subgroup</h><h>trivial</h></idx>
-        A subgroup that is a proper subset of <m>G</m> is called a
-        <term>proper subgroup</term>.
-            <idx><h>Subgroup</h><h>proper</h></idx>
-        In many of the examples that we have investigated up to this point,
-        there exist other subgroups besides the trivial and improper subgroups.
-      </p>
+            A subgroup that is a proper subset of <m>G</m> is called a <term>proper subgroup</term>. <idx><h>Subgroup</h><h>proper</h></idx> In many of the examples that we have investigated up to this point, there exist other subgroups besides the trivial and improper subgroups.</p>
 
-      <example xml:id="example-groups-multiplicative-subgroup">
-        <p>
-          Consider the set of nonzero real numbers,
-          <m>{\mathbb R}^*</m>, with the group operation of multiplication.
+            <example xml:id="example-groups-multiplicative-subgroup">
+                <p>Consider the set of nonzero real numbers, <m>{\mathbb R}^*</m>, with the group operation of multiplication.
+                <notation>
+                <usage>\mathbb R^*</usage>
+                <description>the multiplicative group of real numbers</description>
+                </notation>
+                The identity of this group is <m>1</m> and the inverse of any element <m>a \in {\mathbb R}^*</m> is just <m>1/a</m>. We will show that
+                    <me>{\mathbb Q}^* = \{ p/q : p \, \text{and}\, q\, \text{are nonzero integers} \}</me>
+                is a subgroup of <m>{\mathbb R}^*</m>.
+                <notation>
+                <usage>\mathbb Q^*</usage>
+                <description>the multiplicative group of rational numbers</description>
+                </notation>
+                The identity of <m>{\mathbb R}^*</m> is <m>1</m>; however,  <m>1 = 1/1</m> is the quotient of two nonzero integers. Hence, the identity of <m>{\mathbb R}^*</m> is in <m>{\mathbb Q}^*</m>. Given two elements in <m>{\mathbb Q}^*</m>, say <m>p/q</m> and <m>r/s</m>, their product <m>pr/qs</m> is also in <m>{\mathbb Q}^*</m>. The inverse of any element <m>p/q \in {\mathbb Q}^*</m> is again in <m>{\mathbb Q}^*</m> since <m>(p/q)^{-1} = q/p</m>. Since multiplication in <m>{\mathbb R}^*</m> is associative, multiplication in <m>{\mathbb Q}^*</m> is associative.</p>
+            </example>
 
-          <notation>
-            <usage>\mathbb R^*</usage>
-            <description>the multiplicative group of real numbers</description>
-          </notation>
+            <example xml:id="example-groups-subgroup-h">
+                <p>Recall that <m>{\mathbb C}^{\ast}</m> is the multiplicative group of nonzero complex numbers. Let <m>H = \{ 1, -1, i, -i \}</m>. Then <m>H</m> is a subgroup of <m>{\mathbb C}^{\ast}</m>. It is quite easy to verify that <m>H</m> is a group under multiplication and that <m>H \subset {\mathbb C}^{\ast}</m>.</p>
+            </example>
 
-          The identity of this group is <m>1</m> and the inverse of any element <m>a \in {\mathbb R}^*</m> is just <m>1/a</m>.
-          We will show that
-          <me>
-            {\mathbb Q}^* = \{ p/q : p \, \text{and}\, q\, \text{are nonzero integers} \}
-          </me>
-          is a subgroup of <m>{\mathbb R}^*</m>.
+            <example xml:id="example-groups-sl2">
+                <p>Let <m>SL_2( {\mathbb R})</m> be the subset of <m>GL_2( {\mathbb R })</m> consisting of matrices of determinant one; that is, a matrix
+                <notation>
+                <usage>SL_n(\mathbb R)</usage>
+                <description>the special linear group</description>
+                </notation>
+                    <me>A =
+                    \begin{pmatrix}
+                    a &amp; b \\
+                    c &amp; d
+                    \end{pmatrix}</me>
+                is in <m>SL_2( {\mathbb R})</m> exactly when <m>ad - bc = 1</m>. To show that <m>SL_2( {\mathbb R})</m> is a subgroup of the general linear group, we must show that it is a group under matrix multiplication. The <m>2 \times 2</m> identity matrix is in <m>SL_2( {\mathbb R})</m>, as is the inverse of the matrix <m>A</m>:
+                    <me>A^{-1} =
+                    \begin{pmatrix}
+                    d  &amp; -b \\
+                    -c &amp;  a
+                    \end{pmatrix}.</me>
+                It remains to show that multiplication is closed; that is, that the product of two matrices of determinant one also has determinant one. We will leave this task as an exercise. The group <m>SL_2({\mathbb R})</m> is called the <term>special linear group</term>.
+                <idx><h>Group</h><h>special linear</h></idx></p>
+            </example>
 
-          <notation>
-            <usage>\mathbb Q^*</usage>
-            <description>the multiplicative group of rational numbers</description>
-          </notation>
+            <example xml:id="example-groups-gl2-subgroup">
+                <p>It is important to realize that a subset <m>H</m> of a group <m>G</m> can be a group without being a subgroup of <m>G</m>. For <m>H</m> to be a subgroup of <m>G</m>, it must inherit the binary operation of <m>G</m>. The set of all <m>2 \times 2</m> matrices, <m>{\mathbb M}_2(\mathbb R)</m>, forms a group under the operation of addition. The <m>2 \times 2</m> general linear group is a subset of <m>{\mathbb M}_2(\mathbb R)</m> and is a group under matrix multiplication, but it is not a subgroup of <m>{\mathbb M}_2(\mathbb R)</m>. If we add two invertible matrices, we do not necessarily obtain another invertible matrix. Observe that
+                    <me>\begin{pmatrix}
+                    1 &amp; 0 \\
+                    0 &amp; 1
+                    \end{pmatrix}
+                    +
+                    \begin{pmatrix}
+                    -1 &amp;  0 \\
+                    0  &amp; -1
+                    \end{pmatrix}
+                    =
+                    \begin{pmatrix}
+                    0 &amp; 0 \\
+                    0 &amp; 0
+                    \end{pmatrix},</me>
+                but the zero matrix is not in <m>GL_2( {\mathbb R })</m>.</p>
+            </example>
 
-          The identity of <m>{\mathbb R}^*</m> is <m>1</m>;
-          however,  <m>1 = 1/1</m> is the quotient of two nonzero integers.
-          Hence, the identity of <m>{\mathbb R}^*</m> is in <m>{\mathbb Q}^*</m>.
-          Given two elements in <m>{\mathbb Q}^*</m>,
-          say <m>p/q</m> and <m>r/s</m>,
-          their product <m>pr/qs</m> is also in <m>{\mathbb Q}^*</m>.
-          The inverse of any element <m>p/q \in {\mathbb Q}^*</m> is again in
-          <m>{\mathbb Q}^*</m> since <m>(p/q)^{-1} = q/p</m>.
-          Since multiplication in <m>{\mathbb R}^*</m> is associative,
-          multiplication in <m>{\mathbb Q}^*</m> is associative.
-        </p>
-      </example>
+            <example xml:id="example-groups-z2xz2">
+                <p>One way of telling whether or not two groups are the same is by examining their subgroups. Other than the trivial subgroup and the group itself, the group <m>{\mathbb Z}_4</m> has a single subgroup consisting of the elements <m>0</m> and <m>2</m>. From the group <m>{\mathbb Z}_2</m>, we can form another group of four elements as follows. As a set this group is <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>. We perform the group operation coordinatewise; that is, <m>(a,b) + (c,d) = (a+c, b+d)</m>. <xref ref="table-z2xz2"/> is an addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>. Since there are three nontrivial proper subgroups of <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>, <m>H_1 = \{ (0,0), (0,1) \}</m>, <m>H_2 = \{ (0,0), (1,0) \}</m>, and <m>H_3 = \{ (0,0), (1,1) \}</m>, <m>{\mathbb Z}_4</m> and <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m> must be different groups.</p>
 
-      <example xml:id="example-groups-subgroup-h">
-        <p>
-          Recall that <m>{\mathbb C}^{\ast}</m> is the multiplicative group of nonzero complex numbers.
-          Let <m>H = \{ 1, -1, i, -i \}</m>.
-          Then <m>H</m> is a subgroup of <m>{\mathbb C}^{\ast}</m>.
-          It is quite easy to verify that <m>H</m> is a group under multiplication and that <m>H \subset {\mathbb C}^{\ast}</m>.
-        </p>
-      </example>
+                <table xml:id="table-z2xz2">
+                    <caption>Addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m></caption>
+                    <p><me>
+                    \begin{array}{c|cccc}
+                    +     &amp; (0,0) &amp; (0,1) &amp; (1,0) &amp; (1,1) \\
+                    \hline
+                    (0,0) &amp; (0,0) &amp; (0,1) &amp; (1,0) &amp; (1,1) \\
+                    (0,1) &amp; (0,1) &amp; (0,0) &amp; (1,1) &amp; (1,0) \\
+                    (1,0) &amp; (1,0) &amp; (1,1) &amp; (0,0) &amp; (0,1) \\
+                    (1,1) &amp; (1,1) &amp; (1,0) &amp; (0,1) &amp; (0,0)
+                    \end{array}</me></p>
+                </table>
+            </example>
 
-      <example xml:id="example-groups-sl2">
-        <p>
-          Let <m>SL_2( {\mathbb R})</m> be the subset of
-          <m>GL_2( {\mathbb R })</m> consisting of matrices of determinant one;
-          that is, a matrix
+        </subsection>
 
-          <notation>
-            <usage>SL_n(\mathbb R)</usage>
-            <description>the special linear group</description>
-          </notation>
+        <subsection xml:id="groups-subsection-subgroup-theorems">
+            <title>Some Subgroup Theorems</title>
+      
+            <p>Let us examine some criteria for determining exactly when a subset of a group is a subgroup.</p>
 
-          <me>
-            A =
-            \begin{pmatrix}
-            a &amp; b \\
-            c &amp; d
-            \end{pmatrix}
-          </me>
-          is in <m>SL_2( {\mathbb R})</m> exactly when <m>ad - bc = 1</m>.
-          To show that <m>SL_2( {\mathbb R})</m> is a subgroup of the general linear group,
-          we must show that it is a group under matrix multiplication.
-          The <m>2 \times 2</m> identity matrix is in <m>SL_2( {\mathbb R})</m>,
-          as is the inverse of the matrix <m>A</m>:
-          <me>
-            A^{-1} =
-            \begin{pmatrix}
-            d  &amp; -b \\
-            -c &amp;  a
-            \end{pmatrix}
-          </me>.
-          It remains to show that multiplication is closed;
-          that is, that the product of two matrices of determinant one also has determinant one.
-          We will leave this task as an exercise.
-          The group <m>SL_2({\mathbb R})</m> is called the
-          <term>special linear group</term>.
-              <idx><h>Group</h><h>special linear</h></idx>
-        </p>
-      </example>
+            <proposition>
+                <statement>
+                    <p>A subset <m>H</m> of <m>G</m> is a subgroup if and only if it satisfies the following conditions.
+                        <ol>
+              
+                            <li><p>The identity <m>e</m> of <m>G</m> is in <m>H</m>.</p></li>
 
-      <example xml:id="example-groups-gl2-subgroup">
-        <p>
-          It is important to realize that a subset <m>H</m> of a group <m>G</m> can be a group without being a subgroup of <m>G</m>.
-          For <m>H</m> to be a subgroup of <m>G</m>, it must inherit the binary operation of <m>G</m>.
-          The set of all <m>2 \times 2</m> matrices,
-          <m>{\mathbb M}_2(\mathbb R)</m>,
-          forms a group under the operation of addition.
-          The <m>2 \times 2</m> general linear group is a subset of
-          <m>{\mathbb M}_2(\mathbb R)</m> and is a group under matrix multiplication,
-          but it is not a subgroup of <m>{\mathbb M}_2(\mathbb R)</m>.
-          If we add two invertible matrices,
-          we do not necessarily obtain another invertible matrix.
-          Observe that
-          <me>
-            \begin{pmatrix}
-            1 &amp; 0 \\
-            0 &amp; 1
-            \end{pmatrix}
-            +
-            \begin{pmatrix}
-            -1 &amp;  0 \\
-            0  &amp; -1
-            \end{pmatrix}
-            =
-            \begin{pmatrix}
-            0 &amp; 0 \\
-            0 &amp; 0
-            \end{pmatrix}
-          </me>,
-          but the zero matrix is not in <m>GL_2( {\mathbb R })</m>.
-        </p>
-      </example>
+                            <li><p>If <m>h_1, h_2 \in H</m>, then <m>h_1h_2 \in H</m>.</p></li>
 
-      <example xml:id="example-groups-z2xz2">
-        <p>
-          One way of telling whether or not two groups are the same is by examining their subgroups.
-          Other than the trivial subgroup and the group itself,
-          the group <m>{\mathbb Z}_4</m> has a single subgroup consisting of the elements <m>0</m> and <m>2</m>.
-          From the group <m>{\mathbb Z}_2</m>,
-          we can form another group of four elements as follows.
-          As a set this group is <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
-          We perform the group operation coordinatewise;
-          that is, <m>(a,b) + (c,d) = (a+c, b+d)</m>.
-          <xref ref="table-z2xz2"/> is an addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
-          Since there are three nontrivial proper subgroups of <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>,
-          <m>H_1 = \{ (0,0), (0,1) \}</m>,
-          <m>H_2 = \{ (0,0), (1,0) \}</m>,
-          and <m>H_3 = \{ (0,0), (1,1) \}</m>,
-          <m>{\mathbb Z}_4</m> and <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m> must be different groups.
-        </p>
+                            <li><p>If <m>h \in H</m>, then <m>h^{-1} \in H</m>.</p></li>
 
-        <table xml:id="table-z2xz2">
-            <!-- math table -->
-          <caption>Addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m></caption>
-          <p>
-            <me>
-              \begin{array}{c|cccc}
-              +     &amp; (0,0) &amp; (0,1) &amp; (1,0) &amp; (1,1) \\
-              \hline
-              (0,0) &amp; (0,0) &amp; (0,1) &amp; (1,0) &amp; (1,1) \\
-              (0,1) &amp; (0,1) &amp; (0,0) &amp; (1,1) &amp; (1,0) \\
-              (1,0) &amp; (1,0) &amp; (1,1) &amp; (0,0) &amp; (0,1) \\
-              (1,1) &amp; (1,1) &amp; (1,0) &amp; (0,1) &amp; (0,0)
-              \end{array}
-            </me>
-          </p>
-        </table>
-      </example>
+                        </ol></p>
+                </statement>
+                <proof>
+                    <p>First suppose that <m>H</m> is a subgroup of <m>G</m>. We must show that the three conditions hold. Since <m>H</m> is a group, it must have an identity <m>e_H</m>. We must show that <m>e_H = e</m>, where <m>e</m> is the identity of <m>G</m>. We know that <m>e_H e_H = e_H</m> and that <m>ee_H = e_H e = e_H</m>; hence, <m>ee_H = e_H e_H</m>. By right-hand cancellation, <m>e =e_H</m>. The second condition holds since a subgroup <m>H</m> is a group. To prove the third condition, let <m>h \in H</m>. Since <m>H</m> is a group, there is an element <m>h' \in H</m> such that <m>hh' = h'h = e</m>. By the uniqueness of the inverse in <m>G</m>, <m>h' = h^{-1}</m>.</p>
 
-    </subsection>
+                    <p>Conversely, if the three conditions hold, we must show that <m>H</m> is a group under the same operation as <m>G</m>; however, these conditions plus the associativity of the binary operation are exactly the axioms stated in the definition of a group.</p>
+                </proof>
+            </proposition>
 
-    <subsection xml:id="groups-subsection-subgroup-theorems">
-      <title>Some Subgroup Theorems</title>
-      <p>
-        Let us examine some criteria for determining exactly when a subset of
-        a group is a subgroup.
-      </p>
+            <proposition xml:id="proposition-subgroup">
+                <statement>
+                    <p>Let <m>H</m> be a subset of a group <m>G</m>. Then <m>H</m> is a subgroup of <m>G</m> if and only if <m>H \neq \emptyset</m>, and whenever <m>g, h \in H</m> then <m>gh^{-1}</m> is in <m>H</m>.</p>
+                </statement>
+                <proof>
+                    <p>First assume that <m>H</m> is a subgroup of <m>G</m>. We wish to show that <m>gh^{-1} \in H</m> whenever <m>g</m> and <m>h</m> are in <m>H</m>. Since <m>h</m> is in <m>H</m>, its inverse <m>h^{-1}</m> must also be in <m>H</m>. Because of the closure of the group operation, <m>gh^{-1} \in H</m>.</p>
 
-      <proposition>
-        <statement>
-          <p>
-            A subset <m>H</m> of <m>G</m> is a subgroup if and only if it satisfies the following conditions.
+                    <p>Conversely, suppose that <m>H \subset G</m> such that <m>H \neq \emptyset</m> and <m>g h^{-1} \in H</m> whenever <m>g, h \in H</m>. If <m>g \in H</m>, then <m>gg^{-1} = e</m> is in <m>H</m>. If <m>g \in H</m>, then <m>eg^{-1} = g^{-1}</m> is also in <m>H</m>. Now let <m>h_1, h_2 \in H</m>. We must show that their product is also in <m>H</m>. However, <m>h_1(h_2^{-1})^{-1} = h_1 h_2 \in H</m>. Hence, <m>H</m> is a subgroup of <m>G</m>.</p>
+                </proof>
+            </proposition>
 
-            <ol>
-              <li>
-                <p>
-                  The identity <m>e</m> of <m>G</m> is in <m>H</m>.
-                </p>
-              </li>
+        </subsection>
 
-              <li>
-                <p>
-                  If <m>h_1, h_2 \in H</m>, then <m>h_1h_2 \in H</m>.
-                </p>
-              </li>
+    </section>
 
-              <li>
-                <p>
-                  If <m>h \in H</m>, then <m>h^{-1} \in H</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
+    <exercises xml:id="exercises-groups" filenamebase="groups">
+        <title>Exercises</title>
+    
+        <exercise>
+            <statement>
+                <p>Find all <m>x \in {\mathbb Z}</m> satisfying each of the following equations.
+                    <ol cols="2">
+            
+                        <li><p><m>3x \equiv 2 \pmod{7}</m></p></li>
 
-        <proof>
-          <p>
-            First suppose that <m>H</m> is a subgroup of <m>G</m>.
-            We must show that the three conditions hold.
-            Since <m>H</m> is a group, it must have an identity <m>e_H</m>.
-            We must show that <m>e_H = e</m>,
-            where <m>e</m> is the identity of <m>G</m>.
-            We know that <m>e_H e_H = e_H</m> and that <m>ee_H = e_H e = e_H</m>;
-            hence, <m>ee_H = e_H e_H</m>.
-            By right-hand cancellation, <m>e =e_H</m>.
-            The second condition holds since a subgroup <m>H</m> is a group.
-            To prove the third condition, let <m>h \in H</m>.
-            Since <m>H</m> is a group,
-            there is an element <m>h' \in H</m> such that <m>hh' = h'h = e</m>.
-            By the uniqueness of the inverse in <m>G</m>, <m>h' = h^{-1}</m>.
-          </p>
+                        <li><p><m>5x + 1 \equiv 13 \pmod{23}</m></p></li>
 
-          <p>
-            Conversely, if the three conditions hold,
-            we must show that <m>H</m> is a group under the same operation as <m>G</m>;
-            however, these conditions plus the associativity of the binary operation are exactly the axioms stated in the definition of a group.
-          </p>
-        </proof>
-      </proposition>
+                        <li><p><m>5x + 1 \equiv 13 \pmod{26}</m></p></li>
 
-      <proposition xml:id="proposition-subgroup">
-        <statement>
-          <p>
-            Let <m>H</m> be a subset of a group <m>G</m>.
-            Then <m>H</m> is a subgroup of <m>G</m> if and only if <m>H \neq \emptyset</m>,
-            and whenever <m>g, h \in H</m> then <m>gh^{-1}</m> is in <m>H</m>.
-          </p>
-        </statement>
+                        <li><p><m>9x \equiv 3 \pmod{5}</m></p></li>
 
-        <proof>
-          <p>
-            First assume that <m>H</m> is a subgroup of <m>G</m>.
-            We wish to show that <m>gh^{-1} \in H</m> whenever <m>g</m> and <m>h</m> are in <m>H</m>.
-            Since <m>h</m> is in <m>H</m>,
-            its inverse <m>h^{-1}</m> must also be in <m>H</m>.
-            Because of the closure of the group operation, <m>gh^{-1} \in H</m>.
-          </p>
+                        <li><p><m>5x \equiv 1 \pmod{6}</m></p></li>
 
-          <p>
-            Conversely, suppose that <m>H \subset G</m> such that <m>H \neq \emptyset</m> and
-            <m>g h^{-1} \in H</m> whenever <m>g, h \in H</m>.
-            If <m>g \in H</m>, then <m>gg^{-1} = e</m> is in <m>H</m>.
-            If <m>g \in H</m>, then <m>eg^{-1} = g^{-1}</m> is also in <m>H</m>.
-            Now let <m>h_1, h_2 \in H</m>.
-            We must show that their product is also in <m>H</m>.
-            However, <m>h_1(h_2^{-1})^{-1} = h_1 h_2 \in H</m>.
-            Hence, <m>H</m> is a subgroup of <m>G</m>.
-          </p>
-        </proof>
-      </proposition>
-            <!-- % TWJ, 2012/11/21 -->
-            <!-- % Proof rewritten for clarity.  Suggested by R. Beezer. -->
-            <!-- Let <m>H</m> be a nonempty subset of <m>G</m>.  Then <m>H</m> contains some element <m>g</m>.  So <m>gg^{-1} = e</m> is in <m>H</m>.  If <m>g \in H</m>, then <m>eg^{-1} = g^{-1}</m> is also in <m>H</m>. Finally, let <m>g, h \in H</m>. We must show that their product is also in <m>H</m>.  However, <m>g(h^{-1})^{-1} = gh \in H</m>.  Hence, <m>H</m> is indeed a subgroup of <m>G</m>. Conversely, if <m>g</m> and <m>h</m> are in <m>H</m>, we want to show that <m>gh^{-1} \in H</m>.  Since <m>h</m> is in <m>H</m>, its inverse <m>h^{-1}</m> must also be in <m>H</m>.  Because of the closure of the group operation, <m>gh^{-1} \in H</m>.  -->
+                        <li><p><m>3x \equiv 1 \pmod{6}</m></p></li>
+          
+                    </ol></p>
+      
+            </statement>
+            <hint>
+                <p>(a) <m>3 + 7 \mathbb Z = \{ \ldots, -4, 3, 10, \ldots \}</m>; (c) <m>18 + 26 \mathbb Z</m>; (e) <m>5 + 6 \mathbb Z</m>.</p>
+            </hint>
+        </exercise>
 
-      <paragraphs>
-        <title>Sage</title>
-        <p>
-          The first half of this text is about group theory.
-          Sage includes Groups, Algorithms and Programming (<acro>GAP</acro>),
-          a program designed primarly for just group theory,
-          and in continuous development since 1986.
-          Many of Sage's computations for groups ultimately are performed by GAP.
-        </p>
-      </paragraphs>
+        <exercise>
+            <statement>
+                <p>Which of the following multiplication tables defined on the set <m>G = \{ a, b, c, d \}</m> form a group? Support your answer in each case.
+                    <ol cols="2">
+            
+                        <li><p><me>
+                            \begin{array}{c|cccc}
+                            \circ &amp; a &amp; b &amp; c &amp; d \\
+                            \hline
+                            a &amp; a &amp; c &amp; d &amp; a \\
+                            b &amp; b &amp; b &amp; c &amp; d \\
+                            c &amp; c &amp; d &amp; a &amp; b \\
+                            d &amp; d &amp; a &amp; b &amp; c
+                            \end{array}</me></p></li>
 
-    </subsection>
+                        <li><p><me>
+                            \begin{array}{c|cccc}
+                            \circ &amp; a &amp; b &amp; c &amp; d \\
+                            \hline
+                            a &amp; a &amp; b &amp; c &amp; d \\
+                            b &amp; b &amp; a &amp; d &amp; c \\
+                            c &amp; c &amp; d &amp; a &amp; b \\
+                            d &amp; d &amp; c &amp; b &amp; a
+                            \end{array}</me></p></li>
 
-  </section>
-    <!-- Exercises with Solutions  -->
-    <!-- File: groups.xml  -->
-    <!-- Title: Groups -->
-  <exercises xml:id="exercises-groups" filenamebase="groups">
-    <title>Exercises</title>
-    <exercise number="1">
-      <statement>
-        <p>
-          Find all <m>x \in {\mathbb Z}</m> satisfying each of the following equations.
+                        <li><p><me>
+                            \begin{array}{c|cccc}
+                            \circ &amp; a &amp; b &amp; c &amp; d \\
+                            \hline
+                            a &amp; a &amp; b &amp; c &amp; d \\
+                            b &amp; b &amp; c &amp; d &amp; a \\
+                            c &amp; c &amp; d &amp; a &amp; b \\
+                            d &amp; d &amp; a &amp; b &amp; c
+                            \end{array}</me></p></li>
 
-          <ol cols="2">
-            <li>
-              <p>
-                <m>3x \equiv 2 \pmod{7}</m>
-              </p>
-            </li>
+                        <li><p><me>
+                            \begin{array}{c|cccc}
+                            \circ &amp; a &amp; b &amp; c &amp; d \\
+                            \hline
+                            a &amp; a &amp; b &amp; c &amp; d \\
+                            b &amp; b &amp; a &amp; c &amp; d \\
+                            c &amp; c &amp; b &amp; a &amp; d \\
+                            d &amp; d &amp; d &amp; b &amp; c
+                            \end{array}</me></p></li>
 
-            <li>
-              <p>
-                <m>5x + 1 \equiv 13 \pmod{23}</m>
-              </p>
-            </li>
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) Not a group; (c) a group.</p>
+            </hint>
+        </exercise>
 
-            <li>
-              <p>
-                <m>5x + 1 \equiv 13 \pmod{26}</m>
-              </p>
-            </li>
+        <exercise xml:id="exercise-groups-rectangle-symmetries">
+            <statement>
+                <p>Write out Cayley tables for groups formed by the symmetries of a rectangle and for <m>({\mathbb Z}_4, +)</m>. How many elements are in each group? Are the groups the same? Why or why not?</p>
+            </statement>
+        </exercise>
 
-            <li>
-              <p>
-                <m>9x \equiv 3 \pmod{5}</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>5x \equiv 1 \pmod{6}</m>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <m>3x \equiv 1 \pmod{6}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>3 + 7 \mathbb Z = \{ \ldots, -4, 3, 10, \ldots \}</m>; (c)
-          <m>18 + 26 \mathbb Z</m>; (e) <m>5 + 6 \mathbb Z</m>.
-        </p>
-      </hint>
-    </exercise>
-
-    <exercise number="2">
-      <statement>
-        <p>
-          Which of the following multiplication tables defined on the set <m>G = \{ a, b, c, d \}</m> form a group?
-          Support your answer in each case.
-
-          <ol cols="2">
-            <li>
-              <p>
-                <me>
-                  \begin{array}{c|cccc}
-                  \circ &amp; a &amp; b &amp; c &amp; d \\
-                  \hline
-                  a &amp; a &amp; c &amp; d &amp; a \\
-                  b &amp; b &amp; b &amp; c &amp; d \\
-                  c &amp; c &amp; d &amp; a &amp; b \\
-                  d &amp; d &amp; a &amp; b &amp; c
-                  \end{array}
-                </me>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <me>
-                  \begin{array}{c|cccc}
-                  \circ &amp; a &amp; b &amp; c &amp; d \\
-                  \hline
-                  a &amp; a &amp; b &amp; c &amp; d \\
-                  b &amp; b &amp; a &amp; d &amp; c \\
-                  c &amp; c &amp; d &amp; a &amp; b \\
-                  d &amp; d &amp; c &amp; b &amp; a
-                  \end{array}
-                </me>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <me>
-                  \begin{array}{c|cccc}
-                  \circ &amp; a &amp; b &amp; c &amp; d \\
-                  \hline
-                  a &amp; a &amp; b &amp; c &amp; d \\
-                  b &amp; b &amp; c &amp; d &amp; a \\
-                  c &amp; c &amp; d &amp; a &amp; b \\
-                  d &amp; d &amp; a &amp; b &amp; c
-                  \end{array}
-                </me>
-              </p>
-            </li>
-
-            <li>
-              <p>
-                <me>
-                  \begin{array}{c|cccc}
-                  \circ &amp; a &amp; b &amp; c &amp; d \\
-                  \hline
-                  a &amp; a &amp; b &amp; c &amp; d \\
-                  b &amp; b &amp; a &amp; c &amp; d \\
-                  c &amp; c &amp; b &amp; a &amp; d \\
-                  d &amp; d &amp; d &amp; b &amp; c
-                  \end{array}
-                </me>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) Not a group; (c) a group.
-        </p>
-      </hint>
-    </exercise>
-
-    <exercise number="3" xml:id="exercise-groups-rectangle-symmetries">
-      <statement>
-        <p>
-          Write out Cayley tables for groups formed by the symmetries of a rectangle and for <m>({\mathbb Z}_4, +)</m>.
-          How many elements are in each group?
-          Are the groups the same?
-          Why or why not?
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise number="4">
-      <statement>
-        <p>
-          Describe the symmetries of a rhombus and prove that the set of symmetries forms a group.
-          Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus.
-          Are the symmetries of a rectangle and those of a rhombus the same?
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Describe the symmetries of a rhombus and prove that the set of symmetries forms a group. Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus. Are the symmetries of a rectangle and those of a rhombus the same?</p>
+            </statement>
+        </exercise>
 
     <exercise number="5">
       <statement>
@@ -1593,18 +1313,6 @@ then <m>ba = ca</m> implies <m>b = c</m> and <m>ab = ac</m> implies <m>b = c</m>
       </statement>
     </exercise>
 
-    <!-- To do Move the old Exercise 50 to struct.xml-->
-        <!--
-	<exercise number="50">
-		<statement>
-			<p>Give an example of an infinite group in which every proper subgroup is finite.</p>
-		</statement>
-		<solution>
-			<p>Such groups exist, but the answer is complicated.</p>
-		</solution>
-	</exercise>
-
--->
     <exercise number="51">
       <statement>
         <p>
