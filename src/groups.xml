@@ -722,320 +722,207 @@
             </statement>
         </exercise>
 
-    <exercise number="5">
-      <statement>
-        <p>
-          Describe the symmetries of a square and prove that the set of symmetries is a group.
-          Give a Cayley table for the symmetries.
-          How many ways can the vertices of a square be permuted?
-          Is each permutation necessarily a symmetry of the square?
-          The symmetry group of the square is denoted by <m>D_4</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Describe the symmetries of a square and prove that the set of symmetries is a group. Give a Cayley table for the symmetries. How many ways can the vertices of a square be permuted? Is each permutation necessarily a symmetry of the square? The symmetry group of the square is denoted by <m>D_4</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="6">
-      <statement>
-        <p>
-          Give a multiplication table for the group <m>U(12)</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          <me>
-            \begin{array}{c|cccc}
-            \cdot &amp; 1  &amp; 5  &amp; 7  &amp; 11 \\
-            \hline
-            1 &amp; 1 &amp; 5 &amp; 7 &amp; 11 \\ 5 &amp; 5 &amp; 1 &amp; 11 &amp; 7 \\
-            7 &amp; 7 &amp; 11 &amp; 1 &amp; 5 \\ 11 &amp; 11 &amp; 7 &amp; 5 &amp; 1
-            \end{array}
-          </me>
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Give a multiplication table for the group <m>U(12)</m>.</p>
+            </statement>
+            <hint>
+                <p><me>\begin{array}{c|cccc}
+                \cdot &amp; 1  &amp; 5  &amp; 7  &amp; 11 \\
+                \hline
+                1 &amp; 1 &amp; 5 &amp; 7 &amp; 11 \\ 5 &amp; 5 &amp; 1 &amp; 11 &amp; 7 \\
+                7 &amp; 7 &amp; 11 &amp; 1 &amp; 5 \\ 11 &amp; 11 &amp; 7 &amp; 5 &amp; 1
+                \end{array}</me></p>
+            </hint>
+        </exercise>
 
-    <exercise number="7">
-      <statement>
-        <p>
-          Let <m>S = {\mathbb R} \setminus \{ -1 \}</m> and define a binary operation on <m>S</m> by <m>a \ast b = a + b + ab</m>.
-          Prove that <m>(S, \ast)</m> is an abelian group.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>S = {\mathbb R} \setminus \{ -1 \}</m> and define a binary operation on <m>S</m> by <m>a \ast b = a + b + ab</m>. Prove that <m>(S, \ast)</m> is an abelian group.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="8">
-      <statement>
-        <p>
-          Give an example of two elements <m>A</m> and <m>B</m> in
-          <m>GL_2({\mathbb R})</m> with <m>AB \neq BA</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Pick two matrices.
-          Almost any pair will work.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Give an example of two elements <m>A</m> and <m>B</m> in<m>GL_2({\mathbb R})</m> with <m>AB \neq BA</m>.</p>
+            </statement>
+            <hint>
+                <p>Pick two matrices. Almost any pair will work.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="9">
-      <statement>
-        <p>
-          Prove that the product of two matrices in <m>SL_2({\mathbb R})</m> has determinant one.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that the product of two matrices in <m>SL_2({\mathbb R})</m> has determinant one.</p>
+            </statement>
+        </exercise>
 
-    <!-- To do Check references to Heisenberg group-->
+        <exercise>
+            <statement>
+                <p>Prove that the set of matrices of the form
+                    <me>\begin{pmatrix}
+                    1 &amp; x &amp; y \\
+                    0 &amp; 1 &amp; z \\
+                    0 &amp; 0 &amp; 1
+                    \end{pmatrix}</me>
+                is a group under matrix multiplication. This group, known as the <term>Heisenberg group</term>, is important in quantum physics. Matrix multiplication in the Heisenberg group is defined by
+                    <me>\begin{pmatrix}
+                    1 &amp; x &amp; y \\
+                    0 &amp; 1 &amp; z \\
+                    0 &amp; 0 &amp; 1
+                    \end{pmatrix}
+                    \begin{pmatrix}
+                    1 &amp; x' &amp; y' \\
+                    0 &amp; 1 &amp; z' \\
+                    0 &amp; 0 &amp; 1
+                    \end{pmatrix}
+                    =
+                    \begin{pmatrix}
+                    1 &amp; x+x' &amp; y+y'+xz' \\
+                    0 &amp; 1 &amp; z+z' \\
+                    0 &amp; 0 &amp; 1
+                    \end{pmatrix}.</me></p>
+            </statement>
+        </exercise>
 
-    <exercise number="10">
-      <statement>
-        <p>
-          Prove that the set of matrices of the form
-          <me>
-            \begin{pmatrix}
-            1 &amp; x &amp; y \\
-            0 &amp; 1 &amp; z \\
-            0 &amp; 0 &amp; 1
-            \end{pmatrix}
-          </me>
-          is a group under matrix multiplication.
-          This group, known as the
-          <term>Heisenberg group</term>,
-          is important in quantum physics.
-          Matrix multiplication in the Heisenberg group is defined by
-          <me>
-            \begin{pmatrix}
-            1 &amp; x &amp; y \\
-            0 &amp; 1 &amp; z \\
-            0 &amp; 0 &amp; 1
-            \end{pmatrix}
-            \begin{pmatrix}
-            1 &amp; x' &amp; y' \\
-            0 &amp; 1 &amp; z' \\
-            0 &amp; 0 &amp; 1
-            \end{pmatrix}
-            =
-            \begin{pmatrix}
-            1 &amp; x+x' &amp; y+y'+xz' \\
-            0 &amp; 1 &amp; z+z' \\
-            0 &amp; 0 &amp; 1
-            \end{pmatrix}
-          </me>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that <m>\det(AB) = \det(A) \det(B)</m> in <m>GL_2({\mathbb R})</m>. Use this result to show that the binary operation in the group <m>GL_2({\mathbb R})</m> is closed; that is, if <m>A</m> and <m>B</m> are in <m>GL_2({\mathbb R})</m>, then <m>AB \in GL_2({\mathbb R})</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="11">
-      <statement>
-        <p>
-          Prove that <m>\det(AB) = \det(A) \det(B)</m> in <m>GL_2({\mathbb R})</m>.
-          Use this result to show that the binary operation in the group <m>GL_2({\mathbb R})</m> is closed;
-          that is, if <m>A</m> and <m>B</m> are in <m>GL_2({\mathbb R})</m>,
-          then <m>AB \in GL_2({\mathbb R})</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>{\mathbb Z}_2^n = \{ (a_1, a_2, \ldots, a_n) : a_i \in {\mathbb Z}_2 \}</m>. Define a binary operation on <m>{\mathbb Z}_2^n</m> by
+                    <me>(a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n).</me>
+                Prove that <m>{\mathbb Z}_2^n</m> is a group under this operation. This group is important in algebraic coding theory.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="12">
-      <statement>
-        <p>
-          Let <m>{\mathbb Z}_2^n = \{ (a_1, a_2, \ldots,
-          a_n) : a_i \in {\mathbb Z}_2 \}</m>.
-          Define a binary operation on <m>{\mathbb Z}_2^n</m> by
-          <me>
-            (a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n)
-          </me>.
-          Prove that <m>{\mathbb Z}_2^n</m> is a group under this operation.
-          This group is important in algebraic coding theory.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that <m>{\mathbb R}^{\ast} = {\mathbb R} \setminus \{0 \}</m> is a group under the operation of multiplication.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="13">
-      <statement>
-        <p>
-          Show that <m>{\mathbb R}^{\ast} = {\mathbb R} \setminus \{0 \}</m> is a group under the operation of multiplication.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Given the groups <m>{\mathbb R}^{\ast}</m> and <m>{\mathbb Z}</m>, let <m>G = {\mathbb R}^{\ast} \times {\mathbb Z}</m>. Define a binary operation <m>\circ</m> on <m>G</m> by <m>(a,m) \circ (b,n) = (ab, m + n)</m>. Show that <m>G</m> is a group under this operation.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="14">
-      <statement>
-        <p>
-          Given the groups <m>{\mathbb R}^{\ast}</m> and <m>{\mathbb Z}</m>,
-          let <m>G = {\mathbb R}^{\ast} \times {\mathbb Z}</m>.
-          Define a binary operation <m>\circ</m> on <m>G</m> by <m>(a,m) \circ (b,n) = (ab,
-          m + n)</m>.
-          Show that <m>G</m> is a group under this operation.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove that every group containing six elements is abelian.</p>
+            </statement>
+            <hint>
+                <p>There is a nonabelian group containing six elements.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="15">
-      <statement>
-        <p>
-          Prove or disprove that every group containing six elements is abelian.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          There is a nonabelian group containing six elements.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Give a specific example of some group <m>G</m> and elements <m>g, h \in G</m> where <m>(gh)^n \neq g^nh^n</m>.</p>
+            </statement>
+            <hint>
+                <p>Look at the symmetry group of an equilateral triangle or a square.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="16">
-      <statement>
-        <p>
-          Give a specific example of some group <m>G</m> and elements
-          <m>g,
-          h \in G</m> where <m>(gh)^n \neq g^nh^n</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Look at the symmetry group of an equilateral triangle or a square.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Give an example of three different groups with eight elements. Why are the groups different?</p>
+            </statement>
+            <hint>
+                <p>The are five different groups of order 8.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="17">
-      <statement>
-        <p>
-          Give an example of three different groups with eight elements.
-          Why are the groups different?
-        </p>
-      </statement>
-      <hint>
-        <p>
-          The are five different groups of order 8.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that there are <m>n!</m> permutations of a set containing <m>n</m> items.</p>
+            </statement>
+            <hint>
+                <p>Let
+                    <me>\sigma =
+                    \begin{pmatrix}
+                    1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n
+                    \end{pmatrix}</me>
+                be in <m>S_n</m>. All of the <m>a_i</m>s must be distinct. There are <m>n</m> ways to choose <m>a_1</m>, <m>n - 1</m> ways to choose <m>a_2, \ldots</m>, 2 ways to choose <m>a_{n - 1}</m>, and only one way to choose <m>a_n</m>. Therefore, we can form <m>\sigma</m> in <m>n(n - 1) \cdots 2 \cdot 1 = n!</m> ways.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="18">
-      <statement>
-        <p>
-          Show that there are <m>n!</m> permutations of a set containing <m>n</m> items.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Let
-          <me>
-            \sigma =
-            \begin{pmatrix}
-            1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n
-            \end{pmatrix}
-          </me>
-          be in <m>S_n</m>.
-          All of the <m>a_i</m>s must be distinct.
-          There are <m>n</m> ways to choose <m>a_1</m>,
-          <m>n - 1</m> ways to choose <m>a_2, \ldots</m>, 2 ways to choose <m>a_{n - 1}</m>,
-          and only one way to choose <m>a_n</m>.
-          Therefore, we can form <m>\sigma</m> in <m>n(n - 1) \cdots 2 \cdot 1 = n!</m> ways.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that
+                    <me>0 + a  \equiv a + 0  \equiv a \pmod{ n }</me>
+                for all <m>a \in {\mathbb Z}_n</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="19">
-      <statement>
-        <p>
-          Show that
-          <me>
-            0 + a  \equiv a + 0  \equiv a \pmod{ n }
-          </me>
-          for all <m>a \in {\mathbb Z}_n</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that there is a multiplicative identity for the integers modulo <m>n</m>:
+                    <me>a \cdot  1   \equiv  a \pmod{n}.</me></p>
+            </statement>
+        </exercise>
 
-    <exercise number="20">
-      <statement>
-        <p>
-          Prove that there is a multiplicative identity for the integers modulo <m>n</m>:
-          <me>
-            a \cdot  1   \equiv  a \pmod{n}
-          </me>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>For each <m>a \in {\mathbb Z}_n</m> find an element <m>b \in {\mathbb Z}_n</m> such that
+                    <me>a + b \equiv b + a  \equiv 0 \pmod{ n}.</me></p>
+            </statement>
+        </exercise>
 
-    <exercise number="21">
-      <statement>
-        <p>
-          For each <m>a \in {\mathbb Z}_n</m> find an element <m>b \in {\mathbb Z}_n</m> such that
-          <me>
-            a + b \equiv b + a  \equiv 0 \pmod{ n}
-          </me>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that addition and multiplication mod <m>n</m> are well defined operations. That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod <m>n</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="22">
-      <statement>
-        <p>
-          Show that addition and multiplication mod <m>n</m> are well defined operations.
-          That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod <m>n</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that addition and multiplication mod <m>n</m> are associative operations.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="23">
-      <statement>
-        <p>
-          Show that addition and multiplication mod <m>n</m> are associative operations.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that multiplication distributes over addition modulo <m>n</m>:
+                    <me>a(b  + c)  \equiv ab + ac  \pmod{n}.</me></p>
+            </statement>
+        </exercise>
 
-    <exercise number="24">
-      <statement>
-        <p>
-          Show that multiplication distributes over addition modulo <m>n</m>:
-          <me>
-            a(b  + c)  \equiv ab + ac  \pmod{n}
-          </me>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>a</m> and <m>b</m> be elements in a group <m>G</m>. Prove that <m>ab^na^{-1} = (aba^{-1})^n</m> for <m>n \in \mathbb Z</m>.</p>
+            </statement>
+            <hint>
+                <p><md>
+                    <mrow>(aba^{-1})^n &amp; = (aba^{-1})(aba^{-1}) \cdots (aba^{-1})</mrow>
+                    <mrow>&amp; = ab(aa^{-1})b(aa^{-1})b \cdots b(aa^{-1})ba^{-1}</mrow>
+                    <mrow>&amp; = ab^na^{-1}.</mrow>
+                </md></p>
+            </hint>
+        </exercise>
 
-    <exercise number="25">
-      <statement>
-        <p>
-          Let <m>a</m> and <m>b</m> be elements in a group <m>G</m>.
-          Prove that <m>ab^na^{-1} = (aba^{-1})^n</m> for <m>n \in \mathbb Z</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          <md>
-            <mrow>(aba^{-1})^n &amp; = (aba^{-1})(aba^{-1}) \cdots (aba^{-1})</mrow>
-            <mrow>&amp; = ab(aa^{-1})b(aa^{-1})b \cdots b(aa^{-1})ba^{-1}</mrow>
-            <mrow>&amp; = ab^na^{-1}</mrow>
-          </md>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>U(n)</m> be the group of units in <m>{\mathbb Z}_n</m>. If <m>n \gt 2</m>, prove that there is an element <m>k \in U(n)</m> such that <m>k^2 = 1</m> and <m>k \neq 1</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="26">
-      <statement>
-        <p>
-          Let <m>U(n)</m> be the group of units in <m>{\mathbb Z}_n</m>.
-          If <m>n \gt 2</m>, prove that there is an element
-          <m>k \in U(n)</m> such that <m>k^2 = 1</m> and <m>k \neq 1</m>.
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise number="27">
-      <statement>
-        <p>
-          Prove that the inverse of <m>g _1 g_2 \cdots g_n</m> is <m>g_n^{-1} g_{n-1}^{-1} \cdots g_1^{-1}</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that the inverse of <m>g _1 g_2 \cdots g_n</m> is <m>g_n^{-1} g_{n-1}^{-1} \cdots g_1^{-1}</m>.</p>
+            </statement>
+        </exercise>
 
     <exercise number="28">
       <statement>
