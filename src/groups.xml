@@ -1024,224 +1024,140 @@
             </hint>
         </exercise>
 
-    <exercise number="42">
-      <statement>
-        <p>
-          Let <m>G</m> be the group of
-          <m>2 \times 2</m> matrices under addition and
-          <me>
-            H =
-            \left\{
-            \begin{pmatrix}
-            a &amp; b \\
-            c &amp; d
-            \end{pmatrix} :
-            a + d = 0
-            \right\}
-          </me>.
-          Prove that <m>H</m> is a subgroup of <m>G</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>G</m> be the group of <m>2 \times 2</m> matrices under addition and
+                    <me>H =
+                    \left\{
+                    \begin{pmatrix}
+                    a &amp; b \\
+                    c &amp; d
+                    \end{pmatrix} :
+                    a + d = 0
+                    \right\}.
+                    </me>
+                Prove that <m>H</m> is a subgroup of <m>G</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="43">
-      <statement>
-        <p>
-          Prove or disprove: <m>SL_2( {\mathbb Z} )</m>,
-          the set of <m>2 \times 2</m> matrices with integer entries and determinant one,
-          is a subgroup of <m>SL_2( {\mathbb R} )</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: <m>SL_2( {\mathbb Z} )</m>, the set of <m>2 \times 2</m> matrices with integer entries and determinant one, is a subgroup of <m>SL_2( {\mathbb R} )</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="44">
-      <statement>
-        <p>
-          List the subgroups of the quaternion group, <m>Q_8</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>List the subgroups of the quaternion group, <m>Q_8</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="45">
-      <statement>
-        <p>
-          Prove that the intersection of two subgroups of a group <m>G</m> is also a subgroup of <m>G</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that the intersection of two subgroups of a group <m>G</m> is also a subgroup of <m>G</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="46">
-      <statement>
-        <p>
-          Prove or disprove: If <m>H</m> and <m>K</m> are subgroups of a group <m>G</m>,
-          then <m>H \cup K</m> is a subgroup of <m>G</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Look at <m>S_3</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: If <m>H</m> and <m>K</m> are subgroups of a group <m>G</m>, then <m>H \cup K</m> is a subgroup of <m>G</m>.</p>
+            </statement>
+            <hint>
+                <p>Look at <m>S_3</m>.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="47">
-      <statement>
-        <p>
-          Prove or disprove: If <m>H</m> and <m>K</m> are subgroups of a group <m>G</m>,
-          then <m>H K = \{hk : h \in H \text{ and } k \in K \}</m> is a subgroup of <m>G</m>.
-          What if <m>G</m> is abelian?
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: If <m>H</m> and <m>K</m> are subgroups of a group <m>G</m>, then <m>H K = \{hk : h \in H \text{ and } k \in K \}</m> is a subgroup of <m>G</m>. What if <m>G</m> is abelian?</p>
+            </statement>
+        </exercise>
 
-    <exercise number="48" xml:id="exercise-groups-center-group">
-      <statement>
-        <p>
-          Let <m>G</m> be a group and <m>g \in G</m>.
-          Show that
-          <me>
-            Z(G) = \{ x \in G : gx = xg \text{ for all } g \in G \}
-          </me>
-          is a subgroup of <m>G</m>.
-          This subgroup is called the <term>center</term> of <m>G</m>.
+        <exercise xml:id="exercise-groups-center-group">
+            <statement>
+                <p>Let <m>G</m> be a group and <m>g \in G</m>. Show that
+                    <me>Z(G) = \{ x \in G : gx = xg \text{ for all } g \in G \}</me>
+                is a subgroup of <m>G</m>. This subgroup is called the <term>center</term> of <m>G</m>.
+                <notation>
+                <usage>Z(G)</usage>
+                <description>the center of a group</description>
+                </notation></p>
+            </statement>
+        </exercise>
 
-          <notation>
-            <usage>Z(G)</usage>
-            <description>the center of a group</description>
-          </notation>
+        <exercise>
+            <statement>
+                <p>Let <m>a</m> and <m>b</m> be elements of a group <m>G</m>. If <m>a^4 b = ba</m> and <m>a^3 = e</m>, prove that <m>ab = ba</m>.</p>
+            </statement>
+            <hint>
+                <p><m>b a = a^4 b = a^3 a b = ab</m></p>
+            </hint>
+        </exercise>
 
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Give an example of an infinite group in which every nontrivial subgroup is infinite.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="49">
-      <statement>
-        <p>
-          Let <m>a</m> and <m>b</m> be elements of a group <m>G</m>.
-          If <m>a^4 b = ba</m> and <m>a^3 = e</m>,
-          prove that <m>ab = ba</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          <m>b a = a^4 b = a^3 a b = ab</m>
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>If <m>xy = x^{-1} y^{-1}</m> for all <m>x</m> and <m>y</m> in <m>G</m>, prove that <m>G</m> must be abelian.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="50">
-      <statement>
-        <p>
-          Give an example of an infinite group in which every nontrivial subgroup is infinite.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: Every proper subgroup of a nonabelian group is nonabelian.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="51">
-      <statement>
-        <p>
-          If <m>xy = x^{-1} y^{-1}</m> for all <m>x</m> and <m>y</m> in <m>G</m>,
-          prove that <m>G</m> must be abelian.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>H</m> be a subgroup of <m>G</m> and
+                    <me>C(H) = \{ g \in G : gh = hg \text{ for all } h \in H \}.</me>
+                Prove <m>C(H)</m> is a subgroup of <m>G</m>. This subgroup is called the <term>centralizer</term> of <m>H</m> in <m>G</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="52">
-      <statement>
-        <p>
-          Prove or disprove: Every proper subgroup of a nonabelian group is nonabelian.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>H</m> be a subgroup of <m>G</m>. If <m>g \in G</m>, show that <m>gHg^{-1} = \{ghg^{-1} : h\in H\}</m> is also a subgroup of <m>G</m>.</p>
+            </statement>
+        </exercise>
 
-    <!-- To do Fix references to centralizer-->
+        <exercise>
+            <title><acro>ISBN</acro> Codes</title>
+            <statement>
+                <p>Every book has an International Standard Book Number<idx><h>International standard book number</h></idx> (<acro>ISBN</acro>) code. This is a 10-digit code indicating the book's publisher and title. The tenth digit is a check digit satisfying
+                    <me>(d_1, d_2, \ldots, d_{10} ) \cdot (10, 9, \ldots, 1 )  \equiv 0 \pmod{11}.</me>
+                One problem is that <m>d_{10}</m> might have to be a 10 to make the inner product zero; in this case, 11 digits would be  needed to make this scheme work. Therefore, the character X is used for the eleventh digit. So <acro>ISBN</acro> 3-540-96035-X is a valid <acro>ISBN</acro> code.
+                    <ol>
 
-    <exercise number="53">
-      <statement>
-        <p>
-          Let <m>H</m> be a subgroup of <m>G</m> and
-          <me>
-            C(H) = \{ g \in G : gh = hg \text{ for all } h \in H \}
-          </me>.
-          Prove <m>C(H)</m> is a subgroup of <m>G</m>.
-          This subgroup is called the <term>centralizer</term> of <m>H</m> in <m>G</m>.
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>Is <acro>ISBN</acro> 0-534-91500-0 a valid <acro>ISBN</acro> code? What about <acro>ISBN</acro> 0-534-91700-0 and <acro>ISBN</acro> 0-534-19500-0?</p></li>
 
-    <exercise number="54">
-      <statement>
-        <p>
-          Let <m>H</m> be a subgroup of <m>G</m>.
-          If <m>g \in G</m>, show that
-          <m>gHg^{-1} = \{ghg^{-1} : h\in H\}</m> is also a subgroup of <m>G</m>.
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>Does this method detect all single-digit errors? What about all transposition errors?</p></li>
 
-    <exercise>
-      <title><acro>ISBN</acro> Codes</title>
-      <statement>
-        <p>
-          Every book has an International Standard Book Number<idx><h>International standard book number</h></idx> (<acro>ISBN</acro>) code.
-          This is a 10-digit code indicating the book's publisher and title.
-          The tenth digit is a check digit satisfying
-          <me>
-            (d_1, d_2, \ldots, d_{10} ) \cdot (10, 9, \ldots, 1 )  \equiv 0 \pmod{11}
-          </me>.
-          One problem is that <m>d_{10}</m> might have to be a 10 to make the inner product zero;
-          in this case, 11 digits would be  needed to make this scheme work.
-          Therefore, the character X is used for the eleventh digit.
-          So <acro>ISBN</acro> 3-540-96035-X is a valid <acro>ISBN</acro> code.
+                        <li><p>How many different <acro>ISBN</acro> codes are there?</p></li>
 
-          <ol>
-            <li>
-              <p>
-                Is <acro>ISBN</acro> 0-534-91500-0 a valid <acro>ISBN</acro> code?
-                What about <acro>ISBN</acro> 0-534-91700-0 and <acro>ISBN</acro> 0-534-19500-0?
-              </p>
-            </li>
+                        <li><p>A publisher has houses in Germany and the United States. Its German prefix is 3-540. If its United States prefix will be 0-<c>abc</c>, find <c>abc</c> such that the rest of the <acro>ISBN</acro> code will be the same for a book printed in Germany and in the United States. Under the <acro>ISBN</acro> coding method the first digit identifies the language; German is 3 and English is 0. The next group of numbers identifies the publisher, and the last group identifies the specific book.</p></li>
 
-            <li>
-              <p>
-                Does this method detect all single-digit errors?
-                What about all transposition errors?
-              </p>
-            </li>
+                    </ol></p>
+            </statement>
+        </exercise>
 
-            <li>
-              <p>
-                How many different <acro>ISBN</acro> codes are there?
-              </p>
-            </li>
+    </exercises>
 
-            <li>
-              <p>
-                A publisher has houses in Germany and the United States.
-                Its German prefix is 3-540.
-                If its United States prefix will be 0-<c>abc</c>,
-                find <c>abc</c> such that the rest of the <acro>ISBN</acro> code will be the same for a book printed in Germany and in the United States.
-                Under the <acro>ISBN</acro> coding method the first digit identifies the language; German is 3 and English is 0.
-                The next group of numbers identifies the publisher,
-                and the last group identifies the specific book.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+    <section xml:id="section-groups-symmetry-groups-in-the-classroom">
+        <title>Symmetry in the Secondary Classroom</title>
 
-  </exercises>
+        <p>This appendix will connect symmetry groups to the high school classroom.</p>
+  
+    </section>
 
-  <section xml:id="section-groups-symmetry-groups-in-the-classroom">
-    <title>Symmetry in the Secondary Classroom</title>
-
-    <p>This appendix will connect symmetry groups to the high school classroom.</p>
-  </section>
-
-  <references xml:id="groups-references">
+    <references xml:id="groups-references">
         <!--  references checked and updated - TWJ 6/22/2010 -->
-    <title>References and Suggested Readings</title>
+        <title>References and Suggested Readings</title>
         <!--Fix intro
 	 	<introduction>
 	 		<p>References [2] and [3] show how group theory can be used in error detection schemes.  Other sources cover more advanced topics in group theory.</p>
@@ -1249,45 +1165,46 @@
 -->
         <!-- %Reference updated - TWJ 6/22/2010 -->
         <!-- was [1] -->
-    <biblio type="raw">
-      Burnside, W.
-      <title>Theory of Groups of Finite Order</title>. 2nd ed. Cambridge University Press, Cambridge, 1911; Dover, New York, 1953.  A classic.  Also available at books.google.com.
-    </biblio>
+        <biblio type="raw">
+            Burnside, W.
+            <title>Theory of Groups of Finite Order</title>. 2nd ed. Cambridge University Press, Cambridge, 1911; Dover, New York, 1953.  A classic.  Also available at books.google.com.
+        </biblio>
         <!-- was [2] -->
-    <biblio type="raw">
-      Gallian, J. A. and Winters, S. <q>Modular Arithmetic in the Marketplace,</q>
-      <title>The American Mathematical Monthly</title>
-      <volume>95</volume>
-      (1988): 548<ndash/>51.
-    </biblio>
+        <biblio type="raw">
+            Gallian, J. A. and Winters, S. <q>Modular Arithmetic in the Marketplace,</q>
+            <title>The American Mathematical Monthly</title>
+            <volume>95</volume>
+            (1988): 548<ndash/>51.
+        </biblio>
         <!-- %Reference updated - TWJ 6/22/2010 -->
         <!-- was [3] -->
-    <biblio type="raw">
-      Gallian, J. A.
-      <title>Contemporary Abstract Algebra</title>. 7th ed. Brooks/Cole, Belmont, CA, 2009.
-    </biblio>
+        <biblio type="raw">
+            Gallian, J. A.
+            <title>Contemporary Abstract Algebra</title>. 7th ed. Brooks/Cole, Belmont, CA, 2009.
+        </biblio>
         <!-- %Reference updated - TWJ 6/22/2010 -->
         <!-- was [4] -->
-    <biblio type="raw">
-      Hall, M.
-      <title>Theory of Groups</title>. 2nd ed. American Mathematical Society, Providence, 1959.
-    </biblio>
+        <biblio type="raw">
+            Hall, M.
+            <title>Theory of Groups</title>. 2nd ed. American Mathematical Society, Providence, 1959.
+        </biblio>
         <!-- %Reference updated - TWJ 6/22/2010 -->
         <!-- was [5] -->
-    <biblio type="raw">
-      Kurosh, A. E.
-      <title>The Theory of Groups</title>, vols. I and II. American Mathematical Society, Providence, 1979.
-    </biblio>
+        <biblio type="raw">
+            Kurosh, A. E.
+            <title>The Theory of Groups</title>, vols. I and II. American Mathematical Society, Providence, 1979.
+        </biblio>
         <!-- %  The following two books are out of print and probably not readily available - TWJ 6/22/2010  -->
         <!-- [6] MacDonald, I. D. The Theory of Groups. Krieger, London, 1988. -->
         <!-- [7] Rose, J. S. A Course on Group Theory. Cambridge University Press, Cambridge, 1978. -->
         <!-- %Reference updated 6/22/2010 - TWJ -->
         <!-- was [6] -->
-    <biblio type="raw">
-      Rotman, J. J.
-      <title>An Introduction to the Theory of Groups</title>. 4th ed. Springer, New York, 1995.
-    </biblio>
-  </references>
+        <biblio type="raw">
+            Rotman, J. J.
+            <title>An Introduction to the Theory of Groups</title>. 4th ed. Springer, New York, 1995.
+        </biblio>
+  
+    </references>
 
 
 </chapter>
