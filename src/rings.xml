@@ -35,361 +35,196 @@
                     <md>
                         <mrow>a( b + c)&amp;= ab +ac</mrow>
                         <mrow>(a + b)c &amp; = ac + bc.</mrow>
-                    </md>.</p></li>
+                    </md></p></li>
 
             </ol>
-        This last condition, the distributive axiom, relates the binary operations of addition and multiplication. Notice that the first four axioms simply require that a ring be an abelian group under addition, so we could also have defined a ring to be an abelian group <m>(R, +)</m> together with a second binary operation satisfying the fifth and sixth conditions given above.</p>
+        This last condition, the distributive axiom, relates the binary operations of addition and multiplication. Notice that the first four axioms simply require that a ring be an abelian group under addition (see <xref ref="section-groups-define"/>), so we could also have defined a ring to be an abelian group <m>(R, +)</m> together with a second binary operation satisfying the fifth and sixth conditions given above.</p>
 
-        <p>
-      If there is an element <m>1 \in R</m> such that <m>1 \neq 0</m> and
-      <m>1a = a1 = a</m> for each element <m>a \in R</m>,
-      we say that <m>R</m> is a ring with <term>unity</term>
-          <idx><h>Ring</h><h>with unity</h></idx>
-      or <term>identity</term>.
-          <idx><h>Ring</h><h>with identity</h></idx>
-      A ring <m>R</m> for which <m>ab = ba</m> for all
-      <m>a,
-      b</m> in <m>R</m> is called a <term>commutative ring</term>.
-          <idx><h>Ring</h><h>commutative</h></idx>
-          <idx><h>Commutative rings</h></idx>
-      A commutative ring <m>R</m> with identity is called an
-      <term>integral domain</term>
-          <idx><h>Integral domain</h></idx>
-      if, for every <m>a, b \in R</m> such that <m>ab = 0</m>,
-      either <m>a = 0</m> or <m>b = 0</m>.
-      A <term>division ring</term>
-          <idx><h>Division ring</h></idx>
-          <idx><h>Ring</h><h>division</h></idx>
-      is a ring <m>R</m>, with an identity,
-      in which every nonzero element in <m>R</m> is a <term>unit</term>;
-          <idx><h>Unit</h></idx>
-      that is, for each <m>a \in R</m> with <m>a \neq 0</m>,
-      there exists a unique element <m>a^{-1}</m> such that <m>a^{-1} a = a a^{-1} = 1</m>.
-      A commutative division ring is called a <term>field</term>.
-          <idx><h>Field</h></idx>
-      The relationship among rings,
-      integral domains, division rings,
-      and fields is shown in <xref ref="figure-ring-types"/>.
-    </p>
+        <p>If there is an element <m>1 \in R</m> such that <m>1 \neq 0</m> and <m>1a = a1 = a</m> for each element <m>a \in R</m>, we say that <m>R</m> is a ring with <term>unity</term> <idx><h>Ring</h><h>with unity</h></idx> or <term>identity</term>. <idx><h>Ring</h><h>with identity</h></idx> A ring <m>R</m> for which <m>ab = ba</m> for all <m>a, b</m> in <m>R</m> is called a <term>commutative ring</term>.
+        <idx><h>Ring</h><h>commutative</h></idx>
+        <idx><h>Commutative rings</h></idx>
+        A commutative ring <m>R</m> with identity is called an <term>integral domain</term> <idx><h>Integral domain</h></idx> if, for every <m>a, b \in R</m> such that <m>ab = 0</m>, either <m>a = 0</m> or <m>b = 0</m>. <idx><h>Division ring</h></idx> <idx><h>Ring</h><h>division</h></idx> is a ring <m>R</m>, with an identity, in which every nonzero element in <m>R</m> is a <term>unit</term>; <idx><h>Unit</h></idx> that is, for each <m>a \in R</m> with <m>a \neq 0</m>, there exists a unique element <m>a^{-1}</m> such that <m>a^{-1} a = a a^{-1} = 1</m>. A commutative division ring is called a <term>field</term>.
+        <idx><h>Field</h></idx>
+        The relationship among rings, integral domains, division rings, and fields is shown in <xref ref="figure-ring-types"/>.</p>
 
-    <figure xml:id="figure-ring-types">
-      <caption>Types of rings</caption>
-            <!-- Replaced figure with tikz figure - TWJ 8/13/2010 -->
-      <image width="50%" xml:id="rings-types">
+        <figure xml:id="figure-ring-types">
+            <caption>Types of rings</caption>
+            <image width="50%" xml:id="rings-types">
+                <latex-image>
+                    <xi:include href="tikz/rings-types.tex" parse="text"/>
+                </latex-image>
+            </image>
+        </figure>
 
-            <latex-image>
-                <xi:include href="tikz/rings-types.tex" parse="text"/>
-            </latex-image>
-      </image>
+        <example xml:id="example-rings-integers">
+            <p>As we have mentioned previously, the integers form a ring. In fact, <m>{\mathbb Z}</m> is an integral domain. Certainly if <m>a b = 0</m> for two integers <m>a</m> and <m>b</m>, either <m>a=0</m> or <m>b=0</m>. However, <m>{\mathbb Z}</m> is not a field. There is no integer that is the multiplicative inverse of <m>2</m>, since <m>1/2</m> is not an integer. The only integers with multiplicative inverses are <m>1</m> and <m>-1</m>.</p>
+        </example>
 
-    </figure>
+        <example xml:id="example-rings-field">
+            <p>Under the ordinary operations of addition and multiplication, all of the familiar number systems are rings: the rationals, <m>{\mathbb Q}</m>; the real numbers, <m>{\mathbb R}</m>; and the complex numbers, <m>{\mathbb C}</m>. Each of these rings is a field.</p>
+        </example>
 
-    <example xml:id="example-rings-integers">
-      <p>
-        As we have mentioned previously, the integers form a ring.
-        In fact, <m>{\mathbb Z}</m> is an integral domain.
-        Certainly if <m>a b = 0</m> for two integers <m>a</m> and <m>b</m>,
-        either <m>a=0</m> or <m>b=0</m>.
-        However, <m>{\mathbb Z}</m> is not a field.
-        There is no integer that is the multiplicative inverse of <m>2</m>,
-        since <m>1/2</m> is not an integer.
-        The only integers with multiplicative inverses are <m>1</m> and <m>-1</m>.
-      </p>
-    </example>
+        <example xml:id="example-rings-zn">
+            <p>We can define the product of two elements <m>a</m> and <m>b</m> in <m>{\mathbb Z}_n</m> by <m>ab \pmod{n}</m>. For instance, in <m>{\mathbb Z}_{12}</m>, <m>5 \cdot 7 \equiv 11 \pmod{12}</m>. This product makes the abelian group <m>{\mathbb Z}_n</m> into a ring. Certainly <m>{\mathbb Z}_n</m> is a commutative ring; however, it may fail to be an integral domain. If we consider <m>3 \cdot 4 \equiv 0 \pmod{12}</m> in <m>{\mathbb Z}_{12}</m>, it is easy to see that a product of two nonzero elements in the ring can be equal to zero.</p>
+        </example>
 
-    <example xml:id="example-rings-field">
-      <p>
-        Under the ordinary operations of addition and multiplication,
-        all of the familiar number systems are rings:
-        the rationals, <m>{\mathbb Q}</m>;
-        the real numbers, <m>{\mathbb R}</m>;
-        and the complex numbers, <m>{\mathbb C}</m>.
-        Each of these rings is a field.
-      </p>
-    </example>
+        <p>A nonzero element <m>a</m> in a ring <m>R</m> is called a <term>zero divisor</term>
+        <idx><h>Zero divisor</h></idx>
+        if there is a nonzero element <m>b</m> in <m>R</m> such that <m>ab = 0</m>. In the previous example, <m>3</m> and <m>4</m> are zero divisors in <m>{\mathbb Z}_{12}</m>.</p>
 
-    <example xml:id="example-rings-zn">
-      <p>
-        We can define the product of two elements <m>a</m> and <m>b</m> in
-        <m>{\mathbb Z}_n</m> by <m>ab \pmod{n}</m>.
-        For instance, in <m>{\mathbb Z}_{12}</m>,
-        <m>5 \cdot 7 \equiv 11 \pmod{12}</m>.
-        This product makes the abelian group <m>{\mathbb Z}_n</m> into a ring.
-        Certainly <m>{\mathbb Z}_n</m> is a commutative ring;
-        however, it may fail to be an integral domain.
-        If we consider <m>3 \cdot 4 \equiv 0 \pmod{12}</m> in <m>{\mathbb Z}_{12}</m>,
-        it is easy to see that a product of two nonzero elements in the ring can be equal to zero.
-      </p>
-    </example>
+        <example xml:id="example-rings-functions">
+            <p>In calculus the continuous real-valued functions on an interval <m>[a,b]</m> form a commutative ring. We add or multiply two functions by adding or multiplying the values of the functions. If <m>f(x) = x^2</m> and <m>g(x) = \cos x</m>, then <m>(f+g)(x) = f(x) + g(x) = x^2 + \cos x</m> and <m>(fg)(x) = f(x) g(x) = x^2 \cos x</m>.</p>
+        </example>
 
-    <p>
-      A nonzero element <m>a</m> in a ring <m>R</m> is called a <term>zero divisor</term>
-          <idx><h>Zero divisor</h></idx>
-      if there is a nonzero element <m>b</m> in <m>R</m> such that <m>ab = 0</m>.
-      In the previous example,
-      <m>3</m> and <m>4</m> are zero divisors in <m>{\mathbb Z}_{12}</m>.
-    </p>
+        <example xml:id="example-rings-matrix">
+            <p>The <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m> form a ring under the usual operations of matrix addition and multiplication. This ring is noncommutative, since it is usually the case that <m>AB \neq BA</m>. Also, notice that we can have <m>AB = 0</m> when neither <m>A</m> nor <m>B</m> is zero.</p>
+        </example>
 
-    <example xml:id="example-rings-functions">
-      <p>
-        In calculus the continuous real-valued functions on an interval <m>[a,b]</m> form a commutative ring.
-        We add or multiply two functions by adding or multiplying the values of the functions.
-        If <m>f(x) = x^2</m> and <m>g(x) = \cos x</m>,
-        then <m>(f+g)(x) = f(x) + g(x) = x^2 + \cos x</m> and <m>(fg)(x) = f(x) g(x) = x^2 \cos x</m>.
-      </p>
-    </example>
+        <example xml:id="example-rings-noncommutative">
+            <p>For an example of a noncommutative division ring, let
+                <me>1 = 
+                \begin{pmatrix}
+                1 &amp; 0 \\
+                0 &amp; 1
+                \end{pmatrix},
+                \quad
+                {\mathbf i}
+                =
+                \begin{pmatrix}
+                0 &amp; 1 \\
+                -1 &amp; 0
+                \end{pmatrix},
+                \quad
+                {\mathbf j} =
+                \begin{pmatrix}
+                0 &amp; i \\
+                i &amp; 0
+                \end{pmatrix},
+                \quad
+                {\mathbf k} = 
+                \begin{pmatrix}
+                i &amp; 0 \\
+                0 &amp; -i
+                \end{pmatrix},</me>
+            where <m>i^2 = -1</m>. These elements satisfy the following relations:
+                <md>
+                    <mrow>{\mathbf i}^2 = {\mathbf j}^2 &amp; =  {\mathbf k}^2 = -1</mrow>
+                    <mrow>{\mathbf i}  {\mathbf j} &amp; =  {\mathbf k}</mrow>
+                    <mrow>{\mathbf j}  {\mathbf k} &amp; =  {\mathbf i}</mrow>
+                    <mrow>{\mathbf k}  {\mathbf i} &amp; =  {\mathbf j}</mrow>
+                    <mrow>{\mathbf j}  {\mathbf i} &amp; =  - {\mathbf k}</mrow>
+                    <mrow>{\mathbf k}  {\mathbf j} &amp; =  - {\mathbf i}</mrow>
+                    <mrow>{\mathbf i}  {\mathbf k} &amp; =  - {\mathbf j}.</mrow>
+                </md>
+            Let <m>{\mathbb H}</m> consist of elements of the form <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}</m>, where <m>a, b , c, d</m> are real numbers. Equivalently, <m>{\mathbb H}</m> can be considered to be the set of all <m>2 \times 2</m> matrices of the form
+            <notation>
+            <usage>\mathbb H</usage>
+            <description>the ring of quaternions</description>
+            </notation>
+                <me>\begin{pmatrix}
+                \alpha &amp; \beta \\
+                -\overline{\beta} &amp; \overline{\alpha }
+                \end{pmatrix},</me>
+            where <m>\alpha = a + di</m> and <m>\beta = b + ci</m> are complex numbers. We can define addition and multiplication on <m>{\mathbb H}</m> either by the usual matrix operations or in terms of the generators <m>1</m>, <m>{\mathbf i}</m>, <m>{\mathbf j}</m>, and <m>{\mathbf k}</m>:
+                <md>
+                    <mrow>(a_1 + b_1 {\mathbf i} + c_1 {\mathbf j} +d_1 {\mathbf k} ) + ( a_2 + b_2 {\mathbf i} + c_2 {\mathbf j} +d_2 {\mathbf k} )</mrow>
+                    <mrow>= (a_1 + a_2) + ( b_1 + b_2) {\mathbf i}  + ( c_1 + c_2) \mathbf j + (d_1 + d_2) \mathbf k</mrow>
+                </md>
+            and
+                <me>(a_1 + b_1 {\mathbf i}  + c_1 {\mathbf j} +d_1 {\mathbf k} ) ( a_2 + b_2 {\mathbf i}  + c_2 {\mathbf j} +d_2 {\mathbf k} ) = \alpha + \beta {\mathbf i}  + \gamma {\mathbf j} + \delta {\mathbf k},</me>
+            where
+                <md>
+                    <mrow>\alpha &amp; =  a_1 a_2 - b_1 b_2 - c_1 c_2 -d_1 d_2</mrow>
+                    <mrow>\beta &amp; =  a_1 b_2 + a_2 b_1 + c_1 d_2 - d_1 c_2</mrow>
+                    <mrow>\gamma &amp; =  a_1 c_2 - b_1 d_2 + c_1 a_2 + d_1 b_2</mrow>
+                    <mrow>\delta &amp; =  a_1 d_2 + b_1 c_2 - c_1 b_2 + d_1 a_2.</mrow>
+                </md>
+            Though multiplication looks complicated, it is actually a straightforward computation if we remember that we just add and multiply elements in <m>{\mathbb H}</m> like polynomials and keep in mind the relationships between the generators <m>{\mathbf i}</m>, <m>{\mathbf j}</m>, and <m>{\mathbf k}</m>. The ring <m>{\mathbb H}</m> is called the ring of <term>quaternions</term>. <idx><h>Quaternions</h></idx></p>
 
-    <example xml:id="example-rings-matrix">
-      <p>
-        The <m>2 \times 2</m> matrices with entries in
-        <m>{\mathbb R}</m> form a ring under the usual operations of matrix addition and multiplication.
-        This ring is noncommutative,
-        since it is usually the case that <m>AB \neq BA</m>.
-        Also, notice that we can have <m>AB = 0</m> when neither <m>A</m> nor <m>B</m> is zero.
-      </p>
-    </example>
+            <p>To show that the quaternions are a division ring, we must be able to find an inverse for each nonzero element. Notice that
+                <me>(a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k})(a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k}) = a^2 + b^2 + c^2 + d^2.</me>
+            This element can be zero only if <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m> are all zero. So if <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0</m>,
+                <me>(a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k})\left(\frac{a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} }{a^2 + b^2 + c^2 + d^2} \right) = 1.</me></p>
+        </example>
 
-    <example xml:id="example-rings-noncommutative">
-      <p>
-        For an example of a noncommutative division ring, let
-        <me>
-          1 = 
-          \begin{pmatrix}
-          1 &amp; 0 \\
-          0 &amp; 1
-          \end{pmatrix},
-          \quad
-          {\mathbf i}
-          =
-          \begin{pmatrix}
-          0 &amp; 1 \\
-          -1 &amp; 0
-          \end{pmatrix},
-          \quad
-          {\mathbf j} =
-          \begin{pmatrix}
-          0 &amp; i \\
-          i &amp; 0
-          \end{pmatrix},
-          \quad
-          {\mathbf k} = 
-          \begin{pmatrix}
-          i &amp; 0 \\
-          0 &amp; -i
-          \end{pmatrix}
-        </me>,
-        where <m>i^2 = -1</m>.
-        These elements satisfy the following relations:
-        <md>
-          <mrow>{\mathbf i}^2 = {\mathbf j}^2 &amp; =  {\mathbf k}^2 = -1</mrow>
-          <mrow>{\mathbf i}  {\mathbf j} &amp; =  {\mathbf k}</mrow>
-          <mrow>{\mathbf j}  {\mathbf k} &amp; =  {\mathbf i}</mrow>
-          <mrow>{\mathbf k}  {\mathbf i} &amp; =  {\mathbf j}</mrow>
-          <mrow>{\mathbf j}  {\mathbf i} &amp; =  - {\mathbf k}</mrow>
-          <mrow>{\mathbf k}  {\mathbf j} &amp; =  - {\mathbf i}</mrow>
-          <mrow>{\mathbf i}  {\mathbf k} &amp; =  - {\mathbf j}</mrow>
-        </md>.
-        Let <m>{\mathbb H}</m> consist of elements of the form <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}</m>,
-        where <m>a, b , c, d</m> are real numbers.
-        Equivalently,
-        <m>{\mathbb H}</m> can be considered to be the set of all <m>2 \times 2</m> matrices of the form
+        <proposition>
+            <statement>
+                <p>Let <m>R</m> be a ring with <m>a, b \in R</m>. Then
+                    <ol>
 
-        <notation>
-          <usage>\mathbb H</usage>
-          <description>the ring of quaternions</description>
-        </notation>
+                        <li><p><m>a0 = 0a = 0</m>;</p></li>
 
-        <me>
-          \begin{pmatrix}
-          \alpha &amp; \beta \\
-          -\overline{\beta} &amp; \overline{\alpha }
-          \end{pmatrix}
-        </me>,
-        where <m>\alpha = a + di</m> and <m>\beta = b + ci</m> are complex numbers.
-        We can define addition and multiplication on
-        <m>{\mathbb H}</m> either by the usual matrix operations or in terms of the generators <m>1</m>,
-        <m>{\mathbf i}</m>, <m>{\mathbf j}</m>, and <m>{\mathbf k}</m>:
-        <md>
-          <mrow>(a_1 + b_1 {\mathbf i} + c_1 {\mathbf j} +d_1 {\mathbf k} ) + ( a_2 + b_2 {\mathbf i} + c_2 {\mathbf j} +d_2 {\mathbf k} )</mrow>
-          <mrow>= (a_1 + a_2) + ( b_1 + b_2) {\mathbf i}  + ( c_1 + c_2) \mathbf j + (d_1 + d_2) \mathbf k</mrow>
-        </md>
-        and
-        <me>
-          (a_1 + b_1 {\mathbf i}  + c_1 {\mathbf j} +d_1 {\mathbf k} ) ( a_2 + b_2 {\mathbf i}  + c_2 {\mathbf j} +d_2 {\mathbf k} ) = \alpha + \beta {\mathbf i}  + \gamma {\mathbf j} + \delta {\mathbf k}
-        </me>,
-        where
-        <md>
-          <mrow>\alpha &amp; =  a_1 a_2 - b_1 b_2 - c_1 c_2 -d_1 d_2</mrow>
-          <mrow>\beta &amp; =  a_1 b_2 + a_2 b_1 + c_1 d_2 - d_1 c_2</mrow>
-          <mrow>\gamma &amp; =  a_1 c_2 - b_1 d_2 + c_1 a_2 + d_1 b_2</mrow>
-          <mrow>\delta &amp; =  a_1 d_2 + b_1 c_2 - c_1 b_2 + d_1 a_2</mrow>
-        </md>.
-        Though multiplication looks complicated,
-        it is actually a straightforward computation if we remember that we just add and multiply elements in
-        <m>{\mathbb H}</m> like polynomials and keep in mind the relationships between the generators <m>{\mathbf i}</m>,
-        <m>{\mathbf j}</m>, and <m>{\mathbf k}</m>.
-        The ring <m>{\mathbb H}</m> is called the ring of <term>quaternions</term>.
-            <idx><h>Quaternions</h></idx>
-      </p>
-            <!-- Subscript error corrected.  Suggested by K. Halasz. -->
-            <!-- TWJ 2/6/2013  -->
-      <p>
-        To show that the quaternions are a division ring,
-        we must be able to find an inverse for each nonzero element.
-        Notice that
-        <me>
-          ( a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k} )( a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} ) = a^2 + b^2 + c^2 + d^2
-        </me>.
-        This element can be zero only if <m>a</m>, <m>b</m>,
-        <m>c</m>, and <m>d</m> are all zero.
-        So if <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0</m>,
-        <me>
-          (a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k})\left( \frac{a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} }{a^2 + b^2 + c^2 + d^2} \right) = 1
-        </me>.
-      </p>
-    </example>
+                        <li><p><m>a(-b) = (-a)b = -ab</m>;</p></li>
 
-    <proposition>
-      <statement>
-        <p>
-          Let <m>R</m> be a ring with <m>a, b \in R</m>.
-          Then
+                        <li><p><m>(-a)(-b) =ab</m>.</p></li>
 
-          <ol>
-            <li>
-              <p>
-                <m>a0 = 0a = 0</m>;
-              </p>
-            </li>
+                    </ol></p>
+            </statement>
+            <proof>
+                <p>To prove (1), observe that
+                    <me>a0 = a(0+0)= a0+ a0;</me>
+                hence, <m>a0=0</m>. Similarly, <m>0a = 0</m>. For (2), we have <m>ab + a(-b) = a(b-b) = a0 = 0</m>; consequently, <m>-ab = a(-b)</m>. Similarly, <m>-ab = (-a)b</m>. Part (3) follows directly from (2) since <m>(-a)(-b) = -(a(- b)) = -(-ab) = ab</m>.</p>
+            </proof>
+        </proposition>
 
-            <li>
-              <p>
-                <m>a(-b) = (-a)b = -ab</m>;
-              </p>
-            </li>
+        <p>Just as we have subgroups of groups, we have an analogous class of substructures for rings. A <term>subring</term>
+        <idx><h>Subring</h></idx>
+        <m>S</m> of a ring <m>R</m> is a subset <m>S</m> of <m>R</m> such that <m>S</m> is also a ring under the inherited operations from <m>R</m>.</p>
 
-            <li>
-              <p>
-                <m>(-a)(-b) =ab</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
+        <example xml:id="example-rings-subring-chain">
+            <p>The ring <m>n {\mathbb Z}</m> is a subring of <m>{\mathbb Z}</m>. Notice that even though the original ring may have an identity, we do not require that its subring have an identity. We have the following chain of subrings:
+                <me>{\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}.</me></p>
+        </example>
 
-      <proof>
-        <p>
-          To prove (1), observe that
-          <me>
-            a0 = a(0+0)= a0+ a0;
-          </me>
-          hence, <m>a0=0</m>.
-          Similarly, <m>0a = 0</m>.
-          For (2), we have <m>ab + a(-b) = a(b-b) = a0 = 0</m>;
-          consequently, <m>-ab = a(-b)</m>.
-          Similarly, <m>-ab = (-a)b</m>.
-          Part (3) follows directly from (2) since <m>(-a)(-b) = -(a(- b)) = -(-ab) = ab</m>.
-        </p>
-      </proof>
-    </proposition>
+        <p>The following proposition gives us some easy criteria for determining whether or not a subset of a ring is indeed a subring. (We will leave the proof of this proposition as an exercise.)</p>
 
-    <p>
-      Just as we have subgroups of groups,
-      we have an analogous class of substructures for rings.
-      A <term>subring</term>
-          <idx><h>Subring</h></idx>
-      <m>S</m> of a ring <m>R</m> is a subset <m>S</m> of <m>R</m> such that <m>S</m> is also a ring under the inherited operations from <m>R</m>.
-    </p>
+        <proposition xml:id="prop-subring">
+            <statement>
+                <p>Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>. Then <m>S</m> is a subring of <m>R</m> if and only if the following conditions are satisfied.
+                    <ol>
 
-    <example xml:id="example-rings-subring-chain">
-      <p>
-        The ring <m>n {\mathbb Z}</m> is a subring of <m>{\mathbb Z}</m>.
-        Notice that even though the original ring may have an identity,
-        we do not require that its subring have an identity.
-        We have the following chain of subrings:
-        <me>
-          {\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}
-        </me>.
-      </p>
-    </example>
+                        <li><p><m>S \neq \emptyset</m>.</p></li>
 
-    <p>
-      The following proposition gives us some easy criteria for determining whether or not a subset of a ring is indeed a subring.
-      (We will leave the proof of this proposition as an exercise.)
-    </p>
+                        <li><p><m>rs \in S</m> for all <m>r, s \in S</m>.</p></li>
 
-    <proposition xml:id="prop-subring">
-      <statement>
-        <p>
-          Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
-          Then <m>S</m> is a subring of <m>R</m> if and only if the following conditions are satisfied.
+                        <li><p><m>r-s \in S</m> for all <m>r, s \in S</m>.</p></li>
 
-          <ol>
-            <li>
-              <p>
-                <m>S \neq \emptyset</m>.
-              </p>
-            </li>
+                    </ol></p>
+            </statement>
+        </proposition>
 
-            <li>
-              <p>
-                <m>rs \in S</m> for all <m>r, s \in S</m>.
-              </p>
-            </li>
+        <example xml:id="example-rings-m2">
+            <p>Let  <m>R ={\mathbb M}_2( {\mathbb R} )</m> be the ring of <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>. If <m>T</m> is the set of upper triangular matrices in <m>R</m>; i.e.,
+                <me>T =
+                \left\{
+                \begin{pmatrix}
+                a &amp; b \\
+                0 &amp; c
+                \end{pmatrix}
+                : a, b, c \in {\mathbb R}
+                \right\},</me>
+            then <m>T</m> is a subring of <m>R</m>. If
+                <me>A =
+                \begin{pmatrix}
+                a &amp; b \\
+                0 &amp; c
+                \end{pmatrix}
+                \quad \text{and} \quad
+                B =
+                \begin{pmatrix}
+                a' &amp; b' \\
+                0 &amp; c'
+                \end{pmatrix}</me>
+            are in <m>T</m>, then clearly <m>A-B</m> is also in <m>T</m>. Also,
+                <me>AB =
+                \begin{pmatrix}
+                a a' &amp; ab' + bc' \\
+                0 &amp; cc'
+                \end{pmatrix}</me>
+            is in <m>T</m>.</p>
+        </example>
 
-            <li>
-              <p>
-                <m>r-s \in S</m> for all <m>r, s \in S</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </proposition>
-
-    <example xml:id="example-rings-m2">
-      <p>
-        Let  <m>R ={\mathbb M}_2( {\mathbb R} )</m> be the ring of
-        <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>.
-        If <m>T</m> is the set of upper triangular matrices in <m>R</m>; i.e.,
-        <me>
-          T =
-          \left\{
-          \begin{pmatrix}
-          a &amp; b \\
-          0 &amp; c
-          \end{pmatrix}
-          : a, b, c \in {\mathbb R}
-          \right\}
-        </me>,
-        then <m>T</m> is a subring of <m>R</m>.
-        If
-        <me>
-          A =
-          \begin{pmatrix}
-          a &amp; b \\
-          0 &amp; c
-          \end{pmatrix}
-          \quad \text{and} \quad
-          B =
-          \begin{pmatrix}
-          a' &amp; b' \\
-          0 &amp; c'
-          \end{pmatrix}
-        </me>
-        are in <m>T</m>, then clearly <m>A-B</m> is also in <m>T</m>.
-        Also,
-        <me>
-          AB =
-          \begin{pmatrix}
-          a a' &amp; ab' + bc' \\
-          0 &amp; cc'
-          \end{pmatrix}
-        </me>
-        is in <m>T</m>.
-      </p>
-    </example>
-  </section>
+    </section>
 
   <section xml:id="section-domains-and-fields">
     <title>Integral Domains and Fields</title>
