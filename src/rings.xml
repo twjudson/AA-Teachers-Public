@@ -8,78 +8,39 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="rings">
-  <title>Rings</title>
-  <introduction>
-    <p>
-      In <xref ref="groups"/> we studied sets with a single binary operation satisfying certain axioms,
-      but we are often more interested in working with sets that have two binary operations.
-      For example,
-      one of the most natural algebraic structures to study is the integers with the operations of addition and multiplication.
-      These operations are related to one another by the distributive property.
-      If we consider a set with two such related binary operations satisfying certain axioms,
-      we have an algebraic structure called a ring.
-      In a ring we add and multiply elements such as real numbers,
-      complex numbers, matrices, and functions.
-    </p>
-  </introduction>
-
-  <section xml:id="section-rings-definitions">
     <title>Rings</title>
-    <p>
-      A nonempty set <m>R</m> is a <term>ring</term><idx><h>Ring</h><h>definition of</h></idx> if it has two closed binary operations,
-      addition and multiplication, satisfying the following conditions.
+    <introduction>
+    
+        <p>In <xref ref="groups"/> we studied sets with a single binary operation satisfying certain axioms, but we are often more interested in working with sets that have two binary operations. For example, one of the most natural algebraic structures to study is the integers with the operations of addition and multiplication. These operations are related to one another by the distributive property. If we consider a set with two such related binary operations satisfying certain axioms, we have an algebraic structure called a ring. In a ring we add and multiply elements such as real numbers, complex numbers, matrices, and functions.</p>
+  
+    </introduction>
 
-      <ol>
-        <li>
-          <p>
-            <m>a + b = b + a</m> for <m>a, b \in R</m>.
-          </p>
-        </li>
+    <section xml:id="section-rings-definitions">
+      <title>Rings</title>
+    
+        <p>A nonempty set <m>R</m> is a <term>ring</term><idx><h>Ring</h><h>definition of</h></idx> if it has two closed binary operations, addition and multiplication, satisfying the following conditions.
+            <ol>
+        
+                <li><p><m>a + b = b + a</m> for <m>a, b \in R</m>.</p></li>
 
-        <li>
-          <p>
-            <m>(a + b) + c = a + ( b + c)</m> for <m>a, b, c \in R</m>.
-          </p>
-        </li>
+                <li><p><m>(a + b) + c = a + ( b + c)</m> for <m>a, b, c \in R</m>.</p></li>
 
-        <li>
-          <p>
-            There is an element <m>0</m> in <m>R</m> such that
-            <m>a + 0 = a</m> for all <m>a \in R</m>.
-          </p>
-        </li>
+                <li><p>There is an element <m>0</m> in <m>R</m> such that <m>a + 0 = a</m> for all <m>a \in R</m>.</p></li>
 
-        <li>
-          <p>
-            For every element <m>a \in R</m>,
-            there exists an element <m>-a</m> in <m>R</m> such that <m>a + (-a) = 0</m>.
-          </p>
-        </li>
+                <li><p>For every element <m>a \in R</m>, there exists an element <m>-a</m> in <m>R</m> such that <m>a + (-a) = 0</m>.</p></li>
 
-        <li>
-          <p>
-            <m>(ab) c = a ( b c)</m> for <m>a, b, c \in R</m>.
-          </p>
-        </li>
+                <li><p><m>(ab) c = a ( b c)</m> for <m>a, b, c \in R</m>.</p></li>
 
-        <li>
-          <p>
-            For <m>a, b, c \in R</m>,
-            <md>
-              <mrow>a( b + c)&amp;= ab +ac</mrow>
-              <mrow>(a + b)c &amp; = ac + bc</mrow>
-            </md>.
-          </p>
-        </li>
-      </ol>
+                <li><p>For <m>a, b, c \in R</m>,
+                    <md>
+                        <mrow>a( b + c)&amp;= ab +ac</mrow>
+                        <mrow>(a + b)c &amp; = ac + bc.</mrow>
+                    </md>.</p></li>
 
-      This last condition, the distributive axiom,
-      relates the binary operations of addition and multiplication.
-      Notice that the first four axioms simply require that a ring be an abelian group under addition,
-      so we could also have defined a ring to be an abelian group <m>(R, +)</m> together with a second binary operation satisfying the fifth and sixth conditions given above.
-    </p>
+            </ol>
+        This last condition, the distributive axiom, relates the binary operations of addition and multiplication. Notice that the first four axioms simply require that a ring be an abelian group under addition, so we could also have defined a ring to be an abelian group <m>(R, +)</m> together with a second binary operation satisfying the fifth and sixth conditions given above.</p>
 
-    <p>
+        <p>
       If there is an element <m>1 \in R</m> such that <m>1 \neq 0</m> and
       <m>1a = a1 = a</m> for each element <m>a \in R</m>,
       we say that <m>R</m> is a ring with <term>unity</term>
