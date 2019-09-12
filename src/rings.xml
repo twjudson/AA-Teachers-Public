@@ -226,508 +226,257 @@
 
     </section>
 
-  <section xml:id="section-domains-and-fields">
-    <title>Integral Domains and Fields</title>
-    <p>
-      Let us briefly recall some definitions.
-      If <m>R</m> is a ring and <m>r</m> is a nonzero element in <m>R</m>,
-      then <m>r</m> is said to be a <term>zero divisor</term>
-      if there is some nonzero element <m>s \in R</m> such that <m>rs = 0</m>.
-      A commutative ring with identity is said to be an
-      <term>integral domain</term> if it has no zero divisors.
-      If an element <m>a</m> in a ring <m>R</m> with identity has a multiplicative inverse,
-      we say that <m>a</m> is a <term>unit</term>.
-      If every nonzero element in a ring <m>R</m> is a unit,
-      then <m>R</m> is called a <term>division ring</term>.
-      A commutative division ring is called a <term>field</term>.
-    </p>
+    <section xml:id="section-domains-and-fields">
+        <title>Integral Domains and Fields</title>
+    
+        <p>Let us briefly recall some definitions. If <m>R</m> is a ring and <m>r</m> is a nonzero element in <m>R</m>, then <m>r</m> is said to be a <term>zero divisor</term> if there is some nonzero element <m>s \in R</m> such that <m>rs = 0</m>. A commutative ring with identity is said to be an <term>integral domain</term> if it has no zero divisors. If an element <m>a</m> in a ring <m>R</m> with identity has a multiplicative inverse, we say that <m>a</m> is a <term>unit</term>. If every nonzero element in a ring <m>R</m> is a unit, then <m>R</m> is called a <term>division ring</term>. A commutative division ring is called a <term>field</term>.</p>
 
-    <example xml:id="example-rings-gaussian-integers">
-      <p>
-        If <m>i^2 = -1</m>, then the set
-        <m>{\mathbb Z}[ i ] = \{ m + ni : m, n \in {\mathbb Z} \}</m> forms a ring known as the
-        <term>Gaussian integers</term>.
+        <example xml:id="example-rings-gaussian-integers">
+            <p>If <m>i^2 = -1</m>, then the set <m>{\mathbb Z}[ i ] = \{ m + ni : m, n \in {\mathbb Z} \}</m> forms a ring known as the <term>Gaussian integers</term>.
             <idx><h>Gaussian integers</h></idx>
+            <notation>
+            <usage>\mathbb Z[i]</usage>
+            <description>the Gaussian integers</description>
+            </notation>
+            It is easily seen that the Gaussian integers are a subring of the complex numbers since they are closed under addition and multiplication. Let <m>\alpha = a + bi</m> be a unit in <m>{\mathbb Z}[ i ]</m>. Then <m>\overline{\alpha} = a - bi</m> is also a unit since if <m>\alpha \beta = 1</m>, then <m>\overline{\alpha} \overline{\beta} = 1</m>. If <m>\beta = c + di</m>, then
+                <me>1 = \alpha \beta \overline{\alpha} \overline{\beta} = (a^2 + b^2 )(c^2 + d^2).</me>
+            Therefore, <m>a^2 + b^2</m> must either be <m>1</m> or <m>-1</m>; or, equivalently, <m>a + bi = \pm 1</m> or <m>a + bi = \pm i</m>. Therefore, units of this ring are <m>\pm 1</m> and <m>\pm i</m>; hence, the Gaussian integers are not a field. We will leave it as an exercise to prove that the Gaussian integers are an integral domain.</p>
+        </example>
+
+        <example xml:id="example-rings-matrix-z2">
+            <p>The set of matrices
+                <me>F =
+                \left\{
+                \begin{pmatrix}
+                1 &amp; 0 \\
+                0 &amp; 1
+                \end{pmatrix},
+                \begin{pmatrix}
+                1 &amp; 1 \\
+                1 &amp; 0
+                \end{pmatrix},
+                \begin{pmatrix}
+                0 &amp; 1 \\
+                1 &amp; 1
+                \end{pmatrix},
+                \begin{pmatrix}
+                0 &amp; 0 \\
+                0 &amp; 0
+                \end{pmatrix}
+                \right\}</me>
+            with entries in <m>{\mathbb Z}_2</m> forms a field.</p>
+        </example>
+
+        <example xml:id="example-rings-q-sqrt2">
+            <p>The set <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> is a field. The inverse of an element <m>a + b \sqrt{2}</m> in <m>{\mathbb Q}( \sqrt{2}\, )</m> is
+                <me>\frac{a}{a^2 - 2 b^2} +\frac{- b}{ a^2 - 2 b^2} \sqrt{2}.</me></p>
+        </example>
+
+        <p>We have the following alternative characterization of integral domains.</p>
+
+        <proposition>
+            <title>Cancellation Law</title>
+            <idx>
+            <h>Cancellation law</h>
+            <h>for integral domains</h>
+            </idx>
+            <statement>
+                <p>Let <m>D</m> be a commutative ring with identity. Then <m>D</m> is an integral domain if and only if for all nonzero elements <m>a \in D</m> with <m>ab = ac</m>, we have <m>b=c</m>.</p>
+            </statement>
+            <proof>
+                <p>Let <m>D</m> be an integral domain. Then <m>D</m> has no zero divisors. Let <m>ab = ac</m> with <m>a \neq 0</m>. Then <m>a(b - c) =0</m>. Hence, <m>b - c = 0</m> and <m>b = c</m>.</p>
+
+                <p>Conversely, let us suppose that cancellation is possible in <m>D</m>. That is, suppose that <m>ab = ac</m> implies <m>b=c</m>. Let <m>ab = 0</m>. If <m>a \neq 0</m>, then <m>ab = a 0</m> or <m>b=0</m>. Therefore, <m>a</m> cannot be a zero divisor.</p>
+            </proof>
+        </proposition>
+
+        <p>The following surprising theorem is due to Wedderburn.</p>
+
+        <theorem>
+            <statement>
+                <p>Every finite integral domain is a field.</p>
+            </statement>
+            <proof>
+                <p>Let <m>D</m> be a finite integral domain and <m>D^\ast</m> be the set of nonzero elements of <m>D</m>. We must show that every element in <m>D^*</m> has an inverse. For each <m>a \in D^\ast</m> we can define a map <m>\lambda_a : D^\ast \rightarrow D^\ast</m> by <m>\lambda_a(d) = ad</m>. This map makes sense, because if  <m>a \neq 0</m> and <m>d \neq 0</m>, then <m>ad \neq 0</m>. The map <m>\lambda_a</m> is one-to-one, since for <m>d_1, d_2 \in D^*</m>,
+                    <me>ad_1 = \lambda_a(d_1) = \lambda_a(d_2) = ad_2</me>
+                implies <m>d_1 = d_2</m> by left cancellation. Since <m>D^\ast</m> is a finite set, the map <m>\lambda_a</m> must also be onto; hence, for some <m>d \in D^\ast</m>, <m>\lambda_a(d) = ad = 1</m>. Therefore, <m>a</m> has a left inverse. Since <m>D</m> is commutative, <m>d</m> must also be a right inverse for <m>a</m>. Consequently, <m>D</m> is a field.</p>
+            </proof>
+        </theorem>
+
+        <p>For any nonnegative integer <m>n</m> and any element <m>r</m> in a ring <m>R</m> we write <m>r + \cdots + r</m> (<m>n</m> times) as <m>nr</m>. We define the <term>characteristic</term><idx><h>Characteristic of a ring</h></idx><idx><h>Ring</h><h>characteristic of</h></idx> of a ring <m>R</m> to be the least positive integer <m>n</m> such that <m>nr = 0</m> for all <m>r \in R</m>. If no such integer exists, then the characteristic of <m>R</m> is defined to be <m>0</m>. We will denote the characteristic of <m>R</m> by <m>\chr R</m>.
         <notation>
-          <usage>\mathbb Z[i]</usage>
-          <description>the Gaussian integers</description>
-        </notation>
-
-        It is easily seen that the Gaussian integers are a subring of the complex numbers since they are closed under addition and multiplication.
-        Let <m>\alpha = a + bi</m> be a unit in <m>{\mathbb Z}[ i ]</m>.
-        Then <m>\overline{\alpha} = a - bi</m> is also a unit since if <m>\alpha \beta = 1</m>,
-        then <m>\overline{\alpha} \overline{\beta} = 1</m>.
-        If <m>\beta = c + di</m>, then
-        <me>
-          1 = \alpha \beta \overline{\alpha} \overline{\beta} = (a^2 + b^2 )(c^2 + d^2)
-        </me>.
-        Therefore, <m>a^2 + b^2</m> must either be <m>1</m> or <m>-1</m>;
-        or, equivalently, <m>a + bi = \pm 1</m> or <m>a + bi = \pm i</m>.
-        Therefore, units of this ring are <m>\pm 1</m> and <m>\pm i</m>;
-        hence, the Gaussian integers are not a field.
-        We will leave it as an exercise to prove that the Gaussian integers are an integral domain.
-      </p>
-    </example>
-
-    <example xml:id="example-rings-matrix-z2">
-      <p>
-        The set of matrices
-        <me>
-          F =
-          \left\{
-          \begin{pmatrix}
-          1 &amp; 0 \\
-          0 &amp; 1
-          \end{pmatrix},
-          \begin{pmatrix}
-          1 &amp; 1 \\
-          1 &amp; 0
-          \end{pmatrix},
-          \begin{pmatrix}
-          0 &amp; 1 \\
-          1 &amp; 1
-          \end{pmatrix},
-          \begin{pmatrix}
-          0 &amp; 0 \\
-          0 &amp; 0
-          \end{pmatrix}
-          \right\}
-        </me>
-        with entries in <m>{\mathbb Z}_2</m> forms a field.
-      </p>
-    </example>
-
-    <example xml:id="example-rings-q-sqrt2">
-      <p>
-        The set <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> is a field.
-        The inverse of an element <m>a + b \sqrt{2}</m> in <m>{\mathbb Q}( \sqrt{2}\, )</m> is
-        <me>
-          \frac{a}{a^2 - 2 b^2} +\frac{- b}{ a^2 - 2 b^2} \sqrt{2}
-        </me>.
-      </p>
-    </example>
-
-    <p>
-      We have the following alternative characterization of integral domains.
-    </p>
-
-    <proposition>
-      <title>Cancellation Law</title>
-      <idx>
-      <h>Cancellation law</h>
-      <h>for integral domains</h>
-      </idx>
-      <statement>
-        <p>
-          Let <m>D</m> be a commutative ring with identity.
-          Then <m>D</m> is an integral domain if and only if for all nonzero elements <m>a \in D</m> with <m>ab = ac</m>,
-          we have <m>b=c</m>.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Let <m>D</m> be an integral domain.
-          Then <m>D</m> has no zero divisors.
-          Let <m>ab = ac</m> with <m>a \neq 0</m>.
-          Then <m>a(b - c) =0</m>.
-          Hence, <m>b - c = 0</m> and <m>b = c</m>.
-        </p>
-
-        <p>
-          Conversely, let us suppose that cancellation is possible in <m>D</m>.
-          That is, suppose that <m>ab = ac</m> implies <m>b=c</m>.
-          Let <m>ab = 0</m>.
-          If <m>a \neq 0</m>, then <m>ab = a 0</m> or <m>b=0</m>.
-          Therefore, <m>a</m> cannot be a zero divisor.
-        </p>
-      </proof>
-    </proposition>
-
-    <p>
-      The following surprising theorem is due to Wedderburn.
-    </p>
-
-    <theorem>
-      <statement>
-        <p>
-          Every finite integral domain is a field.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Let <m>D</m> be a finite integral domain and <m>D^\ast</m> be the set of nonzero elements of <m>D</m>.
-          We must show that every element in <m>D^*</m> has an inverse.
-          For each <m>a \in D^\ast</m> we can define a map
-          <m>\lambda_a : D^\ast \rightarrow D^\ast</m> by <m>\lambda_a(d) = ad</m>.
-          This map makes sense, because if  <m>a \neq 0</m> and
-          <m>d \neq 0</m>, then <m>ad \neq 0</m>.
-          The map <m>\lambda_a</m> is one-to-one,
-          since for <m>d_1, d_2 \in D^*</m>,
-          <me>
-            ad_1 = \lambda_a(d_1) = \lambda_a(d_2) = ad_2
-          </me>
-          implies <m>d_1 = d_2</m> by left cancellation.
-          Since <m>D^\ast</m> is a finite set,
-          the map <m>\lambda_a</m> must also be onto;
-          hence, for some <m>d \in D^\ast</m>,
-          <m>\lambda_a(d) = ad = 1</m>.
-          Therefore, <m>a</m> has a left inverse.
-          Since <m>D</m> is commutative,
-          <m>d</m> must also be a right inverse for <m>a</m>.
-          Consequently, <m>D</m> is a field.
-        </p>
-      </proof>
-    </theorem>
-
-    <p>
-      For any nonnegative integer <m>n</m> and any element <m>r</m> in a ring <m>R</m> we write
-      <m>r + \cdots + r</m> (<m>n</m> times) as <m>nr</m>.
-      We define the <term>characteristic</term><idx><h>Characteristic of a ring</h></idx><idx><h>Ring</h><h>characteristic of</h></idx> of a ring <m>R</m> to be the least positive integer <m>n</m> such that <m>nr = 0</m> for all <m>r \in R</m>.
-      If no such integer exists,
-      then the characteristic of <m>R</m> is defined to be <m>0</m>.
-      We will denote the characteristic of <m>R</m> by <m>\chr R</m>.
-
-      <notation>
         <usage>\chr R</usage>
         <description>characteristic of a ring <m>R</m></description>
-      </notation>
+        </notation></p>
 
-    </p>
+        <example xml:id="example-rings-zp-field">
+            <p>For every prime <m>p</m>, <m>{\mathbb Z}_p</m> is a field of characteristic <m>p</m>. By <xref ref="proposition-zn-equiv-classes"/>, every nonzero element in <m>{\mathbb Z}_p</m> has an inverse; hence, <m>{\mathbb Z}_p</m> is a field. If <m>a</m> is any nonzero element in the field, then <m>pa =0</m>, since the order of any nonzero element in the abelian group <m>{\mathbb Z}_p</m> is <m>p</m>.</p>
+        </example>
 
-    <example xml:id="example-rings-zp-field">
-      <p>
-        For every prime <m>p</m>,
-        <m>{\mathbb Z}_p</m> is a field of characteristic <m>p</m>.
-        By <xref ref="proposition-zn-equiv-classes"/>,
-        every nonzero element in <m>{\mathbb Z}_p</m> has an inverse;
-        hence, <m>{\mathbb Z}_p</m> is a field.
-        If <m>a</m> is any nonzero element in the field, then <m>pa =0</m>,
-        since the order of any nonzero element in the abelian group <m>{\mathbb Z}_p</m> is <m>p</m>.
-      </p>
-    </example>
+        <lemma xml:id="lemma-ring-characteristic">
+            <statement>
+                <p>Let <m>R</m> be a ring with identity. If <m>1</m> has order <m>n</m>, then the characteristic of <m>R</m> is <m>n</m>.</p>
+            </statement>
+            <proof>
+                <p>If <m>1</m> has order <m>n</m>, then <m>n</m> is the least positive integer such that <m>n 1 = 0</m>. Thus, for all <m>r \in R</m>,
+                    <me>nr = n(1r) = (n 1) r = 0r = 0.</me>
+                On the other hand, if no positive <m>n</m> exists such that <m>n1 = 0</m>, then the characteristic of <m>R</m> is zero.</p>
+            </proof>
+        </lemma>
 
-    <lemma xml:id="lemma-ring-characteristic">
-      <statement>
-        <p>
-          Let <m>R</m> be a ring with identity.
-          If <m>1</m> has order <m>n</m>,
-          then the characteristic of <m>R</m> is <m>n</m>.
-        </p>
-      </statement>
+        <theorem xml:id="theorem-integral-domain-characteristic">
+            <statement>
+                <p>The characteristic of an integral domain is either prime or zero.</p>
+            </statement>
+            <proof>
+                <p>Let <m>D</m> be an integral domain and suppose that the characteristic of <m>D</m> is <m>n</m> with <m>n \neq 0</m>. If <m>n</m> is not prime, then <m>n = ab</m>, where <m>1 \lt a \lt n</m> and <m>1 \lt b \lt n</m>. By <xref ref="lemma-ring-characteristic"/>, we need only consider the case <m>n 1 = 0</m>. Since <m>0 = n 1 = (ab)1 = (a1)(b1)</m> and there are no zero divisors in <m>D</m>, either <m>a1 =0</m> or <m>b1=0</m>. Hence, the characteristic of <m>D</m> must be less than <m>n</m>, which is a contradiction. Therefore, <m>n</m> must be prime.</p>
+            </proof>
+        </theorem>
 
-      <proof>
-        <p>
-          If <m>1</m> has order <m>n</m>,
-          then <m>n</m> is the least positive integer such that <m>n 1 = 0</m>.
-          Thus, for all <m>r \in R</m>,
-          <me>
-            nr = n(1r) = (n 1) r = 0r = 0
-          </me>.
-          On the other hand,
-          if no positive <m>n</m> exists such that <m>n1 = 0</m>,
-          then the characteristic of <m>R</m> is zero.
-        </p>
-      </proof>
-    </lemma>
-        <!-- Lemma suggested by R. Beezer to correct the proof in the following theorem.  TWJ - 2/15/2012 -->
-    <theorem xml:id="theorem-integral-domain-characteristic">
-      <statement>
-        <p>
-          The characteristic of an integral domain is either prime or zero.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Let <m>D</m> be an integral domain and suppose that the characteristic of <m>D</m> is <m>n</m> with <m>n \neq 0</m>.
-          If <m>n</m> is not prime, then <m>n = ab</m>,
-          where <m>1 \lt a \lt n</m> and <m>1 \lt b \lt n</m>.
-          By <xref ref="lemma-ring-characteristic"/>, we need only consider the case <m>n 1 = 0</m>.
-          Since <m>0 = n 1 = (ab)1 = (a1)(b1)</m> and there are no zero divisors in <m>D</m>,
-          either <m>a1 =0</m> or <m>b1=0</m>.
-          Hence, the characteristic of <m>D</m> must be less than <m>n</m>,
-          which is a contradiction.
-          Therefore, <m>n</m> must be prime.
-        </p>
-      </proof>
-    </theorem>
-
-
-
-        <!-- Updated to say that Noether lived in the 20th century and not the current (21st century). -->
-        <!-- Suggested by K. Halasz. -->
-        <!-- TWJ 2/5/2013 -->
-    <subsection xml:id="rings-subsection-historical-note">
-      <title>Historical Note</title>
-      <p>
-        Amalie Emmy Noether,
+        <subsection xml:id="rings-subsection-historical-note">
+            <title>Historical Note</title>
+      
+            <p>Amalie Emmy Noether,
             <idx><h>Noether, A. Emmy</h></idx>
-        one of the outstanding mathematicians of the twentieth century,
-        was born in Erlangen, Germany in 1882.
-        She was the daughter of Max Noether
+            one of the outstanding mathematicians of the twentieth century, was born in Erlangen, Germany in 1882. She was the daughter of Max Noether
             <idx><h>Noether, Max</h></idx>
-        (1844<ndash/>1921), a distinguished mathematician at the University of Erlangen.
-        Together with Paul Gordon (1837<ndash/>1912), Emmy Noether's father strongly influenced her early education.
-        She entered the University of Erlangen at the age of 18.
-        Although women had been admitted to universities in England, France,
-        and Italy for decades,
-        there was great resistance to their presence at universities in Germany.
-        Noether was one of only two women among the university's 986 students.
-        After completing her doctorate under Gordon in 1907,
-        she continued to do research at Erlangen,
-        occasionally lecturing when her father was ill.
-      </p>
+            (1844<ndash/>1921), a distinguished mathematician at the University of Erlangen. Together with Paul Gordon (1837<ndash/>1912), Emmy Noether's father strongly influenced her early education. She entered the University of Erlangen at the age of 18. Although women had been admitted to universities in England, France, and Italy for decades, there was great resistance to their presence at universities in Germany. Noether was one of only two women among the university's 986 students. After completing her doctorate under Gordon in 1907, she continued to do research at Erlangen, occasionally lecturing when her father was ill.</p>
 
-      <p>
-        Noether went to Göttingen to study in 1916.
-        David Hilbert
+            <p>Noether went to Göttingen to study in 1916. David Hilbert
             <idx><h>Hilbert, David</h></idx>
-        and Felix Klein
+            and Felix Klein
             <idx><h>Klein, Felix</h></idx>
-        tried unsuccessfully to secure her an appointment at Göttingen.
-        Some of the faculty objected to women lecturers, saying,
-        <q>What will our soldiers think when they return to the university and are expected to learn at the feet of a woman?</q> Hilbert,
-        annoyed at the question, responded,
-        <q>Meine Herren, I do not see that the sex of a candidate is an argument against her admission as a Privatdozent.
-        After all, the Senate is not a bathhouse.</q>
-        At the end of World War I, attitudes changed and conditions greatly improved for women.
-        After Noether passed her habilitation examination in 1919,
-        she was given a title and was paid a small sum for her lectures.
-      </p>
+            tried unsuccessfully to secure her an appointment at Göttingen. Some of the faculty objected to women lecturers, saying, <q>What will our soldiers think when they return to the university and are expected to learn at the feet of a woman?</q> Hilbert, annoyed at the question, responded, <q>Meine Herren, I do not see that the sex of a candidate is an argument against her admission as a Privatdozent. After all, the Senate is not a bathhouse.</q> After Noether passed her habilitation examination in 1919, she was given a title and was paid a small sum for her lectures.</p>
 
-      <p>
-        In 1922, Noether became a Privatdozent at Göttingen.
-        Over the next 11 years she used axiomatic methods to develop an abstract theory of rings and ideals.
-        Though she was not good at lecturing, Noether was an inspiring teacher.
-        One of her many students was B. L. van der Waerden,
-        author of the first text treating abstract algebra from a modern point of view.
-        Some of the other mathematicians Noether influenced or closely worked with were Alexandroff, Artin, Brauer, Courant, Hasse, Hopf, Pontryagin,
-        von Neumann,
-        and Weyl.
-        One of the high points of her career was an invitation to address the International Congress of Mathematicians in Zurich in 1932.
-        In spite of all the recognition she received from her colleagues, Noether's abilities were never recognized as they should have been during her lifetime.
-        She was never promoted to full professor by the Prussian academic bureaucracy.
-      </p>
+            <p>Over the next 11 years she used axiomatic methods to develop an abstract theory of rings and ideals. Though she was not good at lecturing, Noether was an inspiring teacher. One of her many students was B. L. van der Waerden, author of the first text treating abstract algebra from a modern point of view. Some of the other mathematicians Noether influenced or closely worked with were Alexandroff, Artin, Brauer, Courant, Hasse, Hopf, Pontryagin, von Neumann, and Weyl. One of the high points of her career was an invitation to address the International Congress of Mathematicians in Zurich in 1932. In spite of all the recognition she received from her colleagues, Noether's abilities were never recognized as they should have been during her lifetime. She was never promoted to full professor by the Prussian academic bureaucracy.</p>
 
-      <p>
-        In 1933, Noether, who was Jewish,
-        was banned from participation in all academic activities in Germany.
-        She emigrated to the United States,
-        took a position at Bryn Mawr College,
-        and became a member of the Institute for Advanced Study at Princeton.
-        Noether died suddenly on April 14, 1935.
-        After her death she was eulogized by such notable scientists as Albert Einstein.
-      </p>
-    </subsection>
-  </section>
+            <p>In 1933, Noether, who was Jewish, was banned from participation in all academic activities in Germany. She emigrated to the United States, took a position at Bryn Mawr College, and became a member of the Institute for Advanced Study at Princeton. Noether died suddenly on April 14, 1935. After her death she was eulogized by such notable scientists as Albert Einstein.</p>
 
+        </subsection>
+    </section>
 
-    <!-- Exercises with Solutions  -->
-    <!-- File: rings.xml  -->
-    <!-- Title: Rings -->
-  <exercises xml:id="exercises-rings" filenamebase="rings">
-    <title>Exercises</title>
-    <exercise number="1">
-      <statement>
-        <p>
-          Which of the following sets are rings with respect to the usual operations of addition and multiplication?
-          If the set is a ring, is it also a field?
+    <exercises xml:id="exercises-rings" filenamebase="rings">
+        <title>Exercises</title>
+    
+        <exercise>
+            <statement>
+                <p>Which of the following sets are rings with respect to the usual operations of addition and multiplication? If the set is a ring, is it also a field?
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                <m>7 {\mathbb Z}</m>
-              </p>
-            </li>
+                        <li><p><m>7 {\mathbb Z}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb Z}_{18}</m>
-              </p>
-            </li>
+                        <li><p><m>{\mathbb Z}_{18}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb Q} ( \sqrt{2}\, ) = \{a + b \sqrt{2} : a, b \in {\mathbb Q}\}</m>
-              </p>
-            </li>
+                        <li><p><m>{\mathbb Q} ( \sqrt{2}\, ) = \{a + b \sqrt{2} : a, b \in {\mathbb Q}\}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb Q} ( \sqrt{2}, \sqrt{3}\, ) = \{a + b \sqrt{2} + c \sqrt{3} + d \sqrt{6} : a, b, c, d \in {\mathbb Q}\}</m>
-              </p>
-            </li>
+                        <li><p><m>{\mathbb Q} ( \sqrt{2}, \sqrt{3}\, ) = \{a + b \sqrt{2} + c \sqrt{3} + d \sqrt{6} : a, b, c, d \in {\mathbb Q}\}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb Z}[\sqrt{3}\, ] = \{ a + b \sqrt{3} : a, b \in {\mathbb Z} \}</m>
-              </p>
-            </li>
+                        <li><p><m>{\mathbb Z}[\sqrt{3}\, ] = \{ a + b \sqrt{3} : a, b \in {\mathbb Z} \}</m></p></li>
 
-            <li>
-              <p>
-                <m>R = \{a + b \sqrt[3]{3} : a, b \in {\mathbb Q} \}</m>
-              </p>
-            </li>
+                        <li><p><m>R = \{a + b \sqrt[3]{3} : a, b \in {\mathbb Q} \}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb Z}[ i ] = \{ a + b i : a, b \in {\mathbb Z} \text{ and } i^2 = -1 \}</m>
-              </p>
-            </li>
+                        <li><p><m>{\mathbb Z}[ i ] = \{ a + b i : a, b \in {\mathbb Z} \text{ and } i^2 = -1 \}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb Q}( \sqrt[3]{3}\, ) = \{ a + b \sqrt[3]{3} + c \sqrt[3]{9} : a, b, c \in {\mathbb Q} \}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>7 {\mathbb Z}</m> is a ring but not a field; (c)
-          <m>{\mathbb Q}(\sqrt{2}\, )</m> is a field; (f) <m>R</m> is not a ring.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p><m>{\mathbb Q}( \sqrt[3]{3}\, ) = \{ a + b \sqrt[3]{3} + c \sqrt[3]{9} : a, b, c \in {\mathbb Q} \}</m></p></li>
 
-    <exercise number="2">
-      <statement>
-        <p>
-          Let <m>R</m> be the ring of <m>2 \times 2</m> matrices of the form
-          <me>
-            \begin{pmatrix}
-            a &amp; b \\
-            0 &amp; 0
-            \end{pmatrix}
-          </me>,
-          where <m>a, b \in {\mathbb R}</m>.
-          Show that although <m>R</m> is a ring that has no identity,
-          we can find a subring <m>S</m> of <m>R</m> with an identity.
-        </p>
-      </statement>
-    </exercise>
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) <m>7 {\mathbb Z}</m> is a ring but not a field; (c) <m>{\mathbb Q}(\sqrt{2}\, )</m> is a field; (f) <m>R</m> is not a ring.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="3">
-      <statement>
-        <p>
-          List or characterize all of the units in each of the following rings.
+        <exercise>
+            <statement>
+                <p>Let <m>R</m> be the ring of <m>2 \times 2</m> matrices of the form
+                    <me>\begin{pmatrix}
+                    a &amp; b \\
+                    0 &amp; 0
+                    \end{pmatrix},</me>
+                where <m>a, b \in {\mathbb R}</m>. Show that although <m>R</m> is a ring that has no identity, we can find a subring <m>S</m> of <m>R</m> with an identity.</p>
+            </statement>
+        </exercise>
 
-          <ol>
-            <li>
-              <p>
-                <m>{\mathbb Z}_{10}</m>
-              </p>
-            </li>
+        <exercise>
+            <statement>
+                <p>List or characterize all of the units in each of the following rings.
+                    <ol>
 
-            <li>
-              <p>
-                <m>{\mathbb Z}_{12}</m>
-              </p>
-            </li>
+                        <li><p><m>{\mathbb Z}_{10}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb Z}_{7}</m>
-              </p>
-            </li>
+                        <li><p><m>{\mathbb Z}_{12}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb M}_2( {\mathbb Z} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m>
-              </p>
-            </li>
+                        <li><p><m>{\mathbb Z}_{7}</m></p></li>
 
-            <li>
-              <p>
-                <m>{\mathbb M}_2( {\mathbb Z}_2 )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}_2</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>\{1, 3, 7, 9 \}</m>; (c) <m>\{ 1, 2, 3, 4, 5, 6 \}</m>; (e)
-          <me>
-            \left\{
-            \begin{pmatrix}
-            1 &amp; 0 \\
-            0 &amp; 1
-            \end{pmatrix},
-            \begin{pmatrix}
-            1 &amp; 1 \\
-            0 &amp; 1
-            \end{pmatrix},
-            \begin{pmatrix}
-            1 &amp; 0 \\
-            1 &amp; 1
-            \end{pmatrix},
-            \begin{pmatrix}
-            0 &amp; 1 \\
-            1 &amp; 0
-            \end{pmatrix},
-            \begin{pmatrix}
-            1 &amp; 1 \\
-            1 &amp; 0
-            \end{pmatrix},
-            \begin{pmatrix}
-            0 &amp; 1 \\
-            1 &amp; 1
-            \end{pmatrix},
-            \right\}
-          </me>.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p><m>{\mathbb M}_2( {\mathbb Z} )</m>,the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m></p></li>
 
-   
-    <exercise number="9">
-      <statement>
-        <p>
-          What is the characteristic of the field formed by the set of matrices
-          <me>
-            F =
-            \left\{
-            \begin{pmatrix}
-            1 &amp; 0 \\
-            0 &amp; 1
-            \end{pmatrix},
-            \begin{pmatrix}
-            1 &amp; 1 \\
-            1 &amp; 0
-            \end{pmatrix},
-            \begin{pmatrix}
-            0 &amp; 1 \\
-            1 &amp; 1
-            \end{pmatrix},
-            \begin{pmatrix}
-            0 &amp; 0 \\
-            0 &amp; 0
-            \end{pmatrix}
-            \right\}
-          </me>
-          with entries in <m>{\mathbb Z}_2</m>?
-        </p>
-      </statement>
-    </exercise>
+                        <li><p><m>{\mathbb M}_2( {\mathbb Z}_2 )</m>, the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}_2</m></p></li>
 
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) <m>\{1, 3, 7, 9 \}</m>; (c) <m>\{ 1, 2, 3, 4, 5, 6 \}</m>; (e)
+                    <me>\left\{
+                    \begin{pmatrix}
+                    1 &amp; 0 \\
+                    0 &amp; 1
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    1 &amp; 1 \\
+                    0 &amp; 1
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    1 &amp; 0 \\
+                    1 &amp; 1
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    0 &amp; 1 \\
+                    1 &amp; 0
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    1 &amp; 1 \\
+                    1 &amp; 0
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    0 &amp; 1 \\
+                    1 &amp; 1
+                    \end{pmatrix},
+                    \right\}.
+                    </me></p>
+            </hint>
+        </exercise>
 
+        <exercise>
+            <statement>
+                <p>What is the characteristic of the field formed by the set of matrices
+                    <me>F =
+                    \left\{
+                    \begin{pmatrix}
+                    1 &amp; 0 \\
+                    0 &amp; 1
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    1 &amp; 1 \\
+                    1 &amp; 0
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    0 &amp; 1 \\
+                    1 &amp; 1
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    0 &amp; 0 \\
+                    0 &amp; 0
+                    \end{pmatrix}
+                    \right\}</me>
+                with entries in <m>{\mathbb Z}_2</m>?</p>
+            </statement>
+        </exercise>
 
-
-    <exercise number="11">
-      <statement>
-        <p>
-          Prove that the Gaussian integers,
-          <m>{\mathbb Z}[i ]</m>, are an integral domain.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that the Gaussian integers, <m>{\mathbb Z}[i ]</m>, are an integral domain.</p>
+            </statement>
+        </exercise>
 
     <exercise number="12" xml:id="exercise-rings-gaussian">
       <statement>
