@@ -8,185 +8,125 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="permute">
-  <title>Permutation Groups</title>
-  <introduction>
-    <p>
-      Permutation groups are central to the study of geometric symmetries and to Galois theory,
-      the study of finding solutions of polynomial equations.
-      They also provide abundant examples of nonabelian groups.
-    </p>
-
-    <p>
-      Let us recall for a moment the symmetries of the equilateral triangle
-      <m>\bigtriangleup ABC</m> from <xref ref="groups"/>.
-      The symmetries actually consist of permutations of the three vertices,
-      where a <term>permutation</term><idx><h>Permutation</h><h>definition of</h></idx> of the set
-      <m>S = \{ A, B, C \}</m> is a one-to-one and onto map <m>\pi :S \rightarrow S</m>.
-      The three vertices have the following six permutations.
-      <md>
-        <mrow>\begin{pmatrix}
-        A &amp; B &amp; C \\
-        A &amp; B &amp; C
-        \end{pmatrix}
-        \qquad
-        \begin{pmatrix}
-        A &amp; B &amp; C \\
-        C &amp; A &amp; B
-        \end{pmatrix}
-        \qquad
-        \begin{pmatrix}
-        A &amp; B &amp; C \\
-        B &amp; C &amp; A
-        \end{pmatrix}</mrow>
-        <mrow>\begin{pmatrix}
-        A &amp; B &amp; C \\
-        A &amp; C &amp; B
-        \end{pmatrix}
-        \qquad
-        \begin{pmatrix}
-        A &amp; B &amp; C \\
-        C &amp; B &amp; A
-        \end{pmatrix}
-        \qquad
-        \begin{pmatrix}
-        A &amp; B &amp; C \\
-        B &amp; A &amp; C
-        \end{pmatrix}</mrow>
-      </md>
-    </p>
-
-    <p>
-      We have used the array
-      <me>
-        \begin{pmatrix}
-        A &amp; B &amp; C \\
-        B &amp; C &amp; A
-        \end{pmatrix}
-      </me>
-      to denote the permutation that sends <m>A</m> to <m>B</m>,
-      <m>B</m> to <m>C</m>, and <m>C</m> to <m>A</m>.
-      That is,
-      <md>
-        <mrow>A &amp; \mapsto  B</mrow>
-        <mrow>B &amp; \mapsto  C</mrow>
-        <mrow>C &amp; \mapsto  A</mrow>
-      </md>.
-      The symmetries of a triangle form a group.
-      In this chapter we will study groups of this type.
-    </p>
-  </introduction>
-
-  <section xml:id="section-permutation-definitions">
-    <title>Definitions and Notation</title>
+    <title>Permutation Groups</title>
+  
     <introduction>
-      <p>
-        In general, the permutations of a set <m>X</m> form a group <m>S_X</m>.
-        If <m>X</m> is a finite set, we can assume <m>X=\{ 1, 2, \ldots, n\}</m>.
-        In this case we write <m>S_n</m> instead of <m>S_X</m>.
+    
+        <p>Permutation groups are central to the study of geometric symmetries and to Galois theory, the study of finding solutions of polynomial equations. They also provide abundant examples of nonabelian groups.</p>
 
-        <notation>
-          <usage>S_n</usage>
-          <description>the symmetric group on <m>n</m> letters</description>
-        </notation>
+        <p>Let us recall for a moment the symmetries of the equilateral triangle <m>\bigtriangleup ABC</m> from <xref ref="groups"/>. The symmetries actually consist of permutations of the three vertices, where a <term>permutation</term><idx><h>Permutation</h><h>definition of</h></idx> of the set <m>S = \{ A, B, C \}</m> is a one-to-one and onto map <m>\pi :S \rightarrow S</m>. The three vertices have the following six permutations,
+            <md>
+                <mrow>\begin{pmatrix}
+                A &amp; B &amp; C \\
+                A &amp; B &amp; C
+                \end{pmatrix}
+                \qquad
+                \begin{pmatrix}
+                A &amp; B &amp; C \\
+                C &amp; A &amp; B
+                \end{pmatrix}
+                \qquad
+                \begin{pmatrix}
+                A &amp; B &amp; C \\
+                B &amp; C &amp; A
+                \end{pmatrix}</mrow>
+                <mrow>\begin{pmatrix}
+                A &amp; B &amp; C \\
+                A &amp; C &amp; B
+                \end{pmatrix}
+                \qquad
+                \begin{pmatrix}
+                A &amp; B &amp; C \\
+                C &amp; B &amp; A
+                \end{pmatrix}
+                \qquad
+                \begin{pmatrix}
+                A &amp; B &amp; C \\
+                B &amp; A &amp; C
+                \end{pmatrix}.</mrow>
+            </md></p>
 
-        The following theorem says that <m>S_n</m> is a group.
-        We call this group the <term>symmetric group</term>
+        <p>We have used the array
+            <me>\begin{pmatrix}
+            A &amp; B &amp; C \\
+            B &amp; C &amp; A
+            \end{pmatrix}</me>
+        to denote the permutation that sends <m>A</m> to <m>B</m>, <m>B</m> to <m>C</m>, and <m>C</m> to <m>A</m>. That is,
+            <md>
+                <mrow>A &amp; \mapsto  B</mrow>
+                <mrow>B &amp; \mapsto  C</mrow>
+                <mrow>C &amp; \mapsto  A.</mrow>
+            </md>
+        The symmetries of a triangle form a group. In this chapter we will study groups of this type.</p>
+    </introduction>
+
+    <section xml:id="section-permutation-definitions">
+        <title>Definitions and Notation</title>
+    
+        <introduction>
+      
+            <p>In general, the permutations of a set <m>X</m> form a group <m>S_X</m>. If <m>X</m> is a finite set, we can assume <m>X=\{ 1, 2, \ldots, n\}</m>. In this case we write <m>S_n</m> instead of <m>S_X</m>.
+            <notation>
+            <usage>S_n</usage>
+            <description>the symmetric group on <m>n</m> letters</description>
+            </notation>
+            The following theorem says that <m>S_n</m> is a group. We call this group the <term>symmetric group</term>
             <idx><h>Group</h><h>symmetric</h></idx>
-        on <m>n</m> letters.
-      </p>
+            on <m>n</m> letters.</p>
 
-      <theorem>
-        <statement>
-          <p>
-            The symmetric group on <m>n</m> letters, <m>S_n</m>,
-            is a group with <m>n!</m> elements,
-            where the binary operation is the composition of maps.
-          </p>
-        </statement>
+            <theorem>
+                <statement>
+                    <p>The symmetric group on <m>n</m> letters, <m>S_n</m>, is a group with <m>n!</m> elements, where the binary operation is the composition of maps.</p>
+                </statement>
+                <proof>
+                    <p>The identity of <m>S_n</m> is just the identity map that sends <m>1</m> to <m>1</m>, <m>2</m> to <m>2</m>, <m>\ldots</m>, <m>n</m> to <m>n</m>. If <m>f : S_n \rightarrow S_n</m> is a permutation, then <m>f^{-1}</m> exists, since <m>f</m> is one-to-one and onto; hence, every permutation has an inverse. Composition of maps is associative, which makes the group operation associative. We leave the proof that <m>|S_n|= n!</m> as an exercise.</p>
+                </proof>
+            </theorem>
 
-        <proof>
-          <p>
-            The identity of <m>S_n</m> is just the identity map that sends <m>1</m> to <m>1</m>,
-            <m>2</m> to <m>2</m>, <m>\ldots</m>, <m>n</m> to <m>n</m>.
-            If <m>f : S_n \rightarrow S_n</m> is a permutation,
-            then <m>f^{-1}</m> exists, since <m>f</m> is one-to-one and onto;
-            hence, every permutation has an inverse.
-            Composition of maps is associative,
-            which makes the group operation associative.
-            We leave the proof that <m>|S_n|= n!</m> as an exercise.
-          </p>
-        </proof>
-      </theorem>
-
-      <p>
-        A subgroup of <m>S_n</m> is called a
-        <term>permutation group</term>.
+            <p>A subgroup of <m>S_n</m> is called a <term>permutation group</term>.
             <idx><h>Group</h><h>permutation</h></idx>
-            <idx><h>Permutation group</h></idx>
-      </p>
+            <idx><h>Permutation group</h></idx></p>
 
-      <example xml:id="example-permute-s5">
-        <p>
-          Consider the subgroup <m>G</m> of <m>S_5</m> consisting of the identity permutation <m>\identity</m> and the permutations
-          <md>
-            <mrow>\sigma
-            &amp; =
-            \begin{pmatrix}
-            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
-            1 &amp; 2 &amp; 3 &amp; 5 &amp; 4
-            \end{pmatrix}</mrow>
-            <mrow>\tau
-            &amp; =
-            \begin{pmatrix}
-            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
-            3 &amp; 2 &amp; 1 &amp; 4 &amp; 5
-            \end{pmatrix}</mrow>
-            <mrow>\mu
-            &amp; =
-            \begin{pmatrix}
-            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
-            3 &amp; 2 &amp; 1 &amp; 5 &amp; 4
-            \end{pmatrix}</mrow>
-          </md>.
-          The following table tells us how to multiply elements in the permutation group <m>G</m>.
-        </p>
+            <example xml:id="example-permute-s5">
+                <p>Consider the subgroup <m>G</m> of <m>S_5</m> consisting of the identity permutation <m>\identity</m> and the permutations
+                    <md>
+                        <mrow>\sigma
+                        &amp; =
+                        \begin{pmatrix}
+                        1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+                        1 &amp; 2 &amp; 3 &amp; 5 &amp; 4
+                        \end{pmatrix}</mrow>
+                        <mrow>\tau
+                        &amp; =
+                        \begin{pmatrix}
+                        1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+                        3 &amp; 2 &amp; 1 &amp; 4 &amp; 5
+                        \end{pmatrix}</mrow>
+                        <mrow>\mu
+                        &amp; =
+                        \begin{pmatrix}
+                        1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+                        3 &amp; 2 &amp; 1 &amp; 5 &amp; 4
+                        \end{pmatrix}.</mrow>
+                    </md>
+                The following table tells us how to multiply elements in the permutation group <m>G</m>.</p>
 
-        <sidebyside width="100%">
+                <sidebyside width="100%">
+                    <p><me>
+                    \begin{array}{c|cccc}
+                    \circ &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\ \hline
+                    \identity &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\
+                    \sigma &amp; \sigma &amp; \identity &amp; \mu &amp; \tau \\
+                    \tau &amp; \tau &amp; \mu &amp; \identity &amp; \sigma \\
+                    \mu &amp; \mu &amp; \tau &amp; \sigma &amp; \identity
+                    \end{array}
+                    </me></p>
+                </sidebyside>
+            </example>
 
-          <p>
-            <me>
-              \begin{array}{c|cccc}
-              \circ &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\ \hline
-              \identity &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\
-              \sigma &amp; \sigma &amp; \identity &amp; \mu &amp; \tau \\
-              \tau &amp; \tau &amp; \mu &amp; \identity &amp; \sigma \\
-              \mu &amp; \mu &amp; \tau &amp; \sigma &amp; \identity
-              \end{array}
-            </me>
-          </p>
-        </sidebyside>
-      </example>
-
-      <remark>
-        <p>
-          Though it is natural to multiply elements in a group from left to right,
-          functions are composed from right to left.
-          Let <m>\sigma</m> and <m>\tau</m> be permutations on a set <m>X</m>.
-          To compose <m>\sigma</m> and <m>\tau</m> as functions,
-          we calculate <m>(\sigma \circ \tau)(x) = \sigma( \tau(x))</m>.
-          That is, we do <m>\tau</m> first, then <m>\sigma</m>.
-          There are several ways to approach this inconsistency.
-          <em>We will adopt the convention of multiplying permutations right to left.
-          To compute <m>\sigma \tau</m>,
-          do <m>\tau</m> first and then <m>\sigma</m>.</em> That is,
-          by <m>\sigma \tau (x)</m> we mean
-          <m>\sigma( \tau( x))</m>. (Another way of solving this problem would be to write functions on the right;
-          that is, instead of writing <m>\sigma(x)</m>,
-          we could write <m>(x)\sigma</m>.
-          We could also multiply permutations left to right to agree with the usual way of multiplying elements in a group.
-          Certainly all of these methods have been used.
-        </p>
-      </remark>
+            <remark>
+                <p>Though it is natural to multiply elements in a group from left to right, functions are composed from right to left. Let <m>\sigma</m> and <m>\tau</m> be permutations on a set <m>X</m>. To compose <m>\sigma</m> and <m>\tau</m> as functions, we calculate <m>(\sigma \circ \tau)(x) = \sigma( \tau(x))</m>. That is, we do <m>\tau</m> first, then <m>\sigma</m>. There are several ways to approach this inconsistency. <em>We will adopt the convention of multiplying permutations right to left. To compute <m>\sigma \tau</m>, do <m>\tau</m> first and then <m>\sigma</m>.</em> That is, by <m>\sigma \tau (x)</m> we mean <m>\sigma( \tau( x))</m>. (Another way of solving this problem would be to write functions on the right; that is, instead of writing <m>\sigma(x)</m>, we could write <m>(x)\sigma</m>. We could also multiply permutations left to right to agree with the usual way of multiplying elements in a group. Certainly all of these methods have been used.</p>
+            </remark>
 
       <example xml:id="example-permute-s4-nonabelian">
         <p>
