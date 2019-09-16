@@ -626,274 +626,143 @@
             </hint>
         </exercise>
 
-    <exercise number="2">
-      <statement>
-        <p>
-          Compute each of the following.
+        <exercise>
+            <statement>
+                <p>Compute each of the following.
+                    <ol cols="2">
 
-          <ol cols="2">
-            <li>
-              <p>
-                <m>(1345)(234)</m>
-              </p>
-            </li>
+                        <li><p><m>(1345)(234)</m></p></li>
 
-            <li>
-              <p>
-                <m>(12)(1253)</m>
-              </p>
-            </li>
+                        <li><p><m>(12)(1253)</m></p></li>
 
-            <li>
-              <p>
-                <m>(143)(23)(24)</m>
-              </p>
-            </li>
+                        <li><p><m>(143)(23)(24)</m></p></li>
 
-            <li>
-              <p>
-                <m>(1423)(34)(56)(1324)</m>
-              </p>
-            </li>
+                        <li><p><m>(1423)(34)(56)(1324)</m></p></li>
 
-            <li>
-              <p>
-                <m>(1254)(13)(25)</m>
-              </p>
-            </li>
+                        <li><p><m>(1254)(13)(25)</m></p></li>
 
-            <li>
-              <p>
-                <m>(1254) (13)(25)^2</m>
-              </p>
-            </li>
+                        <li><p><m>(1254) (13)(25)^2</m></p></li>
 
-            <li>
-              <p>
-                <m>(1254)^{-1} (123)(45) (1254)</m>
-              </p>
-            </li>
+                        <li><p><m>(1254)^{-1} (123)(45) (1254)</m></p></li>
 
-            <li>
-              <p>
-                <m>(1254)^2 (123)(45)</m>
-              </p>
-            </li>
+                        <li><p><m>(1254)^2 (123)(45)</m></p></li>
 
-            <li>
-              <p>
-                <m>(123)(45) (1254)^{-2}</m>
-              </p>
-            </li>
+                        <li><p><m>(123)(45) (1254)^{-2}</m></p></li>
 
-            <li>
-              <p>
-                <m>(1254)^{100}</m>
-              </p>
-            </li>
+                        <li><p><m>(1254)^{100}</m></p></li>
 
-            <li>
-              <p>
-                <m>|(1254)|</m>
-              </p>
-            </li>
+                        <li><p><m>|(1254)|</m></p></li>
 
-            <li>
-              <p>
-                <m>|(1254)^2|</m>
-              </p>
-            </li>
+                        <li><p><m>|(1254)^2|</m></p></li>
 
-            <li>
-              <p>
-                <m>(12)^{-1}</m>
-              </p>
-            </li>
+                        <li><p><m>(12)^{-1}</m></p></li>
 
-            <li>
-              <p>
-                <m>(12537)^{-1}</m>
-              </p>
-            </li>
+                        <li><p><m>(12537)^{-1}</m></p></li>
 
-            <li>
-              <p>
-                <m>[(12)(34)(12)(47)]^{-1}</m>
-              </p>
-            </li>
+                        <li><p><m>[(12)(34)(12)(47)]^{-1}</m></p></li>
 
-            <li>
-              <p>
-                <m>[(1235)(467)]^{-1}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>(135)(24)</m>; (c) <m>(14)(23)</m>; (e) <m>(1324)</m>; (g) <m>(134)(25)</m>; (n) <m>(17352)</m>.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p><m>[(1235)(467)]^{-1}</m></p></li>
 
-    <exercise number="3">
-      <statement>
-        <p>
-          Express the following permutations as products of transpositions and identify them as even or odd.
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) <m>(135)(24)</m>; (c) <m>(14)(23)</m>; (e) <m>(1324)</m>; (g) <m>(134)(25)</m>; (n) <m>(17352)</m>.</p>
+            </hint>
+        </exercise>
 
-          <ol cols="2">
-            <li>
-              <p>
-                <m>(14356)</m>
-              </p>
-            </li>
+        <exercise>
+            <statement>
+                <p>Express the following permutations as products of transpositions and identify them as even or odd.
+                    <ol cols="2">
+            
+                        <li><p><m>(14356)</m></p></li>
 
-            <li>
-              <p>
-                <m>(156)(234)</m>
-              </p>
-            </li>
+                        <li><p><m>(156)(234)</m></p></li>
 
-            <li>
-              <p>
-                <m>(1426)(142)</m>
-              </p>
-            </li>
+                        <li><p><m>(1426)(142)</m></p></li>
 
-            <li>
-              <p>
-                <m>(17254)(1423)(154632)</m>
-              </p>
-            </li>
+                        <li><p><m>(17254)(1423)(154632)</m></p></li>
 
-            <li>
-              <p>
-                <m>(142637)</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>(16)(15)(13)(14)</m>; (c) <m>(16)(14)(12)</m>.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p><m>(142637)</m></p></li>
 
-    <exercise number="4">
-      <statement>
-        <p>
-          Find <m>(a_1, a_2, \ldots, a_n)^{-1}</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          <m>(a_1, a_2, \ldots, a_n)^{-1} = (a_1, a_{n}, a_{n-1}, \ldots, a_2)</m>
-        </p>
-      </hint>
-    </exercise>
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) <m>(16)(15)(13)(14)</m>; (c) <m>(16)(14)(12)</m>.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="5">
-      <statement>
-        <p>
-          List all of the subgroups of <m>S_4</m>.
-          Find each of the following sets:
+        <exercise>
+            <statement>
+                <p>Find <m>(a_1, a_2, \ldots, a_n)^{-1}</m>.</p>
+            </statement>
+            <hint>
+                <p><m>(a_1, a_2, \ldots, a_n)^{-1} = (a_1, a_{n}, a_{n-1}, \ldots, a_2)</m></p>
+            </hint>
+        </exercise>
 
-          <ol>
-            <li>
-              <p>
-                <m>\{ \sigma \in S_4 : \sigma(1) = 3 \}</m>
-              </p>
-            </li>
+        <exercise>
+            <statement>
+                <p>List all of the subgroups of <m>S_4</m>. Find each of the following sets:
+                    <ol>
 
-            <li>
-              <p>
-                <m>\{ \sigma \in S_4 : \sigma(2) = 2 \}</m>
-              </p>
-            </li>
+                        <li><p><m>\{ \sigma \in S_4 : \sigma(1) = 3 \}</m></p></li>
 
-            <li>
-              <p>
-                <m>\{ \sigma \in S_4 : \sigma(1) = 3</m> and <m>\sigma(2) = 2 \}</m>.
-              </p>
-            </li>
-          </ol>
+                        <li><p><m>\{ \sigma \in S_4 : \sigma(2) = 2 \}</m></p></li>
 
-          Are any of these sets subgroups of <m>S_4</m>?
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>\{ (13), (13)(24), (132), (134), (1324), (1342) \}</m> is not a subgroup.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p><m>\{ \sigma \in S_4 : \sigma(1) = 3</m> and <m>\sigma(2) = 2 \}</m>.</p></li>
 
-    <exercise number="6">
-      <statement>
-        <p>
-          Find all of the subgroups in <m>A_4</m>.
-          What is the order of each subgroup?
-        </p>
-      </statement>
-    </exercise>
+                    </ol>
+                Are any of these sets subgroups of <m>S_4</m>?</p>
+            </statement>
+            <hint>
+                <p>(a) <m>\{ (13), (13)(24), (132), (134), (1324), (1342) \}</m> is not a subgroup.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="7">
-      <statement>
-        <p>
-          Find all possible orders of elements in <m>S_7</m> and <m>A_7</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Find all of the subgroups in <m>A_4</m>. What is the order of each subgroup?</p>
+            </statement>
+        </exercise>
 
-    <exercise number="8">
-      <statement>
-        <p>
-          Show that <m>A_{10}</m> contains an element of order <m>15</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          <m>(12345)(678)</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Find all possible orders of elements in <m>S_7</m> and <m>A_7</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="9">
-      <statement>
-        <p>
-          Does <m>A_8</m> contain an element of order <m>26</m>?
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that <m>A_{10}</m> contains an element of order <m>15</m>.</p>
+            </statement>
+            <hint>
+                <p><m>(12345)(678)</m>.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="10">
-      <statement>
-        <p>
-          Find an element of largest order in <m>S_n</m> for <m>n = 3, \ldots, 10</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Does <m>A_8</m> contain an element of order <m>26</m>?</p>
+            </statement>
+        </exercise>
 
-    <exercise number="11">
-      <statement>
-        <p>
-          What are the possible cycle structures of elements of <m>A_5</m>?
-          What about <m>A_6</m>?
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Permutations of the form
-          <me>
-            (1), (a_1, a_2)(a_3, a_4), (a_1, a_2, a_3), (a_1, a_2, a_3, a_4, a_5)
-          </me>
-          are possible for <m>A_5</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Find an element of largest order in <m>S_n</m> for <m>n = 3, \ldots, 10</m>.</p>
+            </statement>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>What are the possible cycle structures of elements of <m>A_5</m>? What about <m>A_6</m>?</p>
+            </statement>
+            <hint>
+                <p>Permutations of the form
+                    <me>(1), (a_1, a_2)(a_3, a_4), (a_1, a_2, a_3), (a_1, a_2, a_3, a_4, a_5)</me>
+                are possible for <m>A_5</m>.</p>
+            </hint>
+        </exercise>
 
     <exercise number="12">
       <statement>
