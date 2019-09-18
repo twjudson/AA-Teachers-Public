@@ -764,66 +764,44 @@
             </hint>
         </exercise>
 
-    <exercise number="12">
-      <statement>
-        <p>
-          Let <m>\sigma \in S_n</m> have order <m>n</m>.
-          Show that for all integers <m>i</m> and <m>j</m>,
-          <m>\sigma^i = \sigma^j</m> if and only if <m>i \equiv j \pmod{n}</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>\sigma \in S_n</m> have order <m>n</m>. Show that for all integers <m>i</m> and <m>j</m>, <m>\sigma^i = \sigma^j</m> if and only if <m>i \equiv j \pmod{n}</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="13" xml:id="exercise-permute-order-product-cycles">
-      <statement>
-        <p>
-          Let <m>\sigma = \sigma_1 \cdots \sigma_m \in S_n</m> be the product of disjoint cycles.
-          Prove that the order of <m>\sigma</m> is the least common multiple of the lengths of the cycles <m>\sigma_1, \ldots, \sigma_m</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>\sigma = \sigma_1 \cdots \sigma_m \in S_n</m> be the product of disjoint cycles. Prove that the order of <m>\sigma</m> is the least common multiple of the lengths of the cycles <m>\sigma_1, \ldots, \sigma_m</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="14">
-      <statement>
-        <p>
-          Using cycle notation, list the elements in <m>D_5</m>.
-          What are <m>r</m> and <m>s</m>?
-          Write every element as a product of <m>r</m> and <m>s</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Using cycle notation, list the elements in <m>D_5</m>. What are <m>r</m> and <m>s</m>? Write every element as a product of <m>r</m> and <m>s</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="15">
-      <statement>
-        <p>
-          If the diagonals of a cube are labeled as <xref ref="figure-motions"/>,
-          to which motion of the cube does the permutation <m>(12)(34)</m> correspond?
-          What about the other permutations of the diagonals?
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>If the diagonals of a cube are labeled as <xref ref="figure-motions"/>, to which motion of the cube does the permutation <m>(12)(34)</m> correspond? What about the other permutations of the diagonals?</p>
+            </statement>
+        </exercise>
 
-    <exercise number="16">
-      <statement>
-        <p>
-          Find the group of rigid motions of a tetrahedron.
-          Show that this is the same group as <m>A_4</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Find the group of rigid motions of a tetrahedron. Show that this is the same group as <m>A_4</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="17">
-      <statement>
-        <p>
-          Prove that <m>S_n</m> is nonabelian for <m>n \geq 3</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Calculate <m>(123)(12)</m> and <m>(12)(123)</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that <m>S_n</m> is nonabelian for <m>n \geq 3</m>.</p>
+            </statement>
+            <hint>
+                <p>Calculate <m>(123)(12)</m> and <m>(12)(123)</m>.</p>
+            </hint>
+        </exercise>
 
     <exercise number="18">
       <statement>
