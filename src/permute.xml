@@ -803,297 +803,175 @@
             </hint>
         </exercise>
 
-    <exercise number="18">
-      <statement>
-        <p>
-          Show that <m>A_n</m> is nonabelian for <m>n \geq 4</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that <m>A_n</m> is nonabelian for <m>n \geq 4</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="19">
-      <statement>
-        <p>
-          Prove that <m>D_n</m> is nonabelian for <m>n \geq 3</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that <m>D_n</m> is nonabelian for <m>n \geq 3</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="20" xml:id="exercise-permute-cycle-n-1-transpositions">
-      <statement>
-        <p>
-          Let <m>\sigma \in S_n</m> be a cycle.
-          Prove that <m>\sigma</m> can be written as the product of at most <m>n-1</m> transpositions.
-        </p>
-      </statement>
-    </exercise>
+        <exercise xml:id="exercise-permute-cycle-n-1-transpositions">
+            <statement>
+                <p>Let <m>\sigma \in S_n</m> be a cycle. Prove that <m>\sigma</m> can be written as the product of at most <m>n-1</m> transpositions.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="21">
-      <statement>
-        <p>
-          Let <m>\sigma \in S_n</m>.
-          If <m>\sigma</m> is not a cycle,
-          prove that <m>\sigma</m> can be written as the product of at most <m>n - 2</m> transpositions.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>\sigma \in S_n</m>. If <m>\sigma</m> is not a cycle, prove that <m>\sigma</m> can be written as the product of at most <m>n - 2</m> transpositions.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="22">
-      <statement>
-        <p>
-          If <m>\sigma</m> can be expressed as an odd number of transpositions,
-          show that any other product of transpositions equaling <m>\sigma</m> must also be odd.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>If <m>\sigma</m> can be expressed as an odd number of transpositions, show that any other product of transpositions equaling <m>\sigma</m> must also be odd.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="23">
-      <statement>
-        <p>
-          If <m>\sigma</m> is a cycle of odd length,
-          prove that <m>\sigma^2</m> is also a cycle.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>If <m>\sigma</m> is a cycle of odd length, prove that <m>\sigma^2</m> is also a cycle.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="24">
-      <statement>
-        <p>
-          Show that a <m>3</m>-cycle is an even permutation.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that a <m>3</m>-cycle is an even permutation.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="25">
-      <statement>
-        <p>
-          Prove that in <m>A_n</m> with <m>n \geq 3</m>,
-          any permutation is a product of cycles of length <m>3</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Consider the cases <m>(ab)(bc)</m> and <m>(ab)(cd)</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that in <m>A_n</m> with <m>n \geq 3</m>, any permutation is a product of cycles of length <m>3</m>.</p>
+            </statement>
+            <hint>
+                <p>Consider the cases <m>(ab)(bc)</m> and <m>(ab)(cd)</m>.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="26">
-      <statement>
-        <p>
-          Prove that any element in <m>S_n</m> can be written as a finite product of the following permutations.
+        <exercise>
+            <statement>
+                <p>Prove that any element in <m>S_n</m> can be written as a finite product of the following permutations.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                <m>(1 2), (13), \ldots, (1n)</m>
-              </p>
-            </li>
+                        <li><p><m>(1 2), (13), \ldots, (1n)</m></p></li>
 
-            <li>
-              <p>
-                <m>(1 2), (23), \ldots, (n- 1,n)</m>
-              </p>
-            </li>
+                        <li><p><m>(1 2), (23), \ldots, (n- 1,n)</m></p></li>
 
-            <li>
-              <p>
-                <m>(12), (1 2 \ldots n )</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                        <li><p><m>(12), (1 2 \ldots n )</m></p></li>
 
-    <exercise number="27">
-      <statement>
-        <p>
-          Let <m>G</m> be a group and define a map
-          <m>\lambda_g : G \rightarrow G</m> by <m>\lambda_g(a) = g a</m>.
-          Prove that <m>\lambda_g</m> is a permutation of <m>G</m>.
-        </p>
-      </statement>
-    </exercise>
+                    </ol></p>
+            </statement>
+        </exercise>
 
-    <exercise number="28">
-      <statement>
-        <p>
-          Prove that there exist <m>n!</m> permutations of a set containing <m>n</m> elements.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>G</m> be a group and define a map <m>\lambda_g : G \rightarrow G</m> by <m>\lambda_g(a) = g a</m>. Prove that <m>\lambda_g</m> is a permutation of <m>G</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="29">
-      <statement>
-        <p>
-          Recall that the <term>center</term> of a group <m>G</m> is
-          <me>
-            Z(G) = \{ g \in G : gx = xg \text{ for all } x \in G \}
-          </me>.
-          Find the center of <m>D_8</m>.
-          What about the center of <m>D_{10}</m>?
-          What is the center of <m>D_n</m>?
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that there exist <m>n!</m> permutations of a set containing <m>n</m> elements.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="30">
-      <statement>
-        <p>
-          Let <m>\tau = (a_1, a_2, \ldots,
-          a_k)</m> be a cycle of length <m>k</m>.
+        <exercise>
+            <statement>
+                <p>Recall that the <term>center</term> of a group <m>G</m> is
+                    <me>Z(G) = \{ g \in G : gx = xg \text{ for all } x \in G \}.</me>
+                Find the center of <m>D_8</m>. What about the center of <m>D_{10}</m>? What is the center of <m>D_n</m>?</p>
+            </statement>
+        </exercise>
 
-          <ol>
-            <li>
-              <p>
-                Prove that if <m>\sigma</m> is any permutation, then
-                <me>
-                  \sigma \tau \sigma^{-1 } = ( \sigma(a_1), \sigma(a_2), \ldots, \sigma(a_k))
-                </me>
-                is a cycle of length <m>k</m>.
-              </p>
-            </li>
+        <exercise>
+            <statement>
+                <p>Let <m>\tau = (a_1, a_2, \ldots, a_k)</m> be a cycle of length <m>k</m>.
+                    <ol>
 
-            <li>
-              <p>
-                Let <m>\mu</m> be a cycle of length <m>k</m>.
-                Prove that there is a permutation <m>\sigma</m> such that <m>\sigma \tau \sigma^{-1 } = \mu</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          For (a), show that <m>\sigma \tau \sigma^{-1 }(\sigma(a_i)) = \sigma(a_{i + 1})</m>.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p>Prove that if <m>\sigma</m> is any permutation, then
+                            <me>\sigma \tau \sigma^{-1 } = ( \sigma(a_1), \sigma(a_2), \ldots, \sigma(a_k))</me>
+                        is a cycle of length <m>k</m>. </p></li>
 
-    <exercise number="31">
-      <statement>
-        <p>
-          For <m>\alpha</m> and <m>\beta</m> in <m>S_n</m>,
-          define <m>\alpha \sim \beta</m> if there exists an
-          <m>\sigma \in S_n</m> such that <m>\sigma \alpha \sigma^{-1} = \beta</m>.
-          Show that <m>\sim</m> is an equivalence relation on <m>S_n</m>.
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>Let <m>\mu</m> be a cycle of length <m>k</m>. Prove that there is a permutation <m>\sigma</m> such that <m>\sigma \tau \sigma^{-1 } = \mu</m>.</p></li>
 
-    <exercise number="32">
-      <statement>
-        <p>
-          Let <m>\sigma \in S_X</m>.
-          If <m>\sigma^n(x) = y</m>, we will say that <m>x \sim y</m>.
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>For (a), show that <m>\sigma \tau \sigma^{-1 }(\sigma(a_i)) = \sigma(a_{i + 1})</m>.</p>
+            </hint>
+        </exercise>
 
-          <ol>
-            <li>
-              <p>
-                Show that <m>\sim</m> is an equivalence relation on <m>X</m>.
-              </p>
-            </li>
+        <exercise>
+            <statement>
+                <p>For <m>\alpha</m> and <m>\beta</m> in <m>S_n</m>, define <m>\alpha \sim \beta</m> if there exists an <m>\sigma \in S_n</m> such that <m>\sigma \alpha \sigma^{-1} = \beta</m>. Show that <m>\sim</m> is an equivalence relation on <m>S_n</m>.</p>
+            </statement>
+        </exercise>
 
-            <li>
-              <p>
-                If <m>\sigma \in A_n</m> and <m>\tau \in S_n</m>,
-                show that <m>\tau^{-1} \sigma \tau \in A_n</m>.
-              </p>
-            </li>
+        <exercise>
+            <statement>
+                <p>Let <m>\sigma \in S_X</m>. If <m>\sigma^n(x) = y</m>, we will say that <m>x \sim y</m>.
+                    <ol>
 
-            <li>
-              <p>
-                Define the <term>orbit</term> of <m>x \in X</m> under <m>\sigma \in S_X</m> to be the set
-                <me>
-                  {\mathcal O}_{x, \sigma} = \{ y : x \sim y  \}
-                </me>.
-                Compute the orbits of each of the following elements in <m>S_5</m>:
-                <md>
-                  <mrow>\alpha &amp; = (1254)</mrow>
-                  <mrow>\beta &amp; = (123)(45)</mrow>
-                  <mrow>\gamma &amp; = (13)(25)</mrow>
-                </md>.
-              </p>
-            </li>
+                        <li><p>Show that <m>\sim</m> is an equivalence relation on <m>X</m>.</p></li>
 
-            <li>
-              <p>
-                If <m>{\mathcal O}_{x, \sigma} \cap {\mathcal O}_{y, \sigma} \neq \emptyset</m>,
-                prove that <m>{\mathcal O}_{x, \sigma} = {\mathcal O}_{y, \sigma}</m>.
-                The orbits under a permutation <m>\sigma</m> are the equivalence classes corresponding to the equivalence relation <m>\sim</m>.
-              </p>
-            </li>
+                        <li><p>If <m>\sigma \in A_n</m> and <m>\tau \in S_n</m>, show that <m>\tau^{-1} \sigma \tau \in A_n</m>.</p></li>
 
-            <li>
-              <p>
-                A subgroup <m>H</m> of <m>S_X</m> is <term>transitive</term>
-                if for every <m>x, y \in X</m>,
-                there exists a <m>\sigma \in H</m> such that <m>\sigma(x) = y</m>.
-                Prove that <m>\langle \sigma \rangle</m> is transitive if and only if
-                <m>{\mathcal O}_{x, \sigma} = X</m> for some <m>x \in X</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>Define the <term>orbit</term> of <m>x \in X</m> under <m>\sigma \in S_X</m> to be the set
+                            <me>{\mathcal O}_{x, \sigma} = \{ y : x \sim y  \}.</me>
+                        Compute the orbits of each of the following elements in <m>S_5</m>:
+                           <md>
+                                <mrow>\alpha &amp; = (1254)</mrow>
+                                <mrow>\beta &amp; = (123)(45)</mrow>
+                                <mrow>\gamma &amp; = (13)(25).</mrow>
+                            </md> </p></li>
 
-    <exercise number="33">
-      <statement>
-        <p>
-          Let <m>\alpha \in S_n</m> for <m>n \geq 3</m>.
-          If <m>\alpha \beta = \beta \alpha</m> for all <m>\beta \in S_n</m>,
-          prove that <m>\alpha</m> must be the identity permutation;
-          hence, the center of <m>S_n</m> is the trivial subgroup.
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>If <m>{\mathcal O}_{x, \sigma} \cap {\mathcal O}_{y, \sigma} \neq \emptyset</m>, prove that <m>{\mathcal O}_{x, \sigma} = {\mathcal O}_{y, \sigma}</m>. The orbits under a permutation <m>\sigma</m> are the equivalence classes corresponding to the equivalence relation <m>\sim</m>.</p></li>
 
-    <exercise number="34" xml:id="permute-exercise-inverse-even">
-      <statement>
-        <p>
-          If <m>\alpha</m> is even, prove that <m>\alpha^{-1}</m> is also even.
-          Does a corresponding result hold if <m>\alpha</m> is odd?
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>A subgroup <m>H</m> of <m>S_X</m> is <term>transitive</term> if for every <m>x, y \in X</m>, there exists a <m>\sigma \in H</m> such that <m>\sigma(x) = y</m>. Prove that <m>\langle \sigma \rangle</m> is transitive if and only if <m>{\mathcal O}_{x, \sigma} = X</m> for some <m>x \in X</m>.</p></li>
 
-    <exercise number="35">
-      <statement>
-        <p>
-          Show that <m>\alpha^{-1} \beta^{-1} \alpha \beta</m> is even for <m>\alpha, \beta \in S_n</m>.
-        </p>
-      </statement>
-    </exercise>
+                    </ol></p>
+            </statement>
+        </exercise>
 
-    <exercise number="36">
-      <statement>
-        <p>
-          Let <m>r</m> and <m>s</m> be the elements in <m>D_n</m> described in <xref ref="theorem-dn-generator"/>
+        <exercise>
+            <statement>
+                <p>Let <m>\alpha \in S_n</m> for <m>n \geq 3</m>. If <m>\alpha \beta = \beta \alpha</m> for all <m>\beta \in S_n</m>, prove that <m>\alpha</m> must be the identity permutation; hence, the center of <m>S_n</m> is the trivial subgroup.</p>
+            </statement>
+        </exercise>
 
-          <ol>
-            <li>
-              <p>
-                Show that <m>srs = r^{-1}</m>.
-              </p>
-            </li>
+        <exercise xml:id="permute-exercise-inverse-even">
+            <statement>
+                <p> If <m>\alpha</m> is even, prove that <m>\alpha^{-1}</m> is also even. Does a corresponding result hold if <m>\alpha</m> is odd?</p>
+            </statement>
+        </exercise>
 
-            <li>
-              <p>
-                Show that <m>r^k s = s r^{-k}</m> in <m>D_n</m>.
-              </p>
-            </li>
+        <exercise>
+            <statement>
+                <p>Show that <m>\alpha^{-1} \beta^{-1} \alpha \beta</m> is even for <m>\alpha, \beta \in S_n</m>.</p>
+            </statement>
+        </exercise>
 
-            <li>
-              <p>
-                Prove that the order of <m>r^k \in D_n</m> is <m>n / \gcd(k,n)</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>r</m> and <m>s</m> be the elements in <m>D_n</m> described in <xref ref="theorem-dn-generator"/>
+                    <ol>
+
+                        <li><p>Show that <m>srs = r^{-1}</m>.</p></li>
+
+                        <li><p>Show that <m>r^k s = s r^{-k}</m> in <m>D_n</m>.</p></li>
+
+                        <li><p>Prove that the order of <m>r^k \in D_n</m> is <m>n / \gcd(k,n)</m>.</p></li>
+
+                    </ol></p>
+            </statement>
+        </exercise>
+
   </exercises>
 
    <section xml:id="section-permute-permutations-in-the-classroom">
