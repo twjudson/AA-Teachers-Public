@@ -365,122 +365,68 @@
             <idx><h>Internal direct product</h></idx>
             of <m>H</m> and <m>K</m>.</p>
 
-        <example xml:id="example-isomorph-u8">
-            <p>The group <m>U(8)</m> is the internal direct product of
-                <me>H = \{1, 3 \} \quad \text{and} \quad K  = \{1, 5 \}.</me></p>
-        </example>
+            <example xml:id="example-isomorph-u8">
+                <p>The group <m>U(8)</m> is the internal direct product of
+                    <me>H = \{1, 3 \} \quad \text{and} \quad K  = \{1, 5 \}.</me></p>
+            </example>
 
-      <example xml:id="example-isomorph-d6-product">
-        <p>
-          The dihedral group <m>D_6</m> is an internal direct product of its two subgroups
-          <me>
-            H = \{\identity, r^3  \} \quad \text{and} \quad K  = \{\identity, r^2, r^4, s, r^2s, r^4 s \}
-          </me>.
-          It can easily be shown that <m>K \cong S_3</m>;
-          consequently, <m>D_6 \cong {\mathbb Z}_2 \times S_3</m>.
-        </p>
-      </example>
+            <example xml:id="example-isomorph-d6-product">
+                <p>The dihedral group <m>D_6</m> is an internal direct product of its two subgroups
+                    <me>H = \{\identity, r^3  \} \quad \text{and} \quad K  = \{\identity, r^2, r^4, s, r^2s, r^4 s \}.</me>
+                It can easily be shown that <m>K \cong S_3</m>; consequently, <m>D_6 \cong {\mathbb Z}_2 \times S_3</m>.</p>
+            </example>
 
-      <example xml:id="example-isomorph-s3-not-a-product">
-        <p>
-          Not every group can be written as the internal direct product of two of its proper subgroups.
-          If the group <m>S_3</m> were an internal direct product of its proper subgroups <m>H</m> and <m>K</m>,
-          then one of the subgroups, say <m>H</m>,
-          would have to have order <m>3</m>.
-          In this case <m>H</m> is the subgroup <m>\{ (1), (123), (132) \}</m>.
-          The subgroup <m>K</m> must have order <m>2</m>,
-          but no matter which subgroup we choose for <m>K</m>,
-          the condition that <m>hk = kh</m> will never be satisfied for <m>h \in H</m> and <m>k \in K</m>.
-        </p>
-      </example>
+            <example xml:id="example-isomorph-s3-not-a-product">
+                <p>Not every group can be written as the internal direct product of two of its proper subgroups. If the group <m>S_3</m> were an internal direct product of its proper subgroups <m>H</m> and <m>K</m>, then one of the subgroups, say <m>H</m>, would have to have order <m>3</m>. In this case <m>H</m> is the subgroup <m>\{ (1), (123), (132) \}</m>. The subgroup <m>K</m> must have order <m>2</m>, but no matter which subgroup we choose for <m>K</m>, the condition that <m>hk = kh</m> will never be satisfied for <m>h \in H</m> and <m>k \in K</m>.</p>
+            </example>
 
-      <theorem xml:id="theorem-isomorph-directproducts">
-        <statement>
-          <p>
-            Let <m>G</m> be the internal direct product of subgroups <m>H</m> and <m>K</m>.
-            Then <m>G</m> is isomorphic to <m>H \times K</m>.
-          </p>
-        </statement>
+            <theorem xml:id="theorem-isomorph-directproducts">
+                <statement>
+                    <p>Let <m>G</m> be the internal direct product of subgroups <m>H</m> and <m>K</m>. Then <m>G</m> is isomorphic to <m>H \times K</m>.</p>
+                </statement>
+                <proof>
+                    <p>Since <m>G</m> is an internal direct product, we can write any element <m>g \in G</m> as <m>g =hk</m> for some <m>h \in H</m> and some <m>k \in K</m>. Define a map <m>\phi : G \rightarrow H \times K</m> by <m>\phi(g) = (h,k)</m>.</p>
 
-        <proof>
-          <p>
-            Since <m>G</m> is an internal direct product,
-            we can write any element <m>g \in G</m> as <m>g =hk</m> for some <m>h \in H</m> and some <m>k \in K</m>.
-            Define a map <m>\phi : G \rightarrow H \times K</m> by <m>\phi(g) = (h,k)</m>.
-          </p>
+                    <p>The first problem that we must face is to show that <m>\phi</m> is a well-defined map; that is, we must show that <m>h</m> and <m>k</m> are uniquely determined by <m>g</m>. Suppose that <m>g = hk=h'k'</m>. Then <m>h^{-1} h'= k (k')^{-1}</m> is in both <m>H</m> and <m>K</m>, so it must be the identity. Therefore, <m>h = h'</m> and <m>k = k'</m>, which proves that <m>\phi</m> is, indeed, well-defined.</p>
 
-          <p>
-            The first problem that we must face is to show that <m>\phi</m> is a well-defined map;
-            that is, we must show that <m>h</m> and <m>k</m> are uniquely determined by <m>g</m>.
-            Suppose that <m>g = hk=h'k'</m>.
-            Then <m>h^{-1} h'= k (k')^{-1}</m> is in both <m>H</m> and <m>K</m>,
-            so it must be the identity.
-            Therefore, <m>h = h'</m> and <m>k = k'</m>,
-            which proves that <m>\phi</m> is, indeed, well-defined.
-          </p>
+                    <p>To show that <m>\phi</m> preserves the group operation, let <m>g_1 = h_1 k_1</m> and <m>g_2 = h_2 k_2</m> and observe that
+                        <md>
+                            <mrow>\phi( g_1 g_2 ) &amp; = \phi( h_1 k_1 h_2 k_2 )</mrow>
+                            <mrow>&amp; = \phi(h_1  h_2 k_1 k_2)</mrow>
+                            <mrow>&amp; = (h_1  h_2, k_1 k_2)</mrow>
+                            <mrow>&amp; = (h_1, k_1)( h_2, k_2)</mrow>
+                            <mrow>&amp; = \phi( g_1 ) \phi(  g_2 ).</mrow>
+                        </md>
+                    We will leave the proof that <m>\phi</m> is one-to-one and onto as an exercise.</p>
+                </proof>
+            </theorem>
 
-          <p>
-            To show that <m>\phi</m> preserves the group operation,
-            let <m>g_1 = h_1 k_1</m> and <m>g_2 = h_2 k_2</m> and observe that
-            <md>
-              <mrow>\phi( g_1 g_2 ) &amp; = \phi( h_1 k_1 h_2 k_2 )</mrow>
-              <mrow>&amp; = \phi(h_1  h_2 k_1 k_2)</mrow>
-              <mrow>&amp; = (h_1  h_2, k_1 k_2)</mrow>
-              <mrow>&amp; = (h_1, k_1)( h_2, k_2)</mrow>
-              <mrow>&amp; = \phi( g_1 ) \phi(  g_2 )</mrow>
-            </md>.
-            We will leave the proof that <m>\phi</m> is one-to-one and onto as an exercise.
-          </p>
-        </proof>
-      </theorem>
+            <example xml:id="example-isomorph-z6-product">
+                <p>The group <m>{\mathbb Z}_6</m> is an internal direct product isomorphic to <m>\{ 0, 2, 4\} \times \{ 0, 3 \}</m>.</p>
+            </example>
 
-      <example xml:id="example-isomorph-z6-product">
-        <p>
-          The group <m>{\mathbb Z}_6</m> is an internal direct product isomorphic to <m>\{ 0, 2, 4\} \times \{ 0, 3 \}</m>.
-        </p>
-      </example>
+            <p>We can extend the definition of an internal direct product of <m>G</m> to a collection of subgroups <m>H_1, H_2, \ldots, H_n</m> of <m>G</m>, by requiring that
+                <ul>
 
-      <p>
-        We can extend the definition of an internal direct product of <m>G</m> to a collection of subgroups
-        <m>H_1, H_2, \ldots, H_n</m> of <m>G</m>, by requiring that
+                    <li><p><m>G = H_1 H_2 \cdots H_n = \{ h_1 h_2 \cdots h_n : h_i \in H_i \}</m>;</p></li>
 
-        <ul>
-          <li>
-            <p>
-              <m>G = H_1 H_2 \cdots H_n = \{ h_1 h_2 \cdots h_n : h_i \in H_i \}</m>;
-            </p>
-          </li>
+                    <li><p><m>H_i \cap \langle \cup_{j \neq i} H_j \rangle = \{ e \}</m>;</p></li>
 
-          <li>
-            <p>
-              <m>H_i \cap \langle \cup_{j \neq i} H_j \rangle = \{ e \}</m>;
-            </p>
-          </li>
+                    <li><p><m>h_i h_j = h_j h_i</m> for all<m>h_i \in H_i</m> and <m>h_j \in H_j</m>.</p></li>
 
-          <li>
-            <p>
-              <m>h_i h_j = h_j h_i</m> for all
-              <m>h_i \in H_i</m> and <m>h_j \in H_j</m>.
-            </p>
-          </li>
-        </ul>
+                </ul>
+            We will leave the proof of the following theorem as an exercise.</p>
 
-        We will leave the proof of the following theorem as an exercise.
-      </p>
-
-      <theorem>
-        <statement>
-          <p>
-            Let <m>G</m> be the internal direct product of subgroups <m>H_i</m>,
-            where <m>i = 1, 2, \ldots, n</m>.
-            Then <m>G</m> is isomorphic to <m>\prod_i H_i</m>.
-          </p>
-        </statement>
-      </theorem>
+            <theorem>
+                <statement>
+                    <p>Let <m>G</m> be the internal direct product of subgroups <m>H_i</m>, where <m>i = 1, 2, \ldots, n</m>. Then <m>G</m> is isomorphic to <m>\prod_i H_i</m>.</p>
+                </statement>
+            </theorem>
 
 
-    </subsection>
-  </section>
+        </subsection>
+  
+    </section>
 
     <exercises xml:id="exercises-isomorph" filenamebase="isomorph">
         <title>Exercises</title>
@@ -494,32 +440,25 @@
             </hint>
         </exercise>
 
-    <exercise number="2">
-      <statement>
-        <p>
-          Prove that <m>{\mathbb C}^\ast</m> is isomorphic to the subgroup of
-          <m>GL_2( {\mathbb R} )</m> consisting of matrices of the form
-          <me>
-            \begin{pmatrix}
-            a &amp; b \\
-            -b &amp; a
-            \end{pmatrix}
-          </me>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Define <m>\phi: {\mathbb C}^* \rightarrow GL_2( {\mathbb R})</m> by
-          <me>
-            \phi(a + bi) = 
-            \begin{pmatrix}
-            a &amp; b \\
-            -b &amp; a
-            \end{pmatrix}
-          </me>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that <m>{\mathbb C}^\ast</m> is isomorphic to the subgroup of <m>GL_2( {\mathbb R} )</m> consisting of matrices of the form
+                    <me>\begin{pmatrix}
+                    a &amp; b \\
+                    -b &amp; a
+                    \end{pmatrix}.
+                    </me></p>
+            </statement>
+            <hint>
+                <p>Define <m>\phi: {\mathbb C}^* \rightarrow GL_2( {\mathbb R})</m> by
+                    <me>\phi(a + bi) = 
+                    \begin{pmatrix}
+                    a &amp; b \\
+                    -b &amp; a
+                    \end{pmatrix}.
+                    </me></p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -530,31 +469,29 @@
             </hint>
         </exercise>
 
-    <exercise number="4">
-      <statement>
-        <p>
-          Prove that <m>U(8)</m> is isomorphic to the group of matrices
-          <me>
-            \begin{pmatrix}
-            1 &amp; 0 \\
-            0 &amp; 1
-            \end{pmatrix},
-            \begin{pmatrix}
-            1 &amp; 0 \\
-            0 &amp; -1
-            \end{pmatrix},
-            \begin{pmatrix}
-            -1 &amp; 0 \\
-            0 &amp; 1
-            \end{pmatrix},
-            \begin{pmatrix}
-            -1 &amp; 0 \\
-            0 &amp; -1
-            \end{pmatrix}
-          </me>.
-        </p>
-      </statement>
-    </exercise>
+
+        <exercise>
+            <statement>
+                <p>Prove that <m>U(8)</m> is isomorphic to the group of matrices
+                    <me>\begin{pmatrix}
+                    1 &amp; 0 \\
+                    0 &amp; 1
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    1 &amp; 0 \\
+                    0 &amp; -1
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    -1 &amp; 0 \\
+                    0 &amp; 1
+                    \end{pmatrix},
+                    \begin{pmatrix}
+                    -1 &amp; 0 \\
+                    0 &amp; -1
+                    \end{pmatrix}.
+                    </me></p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
@@ -562,39 +499,29 @@
             </statement>
         </exercise>
 
-    <exercise number="6">
-      <statement>
-        <p>
-          Show that the <m>n</m>th roots of unity are isomorphic to <m>{\mathbb Z}_n</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Define a map from <m>{\mathbb Z}_n</m> into the <m>n</m>th roots of unity by <m>k \mapsto \cis(2k\pi / n)</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that the <m>n</m>th roots of unity are isomorphic to <m>{\mathbb Z}_n</m>.</p>
+            </statement>
+            <hint>
+                <p>Define a map from <m>{\mathbb Z}_n</m> into the <m>n</m>th roots of unity by <m>k \mapsto \cis(2k\pi / n)</m>.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="7">
-      <statement>
-        <p>
-          Show that any cyclic group of order <m>n</m> is isomorphic to <m>{\mathbb Z}_n</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that any cyclic group of order <m>n</m> is isomorphic to <m>{\mathbb Z}_n</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="8">
-      <statement>
-        <p>
-          Prove that <m>{\mathbb Q}</m> is not isomorphic to <m>{\mathbb Z}</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Assume that <m>{\mathbb Q}</m> is cyclic and try to find a generator.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that <m>{\mathbb Q}</m> is not isomorphic to <m>{\mathbb Z}</m>.</p>
+            </statement>
+            <hint>
+                <p>Assume that <m>{\mathbb Q}</m> is cyclic and try to find a generator.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -604,64 +531,57 @@
             </statement>
         </exercise>
 
-    <exercise number="10">
-      <statement>
-        <p>
-          Show that the matrices
-          <md>
-            <mrow>\begin{pmatrix}
-            1 &amp; 0 &amp; 0 \\
-            0 &amp; 1 &amp; 0 \\
-            0 &amp; 0 &amp; 1
-            \end{pmatrix}
-            \quad
-            \begin{pmatrix}
-            1 &amp; 0 &amp; 0 \\
-            0 &amp; 0 &amp; 1 \\
-            0 &amp; 1 &amp; 0
-            \end{pmatrix}
-            \quad
-            \begin{pmatrix}
-            0 &amp; 1 &amp; 0 \\
-            1 &amp; 0 &amp; 0 \\
-            0 &amp; 0 &amp; 1
-            \end{pmatrix}</mrow>
-            <mrow>\begin{pmatrix}
-            0 &amp; 0 &amp; 1 \\
-            1 &amp; 0 &amp; 0 \\
-            0 &amp; 1 &amp; 0
-            \end{pmatrix}
-            \quad
-            \begin{pmatrix}
-            0 &amp; 0 &amp; 1 \\
-            0 &amp; 1 &amp; 0 \\
-            1 &amp; 0 &amp; 0
-            \end{pmatrix}
-            \quad
-            \begin{pmatrix}
-            0 &amp; 1 &amp; 0 \\
-            0 &amp; 0 &amp; 1 \\
-            1 &amp; 0 &amp; 0
-            \end{pmatrix}</mrow>
-          </md>
-          form a group.
-          Find an isomorphism of <m>G</m> with a more familiar group of order <m>6</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that the matrices
+                    <md>
+                         <mrow>\begin{pmatrix}
+                        1 &amp; 0 &amp; 0 \\
+                        0 &amp; 1 &amp; 0 \\
+                        0 &amp; 0 &amp; 1
+                        \end{pmatrix}
+                        \quad
+                        \begin{pmatrix}
+                        1 &amp; 0 &amp; 0 \\
+                        0 &amp; 0 &amp; 1 \\
+                        0 &amp; 1 &amp; 0
+                        \end{pmatrix}
+                        \quad
+                        \begin{pmatrix}
+                        0 &amp; 1 &amp; 0 \\
+                        1 &amp; 0 &amp; 0 \\
+                        0 &amp; 0 &amp; 1
+                    \end{pmatrix}</mrow>
+                    <mrow>\begin{pmatrix}
+                        0 &amp; 0 &amp; 1 \\
+                        1 &amp; 0 &amp; 0 \\
+                        0 &amp; 1 &amp; 0
+                        \end{pmatrix}
+                        \quad
+                        \begin{pmatrix}
+                        0 &amp; 0 &amp; 1 \\
+                        0 &amp; 1 &amp; 0 \\
+                        1 &amp; 0 &amp; 0
+                        \end{pmatrix}
+                        \quad
+                        \begin{pmatrix}
+                        0 &amp; 1 &amp; 0 \\
+                        0 &amp; 0 &amp; 1 \\
+                        1 &amp; 0 &amp; 0
+                        \end{pmatrix}</mrow>
+                    </md>
+                form a group. Find an isomorphism of <m>G</m> with a more familiar group of order <m>6</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="11">
-      <statement>
-        <p>
-          Find five non-isomorphic groups of order <m>8</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          There are two nonabelian and three abelian groups that are not isomorphic.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Find five non-isomorphic groups of order <m>8</m>.</p>
+            </statement>
+            <hint>
+                <p>There are two nonabelian and three abelian groups that are not isomorphic.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -669,28 +589,24 @@
             </statement>
         </exercise>
 
-    <exercise number="13">
-      <statement>
-        <p>
-          Let <m>\omega = \cis(2 \pi /n)</m> be a primitive <m>n</m>th root of unity.
-          Prove that the matrices
-          <me>
-            A =
-            \begin{pmatrix}
-            \omega &amp; 0 \\
-            0 &amp; \omega^{-1}
-            \end{pmatrix}
-            \quad \text{and} \quad
-            B =
-            \begin{pmatrix}
-            0 &amp; 1 \\
-            1 &amp; 0
-            \end{pmatrix}
-          </me>
-          generate a multiplicative group isomorphic to <m>D_n</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>\omega = \cis(2 \pi /n)</m> be a primitive <m>n</m>th root of unity. Prove that the matrices
+                    <me>A =
+                    \begin{pmatrix}
+                    \omega &amp; 0 \\
+                    0 &amp; \omega^{-1}
+                    \end{pmatrix}
+                    \quad \text{and} \quad
+                    B =
+                    \begin{pmatrix}
+                    0 &amp; 1 \\
+                    1 &amp; 0
+                    \end{pmatrix}</me>
+                generate a multiplicative group isomorphic to <m>D_n</m>.
+            </p>
+        </statement>
+        </exercise>
 
         <exercise>
             <statement>
@@ -709,44 +625,25 @@
             </statement>
         </exercise>
 
-    <exercise number="16">
-      <statement>
-        <p>
-          Find the order of each of the following elements.
+        <exercise>
+            <statement>
+                <p>Find the order of each of the following elements.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                <m>(3, 4)</m> in <m>{\mathbb Z}_4 \times {\mathbb Z}_6</m>
-              </p>
-            </li>
+                        <li><p><m>(3, 4)</m> in <m>{\mathbb Z}_4 \times {\mathbb Z}_6</m></p></li>
 
-            <li>
-              <p>
-                <m>(6, 15, 4)</m> in <m>{\mathbb Z}_{30} \times {\mathbb Z}_{45} \times {\mathbb Z}_{24}</m>
-              </p>
-            </li>
+                        <li><p><m>(6, 15, 4)</m> in <m>{\mathbb Z}_{30} \times {\mathbb Z}_{45} \times {\mathbb Z}_{24}</m></p></li>
 
-            <li>
-              <p>
-                <m>(5, 10, 15)</m> in <m>{\mathbb Z}_{25} \times {\mathbb Z}_{25} \times {\mathbb Z}_{25}</m>
-              </p>
-            </li>
+                        <li><p><m>(5, 10, 15)</m> in <m>{\mathbb Z}_{25} \times {\mathbb Z}_{25} \times {\mathbb Z}_{25}</m></p></li>
 
-            <li>
-              <p>
-                <m>(8, 8, 8)</m> in <m>{\mathbb Z}_{10} \times {\mathbb Z}_{24} \times {\mathbb Z}_{80}</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>12</m>; (c) <m>5</m>.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p><m>(8, 8, 8)</m> in <m>{\mathbb Z}_{10} \times {\mathbb Z}_{24} \times {\mathbb Z}_{80}</m></p></li>
+
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) <m>12</m>; (c) <m>5</m>.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -769,36 +666,26 @@
             </hint>
         </exercise>
 
-    <exercise number="20">
-      <statement>
-        <p>
-          Prove or disprove: Every abelian group of order divisible by <m>3</m> contains a subgroup of order <m>3</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          True.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: Every abelian group of order divisible by <m>3</m> contains a subgroup of order <m>3</m>.</p>
+            </statement>
+            <hint>
+                <p>True.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="21">
-      <statement>
-        <p>
-          Prove or disprove: Every nonabelian group of order divisible by 6 contains a subgroup of order <m>6</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: Every nonabelian group of order divisible by 6 contains a subgroup of order <m>6</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="22">
-      <statement>
-        <p>
-          Let <m>G</m> be a group of order <m>20</m>.
-          If <m>G</m> has subgroups <m>H</m> and <m>K</m> of orders <m>4</m> and <m>5</m> respectively such that <m>hk = kh</m> for all <m>h \in H</m> and <m>k \in K</m>,
-          prove that <m>G</m> is the internal direct product of <m>H</m> and <m>K</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>G</m> be a group of order <m>20</m>. If <m>G</m> has subgroups <m>H</m> and <m>K</m> of orders <m>4</m> and <m>5</m> respectively such that <m>hk = kh</m> for all <m>h \in H</m> and <m>k \in K</m>, prove that <m>G</m> is the internal direct product of <m>H</m> and <m>K</m>.</p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
@@ -812,18 +699,14 @@
             </statement>
         </exercise>
 
-    <exercise number="25">
-      <statement>
-        <p>
-          Prove or disprove: There is a noncyclic abelian group of order <m>52</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          True.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: There is a noncyclic abelian group of order <m>52</m>.</p>
+            </statement>
+            <hint>
+                <p>True.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -858,17 +741,11 @@
             </statement>
         </exercise>
 
-    <exercise number="31" xml:id="isomorph-exercise-comp-inv">
-      <statement>
-        <p>
-          Let <m>\phi : G_1 \rightarrow G_2</m> and <m>\psi : G_2 \rightarrow G_3</m> be isomorphisms.
-          Show that <m>\phi^{-1}</m> and
-          <m>\psi \circ \phi</m> are both isomorphisms.
-          Using these results,
-          show that the isomorphism of groups determines an equivalence relation on the class of all groups.
-        </p>
-      </statement>
-    </exercise>
+        <exercise xml:id="isomorph-exercise-comp-inv">
+            <statement>
+                <p>Let <m>\phi : G_1 \rightarrow G_2</m> and <m>\psi : G_2 \rightarrow G_3</m> be isomorphisms. Show that <m>\phi^{-1}</m> and <m>\psi \circ \phi</m> are both isomorphisms. Using these results, show that the isomorphism of groups determines an equivalence relation on the class of all groups.</p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
@@ -894,43 +771,31 @@
             </statement>
         </exercise>
 
-    <exercise number="36">
-      <statement>
-        <p>
-          Prove that <m>A \mapsto B^{-1}AB</m> is an automorphism of
-          <m>SL_2({\mathbb R})</m> for all <m>B</m> in <m>GL_2({\mathbb R})</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that <m>A \mapsto B^{-1}AB</m> is an automorphism of <m>SL_2({\mathbb R})</m> for all <m>B</m> in <m>GL_2({\mathbb R})</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="37">
-      <statement>
-        <p>
-          We will denote the set of all automorphisms of <m>G</m> by <m>\aut(G)</m>.
+        <exercise>
+            <statement>
+                <p>We will denote the set of all automorphisms of <m>G</m> by <m>\aut(G)</m>.
+                <notation>
+                <usage>\aut(G)</usage>
+                <description>automorphism group of a group <m>G</m></description>
+                </notation>
+                Prove that <m>\aut(G)</m> is a subgroup of <m>S_G</m>, the group of permutations of <m>G</m>.</p>
+            </statement>
+        </exercise>
 
-          <notation>
-            <usage>\aut(G)</usage>
-            <description>automorphism group of a group <m>G</m></description>
-          </notation>
-
-          Prove that <m>\aut(G)</m> is a subgroup of <m>S_G</m>,
-          the group of permutations of <m>G</m>.
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise number="38">
-      <statement>
-        <p>
-          Find <m>\aut( {\mathbb Z}_6)</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Any automorphism of <m>{\mathbb Z}_6</m> must send 1 to another generator of <m>{\mathbb Z}_6</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Find <m>\aut( {\mathbb Z}_6)</m>.</p>
+            </statement>
+            <hint>
+                <p>Any automorphism of <m>{\mathbb Z}_6</m> must send 1 to another generator of <m>{\mathbb Z}_6</m>.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -938,37 +803,25 @@
             </statement>
         </exercise>
 
-    <exercise number="40">
-      <statement>
-        <p>
-          Find two nonisomorphic groups <m>G</m> and <m>H</m> such that <m>\aut(G) \cong \aut(H)</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Find two nonisomorphic groups <m>G</m> and <m>H</m> such that <m>\aut(G) \cong \aut(H)</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="41" xml:id="isomorph-exercise-inner-aut">
-      <statement>
-        <p>
-          Let <m>G</m> be a group and <m>g \in G</m>.
-          Define a map <m>i_g : G \rightarrow G</m> by <m>i_g(x) = g x g^{-1}</m>.
-          Prove that <m>i_g</m> defines an automorphism of <m>G</m>.
-          Such an automorphism is called an
-          <term>inner automorphism</term>.
-          The set of all inner automorphisms is denoted by <m>\inn(G)</m>.
-
-          <notation>
-            <usage>i_g</usage>
-            <description><m>i_g(x) = gxg^{-1}</m></description>
-          </notation>
-
-          <notation>
-            <usage>\inn(G)</usage>
-            <description>inner automorphism group of a group <m>G</m></description>
-          </notation>
-
-        </p>
-      </statement>
-    </exercise>
+        <exercise xml:id="isomorph-exercise-inner-aut">
+            <statement>
+                <p>Let <m>G</m> be a group and <m>g \in G</m>. Define a map <m>i_g : G \rightarrow G</m> by <m>i_g(x) = g x g^{-1}</m>. Prove that <m>i_g</m> defines an automorphism of <m>G</m>. Such an automorphism is called an <term>inner automorphism</term>. The set of all inner automorphisms is denoted by <m>\inn(G)</m>.
+                <notation>
+                <usage>i_g</usage>
+                <description><m>i_g(x) = gxg^{-1}</m></description>
+                </notation>
+                <notation>
+                <usage>\inn(G)</usage>
+                <description>inner automorphism group of a group <m>G</m></description>
+                </notation></p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
@@ -982,41 +835,24 @@
             </statement>
         </exercise>
 
-    <exercise number="44">
-      <statement>
-        <p>
-          Let <m>G</m> be a group and <m>g \in G</m>.
-          Define maps <m>\lambda_g :G \rightarrow G</m> and <m>\rho_g :G \rightarrow G</m> by
-          <m>\lambda_g(x) = gx</m> and <m>\rho_g(x) = xg^{-1}</m>.
-          Show that <m>i_g = \rho_g \circ \lambda_g</m> is an automorphism of <m>G</m>.
-          The isomorphism <m>g \mapsto \rho_g</m> is called the
-          <term>right regular representation</term> of <m>G</m>.
+        <exercise>
+            <statement>
+                <p>Let <m>G</m> be a group and <m>g \in G</m>. Define maps <m>\lambda_g :G \rightarrow G</m> and <m>\rho_g :G \rightarrow G</m> by <m>\lambda_g(x) = gx</m> and <m>\rho_g(x) = xg^{-1}</m>. Show that <m>i_g = \rho_g \circ \lambda_g</m> is an automorphism of <m>G</m>. The isomorphism <m>g \mapsto \rho_g</m> is called the <term>right regular representation</term> of <m>G</m>.
+                <notation>
+                <usage>\rho_g</usage>
+                <description>right regular representation</description>
+                </notation></p>
+            </statement>
+        </exercise>
 
-          <notation>
-            <usage>\rho_g</usage>
-            <description>right regular representation</description>
-          </notation>
-
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise number="45">
-      <statement>
-        <p>
-          Let <m>G</m> be the internal direct product of subgroups <m>H</m> and <m>K</m>.
-          Show that the map <m>\phi : G \rightarrow H \times K</m> defined by <m>\phi(g) = (h,k)</m> for <m>g =hk</m>,
-          where <m>h \in H</m> and <m>k \in K</m>, is one-to-one and onto.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          To show that <m>\phi</m> is one-to-one,
-          let <m>g_1 = h_1 k_1</m> and
-          <m>g_2 = h_2 k_2</m> and consider <m>\phi(g_1) = \phi(g_2)</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>G</m> be the internal direct product of subgroups <m>H</m> and <m>K</m>. Show that the map <m>\phi : G \rightarrow H \times K</m> defined by <m>\phi(g) = (h,k)</m> for <m>g =hk</m>, where <m>h \in H</m> and <m>k \in K</m>, is one-to-one and onto.</p>
+            </statement>
+            <hint>
+                <p>To show that <m>\phi</m> is one-to-one, let <m>g_1 = h_1 k_1</m> and <m>g_2 = h_2 k_2</m> and consider <m>\phi(g_1) = \phi(g_2)</m>.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -1036,26 +872,19 @@
             </statement>
         </exercise>
 
-    <exercise number="49">
-      <statement>
-        <p>
-          Let <m>n_1, \ldots, n_k</m> be positive integers.
-          Show that
-          <me>
-            \prod_{i=1}^k {\mathbb Z}_{n_i} \cong {\mathbb Z}_{n_1 \cdots n_k}
-          </me>
-          if and only if <m>\gcd( n_i, n_j) =1</m> for <m>i \neq j</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>n_1, \ldots, n_k</m> be positive integers. Show that
+                    <me>\prod_{i=1}^k {\mathbb Z}_{n_i} \cong {\mathbb Z}_{n_1 \cdots n_k}</me>
+                if and only if <m>\gcd( n_i, n_j) =1</m> for <m>i \neq j</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="50">
-      <statement>
-        <p>
-          Prove that <m>A \times B</m> is abelian if and only if <m>A</m> and <m>B</m> are abelian.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that <m>A \times B</m> is abelian if and only if <m>A</m> and <m>B</m> are abelian.</p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
@@ -1063,118 +892,51 @@
             </statement>
         </exercise>
 
-<exercise number="52">
-<statement>
-<p>
-Let <m>H_1</m> and <m>H_2</m> be subgroups of <m>G_1</m> and <m>G_2</m>,
-respectively.
-Prove that <m>H_1 \times H_2</m> is a subgroup of <m>G_1 \times G_2</m>.
-</p>
-</statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>H_1</m> and <m>H_2</m> be subgroups of <m>G_1</m> and <m>G_2</m>, respectively. Prove that <m>H_1 \times H_2</m> is a subgroup of <m>G_1 \times G_2</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="53">
-      <statement>
-        <p>
-          Let <m>m, n \in {\mathbb Z}</m>.
-          Prove that <m>\langle m,n \rangle = \langle d \rangle</m> if and only if <m>d = \gcd(m,n)</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>m, n \in {\mathbb Z}</m>. Prove that <m>\langle m,n \rangle = \langle d \rangle</m> if and only if <m>d = \gcd(m,n)</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="54">
-      <statement>
-        <p>
-          Let <m>m, n \in {\mathbb Z}</m>.
-          Prove that <m>\langle m \rangle \cap \langle n \rangle = \langle l \rangle</m> if and only if <m>l = \lcm(m,n)</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>m, n \in {\mathbb Z}</m>. Prove that <m>\langle m \rangle \cap \langle n \rangle = \langle l \rangle</m> if and only if <m>l = \lcm(m,n)</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="55" xml:id="exercise-classify-2p">
-      <title>Groups of order <m>2p</m></title>
-      <statement>
-        <p>
-          In this series of exercises we will classify all groups of order <m>2p</m>,
-          where <m>p</m> is an odd prime.
+        <exercise xml:id="exercise-classify-2p">
+            <title>Groups of order <m>2p</m></title>
+            <statement>
+                <p>In this series of exercises we will classify all groups of order <m>2p</m>, where <m>p</m> is an odd prime.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                Assume <m>G</m> is a group of order <m>2p</m>,
-                where <m>p</m> is an odd prime.
-                If <m>a \in G</m>, show that <m>a</m> must have order <m>1</m>,
-                <m>2</m>, <m>p</m>, or <m>2p</m>.
-              </p>
-            </li>
+                        <li><p>Assume <m>G</m> is a group of order <m>2p</m>, where <m>p</m> is an odd prime. If <m>a \in G</m>, show that <m>a</m> must have order <m>1</m>, <m>2</m>, <m>p</m>, or <m>2p</m>.</p></li>
 
-            <li>
-              <p>
-                Suppose that <m>G</m> has an element of order <m>2p</m>.
-                Prove that <m>G</m> is isomorphic to <m>{\mathbb Z}_{2p}</m>.
-                Hence, <m>G</m> is cyclic.
-              </p>
-            </li>
+                        <li><p>Suppose that <m>G</m> has an element of order <m>2p</m>. Prove that <m>G</m> is isomorphic to <m>{\mathbb Z}_{2p}</m>. Hence, <m>G</m> is cyclic.</p></li>
 
-            <li>
-              <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
-                Show that <m>G</m> must contain an element of order <m>p</m>.
-                <em>Hint</em>: Assume that <m>G</m> does not contain an element of order <m>p</m>.
-              </p>
-            </li>
+                        <li><p>Suppose that <m>G</m> does not contain an element of order <m>2p</m>. Show that <m>G</m> must contain an element of order <m>p</m>. <em>Hint</em>: Assume that <m>G</m> does not contain an element of order <m>p</m>. </p></li>
 
-            <li>
-              <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
-                Show that <m>G</m> must contain an element of order <m>2</m>.
-              </p>
-            </li>
+                        <li><p>Suppose that <m>G</m> does not contain an element of order <m>2p</m>. Show that <m>G</m> must contain an element of order <m>2</m>.</p></li>
 
-            <li>
-              <p>
-                Let <m>P</m> be a subgroup of <m>G</m> with order <m>p</m> and <m>y \in G</m> have order <m>2</m>.
-                Show that <m>yP = Py</m>.
-              </p>
-            </li>
+                        <li><p>Let <m>P</m> be a subgroup of <m>G</m> with order <m>p</m> and <m>y \in G</m> have order <m>2</m>. Show that <m>yP = Py</m>.</p></li>
 
-            <li>
-              <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
-                <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m>.
-                If <m>y</m> is an element of order <m>2</m>,
-                then <m>yz = z^ky</m> for some <m>2 \leq k \lt p</m>.
-              </p>
-            </li>
+                        <li><p>Suppose that <m>G</m> does not contain an element of order <m>2p</m> and <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m>. If <m>y</m> is an element of order <m>2</m>, then <m>yz = z^ky</m> for some <m>2 \leq k \lt p</m>.</p></li>
 
-            <li>
-              <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
-                Prove that <m>G</m> is not abelian.
-              </p>
-            </li>
+                        <li><p>Suppose that <m>G</m> does not contain an element of order <m>2p</m>. Prove that <m>G</m> is not abelian.</p></li>
 
-            <li>
-              <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
-                <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m> and <m>y</m> is an element of order <m>2</m>.
-                Show that we can list the elements of <m>G</m> as <m>\{z^iy^j\mid 0\leq i \lt p, 0\leq j \lt 2\}</m>.
-              </p>
-            </li>
+                        <li><p>Suppose that <m>G</m> does not contain an element of order <m>2p</m> and <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m> and <m>y</m> is an element of order <m>2</m>. Show that we can list the elements of <m>G</m> as <m>\{z^iy^j\mid 0\leq i \lt p, 0\leq j \lt 2\}</m>.</p></li>
 
-            <li>
-              <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
-                <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m> and <m>y</m> is an element of order <m>2</m>.
-                Prove that the product <m>(z^iy^j)(z^ry^s)</m> can be expressed as a uniquely as <m>z^m y^n</m> for some non negative integers <m>m, n</m>.
-                Thus, conclude that there is only one possibility for a non-abelian group of order <m>2p</m>,
-                it must therefore be the one we have seen already, the dihedral group.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>Suppose that <m>G</m> does not contain an element of order <m>2p</m> and <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m> and <m>y</m> is an element of order <m>2</m>. Prove that the product <m> z^iy^j)(z^ry^s)</m> can be expressed as a uniquely as <m>z^m y^n</m> for some non negative integers <m>m, n</m>. Thus, conclude that there is only one possibility for a non-abelian group of order <m>2p</m>, it must therefore be the one we have seen already, the dihedral group.</p></li>
+
+                    </ol></p>
+            </statement>
+        </exercise>
 
     </exercises>
 
@@ -1182,6 +944,7 @@ Prove that <m>H_1 \times H_2</m> is a subgroup of <m>G_1 \times G_2</m>.
         <title>Isomorphism in the Secondary Classroom</title>
 
         <p>This appendix will examine why isomorphisms are important in the secondary classroom.</p>
+
     </section>
 
 </chapter>
