@@ -354,384 +354,169 @@
 
         <p>Let <m>F</m> be a field. A monic polynomial <m>d(x)</m> is a <term>greatest common divisor</term><idx><h>Polynomial</h><h>greatest common divisor of</h></idx><idx><h>Greatest common divisor</h><h>of two polynomials</h></idx> of polynomials <m>p(x), q(x) \in F[x]</m> if <m>d(x)</m> evenly divides both <m>p(x)</m> and <m>q(x)</m>; and, if for any other polynomial <m>d'(x)</m> dividing both <m>p(x)</m> and <m>q(x)</m>, <m>d'(x) \mid d(x)</m>. We write <m>d(x) = \gcd( p(x), q( x))</m>. Two polynomials <m>p(x)</m> and <m>q(x)</m> are <term>relatively prime</term> if <m>\gcd(p(x), q(x) ) = 1</m>.</p>
 
-    <proposition xml:id="proposition-poly-gcd">
-      <statement>
-        <p>
-          Let <m>F</m> be a field and suppose that <m>d(x)</m> is a greatest common divisor of two polynomials <m>p(x)</m> and <m>q(x)</m> in <m>F[x]</m>.
-          Then there exist polynomials <m>r(x)</m> and <m>s(x)</m> such that
-          <me>
-            d(x) = r(x) p(x) + s(x) q(x)
-          </me>.
-          Furthermore,
-          the greatest common divisor of two polynomials is unique.
-        </p>
-      </statement>
+        <proposition xml:id="proposition-poly-gcd">
+            <statement>
+                <p>Let <m>F</m> be a field and suppose that <m>d(x)</m> is a greatest common divisor of two polynomials <m>p(x)</m> and <m>q(x)</m> in <m>F[x]</m>. Then there exist polynomials <m>r(x)</m> and <m>s(x)</m> such that
+                    <me>d(x) = r(x) p(x) + s(x) q(x).</me>
+                Furthermore, the greatest common divisor of two polynomials is unique.</p>
+            </statement>
+            <proof>
+                <p>Let <m>d(x)</m> be the monic polynomial of smallest degree in the set
+                    <me>S = \{ f(x) p(x) + g(x) q(x) : f(x), g(x) \in F[x] \}.</me>
+                We can write <m>d(x) = r(x) p(x) + s(x) q(x)</m> for two polynomials  <m>r(x)</m> and <m>s(x)</m> in <m>F[x]</m>. We need to show that <m>d(x)</m> divides both <m>p(x)</m> and <m>q(x)</m>. We shall first show that <m>d(x)</m> divides <m>p(x)</m>. By the division algorithm, there exist polynomials <m>a(x)</m> and <m>b(x)</m> such that <m>p(x) = a(x) d(x) + b(x)</m>, where <m>b(x)</m> is either the zero polynomial or <m>\deg b(x) \lt \deg d(x)</m>. Therefore,
+                    <md>
+                        <mrow>b(x) &amp; = p(x) - a(x) d(x)</mrow>
+                        <mrow>&amp; = p(x) - a(x)( r(x) p(x) + s(x) q(x))</mrow>
+                        <mrow>&amp; = p(x) - a(x) r(x) p(x) - a(x)  s(x) q(x)</mrow>
+                        <mrow>&amp; = p(x)( 1  - a(x) r(x) ) + q(x) ( - a(x) s(x) )</mrow>
+                    </md>
+                is a linear combination of <m>p(x)</m> and <m>q(x)</m> and therefore must be in <m>S</m>. However, <m>b(x)</m> must be the zero polynomial since <m>d(x)</m> was chosen to be of smallest degree; consequently, <m>d(x)</m> divides <m>p(x)</m>. A symmetric argument shows that <m>d(x)</m> must also divide <m>q(x)</m>; hence, <m>d(x)</m> is a common divisor of <m>p(x)</m> and <m>q(x)</m>.</p>
 
-      <proof>
-        <p>
-          Let <m>d(x)</m> be the monic polynomial of smallest degree in the set
-          <me>
-            S = \{ f(x) p(x) + g(x) q(x) : f(x), g(x) \in F[x]  \}
-          </me>.
-          We can write <m>d(x) = r(x) p(x) + s(x) q(x)</m> for two polynomials  <m>r(x)</m> and <m>s(x)</m> in <m>F[x]</m>.
-          We need to show that <m>d(x)</m> divides both <m>p(x)</m> and <m>q(x)</m>.
-          We shall first show that <m>d(x)</m> divides <m>p(x)</m>.
-          By the division algorithm,
-          there exist polynomials <m>a(x)</m> and <m>b(x)</m> such that <m>p(x) = a(x) d(x) + b(x)</m>,
-          where <m>b(x)</m> is either the zero polynomial or <m>\deg b(x) \lt \deg d(x)</m>.
-          Therefore,
-          <md>
-            <mrow>b(x) &amp; = p(x) - a(x) d(x)</mrow>
-            <mrow>&amp; = p(x) - a(x)( r(x) p(x) + s(x) q(x))</mrow>
-            <mrow>&amp; = p(x) - a(x) r(x) p(x) - a(x)  s(x) q(x)</mrow>
-            <mrow>&amp; = p(x)( 1  - a(x) r(x) ) + q(x) ( - a(x) s(x) )</mrow>
-          </md>
-          is a linear combination of <m>p(x)</m> and <m>q(x)</m> and therefore must be in <m>S</m>.
-          However, <m>b(x)</m> must be the zero polynomial since <m>d(x)</m> was chosen to be of smallest degree;
-          consequently, <m>d(x)</m> divides <m>p(x)</m>.
-          A symmetric argument shows that <m>d(x)</m> must also divide <m>q(x)</m>;
-          hence, <m>d(x)</m> is a common divisor of <m>p(x)</m> and <m>q(x)</m>.
-        </p>
+                <p>To show that <m>d(x)</m> is a greatest common divisor of <m>p(x)</m> and <m>q(x)</m>, suppose that <m>d'(x)</m> is another common divisor of <m>p(x)</m> and <m>q(x)</m>. We will show that <m>d'(x) \mid d(x)</m>. Since <m>d'(x)</m> is a common divisor of <m>p(x)</m> and <m>q(x)</m>, there exist polynomials <m>u(x)</m> and <m>v(x)</m> such that <m>p(x) = u(x) d'(x)</m> and <m>q(x) = v(x) d'(x)</m>. Therefore,
+                    <md>
+                        <mrow>d(x) &amp; = r(x) p(x) + s(x) q(x)</mrow>
+                        <mrow>&amp; =  r(x) u(x) d'(x) + s(x) v(x) d'(x)</mrow>
+                        <mrow>&amp; = d'(x) [r(x) u(x) + s(x) v(x)].</mrow>
+                    </md>
+                Since <m>d'(x) \mid d(x)</m>, <m>d(x)</m> is a greatest common divisor of <m>p(x)</m> and <m>q(x)</m>.</p>
 
-        <p>
-          To show that <m>d(x)</m> is a greatest common divisor of <m>p(x)</m> and <m>q(x)</m>,
-          suppose that <m>d'(x)</m> is another common divisor of <m>p(x)</m> and <m>q(x)</m>.
-          We will show that <m>d'(x) \mid d(x)</m>.
-          Since <m>d'(x)</m> is a common divisor of <m>p(x)</m> and <m>q(x)</m>,
-          there exist polynomials <m>u(x)</m> and <m>v(x)</m> such that
-          <m>p(x) = u(x) d'(x)</m> and <m>q(x) = v(x) d'(x)</m>.
-          Therefore,
-          <md>
-            <mrow>d(x) &amp; = r(x) p(x) + s(x) q(x)</mrow>
-            <mrow>&amp; =  r(x) u(x) d'(x) + s(x) v(x) d'(x)</mrow>
-            <mrow>&amp; = d'(x) [r(x) u(x) + s(x) v(x)]</mrow>
-          </md>.
-          Since <m>d'(x) \mid d(x)</m>,
-          <m>d(x)</m> is a greatest common divisor of <m>p(x)</m> and <m>q(x)</m>.
-        </p>
-            <!-- removed and extra parenthesis below. -->
-            <!-- Suggested by  P. Diethelm. -->
-            <!-- TWJ 24/4/2013 -->
-        <p>
-          Finally, we must show that the greatest common divisor of <m>p(x)</m> and <m>q(x)</m> is unique.
-          Suppose that <m>d'(x)</m> is another greatest common divisor of <m>p(x)</m> and <m>q(x)</m>.
-          We have just shown that there exist polynomials <m>u(x)</m> and <m>v(x)</m> in <m>F[x]</m> such that <m>d(x) = d'(x)[r(x) u(x) + s(x) v(x)]</m>.
-          Since
-          <me>
-            \deg d(x) =  \deg d'(x) + \deg[r(x) u(x) + s(x) v(x)]
-          </me>
-          and <m>d(x)</m> and <m>d'(x)</m> are both greatest common divisors,
-          <m>\deg d(x) = \deg d'(x)</m>.
-          Since <m>d(x)</m> and <m>d'(x)</m> are both monic polynomials of the same degree,
-          it must be the case that <m>d(x) = d'(x)</m>.
-        </p>
-      </proof>
-    </proposition>
+                <p>Finally, we must show that the greatest common divisor of <m>p(x)</m> and <m>q(x)</m> is unique. Suppose that <m>d'(x)</m> is another greatest common divisor of <m>p(x)</m> and <m>q(x)</m>. We have just shown that there exist polynomials <m>u(x)</m> and <m>v(x)</m> in <m>F[x]</m> such that <m>d(x) = d'(x)[r(x) u(x) + s(x) v(x)]</m>. Since
+                    <me>\deg d(x) =  \deg d'(x) + \deg[r(x) u(x) + s(x) v(x)]</me>
+                and <m>d(x)</m> and <m>d'(x)</m> are both greatest common divisors,<m>\deg d(x) = \deg d'(x)</m>. Since <m>d(x)</m> and <m>d'(x)</m> are both monic polynomials of the same degree, it must be the case that <m>d(x) = d'(x)</m>.</p>
+            </proof>
+        </proposition>
 
-    <p>
-      Notice the similarity between the proof of <xref ref="proposition-poly-gcd"/> and the proof of <xref ref="theorem-integers-gcd"/>.
-    </p>
-  </section>
+        <p>Notice the similarity between the proof of <xref ref="proposition-poly-gcd"/> and the proof of <xref ref="theorem-integers-gcd"/>.</p>
+    
+    </section>
 
-  <section xml:id="section-irreducible-poly">
-    <title>Irreducible Polynomials</title>
-    <introduction>
-      <p>
-        A nonconstant polynomial <m>f(x) \in F[x]</m> is
-        <term>irreducible</term><idx><h>Polynomial</h><h>irreducible</h></idx>
-            <idx><h>Irreducible polynomial</h></idx>
-        over a field <m>F</m> if <m>f(x)</m> cannot be expressed as a product of two polynomials <m>g(x)</m> and <m>h(x)</m> in <m>F[x]</m>,
-        where the degrees of <m>g(x)</m> and <m>h(x)</m> are both smaller than the degree of <m>f(x)</m>.
-        Irreducible polynomials function as the
-        <q>prime numbers</q> of polynomial rings.
-      </p>
+    <section xml:id="section-irreducible-poly">
+        <title>Irreducible Polynomials</title>
+        <introduction>
+      
+            <p>A nonconstant polynomial <m>f(x) \in F[x]</m> is <term>irreducible</term><idx><h>Polynomial</h><h>irreducible</h></idx> <idx><h>Irreducible polynomial</h></idx> over a field <m>F</m> if <m>f(x)</m> cannot be expressed as a product of two polynomials <m>g(x)</m> and <m>h(x)</m> in <m>F[x]</m>, where the degrees of <m>g(x)</m> and <m>h(x)</m> are both smaller than the degree of <m>f(x)</m>. Irreducible polynomials function as the <q>prime numbers</q> of polynomial rings.</p>
 
-      <example xml:id="example-poly-irreducible">
-        <p>
-          The polynomial <m>x^2 - 2 \in {\mathbb Q}[x]</m> is irreducible since it cannot be factored any further over the rational numbers.
-          Similarly, <m>x^2 + 1</m> is irreducible over the real numbers.
-        </p>
-      </example>
+            <example xml:id="example-poly-irreducible">
+                <p>The polynomial <m>x^2 - 2 \in {\mathbb Q}[x]</m> is irreducible since it cannot be factored any further over the rational numbers. Similarly, <m>x^2 + 1</m> is irreducible over the real numbers.</p>
+            </example>
 
-      <example xml:id="example-poly-finite">
-        <p>
-          The polynomial <m>p(x) = x^3 + x^2 + 2</m> is irreducible over <m>{\mathbb Z}_3[x]</m>.
-          Suppose that this polynomial was reducible over <m>{\mathbb Z}_3[x]</m>.
-          By the division algorithm there would have to be a factor of the form <m>x - a</m>,
-          where <m>a</m> is some element in <m>{\mathbb Z}_3[x]</m>.
-          Hence, it would have to be true that <m>p(a) = 0</m>.
-          However,
-          <md>
-            <mrow>p(0) &amp; = 2</mrow>
-            <mrow>p(1) &amp; = 1</mrow>
-            <mrow>p(2) &amp; = 2</mrow>
-          </md>.
-          Therefore, <m>p(x)</m> has no zeros in
-          <m>{\mathbb Z}_3</m> and must be irreducible.
-        </p>
-      </example>
+            <example xml:id="example-poly-finite">
+                <p>The polynomial <m>p(x) = x^3 + x^2 + 2</m> is irreducible over <m>{\mathbb Z}_3[x]</m>. Suppose that this polynomial was reducible over <m>{\mathbb Z}_3[x]</m>. By the division algorithm there would have to be a factor of the form <m>x - a</m>, where <m>a</m> is some element in <m>{\mathbb Z}_3[x]</m>. Hence, it would have to be true that <m>p(a) = 0</m>. However,
+                    <md>
+                        <mrow>p(0) &amp; = 2</mrow>
+                        <mrow>p(1) &amp; = 1</mrow>
+                        <mrow>p(2) &amp; = 2.</mrow>
+                    </md>
+                Therefore, <m>p(x)</m> has no zeros in <m>{\mathbb Z}_3</m> and must be irreducible.</p>
+            </example>
 
-      <lemma xml:id="lemma-poly-integer-coef">
-        <statement>
-          <p>
-            Let <m>p(x) \in {\mathbb Q}[x]</m>.
-            Then
-            <me>
-              p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n)
-            </me>,
-            where <m>r, s, a_0, \ldots, a_n</m> are integers,
-            the <m>a_i</m>'s are relatively prime,
-            and <m>r</m> and <m>s</m> are relatively prime.
-          </p>
-        </statement>
+            <lemma xml:id="lemma-poly-integer-coef">
+                <statement>
+                    <p>Let <m>p(x) \in {\mathbb Q}[x]</m>. Then
+                        <me>p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n),</me>
+                    where <m>r, s, a_0, \ldots, a_n</m> are integers, the <m>a_i</m>'s are relatively prime, and <m>r</m> and <m>s</m> are relatively prime.</p>
+                </statement>
+                <proof>
+                    <p>Suppose that
+                        <me>p(x) = \frac{b_0}{c_0} + \frac{b_1}{c_1} x + \cdots + \frac{b_n}{c_n} x^n,</me>
+                    where the <m>b_i</m>'s and the <m>c_i</m>'s are integers. We can rewrite <m>p(x)</m> as
+                        <me>p(x) = \frac{1}{c_0 \cdots c_n} (d_0 + d_1 x + \cdots + d_n x^n),</me>
+                    where <m>d_0, \ldots, d_n</m> are integers. Let <m>d</m> be the greatest common divisor of <m>d_0, \ldots, d_n</m>. Then
+                        <me>p(x) = \frac{d}{c_0 \cdots c_n} (a_0 + a_1 x + \cdots + a_n x^n),</me>
+                    where <m>d_i = d a_i</m> and the <m>a_i</m>'s are relatively prime. Reducing <m>d /(c_0 \cdots c_n)</m> to its lowest terms, we can write
+                        <me>p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n),</me>
+                    where <m>\gcd(r,s) = 1</m>.</p>
+                </proof>
+            </lemma>
 
-        <proof>
-          <p>
-            Suppose that
-            <me>
-              p(x) = \frac{b_0}{c_0} + \frac{b_1}{c_1} x + \cdots + \frac{b_n}{c_n} x^n
-            </me>,
-            where the <m>b_i</m>'s and the <m>c_i</m>'s are integers.
-            We can rewrite <m>p(x)</m> as
-            <me>
-              p(x) = \frac{1}{c_0 \cdots c_n} (d_0 + d_1 x + \cdots + d_n x^n)
-            </me>,
-            where <m>d_0, \ldots, d_n</m> are integers.
-            Let <m>d</m> be the greatest common divisor of <m>d_0, \ldots, d_n</m>.
-            Then
-            <me>
-              p(x) = \frac{d}{c_0 \cdots c_n} (a_0 + a_1 x + \cdots + a_n x^n)
-            </me>,
-            where <m>d_i = d a_i</m> and the <m>a_i</m>'s are relatively prime.
-            Reducing <m>d /(c_0 \cdots c_n)</m> to its lowest terms,
-            we can write
-            <me>
-              p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n)
-            </me>,
-            where <m>\gcd(r,s) = 1</m>.
-          </p>
-        </proof>
-      </lemma>
+            <theorem xml:id="theorem-gauss-lemma">
+                <title>Gauss's Lemma</title>
+                <statement>
+                    <p>Let <m>p(x) \in {\mathbb Z}[x]</m> be a monic polynomial such that <m>p(x)</m> factors into a product of two polynomials <m>\alpha(x)</m> and <m>\beta(x)</m> in <m>{\mathbb Q}[x]</m>, where the degrees of both <m>\alpha(x)</m> and <m>\beta(x)</m> are less than the degree of <m>p(x)</m>. Then <m>p(x) = a(x) b(x)</m>, where <m>a(x)</m> and <m>b(x)</m> are monic polynomials in <m>{\mathbb Z}[x]</m> with <m>\deg \alpha(x) = \deg a(x)</m> and <m>\deg \beta(x) = \deg b(x)</m>.</p>
+                </statement>
+                <proof>
+                    <p>By <xref ref="lemma-poly-integer-coef"/>, we can assume that
+                        <md>
+                            <mrow>\alpha(x)  &amp; = \frac{c_1}{d_1} (a_0 + a_1 x + \cdots + a_m x^m ) = \frac{c_1}{d_1} \alpha_1(x)</mrow>
+                            <mrow>\beta(x)  &amp; = \frac{c_2}{d_2} (b_0 + b_1 x + \cdots + b_n x^n) = \frac{c_2}{d_2} \beta_1(x),</mrow>
+                        </md>
+                    where the <m>a_i</m>'s are relatively prime and the <m>b_i</m>'s are relatively prime. Consequently,
+                        <me>p(x) = \alpha(x) \beta(x) = \frac{c_1 c_2}{d_1 d_2} \alpha_1(x) \beta_1(x) = \frac{c}{d} \alpha_1(x) \beta_1(x),</me>
+                    where <m>c/d</m> is the product of <m>c_1/d_1</m> and <m>c_2/d_2</m> expressed in lowest terms. Hence, <m>d p(x) = c \alpha_1(x) \beta_1(x)</m>.</p>
 
-      <theorem xml:id="theorem-gauss-lemma">
-        <title>Gauss's Lemma</title>
-        <statement>
-          <p>
-            Let <m>p(x) \in {\mathbb Z}[x]</m> be a monic polynomial such that <m>p(x)</m> factors into a product of two polynomials <m>\alpha(x)</m> and
-            <m>\beta(x)</m> in <m>{\mathbb Q}[x]</m>,
-            where the degrees of both <m>\alpha(x)</m> and
-            <m>\beta(x)</m> are less than the degree of <m>p(x)</m>.
-            Then <m>p(x) = a(x) b(x)</m>,
-            where <m>a(x)</m> and <m>b(x)</m> are monic polynomials in <m>{\mathbb Z}[x]</m> with
-            <m>\deg \alpha(x) = \deg a(x)</m> and <m>\deg \beta(x) = \deg b(x)</m>.
-          </p>
-        </statement>
+                    <p>If <m>d = 1</m>, then <m>c a_m b_n = 1</m> since <m>p(x)</m> is a monic polynomial. Hence, either <m>c=1</m> or <m>c = -1</m>. If <m>c = 1</m>, then either <m>a_m = b_n = 1</m> or <m>a_m = b_n = -1</m>. In the first case <m>p(x) = \alpha_1(x) \beta_1(x)</m>, where <m>\alpha_1(x)</m> and <m>\beta_1(x)</m> are monic polynomials with <m>\deg \alpha(x) = \deg \alpha_1(x)</m> and <m>\deg \beta(x) = \deg \beta_1(x)</m>. In the second case <m>a(x) = -\alpha_1(x)</m> and <m>b(x) = -\beta_1(x)</m> are the correct monic polynomials since <m>p(x) = (-\alpha_1(x))(- \beta_1(x)) = a(x) b(x)</m>. The case in which <m>c = -1</m> can be handled similarly.</p>
 
-        <proof>
-          <p>
-            By <xref ref="lemma-poly-integer-coef"/>, we can assume that
-            <md>
-              <mrow>\alpha(x)  &amp; = \frac{c_1}{d_1} (a_0 + a_1 x + \cdots + a_m x^m ) = \frac{c_1}{d_1} \alpha_1(x)</mrow>
-              <mrow>\beta(x)  &amp; = \frac{c_2}{d_2} (b_0 + b_1 x + \cdots + b_n x^n) = \frac{c_2}{d_2} \beta_1(x)</mrow>
-            </md>,
-            where the <m>a_i</m>'s are relatively prime and the <m>b_i</m>'s are relatively prime.
-            Consequently,
-            <me>
-              p(x) = \alpha(x) \beta(x) = \frac{c_1 c_2}{d_1 d_2} \alpha_1(x) \beta_1(x) = \frac{c}{d} \alpha_1(x) \beta_1(x)
-            </me>,
-            where <m>c/d</m> is the product of <m>c_1/d_1</m> and <m>c_2/d_2</m> expressed in lowest terms.
-            Hence, <m>d p(x) = c \alpha_1(x) \beta_1(x)</m>.
-          </p>
+                    <p>Now suppose that <m>d \neq 1</m>. Since <m>\gcd(c, d) = 1</m>, there exists a prime <m>p</m> such that <m>p \mid d</m> and <m>p \notdivide c</m>. Also, since the coefficients of <m>\alpha_1(x)</m> are relatively prime, there exists a coefficient <m>a_i</m> such that <m>p \notdivide a_i</m>. Similarly, there exists a coefficient <m>b_j</m> of <m>\beta_1(x)</m> such that <m>p \notdivide b_j</m>. Let <m>\alpha_1'(x)</m> and <m>\beta_1'(x)</m> be the polynomials in <m>{\mathbb Z}_p[x]</m> obtained by reducing the coefficients of <m>\alpha_1(x)</m> and <m>\beta_1(x)</m> modulo <m>p</m>. Since <m>p \mid d</m>, <m>\alpha_1'(x) \beta_1'(x) = 0</m> in <m>{\mathbb Z}_p[x]</m>. However, this is impossible since neither <m>\alpha_1'(x)</m> nor <m>\beta_1'(x)</m> is the zero polynomial and <m>{\mathbb Z}_p[x]</m> is an integral domain. Therefore, <m>d=1</m> and the theorem is proven.</p>
+                </proof>
+            </theorem>
 
-          <p>
-            If <m>d = 1</m>,
-            then <m>c a_m b_n = 1</m> since <m>p(x)</m> is a monic polynomial.
-            Hence, either <m>c=1</m> or <m>c = -1</m>.
-            If <m>c = 1</m>, then either
-            <m>a_m = b_n = 1</m> or <m>a_m = b_n = -1</m>.
-            In the first case <m>p(x) = \alpha_1(x) \beta_1(x)</m>,
-            where <m>\alpha_1(x)</m> and
-            <m>\beta_1(x)</m> are monic polynomials with
-            <m>\deg \alpha(x) = \deg \alpha_1(x)</m> and <m>\deg \beta(x) = \deg \beta_1(x)</m>.
-            In the second case <m>a(x) = -\alpha_1(x)</m> and
-            <m>b(x) = -\beta_1(x)</m> are the correct monic polynomials since <m>p(x) = (-\alpha_1(x))(- \beta_1(x)) = a(x) b(x)</m>.
-            The case in which <m>c = -1</m> can be handled similarly.
-          </p>
+            <corollary xml:id="corollary-rational-roots-theorem">
+                <statement>
+                    <p>Let <m>p(x) = x^n + a_{n - 1} x^{n - 1} + \cdots + a_0</m> be a polynomial with coefficients in <m>{\mathbb Z}</m> and <m>a_0 \neq 0</m>. If <m>p(x)</m> has a zero in <m>{\mathbb Q}</m>, then <m>p(x)</m> also has a zero <m>\alpha</m> in <m>{\mathbb Z}</m>. Furthermore, <m>\alpha</m> divides <m>a_0</m>. </p>
+                </statement>
+                <proof>
+                    <p>Let <m>p(x)</m> have a zero <m>a \in {\mathbb Q}</m>. Then <m>p(x)</m> must have a linear factor <m>x - a</m>. By Gauss's Lemma, <m>p(x)</m> has a factorization with a linear factor in <m>{\mathbb Z}[x]</m>. Hence, for some <m>\alpha \in {\mathbb Z}</m>
+                        <me>p(x) = (x - \alpha)( x^{n - 1} + \cdots - a_0 / \alpha ).</me>
+                    Thus <m>a_0 /\alpha \in {\mathbb Z}</m> and so <m>\alpha \mid a_0</m>.</p>
+                </proof>
+            </corollary>
 
-          <p>
-            Now suppose that <m>d \neq 1</m>.
-            Since <m>\gcd(c, d) = 1</m>,
-            there exists a prime <m>p</m> such that
-            <m>p \mid d</m> and <m>p \notdivide c</m>.
-            Also, since the coefficients of
-            <m>\alpha_1(x)</m> are relatively prime,
-            there exists a coefficient <m>a_i</m> such that <m>p \notdivide a_i</m>.
-            Similarly, there exists a coefficient <m>b_j</m> of
-            <m>\beta_1(x)</m> such that <m>p \notdivide b_j</m>.
-            Let <m>\alpha_1'(x)</m> and <m>\beta_1'(x)</m> be the polynomials in
-            <m>{\mathbb Z}_p[x]</m> obtained by reducing the coefficients of
-            <m>\alpha_1(x)</m> and <m>\beta_1(x)</m> modulo <m>p</m>.
-            Since <m>p \mid d</m>,
-            <m>\alpha_1'(x) \beta_1'(x) = 0</m> in <m>{\mathbb Z}_p[x]</m>.
-            However, this is impossible since neither <m>\alpha_1'(x)</m> nor
-            <m>\beta_1'(x)</m> is the zero polynomial and
-            <m>{\mathbb Z}_p[x]</m> is an integral domain.
-            Therefore, <m>d=1</m> and the theorem is proven.
-          </p>
-        </proof>
-      </theorem>
+            <example xml:id="example-poly-factor">
+                <p>Let <m>p(x) = x^4 - 2 x^3 + x + 1</m>. We shall show that <m>p(x)</m> is irreducible over <m>{\mathbb Q}[x]</m>. Assume that <m>p(x)</m> is reducible. Then either <m>p(x)</m> has a linear factor, say <m>p(x) = (x - \alpha) q(x)</m>, where <m>q(x)</m> is a polynomial of degree three, or <m>p(x)</m> has two quadratic factors.</p>
 
-      <corollary xml:id="corollary-rational-roots-theorem">
-        <statement>
-          <p>
-            Let <m>p(x) = x^n + a_{n - 1} x^{n - 1} + \cdots + a_0</m> be a polynomial with coefficients in
-            <m>{\mathbb Z}</m> and <m>a_0 \neq 0</m>.
-            If <m>p(x)</m> has a zero in <m>{\mathbb Q}</m>,
-            then <m>p(x)</m> also has a zero <m>\alpha</m> in <m>{\mathbb Z}</m>.
-            Furthermore, <m>\alpha</m> divides <m>a_0</m>.
-          </p>
-        </statement>
+                <p>If <m>p(x)</m> has a linear factor in <m>{\mathbb Q}[x]</m>, then it has a zero in <m>{\mathbb Z}</m>. By <xref ref="corollary-rational-roots-theorem"/>, any zero must divide 1 and therefore must be <m>\pm 1</m>; however, <m>p(1) = 1</m> and <m>p(-1)= 3</m>. Consequently, we have eliminated the possibility that <m>p(x)</m> has any linear factors.</p>
 
-        <proof>
-          <p>
-            Let <m>p(x)</m> have a zero <m>a \in {\mathbb Q}</m>.
-            Then <m>p(x)</m> must have a linear factor <m>x - a</m>.
-            By Gauss's Lemma,
-            <m>p(x)</m> has a factorization with a linear factor in <m>{\mathbb Z}[x]</m>.
-            Hence, for some <m>\alpha \in {\mathbb Z}</m>
-            <me>
-              p(x) = (x - \alpha)( x^{n - 1} + \cdots - a_0 / \alpha )
-            </me>.
-            Thus <m>a_0 /\alpha \in {\mathbb Z}</m> and so <m>\alpha \mid a_0</m>.
-          </p>
-        </proof>
-      </corollary>
+                <p>Therefore, if <m>p(x)</m> is reducible it must factor into two quadratic polynomials, say
+                    <md>
+                        <mrow>p(x) &amp; = (x^2 + ax + b )( x^2 + cx + d )</mrow>
+                        <mrow>&amp; = x^4 + (a + c)x^3 + (ac + b + d)x^2 + (ad + bc)x + bd,</mrow>
+                    </md>
+                where each factor is in <m>{\mathbb Z}[x]</m> by Gauss's Lemma. Hence,
+                    <md>
+                        <mrow>a + c &amp; = - 2</mrow>
+                        <mrow>ac + b + d &amp; = 0</mrow>
+                        <mrow>ad + bc &amp; = 1</mrow>
+                        <mrow>bd &amp; = 1.</mrow>
+                    </md>
+                Since <m>bd = 1</m>, either <m>b = d = 1</m> or <m> b = d = -1</m>. In either case <m>b = d</m> and so
+                    <me>ad + bc  = b( a + c ) = 1.</me>
+                Since <m>a + c = -2</m>, we know that <m>-2b = 1</m>. This is impossible since <m>b</m> is an integer. Therefore, <m>p(x)</m> must be irreducible over <m>{\mathbb Q}</m>.</p>
+            </example>
 
-      <example xml:id="example-poly-factor">
-        <p>
-          Let <m>p(x) = x^4 - 2 x^3 + x + 1</m>.
-          We shall show that <m>p(x)</m> is irreducible over <m>{\mathbb Q}[x]</m>.
-          Assume that <m>p(x)</m> is reducible.
-          Then either <m>p(x)</m> has a linear factor,
-          say <m>p(x) = (x - \alpha) q(x)</m>,
-          where <m>q(x)</m> is a polynomial of degree three,
-          or <m>p(x)</m> has two quadratic factors.
-        </p>
+            <theorem xml:id="theorem-eisenstein">
+                <title>Eisenstein's Criterion</title>
+                <idx>
+                <h>Eisenstein's Criterion</h>
+                </idx>
+                <statement>
+                    <p>Let <m>p</m> be a prime and suppose that
+                        <me>f(x) = a_n x^n + \cdots + a_0 \in {\mathbb Z}[x].</me>
+                    If <m>p \mid a_i</m> for <m>i = 0, 1, \ldots, n - 1</m>, but <m>p \notdivide a_n</m> and <m>p^2 \notdivide a_0</m>, then <m>f(x)</m> is irreducible over <m>{\mathbb Q}</m>.</p>
+                </statement>
+                <proof>
+                    <p>By Gauss's Lemma, we need only show that <m>f(x)</m> does not factor into polynomials of lower degree in <m>{\mathbb Z}[x]</m>. Let
+                        <me>f(x) = (b_rx^r + \cdots + b_0)(c_s x^s + \cdots + c_0 )</me>
+                    be a factorization in <m>{\mathbb Z}[x]</m>, with <m>b_r</m> and <m>c_s</m> not equal to zero and <m>r, s \lt n</m>. Since <m>p^2</m> does not divide <m>a_0 = b_0 c_0</m>, either <m>b_0</m> or <m>c_0</m> is not divisible by <m>p</m>. Suppose that <m>p \notdivide b_0</m> and <m>p \mid c_0</m>. Since <m>p \notdivide a_n</m> and <m>a_n = b_r c_s</m>, neither <m>b_r</m> nor <m>c_s</m> is divisible by <m>p</m>. Let <m>m</m> be the smallest value of <m>k</m> such that <m>p \notdivide c_k</m>. Then
+                        <me>a_m = b_0 c_m + b_1 c_{m - 1} + \cdots + b_m c_0</me>
+                    is not divisible by <m>p</m>, since each term on the right-hand side of the equation is divisible by <m>p</m> except for <m>b_0 c_m</m>. Therefore, <m>m = n</m> since <m>a_i</m> is divisible by <m>p</m> for <m>m \lt n</m>. Hence, <m>f(x)</m> cannot be factored into polynomials of lower degree and therefore must be irreducible.</p>
+                </proof>
+            </theorem>
 
-        <p>
-          If <m>p(x)</m> has a linear factor in <m>{\mathbb Q}[x]</m>,
-          then it has a zero in <m>{\mathbb Z}</m>.
-          By <xref ref="corollary-rational-roots-theorem"/>,
-          any zero must divide 1 and therefore must be <m>\pm 1</m>;
-          however, <m>p(1) = 1</m> and <m>p(-1)= 3</m>.
-          Consequently,
-          we have eliminated the possibility that <m>p(x)</m> has any linear factors.
-        </p>
+            <example xml:id="example-poly-eisenstein">
+                <p>The polynomial
+                    <me>f(x) = 16 x^5 - 9 x^4 + 3x^2 + 6 x - 21</me>
+                is easily seen to be irreducible over <m>{\mathbb Q}</m> by Eisenstein's Criterion if we let <m>p = 3</m>.</p>
+            </example>
 
-        <p>
-          Therefore, if <m>p(x)</m> is reducible it must factor into two quadratic polynomials, say
-          <md>
-            <mrow>p(x) &amp; = (x^2 + ax + b )( x^2 + cx + d )</mrow>
-            <mrow>&amp; = x^4 + (a + c)x^3 + (ac + b + d)x^2 + (ad + bc)x + bd</mrow>
-          </md>,
-          where each factor is in <m>{\mathbb Z}[x]</m> by Gauss's Lemma.
-          Hence,
-          <md>
-            <mrow>a + c &amp; = - 2</mrow>
-            <mrow>ac + b + d &amp; = 0</mrow>
-            <mrow>ad + bc &amp; = 1</mrow>
-            <mrow>bd &amp; = 1</mrow>
-          </md>.
-          Since <m>bd = 1</m>, either
-          <m>b = d = 1</m> or <m> b = d = -1</m>.
-          In either case <m>b = d</m> and so
-          <me>
-            ad + bc  = b( a + c ) = 1
-          </me>.
-          Since <m>a + c = -2</m>, we know that <m>-2b = 1</m>.
-          This is impossible since <m>b</m> is an integer.
-          Therefore, <m>p(x)</m> must be irreducible over <m>{\mathbb Q}</m>.
-        </p>
-      </example>
-            <!--  2010/05/18 R Beezer, fixed n-1 in range for p \mid a_i -->
-      <theorem xml:id="theorem-eisenstein">
-        <title>Eisenstein's Criterion</title>
-        <idx>
-        <h>Eisenstein's Criterion</h>
-        </idx>
-        <statement>
-          <p>
-            Let <m>p</m> be a prime and suppose that
-            <me>
-              f(x) = a_n x^n + \cdots + a_0 \in {\mathbb Z}[x]
-            </me>.
-            If <m>p \mid a_i</m> for <m>i = 0, 1, \ldots,
-            n-1</m>, but <m>p \notdivide a_n</m> and <m>p^2 \notdivide a_0</m>,
-            then <m>f(x)</m> is irreducible over <m>{\mathbb Q}</m>.
-          </p>
-        </statement>
+            <p>Eisenstein's Criterion is more useful in constructing irreducible polynomials of a certain degree over <m>{\mathbb Q}</m> than in determining the irreducibility of an arbitrary polynomial in <m>{\mathbb Q}[x]</m>: given an arbitrary polynomial, it is not very likely that we can apply Eisenstein's Criterion. The real value of <xref ref="theorem-eisenstein"/> is that we now have an easy method of generating irreducible polynomials of any degree.</p>
 
-        <proof>
-          <p>
-            By Gauss's Lemma,
-            we need only show that <m>f(x)</m> does not factor into polynomials of lower degree in <m>{\mathbb Z}[x]</m>.
-            Let
-            <me>
-              f(x) = (b_rx^r + \cdots + b_0)(c_s x^s + \cdots + c_0 )
-            </me>
-            be a factorization in <m>{\mathbb Z}[x]</m>,
-            with <m>b_r</m> and <m>c_s</m> not equal to zero and <m>r,
-            s \lt n</m>.
-            Since <m>p^2</m> does not divide <m>a_0 = b_0 c_0</m>,
-            either <m>b_0</m> or <m>c_0</m> is not divisible by <m>p</m>.
-            Suppose that <m>p \notdivide b_0</m> and <m>p \mid c_0</m>.
-            Since <m>p \notdivide a_n</m> and <m>a_n = b_r c_s</m>,
-            neither <m>b_r</m> nor <m>c_s</m> is divisible by <m>p</m>.
-            Let <m>m</m> be the smallest value of <m>k</m> such that <m>p \notdivide c_k</m>.
-            Then
-            <me>
-              a_m = b_0 c_m + b_1 c_{m - 1} + \cdots + b_m c_0
-            </me>
-            is not divisible by <m>p</m>,
-            since each term on the right-hand side of the equation is divisible by <m>p</m> except for <m>b_0 c_m</m>.
-            Therefore, <m>m = n</m> since <m>a_i</m> is divisible by <m>p</m> for <m>m \lt n</m>.
-            Hence, <m>f(x)</m> cannot be factored into polynomials of lower degree and therefore must be irreducible.
-          </p>
-        </proof>
-      </theorem>
+        </introduction>
 
-      <example xml:id="example-poly-eisenstein">
-        <p>
-          The polynomial
-          <me>
-            f(x) = 16 x^5 - 9 x^4 + 3x^2 + 6 x - 21
-          </me>
-          is easily seen to be irreducible over
-          <m>{\mathbb Q}</m> by Eisenstein's Criterion if we let <m>p = 3</m>.
-        </p>
-      </example>
-            <!-- changed p(x) to f(x) -->
-            <!-- Suggested by  P. Diethelm. -->
-            <!-- TWJ 24/4/2013 -->
-      <p>
-        Eisenstein's Criterion is more useful in constructing irreducible polynomials of a certain degree over
-        <m>{\mathbb Q}</m> than in determining the irreducibility of an arbitrary polynomial in <m>{\mathbb Q}[x]</m>:
-        given an arbitrary polynomial,
-        it is not very likely that we can apply Eisenstein's Criterion.
-        The real value of <xref ref="theorem-eisenstein"/> is that we now have an easy method of generating irreducible polynomials of any degree.
-      </p>
-    </introduction>
-
-    <subsection xml:id="poly-subsection-ideals">
-      <title>Ideals in <m>F\lbrack x \rbrack</m></title>
-      <p>
-        Let <m>F</m> be a field.
-        Recall that a principal ideal in <m>F[x]</m> is an ideal
-        <m>\langle p(x) \rangle</m> generated by some polynomial <m>p(x)</m>; that is,
-        <me>
-          \langle p(x) \rangle = \{ p(x) q(x) : q(x) \in F[x] \}
-        </me>.
-      </p>
+        <subsection xml:id="poly-subsection-ideals">
+            <title>Ideals in <m>F\lbrack x \rbrack</m></title>
+            
+            <p>Let <m>F</m> be a field. Recall that a principal ideal in <m>F[x]</m> is an ideal <m>\langle p(x) \rangle</m> generated by some polynomial <m>p(x)</m>; that is,
+                <me>\langle p(x) \rangle = \{ p(x) q(x) : q(x) \in F[x] \}.</me></p>
 
       <example xml:id="example-poly-ideal">
         <p>
