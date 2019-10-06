@@ -611,15 +611,7 @@
         </proof>
       </theorem>
 
-      <paragraphs>
-        <title>Sage</title>
-        <p>
-          Polynomial rings are very important for computational approaches to algebra,
-          and so Sage makes it very easy to compute with polynomials,
-          over rings, or over fields.
-          And it is trivial to check if a polynomial is irreducible.
-        </p>
-      </paragraphs>
+
 
     </subsection>
 
@@ -1001,19 +993,14 @@
       </hint>
     </exercise>
 
-    <exercise number="14">
-      <statement>
-        <p>
-          Prove or disprove: <m>x^p + a</m> is irreducible for any
-          <m>a \in {\mathbb Z}_p</m>, where <m>p</m> is prime.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          False.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: <m>x^p + a</m> is irreducible for any <m>a \in {\mathbb Z}_p</m>, where <m>p</m> is prime.</p>
+            </statement>
+            <hint>
+                <p>False.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -1107,14 +1094,11 @@
 
     <!-- To do Finish the proof.-->
 
-    <exercise number="22">
-      <statement>
-        <p>
-          Let <m>R</m> be a commutative ring with identity.
-          Prove that multiplication is commutative in <m>R[x]</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>R</m> be a commutative ring with identity. Prove that multiplication is commutative in <m>R[x]</m>.</p>
+            </statement>
+        </exercise>
 
     <exercise number="23">
       <statement>
@@ -1213,24 +1197,17 @@
             </statement>
         </exercise>
 
-    <exercise number="28">
-      <statement>
-        <p>
-          Let <m>R</m> be a commutative ring with identity.
-          Show that <m>R[x]</m> has a subring <m>R'</m> isomorphic to <m>R</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>R</m> be a commutative ring with identity. Show that <m>R[x]</m> has a subring <m>R'</m> isomorphic to <m>R</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="29">
-      <statement>
-        <p>
-          Let <m>p(x)</m> and <m>q(x)</m> be polynomials in <m>R[x]</m>,
-          where <m>R</m> is a commutative ring with identity.
-          Prove that <m>\deg( p(x) + q(x) ) \leq \max( \deg p(x), \deg q(x) )</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>p(x)</m> and <m>q(x)</m> be polynomials in <m>R[x]</m>, where <m>R</m> is a commutative ring with identity. Prove that <m>\deg( p(x) + q(x) ) \leq \max( \deg p(x), \deg q(x) )</m>.</p>
+            </statement>
+        </exercise>
 
         <exercise>
       <statement>
