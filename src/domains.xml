@@ -287,105 +287,55 @@
 
     <!-- To do Complete the solution.-->
 
-    <exercise number="10">
-      <statement>
-        <p>
-          A field <m>F</m> is called a <term>prime field</term>
-          if it has no proper subfields.
-          If <m>E</m> is a subfield of <m>F</m> and <m>E</m> is a prime field,
-          then <m>E</m> is a <term>prime subfield</term> of <m>F</m>.
+        <exercise>
+            <statement>
+                <p>A field <m>F</m> is called a <term>prime field</term> if it has no proper subfields. If <m>E</m> is a subfield of <m>F</m> and <m>E</m> is a prime field, then <m>E</m> is a <term>prime subfield</term> of <m>F</m>.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                Prove that every field contains a unique prime subfield.
-              </p>
-            </li>
+                        <li><p>Prove that every field contains a unique prime subfield.</p></li>
 
-            <li>
-              <p>
-                If <m>F</m> is a field of characteristic 0, prove that the prime subfield of <m>F</m> is isomorphic to the field of rational numbers,
-                <m>{\mathbb Q}</m>.
-              </p>
-            </li>
+                        <li><p>If <m>F</m> is a field of characteristic 0, prove that the prime subfield of <m>F</m> is isomorphic to the field of rational numbers, <m>{\mathbb Q}</m>.</p></li>
 
-            <li>
-              <p>
-                If <m>F</m> is a field of characteristic <m>p</m>,
-                prove that the prime subfield of <m>F</m> is isomorphic to <m>{\mathbb Z}_p</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>If <m>F</m> is a field of characteristic <m>p</m>, prove that the prime subfield of <m>F</m> is isomorphic to <m>{\mathbb Z}_p</m>.</p></li>
+
+                    </ol></p>
+            </statement>
+        </exercise>
 
     <!-- To do Complete the solution.-->
 
-    <exercise number="11">
-      <statement>
-        <p>
-          Let <m>{\mathbb Z}[ \sqrt{2}\, ] = \{ a + b \sqrt{2} : a, b \in {\mathbb Z} \}</m>.
+        <exercise>
+            <statement>
+                <p>Let <m>{\mathbb Z}[ \sqrt{2}\, ] = \{ a + b \sqrt{2} : a, b \in {\mathbb Z} \}</m>.
+                    <ol>
+            
+                        <li><p>Prove that <m>{\mathbb Z}[ \sqrt{2}\, ]</m> is an integral domain.</p></li>
 
-          <ol>
-            <li>
-              <p>
-                Prove that <m>{\mathbb Z}[ \sqrt{2}\, ]</m> is an integral domain.
-              </p>
-            </li>
+                        <li><p>Find all of the units in <m>{\mathbb Z}[\sqrt{2}\, ]</m>.</p></li>
 
-            <li>
-              <p>
-                Find all of the units in <m>{\mathbb Z}[\sqrt{2}\, ]</m>.
-              </p>
-            </li>
+                        <li><p>Determine the field of fractions of <m>{\mathbb Z}[ \sqrt{2}\, ]</m>.</p></li>
 
-            <li>
-              <p>
-                Determine the field of fractions of <m>{\mathbb Z}[ \sqrt{2}\, ]</m>.
-              </p>
-            </li>
+                        <li><p>Prove that <m>{\mathbb Z}[ \sqrt{2} i ]</m> is a Euclidean domain under the Euclidean valuation <m>\nu( a + b \sqrt{2}\, i) = a^2 + 2b^2</m>.</p></li>
 
-            <li>
-              <p>
-                Prove that <m>{\mathbb Z}[ \sqrt{2} i ]</m> is a Euclidean domain under the Euclidean valuation <m>\nu( a + b \sqrt{2}\, i) = a^2 + 2b^2</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                    </ol></p>
+            </statement>
+        </exercise>
 
     <!-- To do Complete the solution.-->
 
-    <exercise number="12">
-      <statement>
-        <p>
-          Let <m>D</m> be a <acro>UFD</acro>.
-          An element <m>d \in D</m> is a <term>greatest common divisor of <m>a</m> and <m>b</m> in <m>D</m></term>
-          if <m>d \mid a</m> and <m>d \mid b</m> and <m>d</m> is divisible by any other element dividing both <m>a</m> and <m>b</m>.
+        <exercise>
+            <statement>
+                <p>Let <m>D</m> be a <acro>UFD</acro>. An element <m>d \in D</m> is a <term>greatest common divisor of <m>a</m> and <m>b</m> in <m>D</m></term> if <m>d \mid a</m> and <m>d \mid b</m> and <m>d</m> is divisible by any other element dividing both <m>a</m> and <m>b</m>.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                If <m>D</m> is a <acro>PID</acro> and <m>a</m> and <m>b</m> are both nonzero elements of <m>D</m>,
-                prove there exists a unique greatest common divisor of <m>a</m> and <m>b</m> up to associates.
-                That is, if <m>d</m> and <m>d'</m> are both greatest common divisors of <m>a</m> and <m>b</m>,
-                then <m>d</m> and <m>d'</m> are associates.
-                We write <m>\gcd( a, b)</m> for the greatest common divisor of <m>a</m> and <m>b</m>.
-              </p>
-            </li>
+                        <li><p>If <m>D</m> is a <acro>PID</acro> and <m>a</m> and <m>b</m> are both nonzero elements of <m>D</m>, prove there exists a unique greatest common divisor of <m>a</m> and <m>b</m> up to associates. That is, if <m>d</m> and <m>d'</m> are both greatest common divisors of <m>a</m> and <m>b</m>, then <m>d</m> and <m>d'</m> are associates. We write <m>\gcd( a, b)</m> for the greatest common divisor of <m>a</m> and <m>b</m>.</p></li>
 
-            <li>
-              <p>
-                Let <m>D</m> be a <acro>PID</acro> and <m>a</m> and <m>b</m> be nonzero elements of <m>D</m>.
-                Prove that there exist elements <m>s</m> and <m>t</m> in <m>D</m> such that <m>\gcd(a, b) = as + bt</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>Let <m>D</m> be a <acro>PID</acro> and <m>a</m> and <m>b</m> be nonzero elements of <m>D</m>. Prove that there exist elements <m>s</m> and <m>t</m> in <m>D</m> such that <m>\gcd(a, b) = as + bt</m>.</p></li>
+
+                    </ol></p>
+
+            </statement>
+        </exercise>
 
     <!-- To do Complete the solution.-->
 
@@ -401,45 +351,31 @@
             </statement>
         </exercise>
 
-    <exercise number="15">
-      <statement>
-        <p>
-          Let <m>D</m> be a Euclidean domain with Euclidean valuation <m>\nu</m>.
-          If <m>a</m> and <m>b</m> are associates in <m>D</m>,
-          prove that <m>\nu(a) = \nu(b)</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Let <m>a = ub</m> with <m>u</m> a unit.
-          Then <m>\nu(b) \leq \nu(ub) \leq \nu(a)</m>.
-          Similarly, <m>\nu(a) \leq \nu(b)</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>D</m> be a Euclidean domain with Euclidean valuation <m>\nu</m>. If <m>a</m> and <m>b</m> are associates in <m>D</m>, prove that <m>\nu(a) = \nu(b)</m>.</p>
+            </statement>
+            <hint>
+                <p>Let <m>a = ub</m> with <m>u</m> a unit. Then <m>\nu(b) \leq \nu(ub) \leq \nu(a)</m>. Similarly, <m>\nu(a) \leq \nu(b)</m>.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="16">
-      <statement>
-        <p>
-          Show that <m>{\mathbb Z}[\sqrt{5}\, i]</m> is not a unique factorization domain.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Show that 21 can be factored in two different ways.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Show that <m>{\mathbb Z}[\sqrt{5}\, i]</m> is not a unique factorization domain.</p>
+            </statement>
+            <hint>
+                <p>Show that 21 can be factored in two different ways.</p>
+            </hint>
+        </exercise>
 
     <!-- To do Complete the solution.-->
 
-    <exercise number="17">
-      <statement>
-        <p>
-          Prove or disprove: Every subdomain of a <acro>UFD</acro> is also a <acro>UFD</acro>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: Every subdomain of a <acro>UFD</acro> is also a <acro>UFD</acro>.</p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
@@ -453,96 +389,55 @@
             </statement>
         </exercise>
 
-    <exercise number="20">
-      <statement>
-        <p>
-          Let <m>R</m> be a commutative ring with identity.
-          We define a <term>multiplicative subset</term>
-          of <m>R</m> to be a subset <m>S</m> such that <m>1 \in S</m> and
-          <m>ab \in S</m> if <m>a, b \in S</m>.
+        <exercise>
+            <statement>
+                <p>Let <m>R</m> be a commutative ring with identity. We define a <term>multiplicative subset</term> of <m>R</m> to be a subset <m>S</m> such that <m>1 \in S</m> and <m>ab \in S</m> if <m>a, b \in S</m>.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                Define a relation <m>\sim</m> on
-                <m>R \times S</m> by <m>(a, s) \sim (a', s')</m> if there exists an
-                <m>s^\ast \in S</m> such that <m>s^\ast(s' a -s a') = 0</m>.
-                Show that <m>\sim</m> is an equivalence relation on <m>R \times S</m>.
-              </p>
-            </li>
+                        <li><p>Define a relation <m>\sim</m> on <m>R \times S</m> by <m>(a, s) \sim (a', s')</m> if there exists an <m>s^\ast \in S</m> such that <m>s^\ast(s' a -s a') = 0</m>. Show that <m>\sim</m> is an equivalence relation on <m>R \times S</m>.</p></li>
 
-            <li>
-              <p>
-                Let <m>a/s</m> denote the equivalence class of <m>(a,s) \in R \times S</m> and let
-                <m> S^{-1}R</m> be the set of all equivalence classes with respect to <m>\sim</m>.
-                Define the operations of addition and multiplication on <m>S^{-1} R</m> by
-                <md>
-                  <mrow>\frac{a}{s} + \frac{b}{t} &amp; = \frac{at + b s}{s t}</mrow>
-                  <mrow>\frac{a}{s}  \frac{b}{t} &amp; = \frac{a b}{s t}</mrow>
-                </md>,
-                respectively.
-                Prove that these operations are well-defined on <m>S^{-1}R</m> and that <m>S^{-1}R</m> is a ring with identity under these operations.
-                The ring <m>S^{-1}R</m> is called the
-                <term>ring of quotients</term>
-                of <m>R</m> with respect to <m>S</m>.
-              </p>
-            </li>
+                        <li><p>Let <m>a/s</m> denote the equivalence class of <m>(a,s) \in R \times S</m> and let <m> S^{-1}R</m> be the set of all equivalence classes with respect to <m>\sim</m>. Define the operations of addition and multiplication on <m>S^{-1} R</m> by
+                            <md>
+                                <mrow>\frac{a}{s} + \frac{b}{t} &amp; = \frac{at + b s}{s t}</mrow>
+                                <mrow>\frac{a}{s}  \frac{b}{t} &amp; = \frac{a b}{s t},</mrow>
+                            </md>
+                        respectively. Prove that these operations are well-defined on <m>S^{-1}R</m> and that <m>S^{-1}R</m> is a ring with identity under these operations. The ring <m>S^{-1}R</m> is called the <term>ring of quotients</term> of <m>R</m> with respect to <m>S</m>.</p></li>
 
-            <li>
-              <p>
-                Show that the map <m>\psi : R \rightarrow S^{-1}R</m> defined by
-                <m>\psi(a) = a/1</m> is a ring homomorphism.
-              </p>
-            </li>
+                        <li><p>Show that the map <m>\psi : R \rightarrow S^{-1}R</m> defined by <m>\psi(a) = a/1</m> is a ring homomorphism.</p></li>
 
-            <li>
-              <p>
-                If <m>R</m> has no zero divisors and <m>0 \notin S</m>,
-                show that <m>\psi</m> is one-to-one.
-              </p>
-            </li>
+                        <li><p>If <m>R</m> has no zero divisors and <m>0 \notin S</m>, show that <m>\psi</m> is one-to-one.</p></li>
 
-            <li>
-              <p>
-                Prove that <m>P</m> is a prime ideal of <m>R</m> if and only if
-                <m>S = R \setminus P</m> is a multiplicative subset of <m>R</m>.
-              </p>
-            </li>
+                        <li><p>Prove that <m>P</m> is a prime ideal of <m>R</m> if and only if <m>S = R \setminus P</m> is a multiplicative subset of <m>R</m>.</p></li>
 
-            <li>
-              <p>
-                If <m>P</m> is a prime ideal of <m>R</m> and <m>S = R \setminus P</m>,
-                show that the ring of quotients <m>S^{-1}R</m> has a unique maximal ideal.
-                Any ring that has a unique maximal ideal is called a <term>local ring</term>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>If <m>P</m> is a prime ideal of <m>R</m> and <m>S = R \setminus P</m>, show that the ring of quotients <m>S^{-1}R</m> has a unique maximal ideal. Any ring that has a unique maximal ideal is called a <term>local ring</term>.</p></li>
 
-  </exercises>
+                    </ol></p>
+            </statement>
+        </exercise>
 
-  <section xml:id="section-domains-fields-of-fractions-in-the-classroom">
-    <title>Fields of Fractions in the Secondary Classroom</title>
+    </exercises>
 
-    <p>This appendix will relate how fields of fractions to the secondary classroom.</p>
-  </section>
+    <section xml:id="section-domains-fields-of-fractions-in-the-classroom">
+        <title>Fields of Fractions in the Secondary Classroom</title>
 
-  <references xml:id="domains-references">
-    <title>References and Suggested Readings</title>
-    <biblio type="raw">
-<!-- was [1] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Atiyah, M. F.  and MacDonald, I. G.
-      <title>Introduction to Commutative Algebra</title>. Westview Press, Boulder, CO, 1994.
-    </biblio>
+        <p>This appendix will relate how fields of fractions to the secondary classroom.</p>
+  
+    </section>
 
-    <biblio type="raw">
-<!-- was [2] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Zariski, O. and Samuel, P.
-      <title>Commutative Algebra</title>, vols. I and II. Springer, New York, 1975, 1960.
-    </biblio>
-  </references>
+    <references xml:id="domains-references">
+        <title>References and Suggested Readings</title>
+        <biblio type="raw">
+        <!-- was [1] --><!-- Reference updated - TWJ 8/14/2010 -->
+        Atiyah, M. F.  and MacDonald, I. G.
+        <title>Introduction to Commutative Algebra</title>. Westview Press, Boulder, CO, 1994.
+        </biblio>
+
+        <biblio type="raw">
+        <!-- was [2] --><!-- Reference updated - TWJ 8/14/2010 -->
+        Zariski, O. and Samuel, P.
+        <title>Commutative Algebra</title>, vols. I and II. Springer, New York, 1975, 1960.
+        </biblio>
+    </references>
 
 
 </chapter>
