@@ -132,43 +132,27 @@
             </proof>
         </theorem>
 
-    <example xml:id="example-domains-rational-polys">
-      <p>
-        Since <m>{\mathbb Q}</m> is a field,
-        <m>{\mathbb Q}[x]</m> is an integral domain.
-        The field of fractions of <m>{\mathbb Q}[x]</m> is the set of all rational expressions <m>p(x)/q(x)</m>,
-        where <m>p(x)</m> and <m>q(x)</m> are polynomials over the rationals and <m>q(x)</m> is not the zero polynomial.
-        We will denote this field by <m>{\mathbb Q}(x)</m>.
+        <example xml:id="example-domains-rational-polys">
+            <p>Since <m>{\mathbb Q}</m> is a field, <m>{\mathbb Q}[x]</m> is an integral domain. The field of fractions of <m>{\mathbb Q}[x]</m> is the set of all rational expressions <m>p(x)/q(x)</m>, where <m>p(x)</m> and <m>q(x)</m> are polynomials over the rationals and <m>q(x)</m> is not the zero polynomial. We will denote this field by <m>{\mathbb Q}(x)</m>.
+            <notation>
+            <usage>\mathbb Q(x)</usage>
+            <description>field of rational functions over <m>\mathbb Q</m></description>
+            </notation></p>
+        </example>
 
-        <notation>
-          <usage>\mathbb Q(x)</usage>
-          <description>field of rational functions over <m>\mathbb Q</m></description>
-        </notation>
+        <p>We will leave the proofs of the following corollaries of <xref ref="theorem-field-of-quotients"/> as exercises.</p>
 
-      </p>
-    </example>
+        <corollary xml:id="corollary-char-zero-rationals">
+            <statement>
+                <p>Let <m>F</m> be a field of characteristic zero. Then <m>F</m> contains a subfield isomorphic to <m>{\mathbb Q}</m>.</p>
+            </statement>
+        </corollary>
 
-    <p>
-      We will leave the proofs of the following corollaries of <xref ref="theorem-field-of-quotients"/> as exercises.
-    </p>
-
-    <corollary xml:id="corollary-char-zero-rationals">
-      <statement>
-        <p>
-          Let <m>F</m> be a field of characteristic zero.
-          Then <m>F</m> contains a subfield isomorphic to <m>{\mathbb Q}</m>.
-        </p>
-      </statement>
-    </corollary>
-
-    <corollary xml:id="corollary-char-p-zp">
-      <statement>
-        <p>
-          Let <m>F</m> be a field of characteristic <m>p</m>.
-          Then <m>F</m> contains a subfield isomorphic to <m>{\mathbb Z}_p</m>.
-        </p>
-      </statement>
-    </corollary>
+        <corollary xml:id="corollary-char-p-zp">
+            <statement>
+                <p>Let <m>F</m> be a field of characteristic <m>p</m>. Then <m>F</m> contains a subfield isomorphic to <m>{\mathbb Z}_p</m>.</p>
+            </statement>
+        </corollary>
 
         <subsection xml:id="domains-subsection-historical-note">
             <title>Historical Note</title>
@@ -200,155 +184,86 @@
             </hint>
         </exercise>
 
-    <exercise number="2">
-      <statement>
-        <p>
-          The Gaussian integers, <m>{\mathbb Z}[i]</m>, are a <acro>UFD</acro>.
-          Factor each of the following elements in
-          <m>{\mathbb Z}[i]</m> into a product of irreducibles.
+        <exercise>
+            <statement>
+                <p>The Gaussian integers, <m>{\mathbb Z}[i]</m>, are a <acro>UFD</acro>. Factor each of the following elements in <m>{\mathbb Z}[i]</m> into a product of irreducibles.
+                    <ol cols="2">
 
-          <ol cols="2">
-            <li>
-              <p>
-                <m>5</m>
-              </p>
-            </li>
+                        <li><p><m>5</m></p></li>
 
-            <li>
-              <p>
-                <m>1 + 3i</m>
-              </p>
-            </li>
+                        <li><p><m>1 + 3i</m></p></li>
 
-            <li>
-              <p>
-                <m>6 + 8i</m>
-              </p>
-            </li>
+                        <li><p><m>6 + 8i</m></p></li>
 
-            <li>
-              <p>
-                <m>2</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <hint>
-        <p>
-          (a) <m>5 = -i(1 + 2i)(2 + i)</m>; (c) <m>6 + 8i = -i(1 + i)^2(2 + i)^2</m>.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p><m>2</m></p></li>
 
-    <exercise number="3">
-      <statement>
-        <p>
-          Let <m>D</m> be an integral domain.
+                    </ol></p>
+            </statement>
+            <hint>
+                <p>(a) <m>5 = -i(1 + 2i)(2 + i)</m>; (c) <m>6 + 8i = -i(1 + i)^2(2 + i)^2</m>.</p>
+            </hint>
+        </exercise>
 
-          <ol>
-            <li>
-              <p>
-                Prove that <m>F_D</m> is an abelian group under the operation of addition.
-              </p>
-            </li>
+        <exercise>
+            <statement>
+                <p>Let <m>D</m> be an integral domain.
+                    <ol>
 
-            <li>
-              <p>
-                Show that the operation of multiplication is well-defined in the field of fractions,
-                <m>F_D</m>.
-              </p>
-            </li>
+                        <li><p>Prove that <m>F_D</m> is an abelian group under the operation of addition.</p></li>
 
-            <li>
-              <p>
-                Verify the associative and commutative properties for multiplication in <m>F_D</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>Show that the operation of multiplication is well-defined in the field of fractions, <m>F_D</m>.</p></li>
 
-    <exercise number="4">
-      <statement>
-        <p>
-          Prove or disprove: Any subring of a field <m>F</m> containing <m>1</m> is an integral domain.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          True.
-        </p>
-      </hint>
-    </exercise>
+                        <li><p>Verify the associative and commutative properties for multiplication in <m>F_D</m>.</p></li>
 
-    <exercise number="5">
-      <statement>
-        <p>
-          Prove or disprove: If <m>D</m> is an integral domain,
-          then every prime element in <m>D</m> is also irreducible in <m>D</m>.
-        </p>
-      </statement>
-    </exercise>
+                    </ol></p>
+            </statement>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>Prove or disprove: Any subring of a field <m>F</m> containing <m>1</m> is an integral domain.</p>
+            </statement>
+            <hint>
+                <p>True.</p>
+            </hint>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>Prove or disprove: If <m>D</m> is an integral domain, then every prime element in <m>D</m> is also irreducible in <m>D</m>.</p>
+            </statement>
+        </exercise>
 
     <!-- To do Check this solution.-->
 
-    <exercise number="6">
-      <statement>
-        <p>
-          Let <m>F</m> be a field of characteristic zero.
-          Prove that <m>F</m> contains a subfield isomorphic to <m>{\mathbb Q}</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>F</m> be a field of characteristic zero. Prove that <m>F</m> contains a subfield isomorphic to <m>{\mathbb Q}</m>.</p>
+            </statement>
+        </exercise>
 
     <!-- To do Complete the solution.-->
 
-    <exercise number="7">
-      <statement>
-        <p>
-          Let <m>F</m> be a field.
+        <exercise>
+            <statement>
+                <p>Let <m>F</m> be a field.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                Prove that the field of fractions of <m>F[x]</m>, denoted by <m>F(x)</m>,
-                is isomorphic to the set all rational expressions <m>p(x) / q(x)</m>,
-                where <m>q(x)</m> is not the zero polynomial.
+                        <li><p>Prove that the field of fractions of <m>F[x]</m>, denoted by <m>F(x)</m>, is isomorphic to the set all rational expressions <m>p(x) / q(x)</m>, where <m>q(x)</m> is not the zero polynomial.
+                        <notation>
+                        <usage>F(x)</usage>
+                        <description>field of rational functions in <m>x</m></description>
+                        </notation></p></li>
 
-                <notation>
-                  <usage>F(x)</usage>
-                  <description>field of rational functions in <m>x</m></description>
-                </notation>
+                        <li><p>Let <m>p(x_1, \ldots, x_n)</m> and <m>q(x_1, \ldots, x_n)</m> be polynomials in <m>F[x_1, \ldots, x_n]</m>. Show that the set of all rational expressions <m>p(x_1, \ldots, x_n) / q(x_1, \ldots, x_n)</m> is isomorphic to the field of fractions of <m>F[x_1, \ldots, x_n]</m>. We denote the field of fractions of <m>F[x_1, \ldots, x_n]</m> by <m>F(x_1, \ldots, x_n)</m>.
+                        <notation>
+                        <usage>F(x_1, \dots, x_n)</usage>
+                        <description>field of rational functions in <m>x_1, \ldots, x_n</m></description>
+                        </notation></p></li>
 
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Let <m>p(x_1, \ldots, x_n)</m> and
-                <m>q(x_1, \ldots,
-                x_n)</m> be polynomials in <m>F[x_1, \ldots, x_n]</m>.
-                Show that the set of all rational expressions
-                <m>p(x_1, \ldots, x_n) / q(x_1, \ldots,
-                x_n)</m> is isomorphic to the field of fractions of <m>F[x_1, \ldots,
-                x_n]</m>.
-                We denote the field of fractions of
-                <m>F[x_1, \ldots,
-                x_n]</m> by <m>F(x_1, \ldots, x_n)</m>.
-
-                <notation>
-                  <usage>F(x_1, \dots, x_n)</usage>
-                  <description>field of rational functions in <m>x_1, \ldots, x_n</m></description>
-                </notation>
-
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                    </ol></p>
+            </statement>
+        </exercise>
 
     <!-- To do Complete the solution.-->
 
@@ -360,23 +275,15 @@
 
     <!-- To do Complete the solution.-->
 
-    <exercise number="9">
-      <statement>
-        <p>
-          Prove that the field of fractions of the Gaussian integers,
-          <m>{\mathbb Z}[i]</m>, is
-          <me>
-            {\mathbb Q}(i) = \{ p + q i : p, q \in {\mathbb Q}  \}
-          </me>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Let <m>z = a + bi</m> and <m>w = c + di \neq 0</m> be in <m>{\mathbb Z}[i]</m>.
-          Prove that <m>z/w \in {\mathbb Q}(i)</m>.
-        </p>
-      </hint>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that the field of fractions of the Gaussian integers, <m>{\mathbb Z}[i]</m>, is
+                    <me>{\mathbb Q}(i) = \{ p + q i : p, q \in {\mathbb Q} \}.</me></p>
+            </statement>
+            <hint>
+                <p>Let <m>z = a + bi</m> and <m>w = c + di \neq 0</m> be in <m>{\mathbb Z}[i]</m>. Prove that <m>z/w \in {\mathbb Q}(i)</m>.</p>
+            </hint>
+        </exercise>
 
     <!-- To do Complete the solution.-->
 
