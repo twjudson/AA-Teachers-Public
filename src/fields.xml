@@ -8,40 +8,20 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="fields">
-  <title>Fields</title>
-  <introduction>
-    <p>
-      It is natural to ask whether or not some field <m>F</m> is contained in a larger field.
-      We think of the rational numbers,
-      which reside inside the real numbers,
-      while in turn, the real numbers live inside the complex numbers.
-      We can also study the fields between <m>{\mathbb Q}</m> and
-      <m>{\mathbb R}</m> and inquire as to the nature of these fields.
-    </p>
+    <title>Fields</title>
+    <introduction>
+    
+        <p>It is natural to ask whether or not some field <m>F</m> is contained in a larger field. We think of the rational numbers, which reside inside the real numbers, while in turn, the real numbers live inside the complex numbers. We can also study the fields between <m>{\mathbb Q}</m> and <m>{\mathbb R}</m> and inquire as to the nature of these fields.</p>
 
-    <p>
-      More specifically if we are given a field <m>F</m> and a polynomial <m>p(x) \in F[x]</m>,
-      we can ask whether or not we can find a field <m>E</m> containing <m>F</m> such that <m>p(x)</m> factors into linear factors over <m>E[x]</m>.
-      For example, if we consider the polynomial
-      <me>
-        p(x) = x^4 -5 x^2 + 6
-      </me>
-      in <m>{\mathbb Q}[x]</m>,
-      then <m>p(x)</m> factors as <m>(x^2 - 2)(x^2 - 3)</m>.
-      However, both of these factors are irreducible in <m>{\mathbb Q}[x]</m>.
-      If we wish to find a zero of <m>p(x)</m>,
-      we must go to a larger field.
-      Certainly the field of real numbers will work, since
-      <me>
-        p(x) = (x - \sqrt{2} ) (x + \sqrt{2} )( x - \sqrt{3})(x + \sqrt{3})
-      </me>.
-      It is possible to find a smaller field in which <m>p(x)</m> has a zero, namely
-      <me>
-        {\mathbb Q }( \sqrt{2} ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
-      </me>.
-      We wish to be able to compute and study such fields for arbitrary polynomials over a field <m>F</m>.
-    </p>
-  </introduction>
+        <p>More specifically if we are given a field <m>F</m> and a polynomial <m>p(x) \in F[x]</m>, we can ask whether or not we can find a field <m>E</m> containing <m>F</m> such that <m>p(x)</m> factors into linear factors over <m>E[x]</m>. For example, if we consider the polynomial
+            <me>p(x) = x^4 -5 x^2 + 6</me>
+        in <m>{\mathbb Q}[x]</m>, then <m>p(x)</m> factors as <m>(x^2 - 2)(x^2 - 3)</m>. However, both of these factors are irreducible in <m>{\mathbb Q}[x]</m>. If we wish to find a zero of <m>p(x)</m>, we must go to a larger field. Certainly the field of real numbers will work, since
+            <me>p(x) = (x - \sqrt{2} ) (x + \sqrt{2} )( x - \sqrt{3})(x + \sqrt{3}).</me>
+        It is possible to find a smaller field in which <m>p(x)</m> has a zero, namely
+            <me>{\mathbb Q }( \sqrt{2} ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}.</me>
+        We wish to be able to compute and study such fields for arbitrary polynomials over a field <m>F</m>.</p>
+
+    </introduction>
 
   <section xml:id="section-extension-fields">
     <title>Extension Fields</title>
