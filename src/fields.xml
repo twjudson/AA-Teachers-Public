@@ -517,75 +517,41 @@
             </hint>
         </exercise>
 
-    <exercise number="4">
-      <statement>
-        <p>
-          Consider the field extension
-          <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> over <m>\mathbb Q</m>.
+        <exercise>
+            <statement>
+                <p>Consider the field extension <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> over <m>\mathbb Q</m>.
+                    <ol>
 
-          <ol>
-            <li>
-              <p>
-                Find a basis for the field extension
-                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> over <m>\mathbb Q</m>.
-                Conclude that <m>[{\mathbb Q}( \sqrt[4]{3}, i ): \mathbb Q] = 8</m>.
-              </p>
-            </li>
+                        <li><p>Find a basis for the field extension <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> over <m>\mathbb Q</m>. Conclude that <m>[{\mathbb Q}( \sqrt[4]{3}, i ): \mathbb Q] = 8</m>.</p></li>
 
-            <li>
-              <p>
-                Find all subfields <m>F</m> of
-                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> such that <m>[F:\mathbb Q] = 2</m>.
-              </p>
-            </li>
+                        <li><p>Find all subfields <m>F</m> of<m>{\mathbb Q}( \sqrt[4]{3}, i )</m> such that <m>[F:\mathbb Q] = 2</m>.</p></li>
 
-            <li>
-              <p>
-                Find all subfields <m>F</m> of
-                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> such that <m>[F:\mathbb Q] = 4</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+                        <li><p>Find all subfields <m>F</m> of <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> such that <m>[F:\mathbb Q] = 4</m>.</p></li>
 
-    <exercise number="5">
-      <statement>
-        <p>
-          Show that <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m> is a field with eight elements.
-          Construct a multiplication table for the multiplicative group of the field.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Use the fact that the elements of
-          <m>{\mathbb Z}_2[x]/ \langle x^3 + x + 1 \rangle</m> are 0, 1, <m>\alpha</m>,
-          <m>1 + \alpha</m>,
-          <m>\alpha^2</m>, <m>1 + \alpha^2</m>, <m>\alpha + \alpha^2</m>,
-          <m>1 + \alpha + \alpha^2</m> and the fact that <m>\alpha^3 + \alpha + 1 = 0</m>.
-        </p>
-      </hint>
-    </exercise>
+                    </ol></p>
+            </statement>
+        </exercise>
 
+        <exercise>
+            <statement>
+                <p>Show that <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m> is a field with eight elements. Construct a multiplication table for the multiplicative group of the field.</p>
+            </statement>
+            <hint>
+                <p>Use the fact that the elements of <m>{\mathbb Z}_2[x]/ \langle x^3 + x + 1 \rangle</m> are 0, 1, <m>\alpha</m>, <m>1 + \alpha</m>, <m>\alpha^2</m>, <m>1 + \alpha^2</m>, <m>\alpha + \alpha^2</m>, <m>1 + \alpha + \alpha^2</m> and the fact that <m>\alpha^3 + \alpha + 1 = 0</m>.</p>
+            </hint>
+        </exercise>
 
-    <exercise number="9">
-      <statement>
-        <p>
-          Prove that <m>{\mathbb Q}(\sqrt{3}, \sqrt[4]{3}, \sqrt[8]{3}, \ldots )</m> is an algebraic extension of
-          <m>{\mathbb Q}</m> but not a finite extension.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that <m>{\mathbb Q}(\sqrt{3}, \sqrt[4]{3}, \sqrt[8]{3}, \ldots )</m> is an algebraic extension of <m>{\mathbb Q}</m> but not a finite extension.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="10">
-      <statement>
-        <p>
-          Prove or disprove:
-          <m>\pi</m> is algebraic over <m>{\mathbb Q}(\pi^3)</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove or disprove: <m>\pi</m> is algebraic over <m>{\mathbb Q}(\pi^3)</m>.</p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
