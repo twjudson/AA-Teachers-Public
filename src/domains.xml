@@ -8,278 +8,129 @@
 <!-- See the file COPYING for copying conditions.     -->
 <!--                                                  -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="domains">
-  <title>Integral Domains</title>
-  <introduction>
-    <p>
-      One of the most important rings we study is the ring of integers.
-      It was our first example of an algebraic structure:
-      the first polynomial ring that we examined was <m>{\mathbb Z}[x]</m>.
-      We also know that the integers sit naturally inside the field of rational numbers,
-      <m>{\mathbb Q}</m>.
-      The ring of integers is the model for all integral domains.
-      In this chapter we will examine integral domains in general,
-      answering questions about the ideal structure of integral domains,
-      polynomial rings over integral domains,
-      and whether or not an integral domain can be embedded in a field.
-    </p>
-  </introduction>
+    <title>Integral Domains</title>
+  
+    <introduction>
+    
+        <p>One of the most important rings we study is the ring of integers. It was our first example of an algebraic structure: the first polynomial ring that we examined was <m>{\mathbb Z}[x]</m>. We also know that the integers sit naturally inside the field of rational numbers, <m>{\mathbb Q}</m>. The ring of integers is the model for all integral domains. In this chapter we will examine integral domains in general, answering questions about the ideal structure of integral domains, polynomial rings over integral domains, and whether or not an integral domain can be embedded in a field.</p>
 
-  <section xml:id="section-field-of-fractions">
-    <title>Fields of Fractions</title>
-    <p>
-      Every field is also an integral domain;
-      however, there are many integral domains that are not fields.
-      For example,
-      the integers <m>{\mathbb Z}</m> form an integral domain but not a field.
-      A question that naturally arises is how we might associate an integral domain with a field.
-      There is a natural way to construct the rationals <m>{\mathbb Q}</m> from the integers:
-      the rationals can be represented as formal quotients of two integers.
-      The rational numbers are certainly a field.
-      In fact, it can be shown that the rationals are the smallest field that contains the integers.
-      Given an integral domain <m>D</m>,
-      our question now becomes how to construct a smallest field <m>F</m> containing <m>D</m>.
-      We will do this in the same way as we constructed the rationals from the integers.
-    </p>
+    </introduction>
 
-    <p>
-      An element <m>p/q \in {\mathbb Q}</m> is the quotient of two integers <m>p</m> and <m>q</m>;
-      however, different pairs of integers can represent the same rational number.
-      For instance, <m>1/2 = 2/4 = 3/6</m>.
-      We know that
-      <me>
-        \frac{a}{b} = \frac{c}{d}
-      </me>
-      if and only if <m>ad = bc</m>.
-      A more formal way of considering this problem is to examine fractions in terms of equivalence relations.
-      We can think of elements in
-      <m>{\mathbb Q}</m> as ordered pairs in <m>{\mathbb Z} \times {\mathbb Z}</m>.
-      A quotient <m>p/q</m> can be written as <m>(p, q)</m>.
-      For instance,
-      <m>(3, 7)</m> would represent the fraction <m>3/7</m>.
-      However, there are problems if we consider all possible pairs in <m>{\mathbb Z} \times {\mathbb Z}</m>.
-      There is no fraction <m>5/0</m> corresponding to the pair <m>(5,0)</m>.
-      Also, the pairs <m>(3,6)</m> and <m>(2,4)</m> both represent the fraction <m>1/2</m>.
-      The first problem is easily solved if we require the second coordinate to be nonzero.
-      The second problem is solved by considering two pairs <m>(a, b)</m> and <m>(c, d)</m> to be equivalent if <m>ad = bc</m>.
-    </p>
+    <section xml:id="section-field-of-fractions">
+        <title>Fields of Fractions</title>
+    
+        <p>Every field is also an integral domain; however, there are many integral domains that are not fields. For example, the integers <m>{\mathbb Z}</m> form an integral domain but not a field. A question that naturally arises is how we might associate an integral domain with a field. There is a natural way to construct the rationals <m>{\mathbb Q}</m> from the integers: the rationals can be represented as formal quotients of two integers. The rational numbers are certainly a field. In fact, it can be shown that the rationals are the smallest field that contains the integers. Given an integral domain <m>D</m>, our question now becomes how to construct a smallest field <m>F</m> containing <m>D</m>. We will do this in the same way as we constructed the rationals from the integers.</p>
 
-    <p>
-      If we use the approach of ordered pairs instead of fractions,
-      then we can study integral domains in general.
-      Let <m>D</m> be any integral domain and let
-      <me>
-        S = \{ (a, b) : a, b \in D \text{ and } b \neq 0 \}
-      </me>.
-      Define a relation on <m>S</m> by <m>(a, b) \sim (c, d)</m> if <m>ad = bc</m>.
-    </p>
+        <p>An element <m>p/q \in {\mathbb Q}</m> is the quotient of two integers <m>p</m> and <m>q</m>; however, different pairs of integers can represent the same rational number. For instance, <m>1/2 = 2/4 = 3/6</m>. We know that
+            <me>\frac{a}{b} = \frac{c}{d}</me>
+        if and only if <m>ad = bc</m>. A more formal way of considering this problem is to examine fractions in terms of equivalence relations. We can think of elements in <m>{\mathbb Q}</m> as ordered pairs in <m>{\mathbb Z} \times {\mathbb Z}</m>. A quotient <m>p/q</m> can be written as <m>(p, q)</m>. For instance, <m>(3, 7)</m> would represent the fraction <m>3/7</m>. However, there are problems if we consider all possible pairs in <m>{\mathbb Z} \times {\mathbb Z}</m>. There is no fraction <m>5/0</m> corresponding to the pair <m>(5,0)</m>. Also, the pairs <m>(3,6)</m> and <m>(2,4)</m> both represent the fraction <m>1/2</m>. The first problem is easily solved if we require the second coordinate to be nonzero. The second problem is solved by considering two pairs <m>(a, b)</m> and <m>(c, d)</m> to be equivalent if <m>ad = bc</m>.</p>
 
-    <lemma>
-      <statement>
-        <p>
-          The relation <m>\sim</m> between elements of <m>S</m> is an equivalence relation.
-        </p>
-      </statement>
+        <p>If we use the approach of ordered pairs instead of fractions, then we can study integral domains in general. Let <m>D</m> be any integral domain and let
+            <me>S = \{ (a, b) : a, b \in D \text{ and } b \neq 0 \}.</me>
+        Define a relation on <m>S</m> by <m>(a, b) \sim (c, d)</m> if <m>ad = bc</m>.</p>
 
-      <proof>
-        <p>
-          Since <m>D</m> is commutative, <m>ab = ba</m>;
-          hence, <m>\sim</m> is reflexive on <m>D</m>.
-          Now suppose that <m>(a,b) \sim (c,d)</m>.
-          Then <m>ad=bc</m> or <m>cb = da</m>.
-          Therefore, <m>(c,d) \sim (a, b)</m> and the relation is symmetric.
-          Finally, to show that the relation is transitive,
-          let <m>(a, b) \sim (c, d)</m> and <m>(c, d) \sim (e,f)</m>.
-          In this case <m>ad = bc</m> and <m>cf = de</m>.
-          Multiplying both sides of <m>ad = bc</m> by <m>f</m> yields
-          <me>
-            a f d = a d f = b c f = b d e = bed
-          </me>.
-          Since <m>D</m> is an integral domain,
-          we can deduce that <m>af = be</m> or <m>(a,b ) \sim (e, f)</m>.
-        </p>
-      </proof>
-    </lemma>
+        <lemma>
+            <statement>
+                <p>The relation <m>\sim</m> between elements of <m>S</m> is an equivalence relation.</p>
+            </statement>
+            <proof>
+                <p>Since <m>D</m> is commutative, <m>ab = ba</m>; hence, <m>\sim</m> is reflexive on <m>D</m>. Now suppose that <m>(a,b) \sim (c,d)</m>. Then <m>ad=bc</m> or <m>cb = da</m>. Therefore, <m>(c,d) \sim (a, b)</m> and the relation is symmetric. Finally, to show that the relation is transitive, let <m>(a, b) \sim (c, d)</m> and <m>(c, d) \sim (e,f)</m>. In this case <m>ad = bc</m> and <m>cf = de</m>. Multiplying both sides of <m>ad = bc</m> by <m>f</m> yields
+                    <me>a f d = a d f = b c f = b d e = bed.</me>
+                Since <m>D</m> is an integral domain, we can deduce that <m>af = be</m> or <m>(a,b ) \sim (e, f)</m>.</p>
+            </proof>
+        </lemma>
 
-    <p>
-      We will denote the set of equivalence classes on <m>S</m> by <m>F_D</m>.
-      We now need to define the operations of addition and multiplication on <m>F_D</m>.
-      Recall how fractions are added and multiplied in <m>{\mathbb Q}</m>:
-      <md>
-        <mrow>\frac{a}{b} + \frac{c}{d} &amp; = \frac{ad + b c}{b d};</mrow>
-        <mrow>\frac{a}{b} \cdot \frac{c}{d} &amp; = \frac{ac}{b d}</mrow>
-      </md>.
-      It seems reasonable to define the operations of addition and multiplication on <m>F_D</m> in a similar manner.
-      If we denote the equivalence class of <m>(a, b) \in S</m> by <m>[a, b]</m>,
-      then we are led to define the operations of addition and multiplication on <m>F_D</m> by
-      <me>
-        [a, b] + [c, d] = [ad + b c,b d]
-      </me>
-      and
-      <me>
-        [a, b] \cdot [c, d] = [ac, b d]
-      </me>,
-      respectively.
-      The next lemma demonstrates that these operations are independent of the choice of representatives from each equivalence class.
-    </p>
+        <p>We will denote the set of equivalence classes on <m>S</m> by <m>F_D</m>. We now need to define the operations of addition and multiplication on <m>F_D</m>. Recall how fractions are added and multiplied in <m>{\mathbb Q}</m>:
+            <md>
+                <mrow>\frac{a}{b} + \frac{c}{d} &amp; = \frac{ad + b c}{b d};</mrow>
+                <mrow>\frac{a}{b} \cdot \frac{c}{d} &amp; = \frac{ac}{b d}.</mrow>
+            </md>
+        It seems reasonable to define the operations of addition and multiplication on <m>F_D</m> in a similar manner. If we denote the equivalence class of <m>(a, b) \in S</m> by <m>[a, b]</m>, then we are led to define the operations of addition and multiplication on <m>F_D</m> by
+            <me>[a, b] + [c, d] = [ad + b c,b d]</me>
+        and
+            <me>[a, b] \cdot [c, d] = [ac, b d],</me>
+        respectively. The next lemma demonstrates that these operations are independent of the choice of representatives from each equivalence class.</p>
 
-    <lemma>
-      <statement>
-        <p>
-          The operations of addition and multiplication on <m>F_D</m> are well-defined.
-        </p>
-      </statement>
+        <lemma>
+            <statement>
+                <p>The operations of addition and multiplication on <m>F_D</m> are well-defined.</p>
+            </statement>
+            <proof>
+                <p>We will prove that the operation of addition is well-defined. The proof that multiplication is well-defined is left as an exercise. Let <m>[a_1, b_1] = [a_2, b_2]</m> and <m>[c_1, d_1] =[ c_2, d_2]</m>. We must show that
+                    <me>[a_1 d_1 + b_1 c_1,b_1 d_1] = [a_2 d_2 + b_2 c_2,b_2 d_2]</me>
+                or, equivalently, that
+                    <me>(a_1 d_1 + b_1 c_1)( b_2 d_2) = (b_1 d_1) (a_2 d_2 + b_2 c_2).</me>
+                Since  <m>[a_1, b_1] = [a_2, b_2]</m> and <m>[c_1, d_1] =[ c_2, d_2]</m>, we know that <m>a_1 b_2 = b_1 a_2</m> and <m>c_1 d_2 = d_1 c_2</m>. Therefore,
+                    <md>
+                        <mrow>(a_1 d_1 + b_1 c_1)( b_2 d_2)  &amp; =  a_1 d_1 b_2 d_2 + b_1 c_1 b_2 d_2</mrow>
+                        <mrow>&amp; = a_1 b_2 d_1 d_2 + b_1 b_2 c_1 d_2</mrow>
+                        <mrow>&amp; = b_1 a_2 d_1 d_2 + b_1 b_2 d_1 c_2</mrow>
+                        <mrow>&amp; = (b_1 d_1) (a_2 d_2 + b_2 c_2).</mrow>
+                    </md></p>
+            </proof>
+        </lemma>
 
-      <proof>
-        <p>
-          We will prove that the operation of addition is well-defined.
-          The proof that multiplication is well-defined is left as an exercise.
-          Let <m>[a_1, b_1] = [a_2, b_2]</m> and <m>[c_1, d_1] =[ c_2, d_2]</m>.
-          We must show that
-          <me>
-            [a_1 d_1 + b_1 c_1,b_1 d_1] = [a_2 d_2 + b_2 c_2,b_2 d_2]
-          </me>
-          or, equivalently, that
-          <me>
-            (a_1 d_1 + b_1 c_1)( b_2 d_2) = (b_1 d_1) (a_2 d_2 + b_2 c_2)
-          </me>.
-          Since  <m>[a_1, b_1] = [a_2, b_2]</m> and <m>[c_1, d_1] =[ c_2, d_2]</m>,
-          we know that <m>a_1 b_2 = b_1 a_2</m> and <m>c_1 d_2 = d_1 c_2</m>.
-          Therefore,
-          <md>
-            <mrow>(a_1 d_1 + b_1 c_1)( b_2 d_2)  &amp; =  a_1 d_1 b_2 d_2 + b_1 c_1 b_2 d_2</mrow>
-            <mrow>&amp; = a_1 b_2 d_1 d_2 + b_1 b_2 c_1 d_2</mrow>
-            <mrow>&amp; = b_1 a_2 d_1 d_2 + b_1 b_2 d_1 c_2</mrow>
-            <mrow>&amp; = (b_1 d_1) (a_2 d_2 + b_2 c_2)</mrow>
-          </md>.
-        </p>
-      </proof>
-    </lemma>
+        <lemma xml:id="lemma-field-of-fractions">
+            <statement>
+                <p>The set of equivalence classes of <m>S</m>, <m>F_D</m>, under the equivalence relation <m>\sim</m>, together with the operations of addition and  multiplication defined by
+                    <md>
+                        <mrow>[a, b] + [c, d] &amp; = [ad + b c, b d]</mrow>
+                        <mrow>[ a, b] \cdot [c, d] &amp; = [ac, b d],</mrow>
+                    </md>
+                is a field.</p>
+            </statement>
+            <proof>
+                <p>The additive and multiplicative identities are <m>[0,1]</m> and <m>[1,1]</m>, respectively. To show that <m>[0,1]</m> is the additive identity, observe that
+                    <me>[a, b] + [0, 1] =  [ a 1 + b 0, b 1] = [a,b].</me>
+                It is easy to show that <m>[1, 1]</m> is the multiplicative identity. Let <m>[a, b] \in F_D</m> such that <m>a \neq 0</m>. Then <m>[b, a]</m> is also in <m>F_D</m> and <m>[a,b] \cdot [b, a] = [1,1]</m>; hence, <m>[b, a]</m> is the multiplicative inverse for <m>[a, b]</m>. Similarly, <m>[-a,b]</m> is the additive inverse of <m>[a, b]</m>. We leave as exercises the verification of the associative and  commutative properties of multiplication in <m>F_D</m>. We also leave it to the reader to show that <m>F_D</m> is an abelian group under addition.</p>
 
-    <lemma xml:id="lemma-field-of-fractions">
-      <statement>
-        <p>
-          The set of equivalence classes of <m>S</m>,
-          <m>F_D</m>, under the equivalence relation <m>\sim</m>,
-          together with the operations of addition and  multiplication defined by
-          <md>
-            <mrow>[a, b] + [c, d] &amp; = [ad + b c, b d]</mrow>
-            <mrow>[ a, b] \cdot [c, d] &amp; = [ac, b d]</mrow>
-          </md>,
-          is a field.
-        </p>
-      </statement>
+                <p>It remains to show that the distributive property holds in <m>F_D</m>; however,
+                    <md>
+                        <mrow>[a, b] [e, f] + [c, d][ e, f ] &amp; = [a e, b f ] + [c e, d f]</mrow>
+                        <mrow>&amp; = [a e d f + b f c e, b d f^2 ]</mrow>
+                        <mrow>&amp; = [a e d + b c e, b d f ]</mrow>
+                        <mrow>&amp; = [a d e + b c e, b d f ]</mrow>
+                        <mrow>&amp; = ( [a, b]  + [c, d] ) [ e, f ]</mrow>
+                    </md>
+                and the lemma is proved.</p>
+            </proof>
+        </lemma>
 
-      <proof>
-        <p>
-          The additive and multiplicative identities are <m>[0,1]</m> and <m>[1,1]</m>,
-          respectively.
-          To show that <m>[0,1]</m> is the additive identity, observe that
-          <me>
-            [a, b] + [0, 1] =  [ a 1 + b 0, b 1] = [a,b]
-          </me>.
-          It is easy to show that <m>[1, 1]</m> is the multiplicative identity.
-          Let <m>[a, b] \in F_D</m> such that <m>a \neq 0</m>.
-          Then <m>[b, a]</m> is also in <m>F_D</m> and <m>[a,b] \cdot [b, a] = [1,1]</m>;
-          hence, <m>[b, a]</m> is the multiplicative inverse for <m>[a, b]</m>.
-          Similarly, <m>[-a,b]</m> is the additive inverse of <m>[a, b]</m>.
-          We leave as exercises the verification of the associative and  commutative properties of multiplication in <m>F_D</m>.
-          We also leave it to the reader to show that <m>F_D</m> is an abelian group under addition.
-        </p>
+        <p>The field <m>F_D</m> in <xref ref="lemma-field-of-fractions"/> is called the <term>field of fractions</term><idx><h>Field</h><h>of fractions</h></idx> or <term>field of quotients</term><idx><h>Field</h><h>of quotients</h></idx> of the integral domain <m>D</m>.</p>
 
-        <p>
-          It remains to show that the distributive property holds in <m>F_D</m>; however,
-          <md>
-            <mrow>[a, b] [e, f] + [c, d][ e, f ] &amp; = [a e, b f ] + [c e, d f]</mrow>
-            <mrow>&amp; = [a e d f + b f c e, b d f^2 ]</mrow>
-            <mrow>&amp; = [a e d + b c e, b d f ]</mrow>
-            <mrow>&amp; = [a d e + b c e, b d f ]</mrow>
-            <mrow>&amp; = ( [a, b]  + [c, d] ) [ e, f ]</mrow>
-          </md>
-          and the lemma is proved.
-        </p>
-      </proof>
-    </lemma>
+        <theorem xml:id="theorem-field-of-quotients">
+            <statement>
+                <p>Let <m>D</m> be an integral domain. Then <m>D</m> can be embedded in a field of fractions <m>F_D</m>, where any element in <m>F_D</m> can be expressed as the quotient of two elements in <m>D</m>. Furthermore, the field of fractions <m>F_D</m> is unique in the sense that if <m>E</m> is any field containing <m>D</m>, then there exists a map <m>\psi : F_D \rightarrow E</m> giving an isomorphism with a subfield of <m>E</m> such that <m>\psi(a) = a</m> for all elements <m>a \in D</m>, where we identify <m>a</m> with its image in <m>F_D</m>.</p>
+            </statement>
+            <proof>
+                <p>We will first demonstrate that <m>D</m> can be embedded in the field  <m>F_D</m>. Define a map <m>\phi : D \rightarrow F_D</m> by <m>\phi(a)  = [a, 1]</m>. Then for <m>a</m> and <m>b</m> in <m>D</m>,
+                    <me>\phi( a + b ) = [a+b, 1] = [a, 1] + [b, 1] = \phi(a ) + \phi(b)</me>
+                and
+                    <me>\phi( a b ) = [a b, 1] = [a, 1]  [b, 1] = \phi(a ) \phi(b);</me>
+                hence, <m>\phi</m> is a homomorphism. To show that <m>\phi</m> is one-to-one, suppose that <m>\phi(a) = \phi( b)</m>. Then <m>[a, 1] = [b, 1]</m>, or <m>a = a1 = 1b = b</m>. Finally, any element of <m>F_D</m> can be expressed as the quotient of two elements in <m>D</m>, since
+                    <me>\phi(a) [\phi(b)]^{-1} = [a, 1] [b, 1]^{-1} = [a, 1] \cdot [1, b] = [a, b].</me></p>
 
-    <p>
-      The field <m>F_D</m> in <xref ref="lemma-field-of-fractions"/> is called the
-      <term>field of fractions</term><idx><h>Field</h><h>of fractions</h></idx> or
-      <term>field of quotients</term><idx><h>Field</h><h>of quotients</h></idx> of the integral domain <m>D</m>.
-    </p>
+                <p>Now let <m>E</m> be a field containing <m>D</m> and define a map <m>\psi :F_D \rightarrow E</m> by <m>\psi([a, b]) = a b^{-1}</m>. To show that <m>\psi</m> is well-defined, let <m>[a_1, b_1] = [a_2, b_2]</m>. Then <m>a_1 b_2 = b_1 a_2</m>. Therefore, <m>a_1 b_1^{-1} = a_2 b_2^{-1}</m> and <m>\psi( [a_1, b_1]) = \psi( [a_2, b_2])</m>.</p>
 
-    <theorem xml:id="theorem-field-of-quotients">
-      <statement>
-        <p>
-          Let <m>D</m> be an integral domain.
-          Then <m>D</m> can be embedded in a field of fractions <m>F_D</m>,
-          where any element in <m>F_D</m> can be expressed as the quotient of two elements in <m>D</m>.
-          Furthermore,
-          the field of fractions <m>F_D</m> is unique in the sense that if <m>E</m> is any field containing <m>D</m>,
-          then there exists a map <m>\psi : F_D \rightarrow E</m> giving an isomorphism with a subfield of <m>E</m> such that
-          <m>\psi(a) = a</m> for all elements <m>a \in D</m>,
-          where we identify <m>a</m> with its image in <m>F_D</m>.
-        </p>
-      </statement>
+                <p>If <m>[a, b ]</m> and <m>[c, d]</m> are in <m>F_D</m>, then
+                    <md>
+                        <mrow>\psi( [a, b] + [c, d] )  &amp; = \psi( [ad + b c, b d ] )</mrow>
+                        <mrow>&amp; =  (ad + b c)(b d)^{-1}</mrow>
+                        <mrow>&amp; = a b^{-1} + c d^{-1}</mrow>
+                        <mrow>&amp; = \psi( [a, b] ) + \psi( [c, d] )</mrow>
+                    </md>
+                and
+                    <md>
+                        <mrow>\psi( [a, b] \cdot [c, d] ) &amp; = \psi( [ac, b d ] )</mrow>
+                        <mrow>&amp; =  (ac)(b d)^{-1}</mrow>
+                        <mrow>&amp; = a b^{-1}  c d^{-1}</mrow>
+                        <mrow>&amp; = \psi( [a, b] )  \psi( [c, d] ).</mrow>
+                    </md>
+                Therefore, <m>\psi</m> is a homomorphism.</p>
 
-      <proof>
-        <p>
-          We will first demonstrate that <m>D</m> can be embedded in the field  <m>F_D</m>.
-          Define a map <m>\phi : D \rightarrow F_D</m> by <m>\phi(a)  = [a, 1]</m>.
-          Then for <m>a</m> and <m>b</m> in <m>D</m>,
-          <me>
-            \phi( a + b ) = [a+b, 1] = [a, 1] + [b, 1] = \phi(a ) + \phi(b)
-          </me>
-          and
-          <me>
-            \phi( a b ) = [a b, 1] = [a, 1]  [b, 1] = \phi(a ) \phi(b);
-          </me>
-          hence, <m>\phi</m> is a homomorphism.
-          To show that <m>\phi</m> is one-to-one,
-          suppose that <m>\phi(a) = \phi( b)</m>.
-          Then <m>[a, 1] = [b, 1]</m>, or <m>a = a1 = 1b = b</m>.
-          Finally, any element of <m>F_D</m> can be expressed as the quotient of two elements in <m>D</m>, since
-          <me>
-            \phi(a) [\phi(b)]^{-1} = [a, 1] [b, 1]^{-1} = [a, 1] \cdot [1, b] = [a, b]
-          </me>.
-        </p>
-            <!-- Typo corrected.  Suggested by Nathan Lander. -->
-            <!-- TWJ 2/13/2012 -->
-        <p>
-          Now let <m>E</m> be a field containing <m>D</m> and define a map
-          <m>\psi :F_D \rightarrow E</m> by <m>\psi([a, b]) = a b^{-1}</m>.
-          To show that <m>\psi</m> is well-defined,
-          let <m>[a_1, b_1] = [a_2, b_2]</m>.
-          Then <m>a_1 b_2 = b_1 a_2</m>.
-          Therefore, <m>a_1 b_1^{-1} = a_2 b_2^{-1}</m> and <m>\psi( [a_1, b_1]) = \psi( [a_2, b_2])</m>.
-        </p>
-
-        <p>
-          If <m>[a, b ]</m> and <m>[c, d]</m> are in <m>F_D</m>, then
-          <md>
-            <mrow>\psi( [a, b] + [c, d] )  &amp; = \psi( [ad + b c, b d ] )</mrow>
-            <mrow>&amp; =  (ad + b c)(b d)^{-1}</mrow>
-            <mrow>&amp; = a b^{-1} + c d^{-1}</mrow>
-            <mrow>&amp; = \psi( [a, b] ) + \psi( [c, d] )</mrow>
-          </md>
-          and
-          <md>
-            <mrow>\psi( [a, b] \cdot [c, d] ) &amp; = \psi( [ac, b d ] )</mrow>
-            <mrow>&amp; =  (ac)(b d)^{-1}</mrow>
-            <mrow>&amp; = a b^{-1}  c d^{-1}</mrow>
-            <mrow>&amp; = \psi( [a, b] )  \psi( [c, d] )</mrow>
-          </md>.
-          Therefore, <m>\psi</m> is a homomorphism.
-        </p>
-
-        <p>
-          To complete the proof of the theorem,
-          we need to show that <m>\psi</m> is one-to-one.
-          Suppose that <m>\psi( [a, b] ) = ab^{-1} = 0</m>.
-          Then <m>a = 0b = 0</m> and <m>[a, b] = [0, b]</m>.
-          Therefore, the kernel of <m>\psi</m> is the zero element <m>[ 0, b]</m> in <m>F_D</m>,
-          and <m>\psi</m> is injective.
-        </p>
-      </proof>
-    </theorem>
+                <p>To complete the proof of the theorem, we need to show that <m>\psi</m> is one-to-one. Suppose that <m>\psi( [a, b] ) = ab^{-1} = 0</m>. Then <m>a = 0b = 0</m> and <m>[a, b] = [0, b]</m>. Therefore, the kernel of <m>\psi</m> is the zero element <m>[ 0, b]</m> in <m>F_D</m>, and <m>\psi</m> is injective.</p>
+            </proof>
+        </theorem>
 
     <example xml:id="example-domains-rational-polys">
       <p>
@@ -319,88 +170,35 @@
       </statement>
     </corollary>
 
-    <subsection xml:id="domains-subsection-historical-note">
-      <title>Historical Note</title>
-      <p>
-        Karl Friedrich Gauss,
-            <idx><h>Gauss, Karl Friedrich</h></idx>
-        born in Brunswick, Germany on April 30, 1777,
-        is considered to be one of the greatest mathematicians who ever lived.
-        Gauss was truly a child prodigy.
-        At the age of three he was able to detect errors in the books of his father's business.
-        Gauss entered college at the age of 15.
-        Before the age of 20, Gauss was able to construct a regular <m>17</m>-sided polygon with a ruler and compass.
-        This was the first new construction of a regular <m>n</m>-sided polygon since the time of the ancient Greeks.
-        Gauss succeeded in showing that if <m>N= 2^{2^n} + 1</m> was prime,
-        then it was possible to construct a regular <m>N</m>-sided polygon.
-      </p>
+        <subsection xml:id="domains-subsection-historical-note">
+            <title>Historical Note</title>
+            <p>Karl Friedrich Gauss, <idx><h>Gauss, Karl Friedrich</h></idx> born in Brunswick, Germany on April 30, 1777, is considered to be one of the greatest mathematicians who ever lived. Gauss was truly a child prodigy. At the age of three he was able to detect errors in the books of his father's business. Gauss entered college at the age of 15. Before the age of 20, Gauss was able to construct a regular <m>17</m>-sided polygon with a ruler and compass. This was the first new construction of a regular <m>n</m>-sided polygon since the time of the ancient Greeks. Gauss succeeded in showing that if <m>N= 2^{2^n} + 1</m> was prime, then it was possible to construct a regular <m>N</m>-sided polygon.</p>
 
-      <p>
-        Gauss obtained his Ph.D. in 1799 under the direction of Pfaff at the University of Helmstedt.
-        In his dissertation he gave the first complete proof of the Fundamental Theorem of Algebra,
-        which states that every polynomial with real coefficients can be factored into linear factors over the complex numbers.
-        The acceptance of complex numbers was brought about by Gauss,
-        who was the first person to use the notation of <m>i</m> for <m>\sqrt{-1}</m>.
-      </p>
+            <p>Gauss obtained his Ph.D. in 1799 under the direction of Pfaff at the University of Helmstedt. In his dissertation he gave the first complete proof of the Fundamental Theorem of Algebra, which states that every polynomial with real coefficients can be factored into linear factors over the complex numbers. The acceptance of complex numbers was brought about by Gauss, who was the first person to use the notation of <m>i</m> for <m>\sqrt{-1}</m>.</p>
 
-      <p>
-        Gauss then turned his attention toward number theory;
-        in 1801, he published his famous book on number theory,
-        <em>Disquisitiones Arithmeticae</em>.
-        Throughout his life Gauss was intrigued with this branch of mathematics.
-        He once wrote, <q>Mathematics is the queen of the sciences,
-        and the theory of numbers is the queen of mathematics.</q>
-      </p>
+            <p>Gauss then turned his attention toward number theory; in 1801, he published his famous book on number theory, <em>Disquisitiones Arithmeticae</em>. Throughout his life Gauss was intrigued with this branch of mathematics. He once wrote, <q>Mathematics is the queen of the sciences, and the theory of numbers is the queen of mathematics.</q></p>
 
-      <p>
-        In 1807, Gauss was appointed director of the Observatory at the University of Göttingen,
-        a position he held until his death.
-        This position required him to study applications of mathematics to the sciences.
-        He succeeded in making contributions to fields such as astronomy,
-        mechanics,
-        optics, geodesy, and magnetism.
-        Along with Wilhelm Weber,
-        he coinvented the first practical electric telegraph some years before a better version was invented by Samuel F. B. Morse.
-      </p>
+            <p>In 1807, Gauss was appointed director of the Observatory at the University of Göttingen, a position he held until his death. This position required him to study applications of mathematics to the sciences. He succeeded in making contributions to fields such as astronomy, mechanics, optics, geodesy, and magnetism. Along with Wilhelm Weber, he coinvented the first practical electric telegraph some years before a better version was invented by Samuel F. B. Morse.</p>
 
-      <p>
-        Gauss was clearly the most prominent mathematician in the world in the early nineteenth century.
-        His status naturally made his discoveries subject to intense scrutiny.
-        Gauss's cold and distant personality many times led him to ignore the work of his contemporaries,
-        making him many enemies.
-        He did not enjoy teaching very much,
-        and young mathematicians who sought him out for encouragement were often rebuffed.
-        Nevertheless, he had many outstanding students,
-        including Eisenstein, Riemann, Kummer, Dirichlet, and Dedekind.
-        Gauss also offered a great deal of encouragement to Sophie Germain (1776<ndash/>1831),
-        who overcame the many obstacles facing women in her day to become a very prominent mathematician.
-        Gauss died at the age of 78 in Göttingen on February 23, 1855.
-      </p>
-    </subsection>
+            <p>Gauss was clearly the most prominent mathematician in the world in the early nineteenth century. His status naturally made his discoveries subject to intense scrutiny. Gauss's cold and distant personality many times led him to ignore the work of his contemporaries, making him many enemies. He did not enjoy teaching very much, and young mathematicians who sought him out for encouragement were often rebuffed. Nevertheless, he had many outstanding students, including Eisenstein, Riemann, Kummer, Dirichlet, and Dedekind. Gauss also offered a great deal of encouragement to Sophie Germain (1776<ndash/>1831), who overcame the many obstacles facing women in her day to become a very prominent mathematician. Gauss died at the age of 78 in Göttingen on February 23, 1855.</p>
 
-  </section>
+        </subsection>
+
+    </section>
     <!-- Exercises with Solutions  -->
     <!-- File: domains.xml  -->
     <!-- Title: Integral Domains -->
-  <exercises xml:id="exercises-domains" filenamebase="domains">
-    <title>Exercises</title>
-    <exercise number="1">
-      <statement>
-        <p>
-          Let <m>z = a + b \sqrt{3}\, i</m> be in <m>{\mathbb Z}[ \sqrt{3}\, i]</m>.
-          If <m>a^2 + 3 b^2 = 1</m>, show that <m>z</m> must be a unit.
-          Show that the only units of
-          <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> are <m>1</m> and <m>-1</m>.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Note that <m>z^{-1} = 1/(a + b\sqrt{3}\, i) = (a -b \sqrt{3}\, i)/(a^2 + 3b^2)</m> is in
-          <m>{\mathbb Z}[\sqrt{3}\, i]</m> if and only if <m>a^2 + 3 b^2 = 1</m>.
-          The only integer solutions to the equation are <m>a = \pm 1, b = 0</m>.
-        </p>
-      </hint>
-    </exercise>
+    <exercises xml:id="exercises-domains" filenamebase="domains">
+        <title>Exercises</title>
+    
+        <exercise>
+            <statement>
+                <p>Let <m>z = a + b \sqrt{3}\, i</m> be in <m>{\mathbb Z}[ \sqrt{3}\, i]</m>. If <m>a^2 + 3 b^2 = 1</m>, show that <m>z</m> must be a unit. Show that the only units of <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> are <m>1</m> and <m>-1</m>.</p>
+            </statement>
+            <hint>
+                <p>Note that <m>z^{-1} = 1/(a + b\sqrt{3}\, i) = (a -b \sqrt{3}\, i)/(a^2 + 3b^2)</m> is in <m>{\mathbb Z}[\sqrt{3}\, i]</m> if and only if <m>a^2 + 3 b^2 = 1</m>. The only integer solutions to the equation are <m>a = \pm 1, b = 0</m>.</p>
+            </hint>
+        </exercise>
 
     <exercise number="2">
       <statement>
@@ -554,15 +352,11 @@
 
     <!-- To do Complete the solution.-->
 
-    <exercise number="8">
-      <statement>
-        <p>
-          Let <m>p</m> be prime and denote the field of fractions of
-          <m>{\mathbb Z}_p[x]</m> by <m>{\mathbb Z}_p(x)</m>.
-          Prove that <m>{\mathbb Z}_p(x)</m> is an infinite field of characteristic <m>p</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>p</m> be prime and denote the field of fractions of <m>{\mathbb Z}_p[x]</m> by <m>{\mathbb Z}_p(x)</m>. Prove that <m>{\mathbb Z}_p(x)</m> is an infinite field of characteristic <m>p</m>.</p>
+            </statement>
+        </exercise>
 
     <!-- To do Complete the solution.-->
 
@@ -688,26 +482,17 @@
 
     <!-- To do Complete the solution.-->
 
-    <exercise number="13">
-      <statement>
-        <p>
-          Let <m>D</m> be an integral domain.
-          Define a relation on <m>D</m> by
-          <m>a \sim b</m> if <m>a</m> and <m>b</m> are associates in <m>D</m>.
-          Prove that <m>\sim</m> is an equivalence relation on <m>D</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>D</m> be an integral domain. Define a relation on <m>D</m> by <m>a \sim b</m> if <m>a</m> and <m>b</m> are associates in <m>D</m>. Prove that <m>\sim</m> is an equivalence relation on <m>D</m>.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="14">
-      <statement>
-        <p>
-          Let <m>D</m> be a Euclidean domain with Euclidean valuation <m>\nu</m>.
-          If <m>u</m> is a unit in <m>D</m>,
-          show that <m>\nu(u) = \nu(1)</m>.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>D</m> be a Euclidean domain with Euclidean valuation <m>\nu</m>. If <m>u</m> is a unit in <m>D</m>, show that <m>\nu(u) = \nu(1)</m>.</p>
+            </statement>
+        </exercise>
 
     <exercise number="15">
       <statement>
@@ -749,35 +534,17 @@
       </statement>
     </exercise>
 
-    <exercise number="18">
-      <statement>
-        <p>
-          An ideal of a commutative ring <m>R</m> is said to be
-          <term>finitely generated</term>
-          if there exist elements <m>a_1, \ldots,
-          a_n</m> in <m>R</m> such that every element <m>r \in R</m> can be written as
-          <m>a_1 r_1 + \cdots + a_n r_n</m> for some <m>r_1, \ldots,
-          r_n</m> in <m>R</m>.
-          Prove that <m>R</m> satisfies the ascending chain condition if and only if every ideal of <m>R</m> is finitely generated.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>An ideal of a commutative ring <m>R</m> is said to be <term>finitely generated</term> if there exist elements <m>a_1, \ldots, a_n</m> in <m>R</m> such that every element <m>r \in R</m> can be written as <m>a_1 r_1 + \cdots + a_n r_n</m> for some <m>r_1, \ldots, r_n</m> in <m>R</m>. Prove that <m>R</m> satisfies the ascending chain condition if and only if every ideal of <m>R</m> is finitely generated.</p>
+            </statement>
+        </exercise>
 
-    <exercise number="19">
-      <statement>
-        <p>
-          Let <m>D</m> be an integral domain with a descending chain of ideals <m>I_1 \supset I_2 \supset I_3 \supset \cdots</m>.
-          Suppose that there exists an <m>N</m> such that
-          <m>I_k = I_N</m> for all <m>k \geq N</m>.
-          A ring satisfying this condition is said to satisfy the
-          <term>descending chain condition</term>, or <term>DCC</term>.
-          Rings satisfying the DCC are called
-          <term>Artinian rings</term>, after Emil Artin.
-          Show that if <m>D</m> satisfies the descending chain condition,
-          it must satisfy the ascending chain condition.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>D</m> be an integral domain with a descending chain of ideals <m>I_1 \supset I_2 \supset I_3 \supset \cdots</m>. Suppose that there exists an <m>N</m> such that <m>I_k = I_N</m> for all <m>k \geq N</m>. A ring satisfying this condition is said to satisfy the <term>descending chain condition</term>, or <term>DCC</term>. Rings satisfying the DCC are called <term>Artinian rings</term>, after Emil Artin. Show that if <m>D</m> satisfies the descending chain condition, it must satisfy the ascending chain condition.</p>
+            </statement>
+        </exercise>
 
     <exercise number="20">
       <statement>
