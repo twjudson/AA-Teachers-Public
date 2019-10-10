@@ -150,102 +150,64 @@
                 </proof>
             </theorem>
 
-      <corollary>
-        <statement>
-          <p>
-            The field of all constructible numbers is an algebraic extension of <m>{\mathbb Q}</m>.
-          </p>
-        </statement>
-      </corollary>
+            <corollary>
+                <statement>
+                    <p>The field of all constructible numbers is an algebraic extension of <m>{\mathbb Q}</m>.</p>
+                </statement>
+            </corollary>
 
-      <p>
-        As we can see by the field of constructible numbers,
-        not every algebraic extension of a field is a finite extension.
-      </p>
-    </subsection>
+            <p>As we can see by the field of constructible numbers, not every algebraic extension of a field is a finite extension.</p>
+    
+        </subsection>
 
-    <subsection xml:id="constructions-subsection-doubling-the-cube">
-      <title>Doubling the Cube and Squaring the Circle</title>
-      <p>
-        We are now ready to investigate the classical problems of doubling the cube and squaring the circle.
-        We can use the field of constructible numbers to show exactly when a particular geometric construction can be accomplished.
-      </p>
+        <subsection xml:id="constructions-subsection-doubling-the-cube">
+            <title>Doubling the Cube and Squaring the Circle</title>
+      
+            <p>We are now ready to investigate the classical problems of doubling the cube and squaring the circle. We can use the field of constructible numbers to show exactly when a particular geometric construction can be accomplished.</p>
 
-      <paragraphs>
-        <title>Doubling the cube is impossible</title>
-        <idx>
-        <h>Doubling the cube</h>
-        </idx>
+            <paragraphs>
+                <title>Doubling the cube is impossible</title>
+                <idx>
+                <h>Doubling the cube</h>
+                </idx>
 
-        <p>
-          Given the edge of the cube,
-          it is impossible to construct with a straightedge and compass the edge of the cube that has twice the volume of the original cube.
-          Let the original cube have an edge of length <m>1</m> and,
-          therefore, a volume of <m>1</m>.
-          If we could construct a cube having a volume of <m>2</m>,
-          then this new cube would have an edge of length <m>\sqrt[3]{2}</m>.
-          However, <m>\sqrt[3]{2}</m> is a zero of the irreducible polynomial <m>x^3 -2</m> over <m>{\mathbb Q}</m>; hence,
-          <me>
-            [{\mathbb Q}(\sqrt[3]{2}\, ) : {\mathbb Q}] = 3
-          </me>
-          This is impossible, since <m>3</m> is not a power of <m>2</m>.
-        </p>
-      </paragraphs>
+                <p>Given the edge of the cube, it is impossible to construct with a straightedge and compass the edge of the cube that has twice the volume of the original cube. Let the original cube have an edge of length <m>1</m> and, therefore, a volume of <m>1</m>. If we could construct a cube having a volume of <m>2</m>, then this new cube would have an edge of length <m>\sqrt[3]{2}</m>. However, <m>\sqrt[3]{2}</m> is a zero of the irreducible polynomial <m>x^3 -2</m> over <m>{\mathbb Q}</m>; hence,
+                    <me>[{\mathbb Q}(\sqrt[3]{2}\, ) : {\mathbb Q}] = 3.</me>
+                This is impossible, since <m>3</m> is not a power of <m>2</m>.</p>
+            </paragraphs>
 
-      <paragraphs>
-        <title>Squaring the circle</title>
-        <idx>
-        <h>Squaring the circle is impossible</h>
-        </idx>
+            <paragraphs>
+                <title>Squaring the circle</title>
+                <idx>
+                <h>Squaring the circle is impossible</h>
+                </idx>
 
-        <p>
-          Suppose that we have a circle of radius <m>1</m>.
-          The area of the circle is <m>\pi</m>;
-          therefore, we must be able to construct a square with side <m>\sqrt{\pi}</m>.
-          This is impossible since <m>\pi</m> and consequently
-          <m>\sqrt{\pi}</m> are both transcendental.
-          Therefore, using a straightedge and compass,
-          it is not possible to construct a square with the same area as the circle.
-        </p>
-      </paragraphs>
-    </subsection>
+                <p>Suppose that we have a circle of radius <m>1</m>. The area of the circle is <m>\pi</m>; therefore, we must be able to construct a square with side <m>\sqrt{\pi}</m>. This is impossible since <m>\pi</m> and consequently <m>\sqrt{\pi}</m> are both transcendental. Therefore, using a straightedge and compass, it is not possible to construct a square with the same area as the circle.</p>
+            </paragraphs>
 
-    <subsection xml:id="constructions-subsection-trisect-angle">
-      <title>Trisecting an Angle</title>
-      <idx>
-      <h>Trisection of an angle</h>
-      </idx>
+        </subsection>
 
-      <p>
-        <em>Trisecting an arbitrary angle is impossible</em>.
-        We will show that it is impossible to construct a <m>20^\circ</m> angle.
-        Consequently, a <m>60^{\circ}</m> angle cannot be trisected.
-        We first need to calculate the triple-angle formula for the cosine:
-        <md>
-          <mrow>\cos 3 \theta &amp; = \cos( 2 \theta + \theta )</mrow>
-          <mrow>&amp; = \cos 2 \theta \cos \theta - \sin 2 \theta \sin \theta</mrow>
-          <mrow>&amp; = ( 2 \cos^2 \theta - 1) \cos \theta - 2 \sin^2 \theta \cos \theta</mrow>
-          <mrow>&amp; = ( 2 \cos^2 \theta - 1) \cos \theta - 2 (1- \cos^2 \theta) \cos \theta</mrow>
-          <mrow>&amp; = 4 \cos^3 \theta - 3 \cos \theta</mrow>
-        </md>.
-        The angle <m>\theta</m> can be constructed if and only if <m>\alpha = \cos \theta</m> is constructible.
-        Let <m>\theta = 20^{\circ}</m>.
-        Then <m>\cos 3 \theta = \cos 60^\circ = 1/2</m>.
-        By the triple-angle formula for the cosine,
-        <me>
-          4 \alpha^3 - 3 \alpha = \frac{1}{2}
-        </me>.
-        Therefore, <m>\alpha</m> is a zero of <m>8 x^3 - 6 x -1</m>.
-        This polynomial has no factors in <m>{\mathbb Z}[x]</m>,
-        and hence is irreducible over <m>{\mathbb Q}[x]</m>.
-        Thus, <m>[{\mathbb Q}( \alpha ) : {\mathbb Q }] = 3</m>.
-        Consequently, <m>\alpha</m> cannot be a constructible number.
-      </p>
+        <subsection xml:id="constructions-subsection-trisect-angle">
+            <title>Trisecting an Angle</title>
+            <idx>
+            <h>Trisection of an angle</h>
+            </idx>
 
- 
-    </subsection>
+            <p><em>Trisecting an arbitrary angle is impossible</em>. We will show that it is impossible to construct a <m>20^\circ</m> angle. Consequently, a <m>60^{\circ}</m> angle cannot be trisected. We first need to calculate the triple-angle formula for the cosine:
+                <md>
+                    <mrow>\cos 3 \theta &amp; = \cos( 2 \theta + \theta )</mrow>
+                    <mrow>&amp; = \cos 2 \theta \cos \theta - \sin 2 \theta \sin \theta</mrow>
+                    <mrow>&amp; = ( 2 \cos^2 \theta - 1) \cos \theta - 2 \sin^2 \theta \cos \theta</mrow>
+                    <mrow>&amp; = ( 2 \cos^2 \theta - 1) \cos \theta - 2 (1- \cos^2 \theta) \cos \theta</mrow>
+                    <mrow>&amp; = 4 \cos^3 \theta - 3 \cos \theta.</mrow>
+                </md>
+            The angle <m>\theta</m> can be constructed if and only if <m>\alpha = \cos \theta</m> is constructible. Let <m>\theta = 20^{\circ}</m>. Then <m>\cos 3 \theta = \cos 60^\circ = 1/2</m>. By the triple-angle formula for the cosine,
+                <me>4 \alpha^3 - 3 \alpha = \frac{1}{2}.</me>
+            Therefore, <m>\alpha</m> is a zero of <m>8 x^3 - 6 x -1</m>. This polynomial has no factors in <m>{\mathbb Z}[x]</m>, and hence is irreducible over <m>{\mathbb Q}[x]</m>. Thus, <m>[{\mathbb Q}( \alpha ) : {\mathbb Q }] = 3</m>. Consequently, <m>\alpha</m> cannot be a constructible number.</p>
 
-  </section>
+        </subsection>
+
+    </section>
     <!-- Exercises with Solutions  -->
     <!-- File: fields.xml  -->
     <!-- Title: Fields -->
@@ -258,14 +220,11 @@
             </statement>
         </exercise>
 
-    <exercise number="7">
-      <statement>
-        <p>
-          Prove that the cosine of one degree (<m>\cos 1^\circ</m>) is algebraic over
-          <m>{\mathbb Q}</m> but not constructible.
-        </p>
-      </statement>
-    </exercise>
+        <exercise>
+            <statement>
+                <p>Prove that the cosine of one degree (<m>\cos 1^\circ</m>) is algebraic over <m>{\mathbb Q}</m> but not constructible.</p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
