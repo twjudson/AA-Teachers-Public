@@ -138,31 +138,18 @@
                 </statement>
             </lemma>
 
-      <theorem>
-        <statement>
-          <p>
-            A real number <m>\alpha</m> is a constructible number if and only if there exists a  sequence of fields
-            <me>
-              {\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k
-            </me>
-            such that <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m> with
-            <m>\alpha_i \in F_i</m> and <m>\alpha \in F_k</m>.
-            In particular,
-            there exists an integer <m>k \gt 0</m> such that <m>[{\mathbb Q}(\alpha) : {\mathbb Q} ] = 2^k</m>.
-          </p>
-        </statement>
+            <theorem>
+                <statement>
+                    <p>A real number <m>\alpha</m> is a constructible number if and only if there exists a  sequence of fields
+                        <me>{\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k</me>
+                    such that <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m> with<m>\alpha_i \in F_i</m> and <m>\alpha \in F_k</m>. In particular, there exists an integer <m>k \gt 0</m> such that <m>[{\mathbb Q}(\alpha) : {\mathbb Q} ] = 2^k</m>.</p>
+                </statement>
+                <proof>
+                    <p>The existence of the <m>F_i</m>'s and the <m>\alpha_i</m>'s is a direct consequence of <xref ref="lemma-lines-and-circles"/> and of the fact that
+                        <me>[F_k: {\mathbb Q}] = [F_k : F_{k - 1}][F_{k - 1} : F_{k - 2}] \cdots [F_1: {\mathbb Q} ] = 2^k.</me></p>
+                </proof>
+            </theorem>
 
-        <proof>
-          <p>
-            The existence of the <m>F_i</m>'s and the
-            <m>\alpha_i</m>'s is a direct consequence of <xref ref="lemma-lines-and-circles"/> and of the fact that
-            <me>
-              [F_k: {\mathbb Q}] = [F_k : F_{k - 1}][F_{k - 1} : F_{k - 2}] \cdots [F_1: {\mathbb Q} ] = 2^k
-            </me>.
-          </p>
-        </proof>
-      </theorem>
-            <!-- Clarified where <m>\alpha_i</m> lives - TWJ 4/23/2011 -->
       <corollary>
         <statement>
           <p>
