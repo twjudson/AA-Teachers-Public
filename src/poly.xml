@@ -29,7 +29,7 @@
                 <mrow>&amp; =  ( x^3 - 3 x + 2 )  ( 3 x^2 - 6 x + 5 )</mrow>
                 <mrow>&amp; = 3 x^5 - 6 x^4 - 4 x^3 + 24 x^2 - 27 x + 10.</mrow>
             </md>
-        It is probably no surprise that polynomials form a ring. In this chapter we shall emphasize the algebraic structure of polynomials by studying polynomial rings. We can prove many results for polynomial rings that are similar to the theorems we proved for the integers. Analogs of prime numbers, the division algorithm, and the Euclidean algorithm exist for polynomials.</p>
+        It is probably no surprise that polynomials form a ring. In this chapter we shall emphasize the algebraic structure of polynomials by studying polynomial rings. We can prove many results for polynomial rings that are similar to the theorems we proved for the integers. Analogs of prime numbers, the division algorithm, and the Euclidean algorithm all exist for polynomials.</p>
 
     </introduction>
 
@@ -50,7 +50,7 @@
         <usage>\deg f(x)</usage>
         <description>degree of a polynomial</description>
         </notation>
-        If no such <m>n</m> exists<mdash/>that is, if <m>f=0</m> is the zero polynomial<mdash/>then the degree of <m>f</m> is defined to be <m>-\infty</m>. We will denote the set of all polynomials with coefficients in a ring <m>R</m> by <m>R[x]</m>.
+        If no such <m>n</m> exists<mdash/>that is, if <m>f(x)=0</m> is the zero polynomial<mdash/>then the degree of <m>f</m> is defined to be <m>-\infty</m>. We will denote the set of all polynomials with coefficients in a ring <m>R</m> by <m>R[x]</m>.
         <notation>
         <usage>R[x]</usage>
         <description>ring of polynomials over a ring <m>R</m></description>
@@ -884,150 +884,161 @@
             </statement>
         </exercise>
 
-        <exercise>
-            <statement>
-                <p>Solve the general quadratic equation
-                    <me>ax^2 + bx + c = 0</me>
-                to obtain
-                    <me>x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.</me>
-                The <term>discriminant</term><idx><h>Discriminant</h><h>of the quadratic equation</h></idx> of the quadratic equation <m>\Delta = b^2 - 4ac</m> determines the nature of the solutions of the equation. If <m>\Delta \gt 0</m>, the equation has two distinct real solutions. If <m>\Delta = 0</m>, the equation has a single repeated real root. If <m>\Delta \lt 0</m>, there are two distinct imaginary solutions.</p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>Show that any cubic equation of the form
-                    <me>x^3 + bx^2 + cx + d = 0</me>
-                can be reduced to the form<m>y^3 + py + q = 0</m> by making the substitution <m>x = y - b/3</m>.</p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>Prove that the cube roots of 1 are given by
-                    <md>
-                        <mrow>\omega &amp; = \frac{-1+ i \sqrt{3}}{2}</mrow>
-                        <mrow>\omega^2 &amp; = \frac{-1- i \sqrt{3}}{2}</mrow>
-                        <mrow>\omega^3 &amp; = 1.</mrow>
-                    </md></p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>Make the substitution
-                    <me>y = z - \frac{p}{3 z}</me>
-                for <m>y</m> in the equation <m>y^3 + py + q = 0</m> and obtain two solutions <m>A</m> and <m>B</m> for <m>z^3</m>.</p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>Show that the product of the solutions obtained in (4) is <m>-p^3/27</m>, deducing that <m>\sqrt[3]{A B} = -p/3</m>.</p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>Prove that the possible solutions for <m>z</m> in (4) are given by
-                    <me>\sqrt[3]{A}, \quad \omega \sqrt[3]{A}, \quad \omega^2 \sqrt[3]{A}, \quad \sqrt[3]{B}, \quad \omega \sqrt[3]{B}, \quad \omega^2 \sqrt[3]{B}</me>
-                and use this result to show that the three possible solutions for <m>y</m> are
-                    <me>\omega^i \sqrt[3]{-\frac{q}{2}+ \sqrt{\ \frac{p^3}{27} + \frac{q^2}{4}} } + \omega^{2i} \sqrt[3]{-\frac{q}{2}- \sqrt{\ \frac{p^3}{27} + \frac{q^2}{4}} },</me>
-                where <m>i = 0, 1, 2</m>.</p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>The <term>discriminant</term><idx><h>Discriminant</h><h>of the cubic equation</h></idx> of the cubic equation is
-                    <me>\Delta = \frac{p^3}{27}  + \frac{q^2}{4}.</me>
-                Show that <m>y^3 + py + q=0</m>
-                    <ol>
-
-                        <li><p>has three real roots, at least two of which are equal, if <m>\Delta = 0</m>.</p></li>
-
-                        <li><p>has one real root and two conjugate imaginary roots if <m>\Delta \gt 0</m>.</p></li>
-
-                        <li><p>has three distinct real roots if <m>\Delta \lt 0</m>.</p></li>
-
-                    </ol></p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>Solve the following cubic equations.
-                    <ol>
-
-                        <li><p><m>x^3 - 4x^2 + 11 x + 30 = 0</m></p></li>
-
-                        <li><p><m>x^3 - 3x +5 = 0</m></p></li>
-
-                        <li><p><m>x^3 - 3x +2 = 0</m></p></li>
-
-                        <li><p><m>x^3 + x + 3 = 0</m></p></li>
-
-                    </ol></p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>Show that the general quartic equation
-                    <me>x^4 + ax^3 + bx^2 + cx + d = 0</me>
-                can be reduced to
-                    <me>y^4 + py^2 + qy + r = 0</me>
-                by using the substitution <m>x = y - a/4</m>.</p>
-            </statement>
-        </exercise>
-
-        <exercise xml:id="exercise-cubic-poly-10">
-            <statement>
-                <p>Show that
-                    <me>\left( y^2 + \frac{1}{2} z \right)^2 = (z - p)y^2 - qy +  \left( \frac{1}{4} z^2 - r \right).</me></p>
-            </statement>
-        </exercise>
-
-        <exercise xml:id="exercise-cubic-poly-11">
-            <statement>
-                <p>Show that the right-hand side of <xref ref="exercise-cubic-poly-10"/> can be put in the form <m>(my + k)^2</m> if and only if
-                    <me>q^2 - 4(z - p)\left( \frac{1}{4} z^2 - r \right) = 0.</me></p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>From <xref ref="exercise-cubic-poly-11"/> obtain the <term>resolvent cubic equation</term><idx><h>Resolvent cubic equation</h></idx>
-                    <me>z^3 - pz^2 - 4rz + (4pr - q^2) = 0.</me>
-                Solving the resolvent cubic equation, put the equation found in <xref ref="exercise-cubic-poly-10"/> in the form
-                    <me>\left( y^2 + \frac{1}{2} z \right)^2 = (my + k)^2</me>
-                to obtain the solution of the quartic equation.</p>
-            </statement>
-        </exercise>
-
-        <exercise>
-            <statement>
-                <p>Use this method to solve the following quartic equations.
-                    <ol>
-
-                        <li><p><m>x^4 - x^2 - 3x + 2 = 0</m></p></li>
-
-                        <li><p><m>x^4 + x^3 - 7 x^2 - x + 6 = 0</m></p></li>
-
-                        <li><p><m>x^4 -2 x^2 + 4 x -3 = 0</m></p></li>
-
-                        <li><p><m>x^4 - 4 x^3 + 3x^2 - 5x +2 = 0</m></p></li>
-
-                    </ol></p>
-            </statement>
-        </exercise>
-
     </exercises>
 
-    <section xml:id="section-poly-polynomials-in-the-classroom">
-        <title>Irreducible Polynomials in the Secondary Classroom</title>
 
-        <p>This appendix will explore why irreducible polynomials are important to the secondary classroom.</p>
+    <section xml:id="section-poly-polynomials-in-the-classroom">
+        <title>Quadratics, Cubic, and Quartic Polynomials in the Secondary Classroom</title>
+
+        <p>A standard topic for the secondary classroom is solving quadratic equations and introducing the quadrtic formula.  The general quadratic equation
+            <me>ax^2 + bx + c = 0</me>
+        can be solved to obtain
+            <men xml:id="equation-poly-quadratic">x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.</men>
+        Indeed, we can complete the square to obtain <xref ref="equation-poly-quadratic"/>
+            <md>
+                <mrow>ax^2 + bx + c &amp; =  0</mrow>
+                <mrow>x^2 + \frac{b}{a}x &amp; =  - \frac{c}{a}</mrow>
+                <mrow>x^2 + \frac{b}{a}x + \left( \frac{b}{2a} \right)^2 &amp; =  \left( \frac{b}{2a} \right)^2 - \frac{c}{a}</mrow>
+                <mrow>\left(x + \frac{b}{2a} \right)^2 &amp; =  \frac{b^2 - 4ac}{4a^2}</mrow>
+                <mrow>x + \frac{b}{2a}  &amp; =  \frac{ \pm \sqrt{ b^2 -4ac}}{2a}</mrow>
+                <mrow>x &amp; =  \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.</mrow>
+            </md></p>
+
+            <p>The <term>discriminant</term><idx><h>Discriminant</h><h>of the quadratic equation</h></idx> of the quadratic equation <m>\Delta = b^2 - 4ac</m> gives us a great deal of information about the quadratic, since it determines the nature of the solutions of the equation. If <m>\Delta \gt 0</m>, the equation has two distinct real solutions. If <m>\Delta = 0</m>, the equation has a single repeated real root. If <m>\Delta \lt 0</m>, there are two distinct imaginary solutions.  By determining the sign of the discriminant alone, we can determine if the graph of any quadratic function intersects the <m>x</m>-axis once, twice, or not at all. We do not need to compute solutions of a quadratic.</p>
+
+            <p>We might ask what generalizes to higher degree polynomials such as cubics and quartics. The following exercises will give us some sense of what is going on.</p>
+
+        <exercises>
+
+            <exercise>
+                <statement>
+                    <p>Show that any cubic equation of the form
+                        <me>x^3 + bx^2 + cx + d = 0</me>
+                    can be reduced to the form <m>y^3 + py + q = 0</m> by making the substitution <m>x = y - b/3</m>.</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Prove that the cube roots of 1 are given by
+                        <md>
+                            <mrow>\omega &amp; = \frac{-1+ i \sqrt{3}}{2}</mrow>
+                            <mrow>\omega^2 &amp; = \frac{-1- i \sqrt{3}}{2}</mrow>
+                            <mrow>\omega^3 &amp; = 1.</mrow>
+                        </md></p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Make the substitution
+                        <me>y = z - \frac{p}{3 z}</me>
+                    for <m>y</m> in the equation <m>y^3 + py + q = 0</m> and obtain two solutions <m>A</m> and <m>B</m> for <m>z^3</m>.</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Show that the product of the solutions obtained in (4) is <m>-p^3/27</m>, deducing that <m>\sqrt[3]{A B} = -p/3</m>.</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Prove that the possible solutions for <m>z</m> in (4) are given by
+                        <me>\sqrt[3]{A}, \quad \omega \sqrt[3]{A}, \quad \omega^2 \sqrt[3]{A}, \quad \sqrt[3]{B}, \quad \omega \sqrt[3]{B}, \quad \omega^2 \sqrt[3]{B}</me>
+                    and use this result to show that the three possible solutions for <m>y</m> are
+                        <me>\omega^i \sqrt[3]{-\frac{q}{2}+ \sqrt{\ \frac{p^3}{27} + \frac{q^2}{4}} } + \omega^{2i} \sqrt[3]{-\frac{q}{2}- \sqrt{\ \frac{p^3}{27} + \frac{q^2}{4}} },</me>
+                    where <m>i = 0, 1, 2</m>.</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>The <term>discriminant</term><idx><h>Discriminant</h><h>of the cubic equation</h></idx> of the cubic equation is
+                        <me>\Delta = \frac{p^3}{27}  + \frac{q^2}{4}.</me>
+                    Show that <m>y^3 + py + q=0</m>
+                        <ol>
+
+                            <li><p>has three real roots, at least two of which are equal, if <m>\Delta = 0</m>.</p></li>
+
+                            <li><p>has one real root and two conjugate imaginary roots if <m>\Delta \gt 0</m>.</p></li>
+
+                            <li><p>has three distinct real roots if <m>\Delta \lt 0</m>.</p></li>
+
+                        </ol></p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Solve the following cubic equations.
+                        <ol>
+
+                            <li><p><m>x^3 - 4x^2 + 11 x + 30 = 0</m></p></li>
+
+                            <li><p><m>x^3 - 3x +5 = 0</m></p></li>
+
+                            <li><p><m>x^3 - 3x +2 = 0</m></p></li>
+
+                            <li><p><m>x^3 + x + 3 = 0</m></p></li>
+
+                        </ol></p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Show that the general quartic equation
+                        <me>x^4 + ax^3 + bx^2 + cx + d = 0</me>
+                    can be reduced to
+                        <me>y^4 + py^2 + qy + r = 0</me>
+                    by using the substitution <m>x = y - a/4</m>.</p>
+                </statement>
+            </exercise>
+
+            <exercise xml:id="exercise-cubic-poly-10">
+                <statement>
+                    <p>Show that
+                        <me>\left( y^2 + \frac{1}{2} z \right)^2 = (z - p)y^2 - qy +  \left( \frac{1}{4} z^2 - r \right).</me></p>
+                </statement>
+            </exercise>
+
+            <exercise xml:id="exercise-cubic-poly-11">
+                <statement>
+                    <p>Show that the right-hand side of <xref ref="exercise-cubic-poly-10"/> can be put in the form <m>(my + k)^2</m> if and only if
+                        <me>q^2 - 4(z - p)\left( \frac{1}{4} z^2 - r \right) = 0.</me></p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>From <xref ref="exercise-cubic-poly-11"/> obtain the <term>resolvent cubic equation</term><idx><h>Resolvent cubic equation</h></idx>
+                        <me>z^3 - pz^2 - 4rz + (4pr - q^2) = 0.</me>
+                    Solving the resolvent cubic equation, put the equation found in <xref ref="exercise-cubic-poly-10"/> in the form
+                        <me>\left( y^2 + \frac{1}{2} z \right)^2 = (my + k)^2</me>
+                    to obtain the solution of the quartic equation.</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Use this method to solve the following quartic equations.
+                        <ol>
+
+                            <li><p><m>x^4 - x^2 - 3x + 2 = 0</m></p></li>
+
+                            <li><p><m>x^4 + x^3 - 7 x^2 - x + 6 = 0</m></p></li>
+
+                            <li><p><m>x^4 -2 x^2 + 4 x -3 = 0</m></p></li>
+
+                            <li><p><m>x^4 - 4 x^3 + 3x^2 - 5x +2 = 0</m></p></li>
+
+                        </ol></p>
+                </statement>
+            </exercise>
+
+        </exercises>
     </section>
 
 </chapter>
