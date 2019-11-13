@@ -988,9 +988,15 @@
 
 
     <section xml:id="section-sets-euclidean-algorithm-in-the-classroom">
-        <title>Sets in the Secondary Classroom</title>
+        <title>Functions in the Secondary Classroom<mdash />The Vertical Line Test</title>
 
-        <p>This appendix will connect sets to the high school classroom.</p>
+        <p>You will often see the <q>vertical line test</q> in many high school textbooks:
+            <blockquote>If any vertical line intersects a graph more than once, then the graph is not a function.</blockquote
+        >We may also encounter the <q>horizontal line test</q>:
+            <blockquote>A function <m>f</m> has an inverse function if any possible horizontal line can intersect the graph of <m>f</m> at most once</blockquote>
+        or
+            <blockquote>A function <m>f</m> is one-to-one if any possible horizontal line can intersect the graph of <m>f</m> at most once.</blockquote>
+        As we usually think of the graph of a funciton as picture, both the vertical and horizontal line tests might be a bit problematic for functions or relations such as the ones in <xref ref="example-sets-mappings"/>, <xref ref="example-sets-inverse-matrix"/>, or <xref ref="example-sets-permutation"/>.</p>
     </section>
   <!--Todo Figure out how to include comments in front of the list of references-->
 
