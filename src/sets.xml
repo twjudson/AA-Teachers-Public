@@ -318,7 +318,7 @@
             </notation>
             For example, the set <m>{\mathbb R}^3</m> consists of all of 3-tuples of real numbers.</p>
 
-            <p>Subsets of <m>A \times B</m> are called <term>relations</term>. We will define a  <term>mapping</term><idx><h>Mapping</h><see>Function</see></idx> or
+            <p>Subsets of <m>A \times B</m> are called <term>relations</term>.<idx><h>Relation</h><h>definition of</h></idx> We will define a <term>mapping</term><idx><h>Mapping</h><see>Function</see></idx> or
             <term>function</term><idx><h>Function</h><h>definition of</h></idx> <m>f \subset A \times B</m> from a set <m>A</m> to a set <m>B</m> to be the special type of relation where <m>(a, b) \in f</m> if for every element <m>a \in A</m> there exists a unique element <m>b \in B</m>. Another way of saying this is that for every element in <m>A</m>, <m>f</m> assigns a unique element in <m>B</m>. We usually write <m>f:A \rightarrow B</m> or <m>A \stackrel{f}{\rightarrow} B</m>.
             Instead of writing down ordered pairs  <m>(a,b) \in A \times B</m>, we write <m>f(a) = b</m> or <m>f : a \mapsto b</m>. The set  <m>A</m> is called the
             <term>domain</term><idx><h>Function</h><h>domain of</h></idx> of <m>f</m> and
@@ -996,7 +996,31 @@
             <blockquote>A function <m>f</m> has an inverse function if any possible horizontal line can intersect the graph of <m>f</m> at most once</blockquote>
         or
             <blockquote>A function <m>f</m> is one-to-one if any possible horizontal line can intersect the graph of <m>f</m> at most once.</blockquote>
-        As we usually think of the graph of a funciton as picture, both the vertical and horizontal line tests might be a bit problematic for functions or relations such as the ones in <xref ref="example-sets-mappings"/>, <xref ref="example-sets-inverse-matrix"/>, or <xref ref="example-sets-permutation"/>.</p>
+        As we usually think of the graph of a function as picture, both the vertical and horizontal line tests might be a bit problematic for functions or relations such as the ones in <xref ref="example-sets-mappings"/>, <xref ref="example-sets-inverse-matrix"/>, or <xref ref="example-sets-permutation"/>.  Or how do we describe the graph of a function or a relation to a blind student?  Clearly, we need a better definition of the graph of a function.</p>
+
+        <p>Recall that we defined a relation between set <m>A</m> and <m>B</m> to be a subset of <m>A \times B</m>. A function from <m>A</m> to <m>B</m> can then be defined as a subset <m>f</m> of <m>A \times B</m> such that
+            <me>f = \{ (a, b) : a \in A \text{ and for each } a \text{ there exists a unique } b\}.</me>
+        So the function <m>f : \mathbb R \to \mathbb R</m> defined by <m>f(x) = x^2</m> can be written as <m>\{ (x, x^2) : x \in \mathbb R\}</m>.  The unit circle <m>x^2 + y^2 = 1</m> can be written as <m>\{ (x, y) : x^2 + y^2 = 1\}</m>.</p>
+
+        <p>We define the <terminology>graph of a relation</terminology><idx><h>Relation</h><h>graph of</h></idx> <m>R \subset A \times B</m> to be the set of ordered pairs <m>(a, b) \in R</m>.  Thus, the graph of a function <m>f : A \to B</m> is the set of ordered pairs <m>(x, f(x))</m>.<idx><h>Function</h><h>graph of</h></idx></p>
+
+        <exercises>
+
+            <exercise>
+                <statement>
+                    <p>Rigorously explain the vertical line test in terms of the formal definition of the graph of a relation.</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Rigorously explain the horizontal line test in terms of the formal definition of the graph of a relation.</p>
+                </statement>
+            </exercise>
+
+        </exercises>
+
+
     </section>
   <!--Todo Figure out how to include comments in front of the list of references-->
 
