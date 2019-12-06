@@ -386,17 +386,13 @@
             </hint>
         </exercise>
 
-<exercise>
-<statement>
-<p>
-Prove that
-<me>
-x + 4x + 7x + \cdots + (3n - 2)x = \frac{n(3n - 1)x}{2}
-</me>
-for <m>n \in {\mathbb N}</m>.
-</p>
-</statement>
-</exercise>
+        <exercise>
+            <statement>
+                <p>Prove that
+                    <me>x + 4x + 7x + \cdots + (3n - 2)x = \frac{n(3n - 1)x}{2}</me>
+                for <m>n \in {\mathbb N}</m>.</p>
+            </statement>
+        </exercise>
 
 <exercise>
 <statement>
@@ -414,16 +410,12 @@ Prove that <m>4 \cdot 10^{2n} + 9 \cdot 10^{2n - 1} + 5</m> is divisible by <m>9
 </statement>
 </exercise>
 
-<exercise>
-<statement>
-<p>
-Show that
-<me>
-\sqrt[n]{a_1 a_2 \cdots a_n} \leq \frac{1}{n} \sum_{k = 1}^{n} a_k
-</me>.
-</p>
-</statement>
-</exercise>
+        <exercise>
+            <statement>
+                <p>Show that
+                    <me>\sqrt[n]{a_1 a_2 \cdots a_n} \leq \frac{1}{n} \sum_{k = 1}^{n} a_k.</me></p>
+            </statement>
+        </exercise>
 
         <exercise>
             <statement>
@@ -748,22 +740,14 @@ and <m>c</m>.
 </statement>
 </exercise>
 
-<exercise>
-<statement>
-<p>
-Let <m>a, b, c \in {\mathbb Z}</m>.
-Prove that if <m>\gcd(a,b) = 1</m> and
-<m>a \mid bc</m>, then <m>a \mid c</m>.
-</p>
-</statement>
-<hint>
-<p>
-Since <m>\gcd(a,b) = 1</m>,
-there exist integers <m>r</m> and <m>s</m> such that <m>ar + bs = 1</m>.
-Thus, <m>acr + bcs = c</m>.
-</p>
-</hint>
-</exercise>
+        <exercise>
+            <statement>
+                <p>Let <m>a, b, c \in {\mathbb Z}</m>. Prove that if <m>\gcd(a,b) = 1</m> and <m>a \mid bc</m>, then <m>a \mid c</m>.</p>
+            </statement>
+            <hint>
+                <p>Since <m>\gcd(a,b) = 1</m>, there exist integers <m>r</m> and <m>s</m> such that <m>ar + bs = 1</m>. Thus, <m>acr + bcs = c</m>.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -771,20 +755,14 @@ Thus, <m>acr + bcs = c</m>.
             </statement>
         </exercise>
 
-<exercise>
-<statement>
-<p>
-Prove that there are an infinite number of primes of the form <m>6n + 5</m>.
-</p>
-</statement>
-<hint>
-<p>
-Every prime must be of the form <m>2</m>, <m>3</m>,
-<m>6n + 1</m>, or <m>6n + 5</m>.
-Suppose there are only finitely many primes of the form <m>6k + 5</m>.
-</p>
-</hint>
-</exercise>
+        <exercise>
+            <statement>
+                <p>Prove that there are an infinite number of primes of the form <m>6n + 5</m>.</p>
+            </statement>
+            <hint>
+                <p>Every prime must be of the form <m>2</m>, <m>3</m>, <m>6n + 1</m>, or <m>6n + 5</m>. Suppose there are only finitely many primes of the form <m>6k + 5</m>.</p>
+            </hint>
+        </exercise>
 
         <exercise>
             <statement>
@@ -800,8 +778,72 @@ Suppose there are only finitely many primes of the form <m>6k + 5</m>.
 
     </exercises>
 
+    <section xml:id="section-integers-division-algorithm-in-the-classroom">
+        <title>Connections to the Secondary Classroom<mdash/>The Euclidean Algorithm</title>
+
+        <p>Long division is an algorithm that we were taught in elementary school.  If we need to calculate <m>4937 \div 6</m> and do not have a calculator, we can always use long division. However, to elementary school students and many teachers, long division is simply an algorithm to be learned.  Many of us know that it works but not why it works. If we take a closer look at <m>493 \div 6</m>, we can see that the problem is asking how many <m>6</m>s are there in <m>493</m>.  Of course, we could just start subtracting <m>6</m>s from <m>493</m>,
+            <md>
+                <mrow>4937 - 6 \amp = 4931</mrow>
+                <mrow>4931 - 6 \amp = 4925</mrow>
+                <mrow>4925 - 6 \amp = 4919</mrow>
+                <mrow>\vdots \amp</mrow>
+                <mrow> 11 - 6 \amp - 5.</mrow>
+            </md>
+        If we count the number of subtractions, we will find that there are <m>822</m>, and we have a remainder of <m>5</m>. This will work, but it will be a very tedious way of calculating <m>493 \div 6</m> to say the least.  However, perhaps if we think about how this process of subtracting <m>6</m>s, we might be able to cut down the number of steps. Instead of subtracting <m>6</m> one hundred times, we could subtract one hundred <m>6</m>s or <m>600</m>. Instead of subtracting <m>6</m> ten times, we could subtract ten <m>6</m>s or <m>60</m>. We would need to keep track of what we subtracted of course.</p>
+        <exercises>
+
+            <exercise>
+                <statement>
+                    <p>Compute <m>6549 \div 7</m> by subtracting one hundred <m>7</m>s, then ten <m>7</m>s and finally individual copies of <m>7</m> until you obtain a remiander.</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>If we compute <m>4937 \div 6</m> in the manner that we described above, we will obtain
+                        <md>
+                            <mrow>4937 - 600 - 600 - 600 - 600 - 600 - 600 - 600 - 600</mrow>
+                            <mrow> - 60 - 60 - 6 - 6 = 5.</mrow>
+                        </md>
+                    However, we could combine steps even further,
+                        <me>4937 - 8(600) - 2(60) - 2(5) =  4937 -800(6) - 20(6) - 2(6) = 5.</me>
+                    Find the appropriate equations for <m>6549 \div 7</m>.</p>
+                </statement>
+            </exercise>
+
+             <exercise>
+                <statement>
+                    <p>A bit of reorganization for <m>4937 \div 6</m> and
+                        <me>4937 - 8(600) - 2(60) - 2(5) =  4937 -800(6) - 20(6) - 2(6) = 5</me>
+                    gives us
+                        <me>\begin{array}{r}
+                             2 \\
+                            20 \\
+                             800 \\ \hline\
+                             \mid 4937 \\
+                             -4800 \\ \hline
+                             137 \\
+                             -120 \\ \hline
+                             17 \\
+                             -12 \\ \hline
+                             5
+                        \end{array}</me>
+                        Write the same subtraction problem for <m>6549 \div 7</m>.</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>What we did in the previous problem is beginning to look very much like long division. Using long division, calculate <m>6549 \div 7</m> and relate your calculations to the division algorithm (<xref ref="theorem-integers-division_algorithm"/>).</p>
+                </statement>
+            </exercise>
+            
 
 
+        </exercises>
+
+    </section>
+<!--
     <section xml:id="section-integers-division-algorithm-in-the-classroom">
         <title>Connections to the Secondary Classroom<mdash/>Long Division</title>
 
@@ -867,6 +909,7 @@ Suppose there are only finitely many primes of the form <m>6k + 5</m>.
         </exercises>
 
     </section>
+-->
 
   <references xml:id="integers-references">
     <title>References and Suggested Readings</title>
